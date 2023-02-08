@@ -54,6 +54,9 @@ acartia_path='./data/acartia/'
 
 # %% [markdown]
 # 2.1 Scrap Chinook data by year
+chromedriver_autoinstaller.install()  # Check if the current version of chromedriver exists
+                                      # and if it doesn't exist, download it automatically,
+                                      # then add chromedriver to path
 
 # %%
 def scrap_fos(yrs='2022',spe='CHINOOK SALMON', fos_path=fos_path):
@@ -62,6 +65,7 @@ def scrap_fos(yrs='2022',spe='CHINOOK SALMON', fos_path=fos_path):
   options.add_argument('--headless')
   options.add_argument('--no-sandbox')
   options.add_argument('--disable-dev-shm-usage')
+  options.add_argument('--ignore-certificate-errors')
   driver=webdriver.Chrome(options=options)
   #landing page of fos data
   url = 'https://www-ops2.pac.dfo-mpo.gc.ca/fos2_Internet/Testfish/rptcsbdparm.cfm?stat=CPTFM&fsub_id=242'

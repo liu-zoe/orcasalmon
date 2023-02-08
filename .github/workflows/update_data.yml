@@ -18,7 +18,10 @@ jobs:
         with:
           python-version: '3.8'
           cache: 'pip'
-
+          
+      - name: Install Dependencies 
+        run: pip install -r requirements.txt
+        
       - name: Run Script and Update Data 
         run: python scrapper.py
 

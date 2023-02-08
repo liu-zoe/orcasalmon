@@ -25,6 +25,8 @@ jobs:
         run: pip install -r requirements.txt
         
       - name: Run Script and Update Data 
+        env: 
+          ACARTIA_TOKEN: ${{ secrets.ACARTIA_TOKEN }}
         run: python scrapper.py
 
       - name: Commit and Push Changes

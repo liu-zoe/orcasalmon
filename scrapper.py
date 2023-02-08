@@ -86,8 +86,6 @@ def scrap_fos(yrs='2022',spe='CHINOOK SALMON', fos_path=fos_path):
   tabls=[t for t in tabls0 if ((len(t)==12) & (t[0]!='Printed'))]
   dat=pd.DataFrame(tabls, columns=['day','mon','year','netlen','catch1','sets1','effort1','cpue1', 'catch2','sets2','effort2','cpue2'])
   #archive data to csv
-  if os.path.exists(fos_path)==False:
-    os.makedirs(fos_path)
   dat.to_csv(fos_path+'fos'+yrs+'.csv', index=False)
 
 # %% [markdown]

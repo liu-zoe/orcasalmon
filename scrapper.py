@@ -19,6 +19,7 @@ import selenium
 from selenium import webdriver 
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
+import chromedriver_autoinstaller
 
 from datetime import date
 from datetime import datetime
@@ -117,6 +118,7 @@ def scrap_bon(yrs='2022', bon_path=bon_path):
   options.add_argument('--headless')
   options.add_argument('--no-sandbox')
   options.add_argument('--disable-dev-shm-usage')
+  options.add_argument('--ignore-certificate-errors')
   driver=webdriver.Chrome(options=options)
   #landing page of Columbia Basin Research 
   url = 'https://www.cbr.washington.edu/dart/query/adult_daily'

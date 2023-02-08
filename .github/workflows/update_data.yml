@@ -1,0 +1,31 @@
+name: Update Data
+on:
+  schedule:
+    - cron: '0 20 * * 0-6'
+  workflow_dispatch:
+
+jobs:
+  update_data:
+    name: Update salmon and orca data 
+    runs-on: ubuntu-latest 
+    
+    steps:
+      - name:Checkout
+        uses: actions/checkout@v2
+        
+      - name: Setup Python 
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          cache:'pip'
+
+      - name: Run Script and Update Data 
+        run: python scrapper.py
+
+      - name: Commit and Push Changes
+        run: | 
+          git config --local user.email "zoelzh@gmail.com"
+          git config --local user.name "Zoe Liu"
+          git add /data/acartia/srkw_2023.csv 
+          git commit -m "Updated data with GitHub Actions"
+          git push origin master

@@ -134,9 +134,9 @@ def scrap_bon(yrs='2022', bon_path=bon_path):
   driver.find_element('id','run1').click()
   driver.find_element(By.XPATH, ".//input[@type='submit']").click()
   sleep(3)
-  dlf=[x for x in os.listdir("/content") if x[-4:]=='.csv']
+  dlf=[x for x in os.listdir("./") if x[-4:]=='.csv']
   filename=dlf[0]
-  os.rename('/content/'+filename, bon_path+'bon'+yrs+'.csv')
+  os.rename('./'+filename, bon_path+'bon'+yrs+'.csv')
 
 # %% [markdown]
 # Use the following line to download the current year

@@ -185,7 +185,7 @@ scrap_acartia()
 # Processing Acartia Data
 
 # %%
-acartia=pd.read_csv(acartia_path,'acartia_'+todaystr+'.csv')
+acartia=pd.read_csv(acartia_path+'acartia_'+todaystr+'.csv')
 srkw=acartia[acartia['type']=='Southern Resident Killer Whale']
 srkw['m']=pd.DatetimeIndex(srkw['created']).month
 srkw['day']=pd.DatetimeIndex(srkw['created']).day

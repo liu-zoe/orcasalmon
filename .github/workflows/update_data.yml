@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest 
     
     steps:
-      - name:Checkout
+      - name: Checkout
         uses: actions/checkout@v2
         
       - name: Setup Python 
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
-          cache:'pip'
+          cache: 'pip'
 
       - name: Run Script and Update Data 
         run: python scrapper.py

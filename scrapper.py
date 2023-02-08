@@ -160,8 +160,7 @@ for y in byl:
 # %%
 def scrap_acartia(acartia_path='./data/acartia/'):
   #Read Acartia token
-  #f = open('/content/drive/MyDrive/Orcasound/salmon/acartia_token.txt', 'r')
-  atoken='jH0zM5fqOxqJVVJc2j8u218svEDapzPa'
+  atoken = os.environ['ACARTIA_TOKEN']
   #Acartia webpages
   url='https://acartia.io/api/v1/sightings/'
   response = requests.get(url, headers={'Authorization': 'Bearer '+atoken, 

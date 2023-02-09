@@ -1,6 +1,6 @@
 # %% [markdown]
-# Script Name: scrapper.py
-# <br>Purpose: Scrapping chinook data and orca for dashboard
+# Script Name: scraper.py
+# <br>Purpose: Scraping chinook data and orca for dashboard
 # <br>Author: Zoe Liu
 # <br>Date: Oct 12th 2022
 

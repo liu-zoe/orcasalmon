@@ -39,7 +39,8 @@ server=app.server
 #%%
 #--------------------------Load And Process Data----------------------------#
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
-mapbox_access_token = open(os.path.join(APP_PATH,"mapbox_token.txt")).read()
+mapbox_access_token = os.environ['MAPBOX_TOKEN']
+#mapbox_access_token = open(os.path.join(APP_PATH,"mapbox_token.txt")).read()
 #Get dates
 today=date.today()
 todaystr=str(today)

@@ -1,0 +1,28 @@
+# Tokens
+acartia_token.txt
+GH_token.txt
+mapbox_token.txt
+flyio_ghtoken.txt
+
+# Folders
+/maps
+/plot
+
+# Work in progress
+chinookplot.ipynb
+chinookplot.py
+plots_colab.ipynb
+skrwplot.py
+
+# Notes
+salmon_dashboard_notes.md
+
+# Venv
+orcasalmon_venv
+
+#Other
+._acartia_token.txt
+._fly.toml
+._plots_colab.ipynb
+._requirements.txt
+

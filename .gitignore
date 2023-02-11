@@ -20,9 +20,12 @@ salmon_dashboard_notes.md
 # Venv
 orcasalmon_venv
 
+# Workspace
+orcasalmon.code-workspace
+
 #Other
 ._acartia_token.txt
 ._fly.toml
 ._plots_colab.ipynb
 ._requirements.txt
-
+._orcasalmon.code-workspace

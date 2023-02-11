@@ -39,7 +39,8 @@ server=app.server
 #%%
 #--------------------------Load And Process Data----------------------------#
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
-mapbox_access_token = os.environ['MAPBOX_TOKEN']
+#mapbox_access_token = os.environ['MAPBOX_TOKEN']
+mapbox_access_token = os.environ.get('MAPBOX_TOKEN')
 #mapbox_access_token = open(os.path.join(APP_PATH,"mapbox_token.txt")).read()
 #Get dates
 today=date.today()
@@ -1111,7 +1112,7 @@ def update_orca_lines(pod,year):
     fig_orcaline.update_yaxes(title_text='Chinook CPUE', row=2, col=1)
     fig_orcaline.update_yaxes(title_text='Chinook Count',  row=3, col=1)
     fig_orcaline.update_xaxes(tickmode='array',
-                        tickvals=['2022-01-01','2022-02-01','2022-03-01','2022-04-01','2022-05-01','2022-06-01','2022-07-01','2022-08-01','2022-09-01','2022-10-01','2022-11-01','2022-12-01',],
+                        tickvals=[str(year)+'-01-01',str(year)+'-02-01',str(year)+'03-01',str(year)+'-04-01',str(year)+'-05-01',str(year)+'-06-01',str(year)+'-07-01',str(year)+'-08-01',str(year)+'-09-01',str(year)+'-10-01',str(year)+'-11-01',str(year)+'-12-01',],
                         ticktext=['Jan-1','Feb-1','Mar-1','Apr-1','May-1','Jun-1','Jul-1','Aug-1','Sept-1','Oct-1','Nov-1','Dec-1'],
                         #tickvals=['Jan-1','Feb-1','Mar-1','Apr-1','May-1','Jun-1','Jul-1','Aug-1','Sep-1','Oct-1','Nov-1','Dec-1'],
                         #nticks=12,

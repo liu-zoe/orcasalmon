@@ -11,6 +11,7 @@ from datetime import date
 from datetime import datetime as dt 
 from time import strptime
 from time import sleep
+import calendar
 
 import pandas as pd
 pd.options.mode.chained_assignment = None #suppress chained assignment 
@@ -39,14 +40,12 @@ server=app.server
 #%%
 #--------------------------Load And Process Data----------------------------#
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
-#mapbox_access_token = os.environ['MAPBOX_TOKEN']
 mapbox_access_token = os.environ.get('MAPBOX_TOKEN')
 #mapbox_access_token = open(os.path.join(APP_PATH,"mapbox_token.txt")).read()
 #Get dates
 today=date.today()
 todaystr=str(today)
 curyr=today.year
-#curyr=2022
 lastyr=curyr-1
 twoyr=curyr-2
 ayl=[y for y in range(1980, curyr+1)] #year list for Albion
@@ -72,15 +71,6 @@ albion['cpue_hist2']=albion.iloc[:,3:].mean(axis=1, skipna=True).round(decimals=
 albion['month']=albion['m'].apply(lambda x: dt.strptime(str(x), '%m').strftime('%b'))
 albion['date']=albion[['month','day']].apply(lambda x: '-'.join(x.values.astype(str)), axis="columns")
 # %%
-# Create Albion lag dataset -- Current Year
-lag1=4
-albion_curyr_lagged=albion[['date','cpue'+str(curyr),'cpue'+str(curyr-1),'cpue_hist']]
-albion_curyr_lagged['date1']=pd.to_datetime(albion_curyr_lagged['date'], format='%b-%d')
-albion_curyr_lagged['date2']=albion_curyr_lagged['date1'] + pd.Timedelta(days=lag1)
-albion_curyr_lagged['m']=pd.DatetimeIndex(albion_curyr_lagged['date2']).month
-albion_curyr_lagged['day']=pd.DatetimeIndex(albion_curyr_lagged['date2']).day
-albion_curyr_lagged=albion_curyr_lagged.drop(columns=['date','date1','date2'])
-# %%
 # Load Bonneville Dam data
 bonnev=pd.DataFrame(columns=['day','m'])
 for i in reversed(range(len(byl))):
@@ -98,66 +88,59 @@ bonnev['chin_hist']=bonnev.iloc[:,5:].mean(axis=1, skipna=True).round(decimals=1
 bonnev['chin_hist2']=bonnev.iloc[:,3:].mean(axis=1, skipna=True).round(decimals=1)#History up to last year
 bonnev['month']=bonnev['m'].apply(lambda x: dt.strptime(str(x), '%m').strftime('%b'))
 bonnev['date']=bonnev[['month','day']].apply(lambda x: '-'.join(x.values.astype(str)), axis="columns")
-# %% 
-# Create Bonneville Dam lagged data -- Current Year
-lag2=10
-bonnev_curyr_lagged=bonnev[['date','chin'+str(curyr),'chin'+str(curyr-1),'chin_hist']]
-bonnev_curyr_lagged=bonnev_curyr_lagged[bonnev_curyr_lagged['date']!='Feb-29']
-bonnev_curyr_lagged['date1']=pd.to_datetime(bonnev_curyr_lagged['date'].apply(lambda x: str(curyr-1)+'-'+x), format='%Y-%b-%d')
-bonnev_curyr_lagged['date2']=bonnev_curyr_lagged['date1'] + pd.Timedelta(days=lag2)
-bonnev_curyr_lagged['m']=pd.DatetimeIndex(bonnev_curyr_lagged['date2']).month
-bonnev_curyr_lagged['day']=pd.DatetimeIndex(bonnev_curyr_lagged['date2']).day
-bonnev_curyr_lagged=bonnev_curyr_lagged.drop(columns=['date','date1','date2'])
 # %%
 # Create calendar dataframes 
-cal1=bonnev[['date']]
-cal1=cal1[cal1['date']!='Feb-29']
-cal1['date1']=pd.to_datetime(cal1['date'].apply(lambda x: str(curyr)+'-'+x), format='%Y-%b-%d')
-cal1['m']=pd.DatetimeIndex(cal1['date1']).month
-cal1['day']=pd.DatetimeIndex(cal1['date1']).day
-cal1=cal1.drop(columns=['date1'])
+cal=bonnev[['date']]
+cal=cal[cal['date']!='Feb-29']
+cal['date1']=pd.to_datetime(cal['date'].apply(lambda x: str(2021)+'-'+x), format='%Y-%b-%d')
+cal['m']=pd.DatetimeIndex(cal['date1']).month
+cal['day']=pd.DatetimeIndex(cal['date1']).day
+cal=cal.drop(columns=['date1'])
 # Example data frame
 # date  m day
 # Jan-1 1 1 
-# %%
-cal2=bonnev[['date']]
-cal2['date1']=pd.to_datetime(cal2['date'].apply(lambda x: str(curyr)+'-'+x), errors='coerce', format='%Y-%b-%d')
-cal2['m']=pd.DatetimeIndex(cal2['date1']).month
-cal2['day']=pd.DatetimeIndex(cal2['date1']).day
-cal2=cal2.drop(columns=['date1'])
-# Example data frame
-# date  m   day
-# Jan-1 1.0 1.0 
+# Create calendar dataframes for leapyear 
+cal_leap=bonnev[['date']]
+cal_leap['date1']=pd.to_datetime(cal_leap['date'].apply(lambda x: str(2020)+'-'+x), errors='coerce', format='%Y-%b-%d')
+cal_leap['m']=pd.DatetimeIndex(cal_leap['date1']).month.astype('int')
+cal_leap['day']=pd.DatetimeIndex(cal_leap['date1']).day.astype('int')
+cal_leap=cal_leap.drop(columns=['date1'])
 #%%
 albion=albion.drop(columns=['date'])
-albion=cal1.merge(albion, how='left', on=['m','day'])
+albion=cal_leap.merge(albion, how='left', on=['m','day'])
 # %%
-lagged=cal1.merge(bonnev_curyr_lagged, how='left', on=['m','day'])
-lagged=lagged.merge(albion_curyr_lagged, on=['m','day'], how='left')
+def create_lagged(year, 
+    lag1, # Albion lag
+    lag2  # Bonneville lag
+    ):
+    # Create Albion lag dataset
+    albion_lagged=albion[['date','cpue'+str(year),'cpue_hist']]
+    if calendar.isleap(year)==False:
+        albion_lagged=albion_lagged[albion_lagged['date']!='Feb-29']
+    albion_lagged['date1']=pd.to_datetime(albion_lagged['date'], errors='coerce', format='%b-%d')
+    albion_lagged['date2']=albion_lagged['date1'] + pd.Timedelta(days=lag1)
+    albion_lagged['m']=pd.DatetimeIndex(albion_lagged['date2']).month
+    albion_lagged['day']=pd.DatetimeIndex(albion_lagged['date2']).day
+    albion_lagged=albion_lagged.drop(columns=['date','date1','date2'])
+    # Create Bonneville Dam lagged dataset
+    bonnev_lagged=bonnev[['date','chin'+str(year),'chin_hist']]
+    if calendar.isleap(year)==False:
+        bonnev_lagged=bonnev_lagged[bonnev_lagged['date']!='Feb-29']
+    bonnev_lagged['date1']=pd.to_datetime(bonnev_lagged['date'].apply(lambda x: str(year-1)+'-'+x), errors='coerce',format='%Y-%b-%d')
+    bonnev_lagged['date2']=bonnev_lagged['date1'] + pd.Timedelta(days=lag2)
+    bonnev_lagged['m']=pd.DatetimeIndex(bonnev_lagged['date2']).month
+    bonnev_lagged['day']=pd.DatetimeIndex(bonnev_lagged['date2']).day
+    bonnev_lagged=bonnev_lagged.drop(columns=['date','date1','date2'])
+    #Combine Albion and Bonneville lagged data
+    if calendar.isleap(year)==False:
+        lagged=cal.merge(bonnev_lagged, how='left', on=['m','day'])
+    else:
+        lagged=cal_leap.merge(bonnev_lagged, how='left', on=['m','day'])
+    lagged=lagged.merge(albion_lagged, on=['m','day'], how='left')
+    return lagged
+lagged=create_lagged(curyr, 4, 10)
 # %% [markdown]
 # Loading Acartia data
-srkw_files=glob.glob(acartia_path+"srkw_"+str(curyr)+".csv")
-srkw_files.sort(reverse=True)
-srkwc=pd.read_csv(srkw_files[0])
-srkwc['date2']=pd.to_datetime(srkwc['date_ymd'],format='%Y-%m-%d', errors='coerce')
-srkwc['day_of_year']=srkwc['date_ymd'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
-srkwc_k=srkwc[srkwc.K==1].reset_index()
-srkwc_l=srkwc[srkwc.L==1].reset_index()
-srkwc_j=srkwc[srkwc.J==1].reset_index()
-#%%
-srkw_curyr_count=srkwc[['m','day','date']]
-srkw_curyr_count=srkw_curyr_count['date'].value_counts().reset_index()
-srkw_curyr_count=srkw_curyr_count.rename(columns={'date':'count', 'index':'date'})
-srkw_curyr_count['day']=srkw_curyr_count['date'].apply(lambda x: x.split('-')[1])
-srkw_curyr_count['mon']=srkw_curyr_count['date'].apply(lambda x: x.split('-')[0])
-srkw_curyr_count['m']=srkw_curyr_count['mon'].apply(lambda x: dt.strptime(x, '%b').month)
-srkw_curyr_count['m2']=srkw_curyr_count['m'].astype('float')
-srkw_curyr_count['day2']=srkw_curyr_count['day'].astype('float')
-srkw_curyr_count=srkw_curyr_count.sort_values(by=['m2','day2'])
-srkw_curyr_count=srkw_curyr_count.merge(lagged, left_on=['m2','day2'], right_on=['m','day'], how='right')
-srkw_curyr_count=srkw_curyr_count[['date_y', 'm_y','day_y','count','chin'+str(curyr),'chin'+str(curyr-1),'chin_hist','cpue'+str(curyr),'cpue'+str(curyr-1),'cpue_hist']]
-srkw_curyr_count.columns=['date','m','day','srkw','bon','bon_ly','bon_hist','alb','alb_ly','alb_hist']
-#%%
 # Function count orca reports or counts by day
 def srkw_count(dat, count_orca=False):
     if count_orca:
@@ -171,7 +154,64 @@ def srkw_count(dat, count_orca=False):
         srkw_avg=dat['date_ymd'].value_counts().reset_index()
         srkw_avg=srkw_avg.rename(columns={'date_ymd':'count','index':'date'})
         srkw_avg=srkw_avg.sort_values(by=['date'])
+    srkw_avg['day']=srkw_avg['date'].apply(lambda x: int(x.split('-')[2]))
+    srkw_avg['m']=srkw_avg['date'].apply(lambda x: int(x.split('-')[1]))
+    srkw_avg=srkw_avg.sort_values(by=['m','day'])
     return srkw_avg
+#%% 
+# Function to make orca count data of a certain year and merge with salmon data
+def srkw_year(year, pod="All pods"):
+    srkwc=pd.read_csv(acartia_path+"srkw_"+str(year)+".csv")
+    srkwc['date2']=pd.to_datetime(srkwc['date_ymd'],format='%Y-%m-%d', errors='coerce')
+    #srkwc['day_of_year']=srkwc['date_ymd'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
+    # Define the north and south puget sound latitude
+    entry_lat=48.19437
+    srkwc['north_puget_sound']=srkwc['latitude'].apply(lambda x: 1 if x>entry_lat else 0)
+    srkwc_k=srkwc[srkwc.K==1].reset_index()
+    srkwc_l=srkwc[srkwc.L==1].reset_index()
+    srkwc_j=srkwc[srkwc.J==1].reset_index()
+
+    if pod=="L pod":
+        srkw_dat=srkwc_l
+    elif pod=="K pod":
+        srkw_dat=srkwc_k
+    elif pod=="J pod":
+        srkw_dat=srkwc_j
+    elif pod=="All pods":
+        srkw_dat=srkwc[srkwc.sum_jkl>=1]
+    
+    srkwc_north=srkw_dat[srkw_dat['north_puget_sound']==1]
+    srkwc_north_avg=srkw_count(srkwc_north, count_orca=True)
+    srkwc_north_avg.columns=['date','count_north','day','m']
+
+    srkwc_south=srkw_dat[srkw_dat['north_puget_sound']==0]
+    srkwc_south_avg=srkw_count(srkwc_south, count_orca=True)
+    srkwc_south_avg.columns=['date','count_south','day','m']
+
+    srkw_yrcount=srkw_count(srkwc, count_orca=True)
+    
+    # Add salmon data
+    salmon=create_lagged(year, 4, 10)
+    srkw_yrcount=srkw_yrcount.merge(salmon, left_on=['m','day'], right_on=['m','day'], how='right')
+    srkw_yrcount=srkw_yrcount.drop(columns=['date_x'])
+    srkw_yrcount=srkw_yrcount.rename(columns={'date_y':'date'})
+
+    # Add srkw count north of puget sound
+    srkw_yrcount=srkw_yrcount.merge(srkwc_north_avg, left_on=['m','day'], right_on=['m','day'], how='left')
+    srkw_yrcount=srkw_yrcount.drop(columns=['date_y'])
+    srkw_yrcount=srkw_yrcount.rename(columns={'date_x':'date'})
+
+    # Add srkw count in puget sound
+    srkw_yrcount=srkw_yrcount.merge(srkwc_south_avg, left_on=['m','day'], right_on=['m','day'], how='left')
+    srkw_yrcount=srkw_yrcount.drop(columns=['date_y'])
+    srkw_yrcount=srkw_yrcount.rename(columns={'date_x':'date'})
+
+    # Keep a subset of variables 
+    srkw_yrcount=srkw_yrcount[['date', 'm','day','count','count_north','count_south','chin'+str(year),'chin_hist','cpue'+str(year),'cpue_hist']]
+    srkw_yrcount.columns=['date','m','day','srkw','srkw_north','srkw_south','bon'+str(year),'bon_hist','alb'+str(year),'alb_hist']
+
+    return srkw_yrcount
+srkw_curyr_count=srkw_year(curyr)
 # %%
 salmon_loc = pd.DataFrame(columns=['loc','lon','lat','color','size'])
 salmon_loc['loc']=['Puget Sound','Bonneville Dam','Albion Test Fishery']
@@ -221,7 +261,7 @@ app.layout = html.Div(
             children=[
             #----------------------------Tab 1: Salmon Time Series-----------------------------------#
                 dcc.Tab(
-                    label='Salmon Time Series', 
+                    label='Chinook Salmon', 
                     className='custom-tab',
                     selected_className='custom-tab--selected',
                     children=[
@@ -389,6 +429,7 @@ app.layout = html.Div(
                                             id="salmon-orca-container",                                           
                                             children=[
                                                 html.H5("Number of Orcas vs Chinook"),
+                                                html.P("Chinook data adjusted for travel distance"),
                                                 dcc.Graph(
                                                     className="salmon-orca-timeseries", 
                                                     id="salmon-orca-timeseries",                                       
@@ -412,8 +453,8 @@ app.layout = html.Div(
                                     className="credit",
                                     children=
                                     '''
-                                    1) Orca sightings data is retrieved from [Acartia](https://acartia.io/home).  
-                                    2) Definition of central Salish Sea follows that of Monika Weiland in her talk talk about SRKW and Bigg's occupancy metrics.                                  
+                                    1. Orca sightings data is retrieved from [Acartia](https://acartia.io/home).  
+                                    2. Definition of central Salish Sea follows that of Monika Weiland in her talk talk about SRKW and Bigg's occupancy metrics.                                  
                                     '''),
                             ],
                         ),
@@ -510,7 +551,7 @@ def update_salmon_timeseries(location_dropdown):
                             color=framecl,
                             showgrid=False,
                             tickmode='array',
-                            tickvals=['Apr-1','May-1','Jun-1','Jul-1','Aug-1','Sep-1','Oct-1'],
+                            tickvals=['Mar-1','Apr-1','May-1','Jun-1','Jul-1','Aug-1','Sep-1','Oct-1','Nov-1','Dec-1'],
                             #nticks=10,
                             tickangle=45,
                 ),
@@ -715,14 +756,20 @@ def update_salmon_timeseries(location_dropdown):
         return fig_salmon, fig_salmonmap
     elif location_dropdown=="Albion v Bonneville":
         # Define salmon time seires
+        if today.month<=4:
+            albbon=create_lagged(curyr, 0, 0)
+            albbon_ly=create_lagged(lastyr, 0, 0)
+            albbon=albbon.merge(albbon_ly[['m','day','chin'+str(lastyr),'cpue'+str(lastyr)]], how='left',on=['m','day'])
+        else:
+            albbon=create_lagged(curyr, 0, 0)
         title='Albion Chinook vs Bonneville Dam'
         ylab='CPUE'
         xlab='Date'
         fig_salmon = make_subplots(specs=[[{"secondary_y": True}]])
         fig_salmon.add_trace(
                 go.Scatter(
-                        x=srkw_curyr_count['date'],
-                        y=srkw_curyr_count['alb'],
+                        x=albbon['date'],
+                        y=albbon['cpue'+str(curyr)],
                         name='Albion'+str(curyr),
                         mode='lines+markers',
                         hovertemplate='%{x}'+':%{y}',
@@ -739,9 +786,9 @@ def update_salmon_timeseries(location_dropdown):
         if today.month<=4:
             fig_salmon.add_trace(
                 go.Scatter(
-                        x=srkw_curyr_count['date'],
-                        y=srkw_curyr_count['alb_ly'],
-                        name='Albion'+str(curyr-1),
+                        x=albbon['date'],
+                        y=albbon['cpue'+str(lastyr)],
+                        name='Albion'+str(lastyr),
                         mode='lines+markers',
                         hovertemplate='%{x}'+':%{y}',
                         marker = go.scatter.Marker(
@@ -756,8 +803,8 @@ def update_salmon_timeseries(location_dropdown):
             )
         fig_salmon.add_trace(
                 go.Scatter(
-                        x=srkw_curyr_count['date'],
-                        y=srkw_curyr_count['alb_hist'],
+                        x=albbon['date'],
+                        y=albbon['cpue_hist'],
                         name='Albion historical mean',
                         mode='lines',
                         hovertemplate='%{x}'+':%{y}',
@@ -773,8 +820,8 @@ def update_salmon_timeseries(location_dropdown):
         )
         fig_salmon.add_trace(
             go.Scatter(
-                        x=srkw_curyr_count['date'],
-                        y=srkw_curyr_count['bon'],
+                        x=albbon['date'],
+                        y=albbon['chin'+str(curyr)],
                         name='Bonneville'+str(curyr),
                         mode='lines+markers',
                         hovertemplate='%{x}'+':%{y}',
@@ -791,9 +838,9 @@ def update_salmon_timeseries(location_dropdown):
         if today.month<=4:
             fig_salmon.add_trace(
             go.Scatter(
-                        x=srkw_curyr_count['date'],
-                        y=srkw_curyr_count['bon_ly'],
-                        name='Bonneville'+str(curyr-1),
+                        x=albbon['date'],
+                        y=albbon['chin'+str(lastyr)],
+                        name='Bonneville'+str(lastyr),
                         mode='lines+markers',
                         hovertemplate='%{x}'+':%{y}',
                         marker = go.scatter.Marker(
@@ -808,8 +855,8 @@ def update_salmon_timeseries(location_dropdown):
             )
         fig_salmon.add_trace(
             go.Scatter(
-                        x=srkw_curyr_count['date'],
-                        y=srkw_curyr_count['bon_hist'],
+                        x=albbon['date'],
+                        y=albbon['chin_hist'],
                         name='Bonneville historical mean',
                         mode='lines',
                         hovertemplate='%{x}'+':%{y}',
@@ -839,7 +886,7 @@ def update_salmon_timeseries(location_dropdown):
                             color=framecl,
                             showgrid=False,
                             tickmode='array',
-                            tickvals=['Apr-1','May-1','Jun-1','Jul-1','Aug-1','Sep-1','Oct-1'],
+                            tickvals=['Jan-1','Feb-1','Mar-1','Apr-1','May-1','Jun-1','Jul-1','Aug-1','Sep-1','Oct-1','Nov-1','Dec-1'],
                             #nticks=10,
                             tickangle=45,
                 ),
@@ -918,7 +965,6 @@ def update_orca_map(pod,year):
     srkwc_k=srkwc[srkwc.K==1].reset_index()
     srkwc_l=srkwc[srkwc.L==1].reset_index()
     srkwc_j=srkwc[srkwc.J==1].reset_index()
-
     if pod=="L pod":
         srkw_dat=srkwc_l
     elif pod=="K pod":
@@ -976,46 +1022,12 @@ def update_orca_map(pod,year):
     ],
 )
 def update_orca_lines(pod,year):
-    srkwc=pd.read_csv(acartia_path+"srkw_"+str(year)+".csv")
-    srkwc['date2']=pd.to_datetime(srkwc['date_ymd'],format='%Y-%m-%d', errors='coerce')
-    srkwc['day_of_year']=srkwc['date_ymd'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
-    # Define the north and south puget sound latitude
-    entry_lat=48.19437
-    srkwc['north_puget_sound']=srkwc['latitude'].apply(lambda x: 1 if x>entry_lat else 0)
-    srkwc_k=srkwc[srkwc.K==1].reset_index()
-    srkwc_l=srkwc[srkwc.L==1].reset_index()
-    srkwc_j=srkwc[srkwc.J==1].reset_index()
-
-    if pod=="L pod":
-        srkw_dat=srkwc_l
-    elif pod=="K pod":
-        srkw_dat=srkwc_k
-    elif pod=="J pod":
-        srkw_dat=srkwc_j
-    elif pod=="All pods":
-        srkw_dat=srkwc[srkwc.sum_jkl>=1]
-
-    srkwc_north=srkw_dat[srkw_dat['north_puget_sound']==1]
-    srkwc_north_avg=srkw_count(srkwc_north, count_orca=True)
-    srkwc_south=srkw_dat[srkw_dat['north_puget_sound']==0]
-    srkwc_south_avg=srkw_count(srkwc_south, count_orca=True)
-
-    srkw_curyr_count=srkwc[['m','day','date']]
-    srkw_curyr_count=srkw_curyr_count['date'].value_counts().reset_index()
-    srkw_curyr_count=srkw_curyr_count.rename(columns={'date':'count', 'index':'date'})
-    srkw_curyr_count['day']=srkw_curyr_count['date'].apply(lambda x: x.split('-')[1])
-    srkw_curyr_count['day_int']=srkw_curyr_count['day'].astype("int")
-    srkw_curyr_count['mon']=srkw_curyr_count['date'].apply(lambda x: x.split('-')[0])
-    srkw_curyr_count['m']=srkw_curyr_count['mon'].apply(lambda x: dt.strptime(x, '%b').month)
-    srkw_curyr_count['m2']=srkw_curyr_count['m'].astype('float')
-    srkw_curyr_count['day2']=srkw_curyr_count['day'].astype('float')
-    srkw_curyr_count=srkw_curyr_count.sort_values(by=['m2','day2'])
-
+    srkw_yr_count=srkw_year(year,pod)    
     fig_orcaline = make_subplots(rows=3, cols=1)
     fig_orcaline.append_trace(
         go.Scatter(
-            x=srkwc_north_avg['date'],
-            y=srkwc_north_avg['count'],
+            x=srkw_yr_count['date'],
+            y=srkw_yr_count['srkw_north'],
             mode="markers",
             name="Central Salish Sea", 
             hovertemplate='%{x}'+': %{y}',
@@ -1024,8 +1036,8 @@ def update_orca_lines(pod,year):
     row=1, col=1)
     fig_orcaline.append_trace(
         go.Scatter(
-                x=srkwc_south_avg['date'],
-                y=srkwc_south_avg['count'],
+                x=srkw_yr_count['date'],
+                y=srkw_yr_count['srkw_south'],
                 mode="markers",
                 name="Puget Sound", 
                 hovertemplate='%{x}'+': %{y}',
@@ -1033,28 +1045,10 @@ def update_orca_lines(pod,year):
             ),
     row=1, col=1
     )
-    """ fig_orcaline.append_trace(
-        go.Scatter(
-        x=srkw_curyr_count['date'],
-        y=srkw_curyr_count['count'],
-        name='Orca'+str(year),
-        mode='lines+markers',
-        hovertemplate='%{x}'+':%{y}',
-        marker = go.scatter.Marker(
-            color = plotlycl[0],
-        ),
-        line = go.scatter.Line(
-            color = plotlycl[0],
-        ),
-        opacity=0.85,
-        ), 
-        row=1, col=1
-    ) """
-
     fig_orcaline.append_trace(
         go.Scatter(
-            x=albion['date'],
-            y=albion['cpue'+str(year)],
+            x=srkw_yr_count['date'],
+            y=srkw_yr_count['alb'+str(year)],
             name='Albion'+str(year),
             mode='lines+markers',
             hovertemplate='%{x}'+':%{y}',
@@ -1068,8 +1062,8 @@ def update_orca_lines(pod,year):
     row=2, col=1)
     fig_orcaline.append_trace(
         go.Scatter(
-            x=bonnev['date'],
-            y=bonnev['chin'+str(year)],
+            x=srkw_yr_count['date'],
+            y=srkw_yr_count['bon'+str(year)],
             name='Bonneville'+str(year),
             mode='lines+markers',
             hovertemplate='%{x}'+':%{y}',
@@ -1112,9 +1106,7 @@ def update_orca_lines(pod,year):
     fig_orcaline.update_yaxes(title_text='Chinook CPUE', row=2, col=1)
     fig_orcaline.update_yaxes(title_text='Chinook Count',  row=3, col=1)
     fig_orcaline.update_xaxes(tickmode='array',
-                        tickvals=[str(year)+'-01-01',str(year)+'-02-01',str(year)+'03-01',str(year)+'-04-01',str(year)+'-05-01',str(year)+'-06-01',str(year)+'-07-01',str(year)+'-08-01',str(year)+'-09-01',str(year)+'-10-01',str(year)+'-11-01',str(year)+'-12-01',],
-                        ticktext=['Jan-1','Feb-1','Mar-1','Apr-1','May-1','Jun-1','Jul-1','Aug-1','Sept-1','Oct-1','Nov-1','Dec-1'],
-                        #tickvals=['Jan-1','Feb-1','Mar-1','Apr-1','May-1','Jun-1','Jul-1','Aug-1','Sep-1','Oct-1','Nov-1','Dec-1'],
+                        tickvals=['Jan-1','Feb-1','Mar-1','Apr-1','May-1','Jun-1','Jul-1','Aug-1','Sep-1','Oct-1','Nov-1','Dec-1'],
                         #nticks=12,
                         tickangle=45, row=1, col=1)
     fig_orcaline.update_xaxes(tickmode='array',

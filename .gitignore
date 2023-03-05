@@ -7,6 +7,7 @@ flyio_ghtoken.txt
 # Folders
 /maps
 /plot
+/data_in_progress
 
 # Work in progress
 chinookplot.ipynb

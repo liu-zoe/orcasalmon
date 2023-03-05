@@ -7,13 +7,14 @@ flyio_ghtoken.txt
 # Folders
 /maps
 /plot
-/data_in_progress
+/data/data_in_progress
 
 # Work in progress
 chinookplot.ipynb
 chinookplot.py
 plots_colab.ipynb
-skrwplot.py
+srkwplot.py
+srkw_satellite_tagging.ipynb
 
 # Notes
 salmon_dashboard_notes.md
@@ -30,3 +31,4 @@ orcasalmon.code-workspace
 ._plots_colab.ipynb
 ._requirements.txt
 ._orcasalmon.code-workspace
+._*

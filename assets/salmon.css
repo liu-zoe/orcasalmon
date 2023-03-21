@@ -217,6 +217,27 @@ font-family: 'Maven Pro', sans-serif;
 
 }
 
+/*  Color of the word logo   
+
+Seagreen (Tiffany Blue?)
+HEX : #a2d1cf
+RGB : 162, 209, 207
+HSL  : 177, 33%, 72%
+
+Azul Blue
+HEX: #016fb9
+
+Space Cadet
+HEX: #363457
+
+Rich Black 
+HEX: #051014
+
+Jet
+HEX: #2E2F2F
+
+*/
+
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -236,7 +257,7 @@ body {
     line-height: 1.6;
     font-weight: 400;
     font-family: "Titillium Web", sans-serif;
-    color: black;
+    color: #051014;
     margin: 0;
 }
 
@@ -323,7 +344,7 @@ p {
 
 #description {
     font-size: 1.5rem;
-    border-left: #0d9ae6 solid 1rem;
+    border-left: #a2d1cf solid 1rem;
     padding-left: 1rem;
     max-width: 100rem;
     margin: 2rem 0 3rem 0;
@@ -429,8 +450,8 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
     color: #FFF;
-    background-color: #33C3F0;
-    border-color: #33C3F0;
+    background-color: #a2d1cf;
+    border-color: #a2d1cf;
 }
 
 .button.button-primary:hover,
@@ -447,7 +468,10 @@ input[type="button"].button-primary:focus {
     background-color: #535C6F;
     border-color: #535C6F;
 }
-
+.button-container{
+    padding: 1rem 1rem 1rem 1rem;
+    height: 4rem;
+}
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -655,21 +679,54 @@ hr {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .slider-container {
-    background-color: #252e3f;
-    padding: 2rem 6rem 4rem 4rem;
-    height: 8rem;
+    background-color: white;
+    padding: 2rem 2rem 2rem 2rem;
+    height: 6rem;
 }
 
 .rc-slider-dot-active, .rc-slider-handle {
-    border-color: #0d9ae6 !important;
+    border-color: #a2d1cf !important;
 }
 
 .rc-slider-track {
-    background-color: #0d9ae6 !important
+    color: #159fab;
+    background-color: #a2d1cf !important
 }
 
 .rc-slider-rail {
-    background-color: #1d2731 !important
+    background-color: #363457 !important
+}
+
+/* bubblemap
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.bubblemap-container {
+    margin: 2.5rem 0 0 0;
+    background-color: white;
+}
+
+.bubblemap-title {
+    margin: 0;
+    padding: 1rem;
+}
+
+.satellite-bubble {
+    margin: 0;
+    flex-grow: 1;
+}
+
+@media (min-width: 1251px) {
+    .bubblemap-container {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 550px) {
+    .country-bubble, .annotation-text{
+        font-size: 1.2rem !important;
+    }
 }
 
 /* Salmon Time Series
@@ -684,7 +741,7 @@ hr {
     padding: 1rem;
 }
 
-.salmon-timeseries, {
+.salmon-timeseries {
     margin: 0;
     flex-grow: 1;
 }
@@ -727,7 +784,7 @@ hr {
     color:#BDC6DC !important;
     border-left: 1px solid #BDC6DC !important;
     border-right: 1px solid #BDC6DC !important;
-    border-top: 2px solid #0d9ae6 !important;
+    border-top: 2px solid #a2d1cf !important;
 }
 
 
@@ -864,7 +921,7 @@ hr {
     }
 }
 
-.salmon-dropdown, .year-dropdown, .pod-dropdown {
+.salmon-dropdown, .year-dropdown, .pod-dropdown, .orca-picker {
     margin-bottom: 6.6rem;
 }
 
@@ -887,6 +944,11 @@ hr {
     width: 50%;
     float: left;
 }
+
+.orca-picker {
+    width: 55%;
+    float: right;
+}
 /* Dropdown
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .Select-value {
@@ -895,20 +957,22 @@ hr {
 
 .Select-control {
     color: #BDC6DC !important;
+/*      color: #ffff !important;*/
 }
 
 .Select {
-    color: black !important;
+    color: #051014 !important;
 }
 
 .Select-menu-outer {
     background-color: white !important;
-    border: 1px solid #0d9ae6 !important;
+    border: 1px solid #BDC6DC !important;
     width: inherit;
 }
 
 .Select div {
-    background-color: white !important;
+    background-color: transparent;
+    border-color: transparent !important;
     width: inherit;
 }
 
@@ -918,7 +982,7 @@ hr {
 }
 
 .Select-value-label {
-    color: black !important;
+    color: #051014 !important;
 }
 
 .Select--single > .Select-control, .Select-placeholder {
@@ -926,9 +990,10 @@ hr {
     border-radius: 4px !important;
 }
 .Select-value {
-    border-top: 1px solid #BDC6DC !important;
-    border-bottom: 1px solid #BDC6DC !important;
-    border-left: 1px solid #BDC6DC !important;
+    border-color: transparent;
+    border-top: 1px solid !important;
+    border-bottom: 1px solid !important;
+    border-left: 1px solid !important;
 }
 /* Placement
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

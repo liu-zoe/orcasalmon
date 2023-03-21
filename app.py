@@ -4,14 +4,18 @@
 ### Purpose: To make a dash board for the Chinook salmon data
 ##### Date Created: Dec 3rd 2022
 import os
+from os.path import join as pjoin
 import pathlib
 import glob
 
+import datetime
 from datetime import date
 from datetime import datetime as dt 
 from time import strptime
 from time import sleep
 import calendar
+import pytz
+from pytz import timezone
 
 import pandas as pd
 pd.options.mode.chained_assignment = None #suppress chained assignment 
@@ -22,6 +26,7 @@ import dash
 from dash import dcc
 from dash import html 
 from dash.dependencies import Input, Output, State
+import dash_daq as daq 
 
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots
@@ -41,7 +46,7 @@ server=app.server
 #--------------------------Load And Process Data----------------------------#
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
 mapbox_access_token = os.environ.get('MAPBOX_TOKEN')
-#mapbox_access_token = open(os.path.join(APP_PATH,"mapbox_token.txt")).read()
+#mapbox_access_token = open(pjoin(APP_PATH,"mapbox_token.txt")).read()
 #Get dates
 today=date.today()
 todaystr=str(today)
@@ -52,9 +57,10 @@ ayl=[y for y in range(1980, curyr+1)] #year list for Albion
 byl=[y for y in range(1939, curyr+1)] #year list for Bonneville Dam
 
 #Define data path
-fos_path=os.path.join(APP_PATH,'data/foschinook/')
-bon_path=os.path.join(APP_PATH,'data/bonchinook/')
-acartia_path=os.path.join(APP_PATH, 'data/acartia/')
+fos_path=pjoin(APP_PATH,'data/foschinook/')
+bon_path=pjoin(APP_PATH,'data/bonchinook/')
+acartia_path=pjoin(APP_PATH, 'data/acartia/')
+srkw_sattellite_path=pjoin(APP_PATH, 'data/srkw_satellite_tagging')
 #%%
 #Load Albion data
 albion=pd.DataFrame(columns=['day','m'])
@@ -213,11 +219,105 @@ def srkw_year(year, pod="All pods"):
     return srkw_yrcount
 srkw_curyr_count=srkw_year(curyr)
 # %%
+# Create data for salmon data locations
 salmon_loc = pd.DataFrame(columns=['loc','lon','lat','color','size'])
 salmon_loc['loc']=['Puget Sound','Bonneville Dam','Albion Test Fishery']
 salmon_loc['lat']=[47.635470, 45.644456, 49.181376]
 salmon_loc['lon']=[-122.457417,-121.940530, -122.567295]
-
+# %%
+# Load in SRKW Satellite Tagging data
+# Functions gmt2pst: convert GMT time to Pacific Time
+def gmt2pst(yr,mon,day,h,m,s):
+    tz=pytz.timezone('GMT')
+    _date1=dt(yr, mon, day,h,m,s, tzinfo=tz)
+    _date2=_date1.astimezone(timezone('US/Pacific'))
+    return(_date2)
+# Function orcaday: create number of days of orca movement from the earliest record
+def orcaday(dat):
+    day0=min(dat['date'])
+    dat['day_move']=dat['date'].apply(lambda x: x-day0)
+# Function geogen: create longitude and latitide 
+def geogen(dat):
+    import numpy as np
+    dat['lon']=np.where(dat['lon_p']>-120, dat['lon_a'],dat['lon_p'])
+    dat['lat']=np.where(dat['lon_p']>-120, dat['lat_a'],dat['lat_p'])
+# # Function orcamove: app to create a plot
+# def orcamove(dat):
+#     orcaday(dat)
+#     geogen(dat)
+#     fig = go.Figure()
+#     fig.add_trace(go.Scattermapbox(
+#             lat=dat['lat_p'],
+#             lon=dat['lon_p'],
+#             mode='markers',
+#             marker=go.scattermapbox.Marker(
+#                 color=dat.day_move,
+#                 size=7,
+#                 colorscale='Blues',
+#                 opacity=0.75,
+#             ),        
+#             text=dat['datetime_pst'],
+#             hoverinfo='text'
+#         ))
+#     fig.update_layout(
+#         autosize=True,
+#         showlegend=False,
+#         margin=dict(l=0, r=0, t=0, b=0),
+#         mapbox=dict(
+#             accesstoken=mapbox_access_token,
+#             bearing=0,
+#             center=dict(
+#                 lat=48.486017,
+#                 lon=-124.699801
+#             ),
+#             zoom=5,
+#             style='dark'
+#         ),
+#     )    
+#     fig.show()
+satellite_fname="SRKW occurrence coastal - SRKW occurrence coastal Data.csv"
+satellite=pd.read_csv(pjoin(srkw_sattellite_path, satellite_fname))
+satellite=satellite.rename(columns={'Lat P':'lat_p', 'Lon P':'lon_p', 'Lat A':'lat_a','Lon A':'lon_a'})
+satellite=satellite[['Animal', 'lat_p', 'lon_p', 'lat_a',
+       'lon_a', 'Dur', 'Sex', 'Popid', 
+       'Month', 'Day', 'Year', 'Hour', 'Minute', 'Second']]
+satellite['Popid']=satellite['Popid'].apply(lambda x: x.replace(' ',''))
+satellite['datetime_pst']=satellite.apply(lambda x: gmt2pst(x.Year, x.Month, x.Day, x.Hour, x.Minute, x.Second), axis=1)
+satellite=satellite.drop(columns=['Year','Month','Day','Hour','Minute','Second'])
+satellite['date']=satellite.apply(lambda x: x.datetime_pst.date(), axis=1)
+satellite['time']=satellite.apply(lambda x: x.datetime_pst.time(), axis=1)
+satellite['year']=satellite.apply(lambda x: x.date.year, axis=1)
+satellite['month']=satellite.apply(lambda x: x.date.month, axis=1)
+satellite['day']=satellite.apply(lambda x: x.date.day, axis=1)
+satellite['hour']=satellite.apply(lambda x: x.time.hour, axis=1)
+satellite['minute']=satellite.apply(lambda x: x.time.minute, axis=1)
+satellite['second']=satellite.apply(lambda x: x.time.second, axis=1)
+satellite['day_of_year']=satellite['date'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
+satellite_j26=satellite[satellite.Popid=='J26']
+satellite_j27=satellite[satellite.Popid=='J27']
+satellite_k25=satellite[satellite.Popid=='K25']
+satellite_k33=satellite[satellite.Popid=='K33']
+satellite_l84=satellite[satellite.Popid=='L84']
+satellite_l87=satellite[satellite.Popid=='L87']
+satellite_l88=satellite[satellite.Popid=='L88']
+satellite_l95=satellite[satellite.Popid=='L95']
+# make an initial list of timestamps with j26
+def make_slider_mark(indat, skip=0): 
+    mark_index=[]
+    timelist=[]
+    i=indat.shape[0]-1
+    while (i>=0):
+        mark_index.append(i)
+        #date='-'.join(str(indat['date'].values[i]).split('-')[1:])
+        #time=':'.join(str(indat['time'].values[i]).split(':')[1:])
+        date=str(indat['date'].values[i])
+        time=str(indat['time'].values[i])
+        timelist.append(date+" "+time)
+        i-=(skip+1)
+    mark_index.reverse()
+    timelist.reverse()
+    return(mark_index, timelist)
+mark_index, timelist=make_slider_mark(satellite_j26)
 # %%
 # Create a color scheme and fonts
 plotlycl=px.colors.qualitative.Plotly
@@ -243,7 +343,9 @@ app.layout = html.Div(
             html.Div(
                 id="header",
                 children=[
-                    html.Img(id="logo", src=app.get_asset_url("logo4.png")),
+                    html.Img(id="logo", src=app.get_asset_url("wordlogo-seagreen.png"),
+                    style={'height':'20%', 'width':'20%'}
+                    ),
                     html.H3(children="Chinook and Orca",
                             style={'textAlign': 'left',},
                     ),
@@ -348,7 +450,7 @@ app.layout = html.Div(
                 ),
                 #----------------------------Tab 2: Orca Viz-----------------------------------#
                 dcc.Tab(
-                    label='Orcas', 
+                    label='Orca Map', 
                     className='custom-tab',
                     selected_className='custom-tab--selected',
                     children=[
@@ -460,6 +562,155 @@ app.layout = html.Div(
                         ),
                     ],
                 ), 
+                #----------------------------Tab 3: Orca Move-----------------------------------#
+                dcc.Tab(
+                    label='Orca Movement', 
+                    className='custom-tab',
+                    selected_className='custom-tab--selected',
+                    children=[
+                        html.Div(
+                            className="app-container", 
+                            children=[
+                                html.Div(
+                                    className="left-column",
+                                    children=[
+                                        html.Div(
+                                            className="bubblemap-container",
+                                            id="bubblemap-container",
+                                            children=[
+                                                html.H5(
+                                                    "Southern Reisdent Killer Whales Movement from Satellite Tagging Data",
+                                                    className="bubblemap-title",
+                                                    id="bubblemap-title",
+                                                    style={"textAlign":"left"},
+                                                ),
+                                                html.Div(
+                                                    className="slider-container",
+                                                    id="slider-container",
+                                                    children=[
+                                                        dcc.Interval(
+                                                            id='auto-stepper',
+                                                            interval=0.5*1000, # in ms
+                                                            n_intervals=0,
+                                                            max_intervals=0, 
+                                                            disabled=False,
+                                                        ),
+                                                        dcc.Slider(
+                                                            id="date-slider",
+                                                            min=0,
+                                                            max=len(mark_index)-1,
+                                                            value=0,
+                                                        ),
+                                                    ],
+                                                ),
+                                                dcc.Graph(
+                                                    className="satellite-bubble",
+                                                    id="satellite-bubble",
+                                                )
+                                            ],
+                                        ),        
+                                    ],
+                                ),
+                                html.Div(
+                                    className="right-column",
+                                    children=[
+                                        html.Div(
+                                            className="orca-dropdown",
+                                            id="orca-dropdown",
+                                            children=[
+                                                #html.H6("Select Orca"),
+                                                dcc.Dropdown(
+                                                    value="J26",
+                                                    className="orca-picker",
+                                                    id="orca-picker",
+                                                    options=[
+                                                        {
+                                                            "label":"J26",
+                                                            "value":"J26",
+                                                        },
+                                                        {
+                                                            "label":"J27",
+                                                            "value":"J27",
+                                                        },
+                                                        {
+                                                            "label":"K25",
+                                                            "value":"K25",
+                                                        },
+                                                        {
+                                                            "label":"K33",
+                                                            "value":"K33",
+                                                        },
+                                                        {
+                                                            "label":"L84",
+                                                            "value":"L84",
+                                                        },
+                                                        {
+                                                            "label":"L87",
+                                                            "value":"L87",
+                                                        },
+                                                        {
+                                                            "label":"L88",
+                                                            "value":"L88",
+                                                        },
+                                                        {
+                                                            "label":"L95",
+                                                            "value":"L95",
+                                                        },
+                                                    ],
+                                                ),
+                                                html.Div(
+                                                    className="button-container",
+                                                    id="button-container",
+                                                    children=[
+                                                        html.Button(
+                                                            id="play-button",
+                                                            children="play",
+                                                            n_clicks=0,
+                                                            n_clicks_timestamp=-1,
+                                                            type='button',
+                                                            style={
+                                                                'color':"#a2d1cf",
+                                                                'textAlign':'center'
+                                                            },
+                                                        ),
+                                                        html.Button(
+                                                            id="pause-button",
+                                                            children="Pause",
+                                                            n_clicks=0,
+                                                            n_clicks_timestamp=-1,
+                                                            type='button',
+                                                            style={
+                                                                'color':"#a2d1cf",
+                                                                'textAlign':'center'
+                                                            },
+                                                        ),
+                                                    ],
+                                                ),
+                                                html.Div(
+                                                    children=[
+                                                        html.H6(
+                                                            id="orcamove-date",
+                                                            children=str(satellite_j26['date'].values[0]),
+                                                        ),
+                                                        daq.LEDDisplay(
+                                                            id="LED-time",
+                                                            color="#a2d1cf",
+                                                            value=str(satellite_j26['time'].values[0]),
+                                                        ),
+                                                        html.H6(
+                                                            id="orcatag",
+                                                            children="J26 Mike (21 yr)",
+                                                        ),
+                                                    ],
+                                                ),
+                                            ],
+                                        ),                                                                                    
+                                    ],
+                                ),
+                            ],
+                        ),
+                    ],
+                ),
             ],
         ),       
     ],
@@ -1119,6 +1370,168 @@ def update_orca_lines(pod,year):
                         tickangle=45,  row=3, col=1)
     fig_orcaline.update_traces(connectgaps=True)
     return fig_orcaline
+
+#~~~~~~~~~~~~~~~~~~~~~Orca Move~~~~~~~~~~~~~~~~~~~~#
+@app.callback(
+    [
+        Output("satellite-bubble", "figure"),
+        Output('orcamove-date','children'),
+        Output('LED-time','value'),
+        Output('date-slider','max'),
+        Output('orcatag','children'),
+    ],
+    [
+        Input("orca-picker", "value"),
+        Input("date-slider", "value")
+    ],
+)
+def update_orca_move(orca, date_index):
+    #Pick orca
+    if orca=="J26":
+        orca_dat=satellite_j26
+        zoom_val=7
+        name="Mike"
+        age=min(orca_dat['year'])-1991
+    if orca=="J27":
+        orca_dat=satellite_j27
+        zoom_val=6        
+        name="Blackberry"
+        age=min(orca_dat['year'])-1991
+    if orca=="K25":
+        orca_dat=satellite_k25
+        zoom_val=4
+        name="Scoter"
+        age=min(orca_dat['year'])-1991
+    if orca=="K33":
+        orca_dat=satellite_k33
+        zoom_val=4
+        name="Tika"
+        age=min(orca_dat['year'])-2001
+    if orca=="L84":
+        orca_dat=satellite_l84
+        zoom_val=4
+        name="Nyssa"
+        age=min(orca_dat['year'])-1990
+    if orca=="L87":
+        orca_dat=satellite_l87
+        zoom_val=6
+        name="Onyx"
+        age=min(orca_dat['year'])-1992
+    if orca=="L88":
+        orca_dat=satellite_l88
+        zoom_val=5
+        name="Wave Walker"
+        age=min(orca_dat['year'])-1993
+    if orca=="L95":
+        orca_dat=satellite_l95
+        zoom_val=5
+        name="Nigel"
+        age=min(orca_dat['year'])-1996
+    orcaday(orca_dat)
+    geogen(orca_dat)
+    lon_avg=orca_dat['lon'].mean()
+    lat_avg=orca_dat['lat'].mean()
+    #create index for slider
+    mark_index, _=make_slider_mark(orca_dat)
+    #Pick time
+    orca_dat=orca_dat.iloc[date_index, :]
+    #Define date and time for clock
+    cur_date=str(orca_dat['date'])
+    cur_time=str(orca_dat['time'])
+    #Define max of slider rack 
+    slider_max=len(mark_index)-1
+    #Define orca tag
+    orca_tag=" ".join([orca, name, "("+str(age)+"yr )"])
+    #Make plot
+    fig_orcamove = go.Figure()
+    fig_orcamove.add_trace(go.Scattermapbox(
+            lat=[orca_dat['lat']],
+            lon=[orca_dat['lon']],
+            mode='markers',
+            marker=go.scattermapbox.Marker(
+                color="#016fb9",
+                size=12,
+                opacity=0.75,
+            ),        
+            text=[str(orca_dat['datetime_pst'])+"["+orca+"]"],
+            hoverinfo='text'
+        ))
+    fig_orcamove.update_layout(
+        autosize=True,
+        showlegend=False,
+        margin=dict(l=0, r=0, t=0, b=0),
+        mapbox=dict(
+            accesstoken=mapbox_access_token,
+            bearing=0,
+            center=dict(
+                lat=lat_avg,
+                lon=lon_avg
+            ),
+            zoom=zoom_val,
+            style='light'
+        ),
+    )    
+    return fig_orcamove, cur_date, cur_time, slider_max, orca_tag
+
+#~~~~~~~~~~~~~~~~~Interval of the Bubble Map~~~~~~~~~~~~~~~~~~~~~~~~~~#
+@app.callback(
+    [
+        Output('date-slider', 'value'),
+        Output('auto-stepper', 'max_intervals'),
+        Output('auto-stepper', 'disabled'),
+    ],
+    [
+        Input('auto-stepper', 'n_intervals'),
+        Input('play-button','n_clicks_timestamp'),
+        Input('pause-button','n_clicks_timestamp'),
+        Input("orca-picker", "value"),
+    ]
+)
+def move_frames(n_intervals, play_timestamp, pause_timestamp,orca):
+    slider_value=0
+    max_intervals=0
+    int_disabled=True
+    #Pick orca
+    if orca=="J26":
+        orca_dat=satellite_j26
+        zoom_val=7
+    if orca=="J27":
+        orca_dat=satellite_j27
+        zoom_val=6        
+    if orca=="K25":
+        orca_dat=satellite_k25
+        zoom_val=4
+    if orca=="K33":
+        orca_dat=satellite_k33
+        zoom_val=4
+    if orca=="L84":
+        orca_dat=satellite_l84
+        zoom_val=4
+    if orca=="L87":
+        orca_dat=satellite_l87
+        zoom_val=6
+    if orca=="L88":
+        orca_dat=satellite_l88
+        zoom_val=5
+    if orca=="L95":
+        orca_dat=satellite_l95
+        zoom_val=5
+    orcaday(orca_dat)
+    geogen(orca_dat)
+    #create index for slider
+    mark_index, _=make_slider_mark(orca_dat)
+    if (play_timestamp==-1) & (pause_timestamp==-1):
+        return 0, 0, True
+    elif  (play_timestamp>pause_timestamp):
+        slider_value=(n_intervals+1)%(len(mark_index))
+        max_intervals=-1
+        int_disabled=False
+    elif (pause_timestamp>play_timestamp):
+        slider_value=(n_intervals+1)%(len(mark_index))
+        max_intervals=0
+        int_disabled=False
+    return slider_value, max_intervals, int_disabled
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)

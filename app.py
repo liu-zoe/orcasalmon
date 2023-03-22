@@ -241,40 +241,7 @@ def geogen(dat):
     import numpy as np
     dat['lon']=np.where(dat['lon_p']>-120, dat['lon_a'],dat['lon_p'])
     dat['lat']=np.where(dat['lon_p']>-120, dat['lat_a'],dat['lat_p'])
-# # Function orcamove: app to create a plot
-# def orcamove(dat):
-#     orcaday(dat)
-#     geogen(dat)
-#     fig = go.Figure()
-#     fig.add_trace(go.Scattermapbox(
-#             lat=dat['lat_p'],
-#             lon=dat['lon_p'],
-#             mode='markers',
-#             marker=go.scattermapbox.Marker(
-#                 color=dat.day_move,
-#                 size=7,
-#                 colorscale='Blues',
-#                 opacity=0.75,
-#             ),        
-#             text=dat['datetime_pst'],
-#             hoverinfo='text'
-#         ))
-#     fig.update_layout(
-#         autosize=True,
-#         showlegend=False,
-#         margin=dict(l=0, r=0, t=0, b=0),
-#         mapbox=dict(
-#             accesstoken=mapbox_access_token,
-#             bearing=0,
-#             center=dict(
-#                 lat=48.486017,
-#                 lon=-124.699801
-#             ),
-#             zoom=5,
-#             style='dark'
-#         ),
-#     )    
-#     fig.show()
+
 satellite_fname="SRKW occurrence coastal - SRKW occurrence coastal Data.csv"
 satellite=pd.read_csv(pjoin(srkw_sattellite_path, satellite_fname))
 satellite=satellite.rename(columns={'Lat P':'lat_p', 'Lon P':'lon_p', 'Lat A':'lat_a','Lon A':'lon_a'})
@@ -1429,6 +1396,7 @@ def update_orca_move(orca, date_index):
         age=min(orca_dat['year'])-1996
     orcaday(orca_dat)
     geogen(orca_dat)
+    orca_dat=orca_dat.sort_values(by=['datetime_pst'])
     lon_avg=orca_dat['lon'].mean()
     lat_avg=orca_dat['lat'].mean()
     #create index for slider

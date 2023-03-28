@@ -180,89 +180,122 @@ scrap_acartia()
 
 # %% [markdown]
 # Processing Acartia Data
-
+# Function to clean up dates format
+def cleandates(s):
+  if s.count('T')>0:
+    s=s.replace('T',' ')
+    s=s.replace('Z','')
+    s=s.split('.')[0]
+  return s
 # %%
 acartia=pd.read_csv(acartia_path+'acartia_'+todaystr+'.csv')
-srkw=acartia[acartia['type']=='Southern Resident Killer Whale']
-srkw['m']=pd.DatetimeIndex(srkw['created']).month
-srkw['day']=pd.DatetimeIndex(srkw['created']).day
-srkw['year']=pd.DatetimeIndex(srkw['created']).year
-srkw['month']=srkw['m'].apply(lambda x: datetime.strptime(str(x), '%m').strftime('%b'))
-srkw['date']=srkw[['month','day']].apply(lambda x: '-'.join(x.values.astype(str)), axis="columns")
-srkw['date_ymd']=srkw[['year','m','day']].apply(lambda x: '-'.join(x.values.astype(str)), axis="columns")
+acartia=acartia[~acartia['created'].isnull()]
+acartia['created']=acartia['created'].apply(lambda x: cleandates(x))
+acartia['m']=pd.DatetimeIndex(acartia['created']).month
+acartia['day']=pd.DatetimeIndex(acartia['created']).day
+acartia['year']=pd.DatetimeIndex(acartia['created']).year
+acartia['month']=acartia['m'].apply(lambda x: datetime.strptime(str(x), '%m').strftime('%b'))
+acartia['date']=acartia[['month','day']].apply(lambda x: '-'.join(x.values.astype(str)), axis="columns")
+acartia['date_ymd']=acartia[['year','m','day']].apply(lambda x: '-'.join(x.values.astype(str)), axis="columns")
+acartia['time']=pd.DatetimeIndex(acartia['created']).time
 
-srkw['J']=srkw['data_source_comments'].apply(lambda x: 1 if ('J pod' in str(x))
-or ('J Pod' in str(x)) or ('jpod' in str(x)) or ('j pod' in str(x)) or ('J ppd' in str(x))
-or ('Jpod' in str(x)) 
-or ('J-pod' in str(x)) or ('J-Pod' in str(x))
-or ('J+K pod' in str(x)) or ('J & K pod' in str(x)) or ('J and K pod' in str(x))
-or ('J+L pod' in str(x)) or ('L+J pod' in str(x))
-or ('J, K, L pod' in str(x)) or ('JKL' in str(x)) or ('J, K, and L pod' in str(x))
-or ('Js' in str(x)) or ('js' in str(x))
-or ('J27' in str(x)) or ('J38' in str(x)) or ('J35'in str(x)) or ('J40' in str(x))
+# Define keys to look up
+srkw_keys=['SRKW', 'srkw', 'southern resident', 'Southern Resident', 'Southern resident', 'southern Resident']
+jpod_keys=['J pod', 'Jpod', 'J ppd', 'J-pod', 'Js', 
+           'j pod', 'jpod', 'j ppd', 'j-pod',  
+           'j+k', 'k+j', 'j & k', 'k & j', 'j and k', 'k and j','jk pods', 'kj pods',
+           'J+K', 'K+J', 'J & K', 'K & J', 'J and K', 'K and J','JK pods', 'KJ pods',
+           'j+l', 'l+j', 'j & l', 'l & j', 'j and l', 'l and j', 'jl pods', 'lj pods',
+           'J+L', 'L+J', 'J & L', 'L & J', 'J and L', 'L and J', 'JL pods', 'LJ pods',
+           'j, k, l pod', 'j, k, and l pod','jkl', 
+           'J, K, L pod', 'J, K, and L pod','JKL', 
+           'j27', 'j38', 'j35','j40',
+           'J27', 'J38', 'J35','J40',
+           ]
+kpod_keys=['K pod', 'Kpod', 'K-pod', 'Ks',
+           'k pod', 'kpod', 'k-pod', 
+           'j+k', 'k+j', 'j & k', 'k & j', 'j and k', 'k and j', 'jk pods', 'kj pods',
+           'J+K', 'K+J', 'J & K', 'K & J', 'J and K', 'K and J', 'JK pods', 'KJ pods',
+           'k+l', 'l+k', 'k & l','l & k', 'k and l', 'l and k', 'lk pods', 'kl pods',
+           'K+L', 'L+K', 'K & L','L & K', 'K and L', 'L and K', 'LK pods', 'KL pods',
+           'j, k, l pod', 'j, k, and l pod','jkl', 
+           'J, K, L pod', 'J, K, and L pod','JKL', 
+           'k37', 'K37',
+]
+lpod_keys=['L pod', 'Lpod', 'L-pod', 'Ls',
+           'j+l', 'l+j', 'j & l', 'l & j', 'j and l', 'l and j', 'jl pods', 'lj pods',
+           'J+L', 'L+J', 'J & L', 'L & J', 'J and L', 'L and J', 'JL pods', 'LJ pods',
+           'k+l', 'l+k', 'k & l','l & k', 'k and l', 'l and k', 'lk pods', 'kl pods',
+           'K+L', 'L+K', 'K & L','L & K', 'K and L', 'L and K', 'LK pods', 'KL pods',
+           'j, k, l pod', 'j, k, and l pod','jkl', 
+           'J, K, L pod', 'J, K, and L pod','JKL', 
+           'l12','l54','l-12','l82','l85','l87', 
+           'L12','L54','L-12','L82','L85','L87',
+]
+biggs_keys=['Bigg','bigg', 'Transient', 'transient', 'Ts',
+            't99', 't137','t46','t10','t2c','t49',
+            'T99','T137','T36','T10','T2C','T49',
+            ]
+
+# J pod
+acartia['J']=acartia['data_source_comments'].apply(lambda x: 1 if any([k for k in jpod_keys if k in str(x)])
+else 0)
+# K pod
+acartia['K']=acartia['data_source_comments'].apply(lambda x: 1 if any([k for k in kpod_keys if k in str(x)])
+else 0)
+# L pod
+acartia['L']=acartia['data_source_comments'].apply(lambda x: 1 if any([k for k in lpod_keys if k in str(x)])
 else 0)
 
-srkw['K']=srkw['data_source_comments'].apply(lambda x: 1 if ('K pod' in str(x))
-or ('Kpod' in str(x)) or ('K-pod' in str(x)) or ('Ks' in str(x)) or ('K Pod' in str(x))
-or ('J+K pod' in str(x))
-or ('K+L' in str(x)) or ('K and L' in str(x))
-or ('J, K, L pod' in str(x)) or ('J & K pod' in str(x)) or ('JKL' in str(x)) or ('J, K, and L pod' in str(x))
-or ('K37' in str(x))
+# Southern Residents
+acartia['sum_jkl']=acartia['J']+acartia['K']+acartia['L']
+acartia['srkw_generic']=acartia['data_source_comments'].apply(lambda x: 1 if any([k for k in srkw_keys if k in str(x).lower()])
 else 0)
+acartia['srkw_type']=acartia['type'].apply(lambda x: 1 if isinstance(x, str) and ('Southern Resident') in x else 0)
+acartia['srkw']=acartia[['J', 'K', 'L', 'srkw_generic', 'srkw_type']].values.max(axis=1)
 
-srkw['L']=srkw['data_source_comments'].apply(lambda x: 1 if ('L pod' in str(x))
-or ('L Pod' in str(x)) or ('Lpod' in str(x)) or ('L-pod' in str(x)) or ('Ls' in str(x)) 
-or ('L12' in str(x)) or ('L54' in str(x)) or ('L-12' in str(x)) or ('L85' in str(x))
-or ('L82' in str(x)) or ('L87' in str(x))
-or ('J+L pod' in str(x)) or ('L+J pod' in str(x))
-or ('K+L' in str(x)) or ('K and L' in str(x))
-or ('J, K, L pod' in str(x)) or ('JKL' in str(x)) or ('J, K, and L pod' in str(x))
-else 0)
+# Biggs
+acartia['biggs']=acartia['data_source_comments'].apply(lambda x: 1 if any([k for k in biggs_keys if k in str(x).lower()]) or ('Ts') in str(x) else 0)
 
-srkw['biggs']=srkw['data_source_comments'].apply(lambda x: 1 if ('biggs' in str(x).lower()) else 0)
+acartia['sum_srkw_biggs']=acartia['srkw']+acartia['biggs']
 
-srkw['sum_jkl']=srkw['J']+srkw['K']+srkw['L']
-srkw['sum_jkl_biggs']=srkw['J']+srkw['K']+srkw['L']+srkw['biggs']
-srkw['south']=srkw['data_source_comments'].apply(lambda x: 1 if ('southbound') in str(x).lower()
+# direction 
+acartia['south']=acartia['data_source_comments'].apply(lambda x: 1 if ('southbound') in str(x).lower()
 or ('heading south' in str(x).lower())
 else 0)
 
-srkw['southeast']=srkw['data_source_comments'].apply(lambda x: 1 if ('southeast') in str(x).lower()
+acartia['southeast']=acartia['data_source_comments'].apply(lambda x: 1 if ('southeast') in str(x).lower()
 or ('SE' in str(x))
 else 0)
 
-srkw['southwest']=srkw['data_source_comments'].apply(lambda x: 1 if ('southwest') in str(x).lower()
+acartia['southwest']=acartia['data_source_comments'].apply(lambda x: 1 if ('southwest') in str(x).lower()
 or ('SW' in str(x))
 else 0)
 
-srkw['north']=srkw['data_source_comments'].apply(lambda x: 1 if ('northbound') in str(x).lower()
+acartia['north']=acartia['data_source_comments'].apply(lambda x: 1 if ('northbound') in str(x).lower()
 or ('heading north' in str(x).lower())
 else 0)
 
-srkw['northeast']=srkw['data_source_comments'].apply(lambda x: 1 if ('northeast') in str(x).lower()
+acartia['northeast']=acartia['data_source_comments'].apply(lambda x: 1 if ('northeast') in str(x).lower()
 or ('NE' in str(x))
 else 0)
 
-srkw['northwest']=srkw['data_source_comments'].apply(lambda x: 1 if ('northwest') in str(x).lower()
+acartia['northwest']=acartia['data_source_comments'].apply(lambda x: 1 if ('northwest') in str(x).lower()
 or ('NW' in str(x))
 else 0)
 
-srkw['east']=srkw['data_source_comments'].apply(lambda x: 1 if (('eastbound') in str(x).lower() and ('southeastbound') not in str(x).lower())
+acartia['east']=acartia['data_source_comments'].apply(lambda x: 1 if (('eastbound') in str(x).lower() and ('southeastbound') not in str(x).lower())
 or ('heading east' in str(x).lower())
 else 0)
 
-srkw['west']=srkw['data_source_comments'].apply(lambda x: 1 if (('westbound') in str(x).lower() and ('northwestbound' not in str(x).lower()))
+acartia['west']=acartia['data_source_comments'].apply(lambda x: 1 if (('westbound') in str(x).lower() and ('northwestbound' not in str(x).lower()))
 or ('heading west' in str(x).lower())
 else 0)
 
-srkw['dir_sum']=srkw['south']+srkw['southeast']+srkw['southwest']+srkw['north']+srkw['northeast']+srkw['northwest']+srkw['east']+srkw['west']
+acartia['dir_sum']=acartia['south']+acartia['southeast']+acartia['southwest']+acartia['north']+acartia['northeast']+acartia['northwest']+acartia['east']+acartia['west']
 
-srkw_curyr=srkw[srkw['year']==curyr]
-#srkw_lastyear=srkw[srkw['year']==(curyr-1)]
-#srkw_2yr=srkw[srkw['year']==(curyr-2)]
-#srkw_3yr=srkw[srkw['year']==(curyr-3)]
-
-srkw_curyr.to_csv(acartia_path+'srkw_'+str(curyr)+'.csv', index=False)
-#srkw_lastyear.to_csv(acartia_path+'srkw_'+str(curyr-1)+'.csv', index=False)
-#srkw_2yr.to_csv(acartia_path+'srkw_'+str(curyr-2)+'.csv', index=False)
-#srkw_3yr.to_csv(acartia_path+'srkw_'+str(curyr-3)+'.csv', index=False)
+for y in range(2018,curyr+1):
+  act=acartia[acartia['year']==y]
+  act=act[act['srkw']==1]
+  act=act.drop_duplicates()
+  act.to_csv(acartia_path+'srkw_'+str(y)+'.csv', index=False)

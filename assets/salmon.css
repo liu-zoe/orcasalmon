@@ -354,7 +354,10 @@ p {
     height: 8rem;
     margin-bottom: 2rem;
 }
-
+#github {
+    height:6rem; 
+    position: relative;
+}
 #slider-text, .chart-selector {
     margin-bottom: 2rem !important;
     font-size: 2rem;
@@ -364,7 +367,7 @@ p {
     font-size:  3rem !important;  
 }
 .credit{
-    font-size:  2rem !important;
+    font-size:  1.5rem !important;
 }
 
 @media only screen and (max-width: 550px) {
@@ -888,7 +891,10 @@ hr {
         float: right;
         padding-right: 2rem;
     }
-
+    #github {
+        float: right;
+        padding-right: 2rem;
+    }
     #header, p {
         font-size: 1.5rem;
     }

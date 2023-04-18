@@ -28,6 +28,8 @@ orcasalmon_venv
 orcasalmon.code-workspace
 
 #Other
+app_3tabs.py
+map.png
 ._acartia_token.txt
 ._fly.toml
 ._plots_colab.ipynb

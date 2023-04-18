@@ -31,6 +31,7 @@ import dash_daq as daq
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 import plotly.express as px
+from plotly.express.colors import sample_colorscale
 #%%
 # Initialize app
 app = dash.Dash(
@@ -45,8 +46,8 @@ server=app.server
 #%%
 #--------------------------Load And Process Data----------------------------#
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
-mapbox_access_token = os.environ.get('MAPBOX_TOKEN')
-#mapbox_access_token = open(pjoin(APP_PATH,"mapbox_token.txt")).read()
+#mapbox_access_token = os.environ.get('MAPBOX_TOKEN')
+mapbox_access_token = open(pjoin(APP_PATH,"mapbox_token.txt")).read()
 #Get dates
 today=date.today()
 todaystr=str(today)
@@ -137,7 +138,7 @@ def create_lagged(year,
     bonnev_lagged['year2']=pd.DatetimeIndex(bonnev_lagged['date2']).year
     bonnev_lagged['m']=pd.DatetimeIndex(bonnev_lagged['date2']).month
     bonnev_lagged['day']=pd.DatetimeIndex(bonnev_lagged['date2']).day
-    #bonnev_lagged=bonnev_lagged[bonnev_lagged['year2']<year]
+    bonnev_lagged=bonnev_lagged[bonnev_lagged['year2']==year]
     bonnev_lagged=bonnev_lagged.drop(columns=['date','date1','date2','year2'])
     #Combine Albion and Bonneville lagged data
     if calendar.isleap(year)==False:
@@ -233,69 +234,11 @@ salmon_loc['loc']=['Puget Sound','Bonneville Dam','Albion Test Fishery']
 salmon_loc['lat']=[47.635470, 45.644456, 49.181376]
 salmon_loc['lon']=[-122.457417,-121.940530, -122.567295]
 # %%
-# Load in SRKW Satellite Tagging data
-# Functions gmt2pst: convert GMT time to Pacific Time
-def gmt2pst(yr,mon,day,h,m,s):
-    tz=pytz.timezone('GMT')
-    _date1=dt(yr, mon, day,h,m,s, tzinfo=tz)
-    _date2=_date1.astimezone(timezone('US/Pacific'))
-    return(_date2)
-# Function orcaday: create number of days of orca movement from the earliest record
-def orcaday(dat):
-    day0=min(dat['date'])
-    dat['day_move']=dat['date'].apply(lambda x: x-day0)
-# Function geogen: create longitude and latitide 
-def geogen(dat):
-    import numpy as np
-    dat['lon']=np.where(dat['lon_p']>-120, dat['lon_a'],dat['lon_p'])
-    dat['lat']=np.where(dat['lon_p']>-120, dat['lat_a'],dat['lat_p'])
-
-satellite_fname="SRKW occurrence coastal - SRKW occurrence coastal Data.csv"
-satellite=pd.read_csv(pjoin(srkw_sattellite_path, satellite_fname))
-satellite=satellite.rename(columns={'Lat P':'lat_p', 'Lon P':'lon_p', 'Lat A':'lat_a','Lon A':'lon_a'})
-satellite=satellite[['Animal', 'lat_p', 'lon_p', 'lat_a',
-       'lon_a', 'Dur', 'Sex', 'Popid', 
-       'Month', 'Day', 'Year', 'Hour', 'Minute', 'Second']]
-satellite['Popid']=satellite['Popid'].apply(lambda x: x.replace(' ',''))
-satellite['datetime_pst']=satellite.apply(lambda x: gmt2pst(x.Year, x.Month, x.Day, x.Hour, x.Minute, x.Second), axis=1)
-satellite=satellite.drop(columns=['Year','Month','Day','Hour','Minute','Second'])
-satellite['date']=satellite.apply(lambda x: x.datetime_pst.date(), axis=1)
-satellite['time']=satellite.apply(lambda x: x.datetime_pst.time(), axis=1)
-satellite['year']=satellite.apply(lambda x: x.date.year, axis=1)
-satellite['month']=satellite.apply(lambda x: x.date.month, axis=1)
-satellite['day']=satellite.apply(lambda x: x.date.day, axis=1)
-satellite['hour']=satellite.apply(lambda x: x.time.hour, axis=1)
-satellite['minute']=satellite.apply(lambda x: x.time.minute, axis=1)
-satellite['second']=satellite.apply(lambda x: x.time.second, axis=1)
-satellite['day_of_year']=satellite['date'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
-satellite_j26=satellite[satellite.Popid=='J26']
-satellite_j27=satellite[satellite.Popid=='J27']
-satellite_k25=satellite[satellite.Popid=='K25']
-satellite_k33=satellite[satellite.Popid=='K33']
-satellite_l84=satellite[satellite.Popid=='L84']
-satellite_l87=satellite[satellite.Popid=='L87']
-satellite_l88=satellite[satellite.Popid=='L88']
-satellite_l95=satellite[satellite.Popid=='L95']
-# make an initial list of timestamps with j26
-def make_slider_mark(indat, skip=0): 
-    mark_index=[]
-    timelist=[]
-    i=indat.shape[0]-1
-    while (i>=0):
-        mark_index.append(i)
-        #date='-'.join(str(indat['date'].values[i]).split('-')[1:])
-        #time=':'.join(str(indat['time'].values[i]).split(':')[1:])
-        date=str(indat['date'].values[i])
-        time=str(indat['time'].values[i])
-        timelist.append(date+" "+time)
-        i-=(skip+1)
-    mark_index.reverse()
-    timelist.reverse()
-    return(mark_index, timelist)
-mark_index, timelist=make_slider_mark(satellite_j26)
-# %%
 # Create a color scheme and fonts
 plotlycl=px.colors.qualitative.Plotly
+viri12pt=[0.083,0.167,0.25,0.333,0.417,0.5,0.583,0.667,0.75,0.833,0.917,1]
+viri12cl=sample_colorscale('viridis', samplepoints=viri12pt)
+viri12=[[viri12pt[i], viri12cl[i]] for i in range(12)]
 bgcl='white'
 framecl='black'
 markercl='salmon'
@@ -318,9 +261,16 @@ app.layout = html.Div(
             html.Div(
                 id="header",
                 children=[
-                    html.Img(id="logo", src=app.get_asset_url("wordlogo-seagreen.png"),
-                    style={'height':'20%', 'width':'20%'}
-                    ),
+                    html.A([
+                        html.Img(id="github", src=app.get_asset_url("icone-github-grise.png"),
+                        ),
+                    ], href='https://github.com/liu-zoe/orcasalmon', target="_blank"),
+                    html.A([
+                        html.Img(id="logo", src=app.get_asset_url("wordlogo-seagreen.png"),
+                        style={'height':'20%', 'width':'20%'}
+                        ),        
+                    ], href="https://www.orcasound.net", target="_blank"),
+                
                     html.H3(children="Chinook and Orca",
                             style={'textAlign': 'left',},
                     ),
@@ -400,17 +350,15 @@ app.layout = html.Div(
                                             animate=False, 
                                         ),
                                     ],
-                                ),
+                                ),                                
                             ],
                         ),
                         #Footer
                         html.Div(
                             className="footer",
                             children=[
-                                html.H5(
-                                    [
-                                        "Data Source",
-                                    ]
+                                html.H6(
+                                    children=["Data Source",], 
                                 ),
                                 dcc.Markdown(
                                     className="credit",
@@ -529,171 +477,25 @@ app.layout = html.Div(
                         html.Div(
                             className="footer",
                             children=[
-                                html.H5(
-                                    [
+                                html.H6(
+                                    children=[
                                         "Data Source",
-                                    ]
+                                    ],
+                                    style={
+                                        "margin-top":"1.8rem"
+                                        },
                                 ),
                                 dcc.Markdown(
                                     className="credit",
                                     children=
                                     '''
-                                    1. Orca sightings data is retrieved from [Acartia](https://acartia.io/home).  
-                                    2. Definition of central Salish Sea follows that of Monika Weiland in her talk talk about SRKW and Bigg's occupancy metrics.                                  
+                                    1. Orca data sources are retrieved from [Acartia](https://acartia.io/home).  
+                                    2. Definition of central Salish Sea follows that of Monika Weiland in her talk about SRKW and Bigg's occupancy metrics.                                  
                                     '''),
                             ],
                         ),
                     ],
                 ), 
-                #----------------------------Tab 3: Orca Move-----------------------------------#
-                # dcc.Tab(
-                #     label='Orca Movement', 
-                #     className='custom-tab',
-                #     selected_className='custom-tab--selected',
-                #     children=[
-                #         html.Div(
-                #             className="app-container", 
-                #             children=[
-                #                 html.Div(
-                #                     className="left-column",
-                #                     children=[
-                #                         html.Div(
-                #                             className="bubblemap-container",
-                #                             id="bubblemap-container",
-                #                             children=[
-                #                                 html.H5(
-                #                                     "Southern Reisdent Killer Whales Movement from Satellite Tagging Data",
-                #                                     className="bubblemap-title",
-                #                                     id="bubblemap-title",
-                #                                     style={"textAlign":"left"},
-                #                                 ),
-                #                                 html.Div(
-                #                                     className="slider-container",
-                #                                     id="slider-container",
-                #                                     children=[
-                #                                         dcc.Interval(
-                #                                             id='auto-stepper',
-                #                                             interval=0.5*1000, # in ms
-                #                                             n_intervals=0,
-                #                                             max_intervals=0, 
-                #                                             disabled=False,
-                #                                         ),
-                #                                         dcc.Slider(
-                #                                             id="date-slider",
-                #                                             min=0,
-                #                                             max=len(mark_index)-1,
-                #                                             value=0,
-                #                                         ),
-                #                                     ],
-                #                                 ),
-                #                                 dcc.Graph(
-                #                                     className="satellite-bubble",
-                #                                     id="satellite-bubble",
-                #                                 )
-                #                             ],
-                #                         ),        
-                #                     ],
-                #                 ),
-                #                 html.Div(
-                #                     className="right-column",
-                #                     children=[
-                #                         html.Div(
-                #                             className="orca-dropdown",
-                #                             id="orca-dropdown",
-                #                             children=[
-                #                                 #html.H6("Select Orca"),
-                #                                 dcc.Dropdown(
-                #                                     value="J26",
-                #                                     className="orca-picker",
-                #                                     id="orca-picker",
-                #                                     options=[
-                #                                         {
-                #                                             "label":"J26",
-                #                                             "value":"J26",
-                #                                         },
-                #                                         {
-                #                                             "label":"J27",
-                #                                             "value":"J27",
-                #                                         },
-                #                                         {
-                #                                             "label":"K25",
-                #                                             "value":"K25",
-                #                                         },
-                #                                         {
-                #                                             "label":"K33",
-                #                                             "value":"K33",
-                #                                         },
-                #                                         {
-                #                                             "label":"L84",
-                #                                             "value":"L84",
-                #                                         },
-                #                                         {
-                #                                             "label":"L87",
-                #                                             "value":"L87",
-                #                                         },
-                #                                         {
-                #                                             "label":"L88",
-                #                                             "value":"L88",
-                #                                         },
-                #                                         {
-                #                                             "label":"L95",
-                #                                             "value":"L95",
-                #                                         },
-                #                                     ],
-                #                                 ),
-                #                                 html.Div(
-                #                                     className="button-container",
-                #                                     id="button-container",
-                #                                     children=[
-                #                                         html.Button(
-                #                                             id="play-button",
-                #                                             children="play",
-                #                                             n_clicks=0,
-                #                                             n_clicks_timestamp=-1,
-                #                                             type='button',
-                #                                             style={
-                #                                                 'color':"#a2d1cf",
-                #                                                 'textAlign':'center'
-                #                                             },
-                #                                         ),
-                #                                         html.Button(
-                #                                             id="pause-button",
-                #                                             children="Pause",
-                #                                             n_clicks=0,
-                #                                             n_clicks_timestamp=-1,
-                #                                             type='button',
-                #                                             style={
-                #                                                 'color':"#a2d1cf",
-                #                                                 'textAlign':'center'
-                #                                             },
-                #                                         ),
-                #                                     ],
-                #                                 ),
-                #                                 html.Div(
-                #                                     children=[
-                #                                         html.H6(
-                #                                             id="orcamove-date",
-                #                                             children=str(satellite_j26['date'].values[0]),
-                #                                         ),
-                #                                         daq.LEDDisplay(
-                #                                             id="LED-time",
-                #                                             color="#a2d1cf",
-                #                                             value=str(satellite_j26['time'].values[0]),
-                #                                         ),
-                #                                         html.H6(
-                #                                             id="orcatag",
-                #                                             children="J26 Mike (21 yr)",
-                #                                         ),
-                #                                     ],
-                #                                 ),
-                #                             ],
-                #                         ),                                                                                    
-                #                     ],
-                #                 ),
-                #             ],
-                #         ),
-                #     ],
-                # ),
             ],
         ),       
     ],
@@ -718,18 +520,16 @@ def update_salmon_timeseries(location_dropdown):
         ylab='Count'
         xlab='Date'
         fig_salmon=go.Figure(
-                data=[  #--This Year--# 
+                data=[  
+                        #--Year before last--# 
                         go.Scatter(
                         x=bonnev['date'],
-                        y=bonnev['chin'+str(curyr)],
-                        name=str(curyr),
+                        y=bonnev['chin'+str(twoyr)],
+                        name=str(twoyr),
                         mode='lines+markers',
                         hovertemplate='%{x}'+':%{y}',
                         marker = go.scatter.Marker(
-                                    color = plotlycl[0],
-                        ),
-                        line = go.scatter.Line(
-                                    color = plotlycl[0],
+                                    color = plotlycl[2],
                         ),
                         opacity=0.85,     
                                 ),
@@ -745,15 +545,18 @@ def update_salmon_timeseries(location_dropdown):
                         ),
                         opacity=0.85,     
                                 ),
-                        #--Year before last--# 
+                        #--This Year--# 
                         go.Scatter(
                         x=bonnev['date'],
-                        y=bonnev['chin'+str(twoyr)],
-                        name=str(twoyr),
+                        y=bonnev['chin'+str(curyr)],
+                        name=str(curyr),
                         mode='lines+markers',
                         hovertemplate='%{x}'+':%{y}',
                         marker = go.scatter.Marker(
-                                    color = plotlycl[2],
+                                    color = plotlycl[0],
+                        ),
+                        line = go.scatter.Line(
+                                    color = plotlycl[0],
                         ),
                         opacity=0.85,     
                                 ),
@@ -854,19 +657,17 @@ def update_salmon_timeseries(location_dropdown):
         ylab='CPUE'
         xlab='Date'
         fig_salmon=go.Figure(
-                data=[  #--This Year--# 
+                data=[  
+                        #--Year before last--# 
                         go.Scatter(
                         x=albion['date'],
-                        y=albion['cpue'+str(curyr)],
-                        name=str(curyr),
+                        y=albion['cpue'+str(twoyr)],
+                        name=str(twoyr),
                         mode='lines+markers',
                         #mode='lines',
                         hovertemplate='%{x}'+':%{y}',
                         marker = go.scatter.Marker(
-                                    color = plotlycl[0],
-                        ),
-                        line = go.scatter.Line(
-                                    color = plotlycl[0],
+                                    color = plotlycl[2],
                         ),
                         opacity=0.85,     
                                 ),
@@ -883,16 +684,19 @@ def update_salmon_timeseries(location_dropdown):
                         ),
                         opacity=0.85,     
                                 ),
-                        #--Year before last--# 
+                        #--This Year--# 
                         go.Scatter(
                         x=albion['date'],
-                        y=albion['cpue'+str(twoyr)],
-                        name=str(twoyr),
+                        y=albion['cpue'+str(curyr)],
+                        name=str(curyr),
                         mode='lines+markers',
                         #mode='lines',
                         hovertemplate='%{x}'+':%{y}',
                         marker = go.scatter.Marker(
-                                    color = plotlycl[2],
+                                    color = plotlycl[0],
+                        ),
+                        line = go.scatter.Line(
+                                    color = plotlycl[0],
                         ),
                         opacity=0.85,     
                                 ),
@@ -1192,9 +996,40 @@ def update_salmon_timeseries(location_dropdown):
         Input("year-dropdown","value")
     ],
 )
+#%%
+# test_colorscale=[
+#     [0, viri12cl[0]],#Jan
+#     [viri12pt[0], viri12cl[0]],
+#     [viri12pt[0], viri12cl[1]],#Feb
+#     [viri12pt[1], viri12cl[1]],
+#     [viri12pt[1], viri12cl[2]],#Mar
+#     [viri12pt[2], viri12cl[2]],
+#     [viri12pt[2], viri12cl[3]],#Apr
+#     [viri12pt[3], viri12cl[3]],
+#     [viri12pt[3], viri12cl[4]], #May
+#     [viri12pt[4], viri12cl[4]], 
+#     [viri12pt[4], viri12cl[5]], #Jun
+#     [viri12pt[5], viri12cl[5]], 
+#     [viri12pt[5], viri12cl[6]], #Jul
+#     [viri12pt[6], viri12cl[6]], 
+#     [viri12pt[6], viri12cl[7]], #Aug
+#     [viri12pt[7], viri12cl[7]], 
+#     [viri12pt[7], viri12cl[8]], #Sept
+#     [viri12pt[8], viri12cl[8]], 
+#     [viri12pt[8], viri12cl[9]], #Oct
+#     [viri12pt[9], viri12cl[9]], 
+#     [viri12pt[9], viri12cl[10]], #Nov
+#     [viri12pt[10], viri12cl[10]], 
+#     [viri12pt[10], viri12cl[11]], #Dec
+#     [viri12pt[11], viri12cl[11]], 
+#     ]
+#%%
 def update_orca_map(pod,year):
     srkwc=pd.read_csv(acartia_path+"srkw_"+str(year)+".csv")
+    srkwc=srkwc[~srkwc.date.isnull()]
     srkwc['date2']=pd.to_datetime(srkwc['date_ymd'],format='%Y-%m-%d', errors='coerce')
+    srkwc['mon']=srkwc['date2'].apply(lambda x: x.month)
+    srkwc['mon_frac']=srkwc['mon'].apply(lambda x: viri12pt[int(x)-1])
     srkwc['day_of_year']=srkwc['date_ymd'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
     srkwc_k=srkwc[srkwc.K==1].reset_index()
     srkwc_l=srkwc[srkwc.L==1].reset_index()
@@ -1213,18 +1048,23 @@ def update_orca_map(pod,year):
             lon=srkw_dat['longitude'],
             mode='markers',
             marker=go.scattermapbox.Marker(
-                color=srkw_dat.day_of_year,
+                color=srkw_dat.mon_frac,
                 size=7,
-                colorscale='Viridis',
+                colorscale=viri12cl,
                 opacity=0.75,
                 showscale=True,
                 colorbar=dict(
-                title='Day of the year',
+                title='Month',
                 thickness=20,
                 titleside='right',
                 outlinecolor='rgba(68,68,68,0)',
                 ticks='outside',
-                ticklen=3,),     
+                ticklen=3,
+                tickmode='array',
+                tickvals=viri12pt,
+                ticktext=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"
+                ],
+                ),     
             ),
             text=srkw_dat['created']+'<br>'+srkw_dat['data_source_comments'],
             hoverinfo='text'
@@ -1246,7 +1086,7 @@ def update_orca_map(pod,year):
         ),
     )
     return fig_orcamap
-
+#%%
 #~~~~~~~~~~~~~~~~~~~~~Orca Time series~~~~~~~~~~~~~~~~~~~~#
 @app.callback(
     Output("salmon-orca-timeseries", "figure"),
@@ -1357,175 +1197,6 @@ def update_orca_lines(pod,year):
                         tickangle=45,  row=3, col=1)
     fig_orcaline.update_traces(connectgaps=True)
     return fig_orcaline
-
-#~~~~~~~~~~~~~~~~~~~~~Tab3: Orca Movement~~~~~~~~~~~~~~~~~~~~#
-# @app.callback(
-#     [
-#         Output("satellite-bubble", "figure"),
-#         Output('orcamove-date','children'),
-#         Output('LED-time','value'),
-#         Output('date-slider','max'),
-#         Output('orcatag','children'),
-#     ],
-#     [
-#         Input("orca-picker", "value"),
-#         Input("date-slider", "value")
-#     ],
-# )
-# def update_orca_move(orca, date_index):
-#     #Pick orca
-#     if orca=="J26":
-#         orca_dat=satellite_j26
-#         zoom_val=7
-#         name="Mike"
-#         age=min(orca_dat['year'])-1991
-#     if orca=="J27":
-#         orca_dat=satellite_j27
-#         zoom_val=6        
-#         name="Blackberry"
-#         age=min(orca_dat['year'])-1991
-#     if orca=="K25":
-#         orca_dat=satellite_k25
-#         zoom_val=4
-#         name="Scoter"
-#         age=min(orca_dat['year'])-1991
-#     if orca=="K33":
-#         orca_dat=satellite_k33
-#         zoom_val=4
-#         name="Tika"
-#         age=min(orca_dat['year'])-2001
-#     if orca=="L84":
-#         orca_dat=satellite_l84
-#         zoom_val=4
-#         name="Nyssa"
-#         age=min(orca_dat['year'])-1990
-#     if orca=="L87":
-#         orca_dat=satellite_l87
-#         zoom_val=6
-#         name="Onyx"
-#         age=min(orca_dat['year'])-1992
-#     if orca=="L88":
-#         orca_dat=satellite_l88
-#         zoom_val=5
-#         name="Wave Walker"
-#         age=min(orca_dat['year'])-1993
-#     if orca=="L95":
-#         orca_dat=satellite_l95
-#         zoom_val=5
-#         name="Nigel"
-#         age=min(orca_dat['year'])-1996
-#     orcaday(orca_dat)
-#     geogen(orca_dat)
-#     orca_dat=orca_dat.sort_values(by=['datetime_pst'])
-#     lon_avg=orca_dat['lon'].mean()
-#     lat_avg=orca_dat['lat'].mean()
-#     #create index for slider
-#     mark_index, _=make_slider_mark(orca_dat)
-#     #Pick time
-#     orca_dat=orca_dat.iloc[date_index, :]
-#     #Define date and time for clock
-#     cur_date=str(orca_dat['date'])
-#     cur_time=str(orca_dat['time'])
-#     #Define max of slider rack 
-#     slider_max=len(mark_index)-1
-#     #Define orca tag
-#     orca_tag=" ".join([orca, name, "("+str(age)+"yr )"])
-#     #Make plot
-#     fig_orcamove = go.Figure()
-#     fig_orcamove.add_trace(go.Scattermapbox(
-#             lat=[orca_dat['lat']],
-#             lon=[orca_dat['lon']],
-#             mode='markers',
-#             marker=go.scattermapbox.Marker(
-#                 color="#016fb9",
-#                 size=12,
-#                 opacity=0.75,
-#             ),        
-#             text=[str(orca_dat['datetime_pst'])+"["+orca+"]"],
-#             hoverinfo='text'
-#         ))
-#     fig_orcamove.update_layout(
-#         autosize=True,
-#         showlegend=False,
-#         margin=dict(l=0, r=0, t=0, b=0),
-#         mapbox=dict(
-#             accesstoken=mapbox_access_token,
-#             bearing=0,
-#             center=dict(
-#                 lat=lat_avg,
-#                 lon=lon_avg
-#             ),
-#             zoom=zoom_val,
-#             style='light'
-#         ),
-#     )    
-#     return fig_orcamove, cur_date, cur_time, slider_max, orca_tag
-
-# #~~~~~~~~~~~~~~~~~Interval of the Bubble Map~~~~~~~~~~~~~~~~~~~~~~~~~~#
-# @app.callback(
-#     [
-#         Output('date-slider', 'value'),
-#         Output('auto-stepper', 'max_intervals'),
-#         Output('auto-stepper', 'disabled'),
-#         Output('auto-stepper', 'n_intervals')
-#     ],
-#     [
-#         Input('auto-stepper', 'n_intervals'),
-#         Input('play-button','n_clicks_timestamp'),
-#         Input('pause-button','n_clicks_timestamp'),
-#         Input("orca-picker", "value"),
-#     ]
-# )
-# def move_frames(n_intervals, play_timestamp, pause_timestamp,orca):
-#     slider_value=0
-#     max_intervals=0
-#     int_disabled=True
-#     #Pick orca
-#     if orca=="J26":
-#         orca_dat=satellite_j26
-#         zoom_val=7
-#     if orca=="J27":
-#         orca_dat=satellite_j27
-#         zoom_val=6        
-#     if orca=="K25":
-#         orca_dat=satellite_k25
-#         zoom_val=4
-#     if orca=="K33":
-#         orca_dat=satellite_k33
-#         zoom_val=4
-#     if orca=="L84":
-#         orca_dat=satellite_l84
-#         zoom_val=4
-#     if orca=="L87":
-#         orca_dat=satellite_l87
-#         zoom_val=6
-#     if orca=="L88":
-#         orca_dat=satellite_l88
-#         zoom_val=5
-#     if orca=="L95":
-#         orca_dat=satellite_l95
-#         zoom_val=5
-#     orcaday(orca_dat)
-#     geogen(orca_dat)
-#     #refresh if it is a different orca
-#     global current_orca
-#     #create index for slider
-#     mark_index, _=make_slider_mark(orca_dat)
-#     if orca!=current_orca:
-#         current_orca=orca
-#         return 0, 0, True, 0
-#     elif (play_timestamp==-1) & (pause_timestamp==-1):
-#         return 0, 0, True, 0
-#     elif  (play_timestamp>pause_timestamp):
-#         slider_value=(n_intervals+1)%(len(mark_index))
-#         max_intervals=-1
-#         int_disabled=False
-#     elif (pause_timestamp>play_timestamp):
-#         slider_value=(n_intervals+1)%(len(mark_index))
-#         max_intervals=0
-#         int_disabled=False
-#     return slider_value, max_intervals, int_disabled, n_intervals
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)

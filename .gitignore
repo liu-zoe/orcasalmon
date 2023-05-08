@@ -1,6 +1,7 @@
 # Tokens
 acartia_token.txt
 GH_token.txt
+GH_token_old.txt
 mapbox_token.txt
 flyio_ghtoken.txt
 
@@ -17,7 +18,7 @@ chinookplot.py
 plots_colab.ipynb
 srkwplot.py
 Scraper.ipynb
-
+twm_viz.ipynb
 # Notes
 salmon_dashboard_notes.md
 

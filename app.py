@@ -21,7 +21,7 @@ import pandas as pd
 pd.options.mode.chained_assignment = None #suppress chained assignment 
 
 import numpy as np
-
+import math 
 import dash
 from dash import dcc
 from dash import html 
@@ -46,8 +46,8 @@ server=app.server
 #%%
 #--------------------------Load And Process Data----------------------------#
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
-mapbox_access_token = os.environ.get('MAPBOX_TOKEN')
-#mapbox_access_token = open(pjoin(APP_PATH,"mapbox_token.txt")).read()
+#mapbox_access_token = os.environ.get('MAPBOX_TOKEN')
+mapbox_access_token = open(pjoin(APP_PATH,"mapbox_token.txt")).read()
 #Get dates
 today=date.today()
 todaystr=str(today)
@@ -56,12 +56,13 @@ lastyr=curyr-1
 twoyr=curyr-2
 ayl=[y for y in range(1980, curyr+1)] #year list for Albion
 byl=[y for y in range(1939, curyr+1)] #year list for Bonneville Dam
-
+twmyl=[y for y in range(1976, 2022)] #year list for TWM data
 #Define data path
 fos_path=pjoin(APP_PATH,'data/foschinook/')
 bon_path=pjoin(APP_PATH,'data/bonchinook/')
 acartia_path=pjoin(APP_PATH, 'data/acartia/')
-srkw_sattellite_path=pjoin(APP_PATH, 'data/srkw_satellite_tagging')
+twm_path=pjoin(APP_PATH, 'data/twm/')
+srkw_path=pjoin(APP_PATH, 'data/')
 #%%
 #Load Albion data
 albion=pd.DataFrame(columns=['day','m'])
@@ -149,7 +150,7 @@ def create_lagged(year,
     return lagged
 lagged=create_lagged(curyr, 10, 10)
 # %% [markdown]
-# Loading Acartia data
+# Load Acartia data
 # Function count orca reports or counts by day
 def srkw_count(dat, count_orca=False):
     if count_orca:
@@ -167,9 +168,31 @@ def srkw_count(dat, count_orca=False):
     srkw_avg['m']=srkw_avg['date'].apply(lambda x: int(x.split('-')[1]))
     srkw_avg=srkw_avg.sort_values(by=['m','day'])
     return srkw_avg
+#%%
+# Function to read in acartia orca data for maps
+def srkw_acartia_map(year, pod="All pods"):
+    srkwc=pd.read_csv(acartia_path+"srkw_"+str(year)+".csv")
+    srkwc=srkwc[~srkwc.date.isnull()]
+    srkwc['date2']=pd.to_datetime(srkwc['date_ymd'],format='%Y-%m-%d', errors='coerce')
+    srkwc['mon']=srkwc['date2'].apply(lambda x: x.month)
+    srkwc['mon_frac']=srkwc['mon'].apply(lambda x: viri12pt[int(x)-1])
+    srkwc['day_of_year']=srkwc['date_ymd'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
+    srkwc_k=srkwc[srkwc.K==1].reset_index()
+    srkwc_l=srkwc[srkwc.L==1].reset_index()
+    srkwc_j=srkwc[srkwc.J==1].reset_index()
+    if pod=="L pod":
+        srkw_dat=srkwc_l
+    elif pod=="K pod":
+        srkw_dat=srkwc_k
+    elif pod=="J pod":
+        srkw_dat=srkwc_j
+    elif pod=="All pods":
+        srkw_dat=srkwc[srkwc.srkw==1]
+    return srkwc 
+#x=srkw_acartia_map(2022)
 #%% 
 # Function to make orca count data of a certain year and merge with salmon data
-def srkw_year(year, pod="All pods"):
+def srkw_acartia_year(year, pod="All pods"):
     srkwc=pd.read_csv(acartia_path+"srkw_"+str(year)+".csv")
     srkwc['date2']=pd.to_datetime(srkwc['date_ymd'],format='%Y-%m-%d', errors='coerce')
     #srkwc['day_of_year']=srkwc['date_ymd'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
@@ -189,20 +212,14 @@ def srkw_year(year, pod="All pods"):
     elif pod=="All pods":
         srkw_dat=srkwc[srkwc.srkw==1]
     srkwc_north=srkw_dat[srkw_dat['north_puget_sound']==1]
-    if year in (2019, 2018):
-        srkwc_north_avg=srkw_count(srkwc_north, count_orca=False)
-    else:
-        srkwc_north_avg=srkw_count(srkwc_north, count_orca=True)
+    srkwc_north_avg=srkw_count(srkwc_north, count_orca=False)
     srkwc_north_avg.columns=['date','count_north','day','m']
 
     srkwc_south=srkw_dat[srkw_dat['north_puget_sound']==0]
-    if year in (2019, 2018):
-        srkwc_south_avg=srkw_count(srkwc_south, count_orca=False)
-    else:
-        srkwc_south_avg=srkw_count(srkwc_south, count_orca=True)
+    srkwc_south_avg=srkw_count(srkwc_south, count_orca=False)
     srkwc_south_avg.columns=['date','count_south','day','m']
 
-    srkw_yrcount=srkw_count(srkwc, count_orca=True)
+    srkw_yrcount=srkw_count(srkwc, count_orca=False)
     
     # Add salmon data
     salmon=create_lagged(year, 4, 10)
@@ -225,8 +242,83 @@ def srkw_year(year, pod="All pods"):
     srkw_yrcount.columns=['date','m','day','srkw','srkw_north','srkw_south','bon'+str(year),'bon_hist','alb'+str(year),'alb_hist']
 
     return srkw_yrcount
-srkw_curyr_count=srkw_year(curyr)
-current_orca="J26"
+srkw_curyr_count=srkw_acartia_year(curyr)
+#%% [markdown]
+# Load the Whale Museum Data
+def srkw_twm_map(year, pod="All pods"):
+    srkwc=pd.read_csv(twm_path+"twm"+str(year)+".csv")
+    srkwc['mon_frac']=srkwc['Month'].apply(lambda x: viri12pt[int(x)-1])
+    srkwc['day_of_year']=srkwc['SightDate'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
+    srkwc['created']=srkwc['SightDate']+" "+srkwc['Time1']
+    srkwc_k=srkwc[srkwc.k==1].reset_index()
+    srkwc_l=srkwc[srkwc.l==1].reset_index()
+    srkwc_j=srkwc[srkwc.j==1].reset_index()
+    if pod=="L pod":
+        srkw_dat=srkwc_l
+    elif pod=="K pod":
+        srkw_dat=srkwc_k
+    elif pod=="J pod":
+        srkw_dat=srkwc_j
+    elif pod=="All pods":
+        srkw_dat=srkwc
+    return srkw_dat
+#%% [markdown]
+# Load The Whale Museum Data 
+def srkw_twm_year(year, pod="All pods"):
+    srkwc=pd.read_csv(twm_path+"twm"+str(year)+".csv")
+    # Define the north and south puget sound latitude
+    entry_lat=48.19437
+    srkwc['north_puget_sound']=srkwc['latitude'].apply(lambda x: 1 if x>entry_lat else 0)
+    srkwc['mon_frac']=srkwc['Month'].apply(lambda x: viri12pt[int(x)-1])
+    srkwc['day_of_year']=srkwc['SightDate'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
+    srkwc['date_ymd']=srkwc['SightDate']
+    srkwc['created']=srkwc['SightDate']+" "+srkwc['Time1']
+    srkwc_k=srkwc[srkwc.k==1].reset_index()
+    srkwc_l=srkwc[srkwc.l==1].reset_index()
+    srkwc_j=srkwc[srkwc.j==1].reset_index()
+    if pod=="L pod":
+        srkw_dat=srkwc_l
+    elif pod=="K pod":
+        srkw_dat=srkwc_k
+    elif pod=="J pod":
+        srkw_dat=srkwc_j
+    elif pod=="All pods":
+        srkw_dat=srkwc
+
+    srkwc_north=srkw_dat[srkw_dat['north_puget_sound']==1]
+    srkwc_north_avg=srkw_count(srkwc_north, count_orca=False)
+    srkwc_north_avg.columns=['date','count_north','day','m']
+
+    srkwc_south=srkw_dat[srkw_dat['north_puget_sound']==0]
+    srkwc_south_avg=srkw_count(srkwc_south, count_orca=False)
+    srkwc_south_avg.columns=['date','count_south','day','m']
+
+    srkw_yrcount=srkw_count(srkwc, count_orca=False)
+    
+    # Add salmon data
+    salmon=create_lagged(year, 4, 10)
+    srkw_yrcount=srkw_yrcount.merge(salmon, left_on=['m','day'], right_on=['m','day'], how='right')
+    srkw_yrcount=srkw_yrcount.drop(columns=['date_x'])
+    srkw_yrcount=srkw_yrcount.rename(columns={'date_y':'date'})
+
+    # Add srkw count north of puget sound
+    srkw_yrcount=srkw_yrcount.merge(srkwc_north_avg, left_on=['m','day'], right_on=['m','day'], how='left')
+    srkw_yrcount=srkw_yrcount.drop(columns=['date_y'])
+    srkw_yrcount=srkw_yrcount.rename(columns={'date_x':'date'})
+
+    # Add srkw count in puget sound
+    srkw_yrcount=srkw_yrcount.merge(srkwc_south_avg, left_on=['m','day'], right_on=['m','day'], how='left')
+    srkw_yrcount=srkw_yrcount.drop(columns=['date_y'])
+    srkw_yrcount=srkw_yrcount.rename(columns={'date_x':'date'})
+
+    # Keep a subset of variables 
+    srkw_yrcount=srkw_yrcount[['date', 'm','day','count','count_north','count_south','chin'+str(year),'chin_hist','cpue'+str(year),'cpue_hist']]
+    srkw_yrcount.columns=['date','m','day','srkw','srkw_north','srkw_south','bon'+str(year),'bon_hist','alb'+str(year),'alb_hist']
+
+    return srkw_yrcount
+#%% [markdow]
+# Load The SRKW Population Data
+srkwdata=pd.read_csv(pjoin(APP_PATH, "data/SRKW.csv"))
 # %%
 # Create data for salmon data locations
 salmon_loc = pd.DataFrame(columns=['loc','lon','lat','color','size'])
@@ -1025,23 +1117,16 @@ def update_salmon_timeseries(location_dropdown):
 #     ]
 #%%
 def update_orca_map(pod,year):
-    srkwc=pd.read_csv(acartia_path+"srkw_"+str(year)+".csv")
-    srkwc=srkwc[~srkwc.date.isnull()]
-    srkwc['date2']=pd.to_datetime(srkwc['date_ymd'],format='%Y-%m-%d', errors='coerce')
-    srkwc['mon']=srkwc['date2'].apply(lambda x: x.month)
-    srkwc['mon_frac']=srkwc['mon'].apply(lambda x: viri12pt[int(x)-1])
-    srkwc['day_of_year']=srkwc['date_ymd'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
-    srkwc_k=srkwc[srkwc.K==1].reset_index()
-    srkwc_l=srkwc[srkwc.L==1].reset_index()
-    srkwc_j=srkwc[srkwc.J==1].reset_index()
-    if pod=="L pod":
-        srkw_dat=srkwc_l
-    elif pod=="K pod":
-        srkw_dat=srkwc_k
-    elif pod=="J pod":
-        srkw_dat=srkwc_j
-    elif pod=="All pods":
-        srkw_dat=srkwc[srkwc.srkw==1]
+    if year>2021:      
+        srkw_dat=srkw_acartia_map(year, pod)
+    # elif year>2017:
+    #     srkw_dat0=srkw_acartia_map(year, pod)
+    #     srkw_dat0=srkw_dat0[['created', 'latitude', 'longitude', 'mon_frac']]
+    #     srkw_dat1=srkw_twm_map(year, pod)
+    #     srkw_dat1=srkw_dat1[['created','latitude','longitude','mon_frac']]
+    #     srkw_dat=pd.concat([srkw_dat0, srkw_dat1])
+    else:
+        srkw_dat=srkw_twm_map(year, pod)
     fig_orcamap = go.Figure()
     fig_orcamap.add_trace(go.Scattermapbox(
             lat=srkw_dat['latitude'],
@@ -1066,7 +1151,7 @@ def update_orca_map(pod,year):
                 ],
                 ),     
             ),
-            text=srkw_dat['created']+'<br>'+srkw_dat['data_source_comments'],
+            text=srkw_dat['created'],
             hoverinfo='text'
         ))
     fig_orcamap.update_layout(
@@ -1096,11 +1181,17 @@ def update_orca_map(pod,year):
     ],
 )
 def update_orca_lines(pod,year):
-    srkw_yr_count=srkw_year(year,pod) 
-    if year in (2018, 2019):
-        orca_line_yaxis_title='reports of orca sightings'
+    orca_line_yaxis_title='reports of orca sightings'
+    if year>2021:
+        srkw_yr_count=srkw_acartia_year(year,pod) 
+    # elif year>2017:
+    #     srkw_dat0=srkw_acartia_map(year, pod)
+    #     srkw_dat0=srkw_dat0[['created', 'latitude', 'longitude', 'mon_frac']]
+    #     srkw_dat1=srkw_twm_map(year, pod)
+    #     srkw_dat1=srkw_dat1[['created','latitude','longitude','mon_frac']]
+    #     srkw_dat=pd.concat([srkw_dat0, srkw_dat1])  
     else:
-        orca_line_yaxis_title='# of orcas'
+        srkw_yr_count=srkw_twm_year(year,pod) 
     fig_orcaline = make_subplots(rows=3, cols=1)
     fig_orcaline.append_trace(
         go.Scatter(

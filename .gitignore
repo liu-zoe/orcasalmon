@@ -10,7 +10,6 @@ flyio_ghtoken.txt
 /plot
 /data/data_in_progress
 /data/srkw_satellite_tagging
-/data/twm
 
 # Work in progress
 chinookplot.ipynb
@@ -31,6 +30,9 @@ orcasalmon.code-workspace
 #Other
 app_3tabs.py
 map.png
+data/twm/AppendixII.XLSX
+data/twm/OM_2021 FINAL program report.pdf
+data/twm/TWMQuads.pdf
 ._acartia_token.txt
 ._fly.toml
 ._plots_colab.ipynb

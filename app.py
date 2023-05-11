@@ -46,8 +46,8 @@ server=app.server
 #%%
 #--------------------------Load And Process Data----------------------------#
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
-mapbox_access_token = os.environ.get('MAPBOX_TOKEN')
-#mapbox_access_token = open(pjoin(APP_PATH,"mapbox_token.txt")).read()
+#mapbox_access_token = os.environ.get('MAPBOX_TOKEN')
+mapbox_access_token = open(pjoin(APP_PATH,"mapbox_token.txt")).read()
 #Get dates
 today=date.today()
 todaystr=str(today)
@@ -325,6 +325,9 @@ salmon_loc = pd.DataFrame(columns=['loc','lon','lat','color','size'])
 salmon_loc['loc']=['Puget Sound','Bonneville Dam','Albion Test Fishery']
 salmon_loc['lat']=[47.635470, 45.644456, 49.181376]
 salmon_loc['lon']=[-122.457417,-121.940530, -122.567295]
+#%%
+# Define path to salmon map image
+salmon_map_path = 'assets/diagram_of_Locations_v1.png'
 # %%
 # Create a color scheme and fonts
 plotlycl=px.colors.qualitative.Plotly
@@ -353,11 +356,12 @@ app.layout = html.Div(
             html.Div(
                 id="header",
                 children=[
-                    html.A([
+                    html.A(id="github-link",children=[
                         html.Img(id="github", src=app.get_asset_url("icone-github-grise.png"),
                         ),
                     ], href='https://github.com/liu-zoe/orcasalmon', target="_blank"),
-                    html.A([
+                    html.A(id="logo-link",
+                           children=[
                         html.Img(id="logo", src=app.get_asset_url("wordlogo-seagreen.png"),
                         style={'height':'20%', 'width':'20%'}
                         ),        
@@ -388,9 +392,21 @@ app.layout = html.Div(
                         html.Div(
                             className="app-container", 
                             children=[
-                                #Left Column
+                                #Salmon Map column
                                 html.Div(
-                                    className="left-column", 
+                                    className="left-column",
+                                    id="graph-container",
+                                    children=[
+                                        html.H6("Salish Sea and Puget Sound", 
+                                                ),
+                                        html.Img(id="salmon-static-map",
+                                                src=salmon_map_path, 
+                                                 ),
+                                    ],
+                                ),       
+                                #Salmon time series Column
+                                html.Div(
+                                    className="right-column", 
                                     children=[
                                         html.Div(
                                             className="salmon-container",
@@ -431,18 +447,18 @@ app.layout = html.Div(
                                         ),
                                     ],
                                 ),
-                                #Right column
-                                html.Div(
-                                    className="right-column",
-                                    id="map-container",
-                                    children=[
-                                        dcc.Graph(
-                                            className="salmon-map",
-                                            id="salmon-map",
-                                            animate=False, 
-                                        ),
-                                    ],
-                                ),                                
+                                # #Right column
+                                # html.Div(
+                                #     className="right-column",
+                                #     id="map-container",
+                                #     children=[
+                                #         dcc.Graph(
+                                #             className="salmon-map",
+                                #             id="salmon-map",
+                                #             animate=False, 
+                                #         ),
+                                #     ],
+                                # ),                                
                             ],
                         ),
                         #Footer
@@ -597,10 +613,11 @@ app.layout = html.Div(
 # ----------------------------------------------------------------------------#
 #~~~~~~~~~~~~~~~~~~~~~Salmon Time Series~~~~~~~~~~~~~~~~~~~~#
 @app.callback(
-    [
-        Output("salmon-timeseries", "figure"),
-        Output("salmon-map","figure")
-    ],
+    Output("salmon-timeseries", "figure"),
+    # [
+    #     Output("salmon-timeseries", "figure"),
+    #     Output("salmon-map","figure")
+    # ],
     [
         Input("location-dropdown", "value"),
     ],
@@ -742,7 +759,7 @@ def update_salmon_timeseries(location_dropdown):
                 ),
             ),
         )
-        return fig_salmon,fig_salmonmap
+        return fig_salmon #,fig_salmonmap
     elif location_dropdown=="Albion":
         # Define salmon time seires
         title='Albion Chinook Catch Per Unit Effort (CPUE) 3 recent years vs History'
@@ -883,7 +900,7 @@ def update_salmon_timeseries(location_dropdown):
                 ),
             ),
         )
-        return fig_salmon, fig_salmonmap
+        return fig_salmon#, fig_salmonmap
     elif location_dropdown=="Albion v Bonneville":
         # Define salmon time seires
         if today.month<=4:
@@ -1078,7 +1095,7 @@ def update_salmon_timeseries(location_dropdown):
                 ),
             ),
         )
-        return fig_salmon, fig_salmonmap
+        return fig_salmon#, fig_salmonmap
 
 #~~~~~~~~~~~~~~~~~~~~~Orca Map~~~~~~~~~~~~~~~~~~~~#
 @app.callback(

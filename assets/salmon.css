@@ -830,7 +830,7 @@ hr {
         flex-direction: column;
         justify-content: flex-start;
         align-content: center;
-        flex: 6 70%;
+        flex: 6 30%;
 
     }
     .right-column {
@@ -839,7 +839,7 @@ hr {
         flex-direction: column;
         justify-content: flex-start;
         align-content: center;
-        flex: 6 30%;
+        flex: 6 70%;
     }
     .left-half-column {
         margin-right: 1.5%;
@@ -870,10 +870,34 @@ hr {
     margin: 0;
 }
 
+#salmon-static-map {
+    padding-top: 5rem !important;
+}
+
 @media (max-width: 1250px) {
     /*For mobile and smaller screens*/
     #header, #footer h4 {
         text-align: center;
+    }
+
+    #github {
+        height:10% !important;
+        width: 10% !important;
+    }
+
+    #logo {
+        height:50% !important;
+        width: 50% !important;
+
+    }
+    #logo-link {
+        display: inline-block;
+    }
+
+    #salmon-static-map {
+        padding-top: 1rem;
+        height:80%;
+        width:80%;
     }
 
     .graph-container {

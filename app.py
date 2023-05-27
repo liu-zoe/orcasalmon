@@ -327,7 +327,7 @@ salmon_loc['lat']=[47.635470, 45.644456, 49.181376]
 salmon_loc['lon']=[-122.457417,-121.940530, -122.567295]
 #%%
 # Define path to salmon map image
-salmon_map_path = 'assets/diagram_of_Locations_v1.png'
+salmon_map_path = 'assets/diagram_of_Locations_v2.png'
 # %%
 # Create a color scheme and fonts
 plotlycl=px.colors.qualitative.Plotly
@@ -417,10 +417,14 @@ app.layout = html.Div(
                                                     children=[
                                                         html.H6("Select Location"),
                                                         dcc.Dropdown(
-                                                            value="Albion",
+                                                            value="Albion v Bonneville",
                                                             className="location-dropdown",
                                                             id="location-dropdown",
                                                             options=[
+                                                                {
+                                                                    "label":"Albion v Bonneville", 
+                                                                    "value":"Albion v Bonneville"
+                                                                },
                                                                 {
                                                                     "label":"Albion",
                                                                     "value":"Albion",
@@ -428,10 +432,6 @@ app.layout = html.Div(
                                                                 {
                                                                     "label":"Bonneville Dam",
                                                                     "value":"Bonneville Dam",
-                                                                },
-                                                                {
-                                                                    "label":"Albion v Bonneville", 
-                                                                    "value":"Albion v Bonneville"
                                                                 },
                                                             ],
                                                         ),

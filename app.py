@@ -188,7 +188,7 @@ def srkw_acartia_map(year, pod="All pods"):
         srkw_dat=srkwc_j
     elif pod=="All pods":
         srkw_dat=srkwc[srkwc.srkw==1]
-    return srkwc 
+    return srkw_dat 
 #x=srkw_acartia_map(2022)
 #%% 
 # Function to make orca count data of a certain year and merge with salmon data

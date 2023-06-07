@@ -327,7 +327,7 @@ salmon_loc['lat']=[47.635470, 45.644456, 49.181376]
 salmon_loc['lon']=[-122.457417,-121.940530, -122.567295]
 #%%
 # Define path to salmon map image
-salmon_map_path = 'assets/diagram_of_Locations_v2.png'
+salmon_map_path = 'assets/diagram_of_locations_v2.png'
 # %%
 # Create a color scheme and fonts
 plotlycl=px.colors.qualitative.Plotly

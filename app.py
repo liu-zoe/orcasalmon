@@ -191,7 +191,6 @@ def srkw_acartia_map(year, pod="All pods"):
     elif pod=="All pods":
         srkw_dat=srkwc[srkwc.srkw==1]
     return srkw_dat
-#x=srkw_acartia_map(2022)
 #%% 
 # Function to make orca count data of a certain year and merge with salmon data
 def srkw_acartia_year(year, pod="All pods"):
@@ -261,8 +260,7 @@ def srkw_twm_map(year, pod="All pods"):
         srkw_dat=srkwc_j
     elif pod=="All pods":
         srkw_dat=srkwc
-    srkw_dat["source"]="TWM"
-    return srkw_dat[['created','mon_frac','latitude','longitude','source']]
+    return srkw_dat[['created','mon_frac','latitude','longitude']]
 #%% [markdown]
 # Load The Whale Museum Data 
 def srkw_twm_year(year, pod="All pods"):
@@ -798,7 +796,7 @@ app.layout = html.Div(
                                             className="salmon-orca-container",
                                             id="salmon-orca-container",                                           
                                             children=[
-                                                html.H5("What's threatening Southern Resident Orcas' survival?"),
+                                                html.H5("Why is Chinook Salmon important to Southern Resident Orcas?"),
                                                 html.P("The Southern Resident killer whales, an iconic population of orcas found in the Pacific Northwest, face a critical threat to their survival due to the lack of chinook salmon. These majestic creatures, known for their intelligence and close-knit social structure, heavily rely on chinook salmon as their primary food source. However, the decline in chinook populations, caused by various factors including habitat degradation, overfishing, and dam construction, has left the Southern Resident orcas in a precarious state. With insufficient access to their preferred prey, these magnificent marine mammals struggle to meet their nutritional needs, resulting in malnutrition and overall population decline."),
                                                 dcc.Graph(
                                                     className="salmon-orca-timeseries", 
@@ -1245,7 +1243,6 @@ def update_orca_map(pod,year):
         srkw_dat=pd.concat([srkw_dat0, srkw_dat1])
     else:
         srkw_dat=srkw_twm_map(year, pod)
-    #srkw_dat['label']=srkw_dat['created']+"["+srkw_dat['source']+"]"
     fig_orcamap = go.Figure()
     fig_orcamap.add_trace(go.Scattermapbox(
             lat=srkw_dat['latitude'],

@@ -1413,7 +1413,7 @@ def update_orca_lines(pod):
                     opacity=0.85, 
             ),secondary_y=True,row=2, col=1,
     )
-    fig_peak.update_yaxes(title_text="Peak day of the year", range=[140, 300], row=1, col=1)
+    fig_peak.update_yaxes(title_text="Peak day of the year", tickvals=list(range(150,300,50)), range=[140, 300], row=1, col=1)
     fig_peak.update_yaxes(title_text="Number of Orca", row=2, col=1, secondary_y=False)
     fig_peak.update_yaxes(title_text="Albion Chinook CPUE", row=2, col=1, secondary_y=True)
     fig_peak.update_xaxes(title_text="Year",tickvals=list(range(1990,curyr,5)),range=[1989, 2023], row=1, col=1)
@@ -1440,13 +1440,13 @@ def update_orca_lines(pod):
                 y=0.9,
             ),
             title=dict(text = "Peak day of Chinook Volume at Albion and Southern Resident Orca Sightings in Central Salish Sea",
-                                x = 0.01,
-                                y = 0.98,
+                                x = 0.02,
+                                y = 1,
                                 xanchor = 'left',
                                 yanchor = 'top',
-                                #pad = dict(
-                                #            t = 0
-                                #           ),
+                                pad = dict(
+                                           t = 1
+                                          ),
                                 font = dict(
                                             family='Arial, sans-serif',
                                             size = 16,

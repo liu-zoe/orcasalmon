@@ -44,8 +44,8 @@ server=app.server
 #%%
 #--------------------------Load And Process Data----------------------------#
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
-mapbox_access_token = os.environ.get('MAPBOX_TOKEN')
-#mapbox_access_token = open(pjoin(APP_PATH,"mapbox_token.txt")).read()
+#mapbox_access_token = os.environ.get('MAPBOX_TOKEN')
+mapbox_access_token = open(pjoin(APP_PATH,"mapbox_token.txt")).read()
 #Get dates
 today=date.today()
 todaystr=str(today)
@@ -1245,7 +1245,7 @@ def update_orca_map(pod,year):
         srkw_dat=pd.concat([srkw_dat0, srkw_dat1])
     else:
         srkw_dat=srkw_twm_map(year, pod)
-    srkw_dat['label']=srkw_dat['created']+"["+srkw_dat['source']+"]"
+    #srkw_dat['label']=srkw_dat['created']+"["+srkw_dat['source']+"]"
     fig_orcamap = go.Figure()
     fig_orcamap.add_trace(go.Scattermapbox(
             lat=srkw_dat['latitude'],
@@ -1325,7 +1325,7 @@ def update_orca_lines(pod):
         srkw=srkwdata_l 
 
     fig_peak = make_subplots(rows=2,cols=1,
-                         subplot_titles=['title1','Orca Population'],
+                         subplot_titles=['','Orca Population'],
                          row_heights=[0.7,0.3],
     specs=[[{"secondary_y": False}],[{"secondary_y": True}]]
     )

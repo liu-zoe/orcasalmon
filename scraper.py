@@ -134,7 +134,7 @@ def scrap_bon(yrs='2022', bon_path=bon_path):
   #calendar_elem=driver.find_element('id','calendar')
   #driver.execute_script("arguments[0].scrollIntoView();", calendar_elem)  
   #calendar_elem.click()
-  driver.find_element('id','run1').click()
+  #driver.find_element('id','run1').click()
   driver.find_element(By.XPATH, ".//input[@type='submit']").click()
   sleep(3)
   dlf=[x for x in os.listdir("./") if x[-4:]=='.csv']

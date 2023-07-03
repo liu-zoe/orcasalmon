@@ -19,8 +19,8 @@ import selenium
 from selenium import webdriver 
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+#from selenium.webdriver.support.ui import WebDriverWait
+#from selenium.webdriver.support import expected_conditions as EC
 
 import chromedriver_autoinstaller
 
@@ -131,11 +131,9 @@ def scrap_bon(yrs='2022', bon_path=bon_path):
   driver.find_element('id','outputFormat2').click()
   driver.find_element('id','year-select').send_keys(yrs)
   driver.find_element('id','proj-select').send_keys(site)
-  # Wait for the element to be clickable
-  wait = WebDriverWait(driver, 10)
-  calendar_element = wait.until(EC.element_to_be_clickable(driver.find_element('id','calendar'))
-  calendar_element.click()
-  #driver.find_element('id','calendar').click()
+  sleep(10)
+  driver.find_element('id','calendar').click()
+  sleep(3)
   driver.find_element('id','run1').click()
   driver.find_element(By.XPATH, ".//input[@type='submit']").click()
   sleep(3)

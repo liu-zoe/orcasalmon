@@ -31,6 +31,8 @@ orcasalmon.code-workspace
 #Other
 app_3tabs.py
 map.png
+fly_old.toml
+fly_new.toml
 data/twm/AppendixII.XLSX
 data/twm/OM_2021 FINAL program report.pdf
 data/twm/TWMQuads.pdf

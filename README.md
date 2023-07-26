@@ -13,7 +13,7 @@ A dashboard visualizing Chinook salmon population of the Fraser River (data from
 2. Bonneville Dam data is retrieved from Columbia Basin Research [Adult Passage Queries](https://www.cbr.washington.edu/dart/query/adult_daily). Number of adult Chinook salmon passing through the Bonneville Dam was directly monitored April to October, with video monitoring covering the other months. See [Fish Passage Center](https://www.fpc.org/adults/Q_adults_subsite.php) for more details. 
 
 #### Orca Data
-1. Orca sightings data is retrieved from [Acartia](https://acartia.io/home), a decentralized data cooperative for sharing marine animal locations within the Salish Sea. 
+1. Orca sightings data is retrieved from [Acartia](https://acartia.io/home) and [The Whale Museum](whalemuseum.org). 
 
 ### Author
 > [Zoe Liu](https://github.com/liu-zoe)

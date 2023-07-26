@@ -824,7 +824,7 @@ app.layout = html.Div(
                                     className="credit",
                                     children=
                                     '''
-                                    1. Orca geolocation data are retrieved from [Acartia](https://acartia.io/home) and [the Whale Museum](whalemuseum.org). 
+                                    1. Orca geolocation data are retrieved from [Acartia](https://acartia.io/home) and [The Whale Museum](whalemuseum.org). 
                                     2. Definition of central Salish Sea follows that of Monika Weiland in her talk about SRKW and Bigg's occupancy metrics.                                  
                                     '''),
                             ],

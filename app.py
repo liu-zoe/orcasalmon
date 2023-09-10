@@ -393,8 +393,8 @@ def peak_chinook(loc="Albion", year_zero=1990):
         raise ValueError("Location other than 'Albion' and 'Bonneville'")
     return peak_vals, peak_dates, peak_days
 def peak_srkw(src="twm", pod="", loc="", year_zero=1990):
-    tyl=[y for y in range(year_zero, 2022)] #year list for data from The Whale Museum
-    ayl=[y for y in range(2018, curyr)] #year list for data from Acartia
+    tyl=[y for y in range(year_zero, 2022)] #year list for data from The Whale Museum 1990~2021
+    ayl=[y for y in range(2018, curyr)] #year list for data from Acartia 2018~present
     byl=[y for y in range(year_zero, curyr)] #year list for data from both The Whale Museum plus Acartia
     peak_vals=[]
     peak_dates=[]
@@ -824,7 +824,7 @@ app.layout = html.Div(
                                     className="credit",
                                     children=
                                     '''
-                                    1. Orca geolocation data are retrieved from [Acartia](https://acartia.io/home) and [The Whale Museum](whalemuseum.org). 
+                                    1. Orca geolocation data are retrieved from [Acartia](https://acartia.io/home) (2018-present) and [The Whale Museum](https://whalemuseum.org/) (1990-2021). 
                                     2. Definition of central Salish Sea follows that of Monika Weiland in her talk about SRKW and Bigg's occupancy metrics.                                  
                                     '''),
                             ],

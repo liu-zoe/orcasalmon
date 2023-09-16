@@ -44,8 +44,10 @@ server=app.server
 #%%
 #--------------------------Load And Process Data----------------------------#
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
-mapbox_access_token = os.environ.get('MAPBOX_TOKEN')
-#mapbox_access_token = open(pjoin(APP_PATH,"mapbox_token.txt")).read()
+try: 
+    mapbox_access_token = open(pjoin(APP_PATH,"mapbox_token.txt")).read() #For debugging locally
+except:
+    mapbox_access_token = os.environ.get('MAPBOX_TOKEN') #For deployment
 #Get dates
 today=date.today()
 todaystr=str(today)
@@ -179,6 +181,8 @@ def srkw_acartia_map(year, pod="All pods"):
     srkwc['mon']=srkwc['date2'].apply(lambda x: x.month)
     srkwc['mon_frac']=srkwc['mon'].apply(lambda x: viri12pt[int(x)-1])
     srkwc['day_of_year']=srkwc['date_ymd'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
+    srkwc['tag']="[Acartia]"+srkwc['created']
+    srkwc['source']='arcartia'
     srkwc_k=srkwc[srkwc.K==1].reset_index()
     srkwc_l=srkwc[srkwc.L==1].reset_index()
     srkwc_j=srkwc[srkwc.J==1].reset_index()
@@ -249,6 +253,8 @@ def srkw_twm_map(year, pod="All pods"):
     srkwc['mon_frac']=srkwc['Month'].apply(lambda x: viri12pt[int(x)-1])
     srkwc['day_of_year']=srkwc['SightDate'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
     srkwc['created']=srkwc['SightDate']+" "+srkwc['Time1']
+    srkwc['tag']="[TWM]"+srkwc['created']
+    srkwc['source']='twm'
     srkwc_k=srkwc[srkwc.k==1].reset_index()
     srkwc_l=srkwc[srkwc.l==1].reset_index()
     srkwc_j=srkwc[srkwc.j==1].reset_index()
@@ -260,7 +266,7 @@ def srkw_twm_map(year, pod="All pods"):
         srkw_dat=srkwc_j
     elif pod=="All pods":
         srkw_dat=srkwc
-    return srkw_dat[['created','mon_frac','latitude','longitude']]
+    return srkw_dat[['created','mon_frac','latitude','longitude','tag','source']]
 #%% [markdown]
 # Load The Whale Museum Data 
 def srkw_twm_year(year, pod="All pods"):
@@ -1267,7 +1273,7 @@ def update_orca_map(pod,year):
                     ],
                 ),     
             ),
-            text=srkw_dat['created'],
+            text=srkw_dat['tag'],
             hoverinfo='text'
         ))
     fig_orcamap.update_layout(

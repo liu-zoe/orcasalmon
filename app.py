@@ -6,26 +6,18 @@
 import os
 from os.path import join as pjoin
 import pathlib
-import glob
-
-import datetime
 from datetime import date
 from datetime import datetime as dt 
-from time import strptime
-from time import sleep
 import calendar
 
 import pandas as pd
 pd.options.mode.chained_assignment = None #suppress chained assignment 
 
 import numpy as np
-from sklearn.linear_model import LinearRegression
 import dash
 from dash import dcc
 from dash import html 
-from dash.dependencies import Input, Output, State
-import dash_daq as daq 
-
+from dash.dependencies import Input, Output
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 import plotly.express as px
@@ -370,6 +362,7 @@ def peak_chinook(loc="Albion", year_zero=1990):
     peak_vals=[]
     peak_dates=[]
     peak_days=[]       
+    peak_p95_df=[]
     if loc=="Albion":
         for i in range(len(ayl)):
             d=pd.read_csv(fos_path+'fos'+str(ayl[i])+'.csv',usecols=['day','mon','cpue1'])
@@ -382,29 +375,45 @@ def peak_chinook(loc="Albion", year_zero=1990):
             peak_day=peak_date-date(yr,1,1)
             peak_vals.append(peak_val)
             peak_dates.append(peak_date)
-            peak_days.append(peak_day.days)                
+            peak_days.append(peak_day.days) 
+            #95 percentile          
+            peak_p95=np.percentile(d['cpue1'], 95)
+            d_p95=d[d['cpue1']>=peak_p95]
+            d_p95['date']=d_p95.apply(lambda x: date(yr, str2mon(x['mon']), int(x['day'])) ,axis=1)
+            d_p95['peak_day']=d_p95['date']-date(yr, 1, 1)
+            d_p95['peak_day']=d_p95['peak_day'].apply(lambda x: x.days)
+            peak_p95_df.append(d_p95)
     elif loc=="Bonneville":
         for i in range(len(byl)):
             d=pd.read_csv(bon_path+'bon'+str(byl[i])+'.csv',\
                     usecols=['Project','Date','Chin'])
             yr=byl[i]
             peak_val=max(d['Chin'].dropna())
+            peak_p95=np.percentile(d['Chin'].dropna(), 95)
             peak_row=d[d['Chin']==peak_val]
             peak_date=dt.strptime(peak_row.Date.values[0], '%Y-%m-%d').date()
             peak_day=peak_date-date(yr,1,1)
             peak_vals.append(peak_val)
             peak_dates.append(peak_date)
-            peak_days.append(peak_day.days)                
+            peak_days.append(peak_day.days)  
+            #95 percentile          
+            peak_p95=np.percentile(d['Chin'].dropna(), 95)
+            d_p95=d[d['Chin']>=peak_p95]
+            d_p95['peak_day']=d_p95['Date']-date(yr, 1, 1)
+            d_p95['peak_day']=d_p95['peak_day'].apply(lambda x: x.days)
+            peak_p95_df.append(d_p95)              
     else:
         raise ValueError("Location other than 'Albion' and 'Bonneville'")
-    return peak_vals, peak_dates, peak_days
+    return peak_vals, peak_dates, peak_days, peak_p95_df
+
 def peak_srkw(src="twm", pod="", loc="", year_zero=1990):
-    tyl=[y for y in range(year_zero, 2022)] #year list for data from The Whale Museum 1990~2021
-    ayl=[y for y in range(2018, curyr)] #year list for data from Acartia 2018~present
+    tyl=[y for y in range(year_zero, 2022)] #year list for data from The Whale Museum
+    ayl=[y for y in range(2018, curyr)] #year list for data from Acartia
     byl=[y for y in range(year_zero, curyr)] #year list for data from both The Whale Museum plus Acartia
     peak_vals=[]
     peak_dates=[]
-    peak_days=[]      
+    peak_days=[]  
+    peak_p95_df=[]    
     # Read TWM data 
     twm_data=[]
     for i in range(len(tyl)):
@@ -468,7 +477,13 @@ def peak_srkw(src="twm", pod="", loc="", year_zero=1990):
             peak_day=peak_date-date(yr,1,1)
             peak_vals.append(peak_val)
             peak_dates.append(peak_date)
-            peak_days.append(peak_day.days)                        
+            peak_days.append(peak_day.days)    
+            #95 percentile          
+            peak_p95=np.percentile(d['count'], 95)
+            d_p95=d[d['count']>=peak_p95]
+            d_p95['peak_day']=d_p95['Date']-date(yr, 1, 1)
+            d_p95['peak_day']=d_p95['peak_day'].apply(lambda x: x.days)
+            peak_p95_df.append(d_p95)                    
     elif src=="acartia":
         for i in range(len(ayl)):
             yr=ayl[i]
@@ -481,7 +496,13 @@ def peak_srkw(src="twm", pod="", loc="", year_zero=1990):
             peak_day=peak_date-date(yr,1,1)
             peak_vals.append(peak_val)
             peak_dates.append(peak_date)
-            peak_days.append(peak_day.days)         
+            peak_days.append(peak_day.days)
+            #95 percentile          
+            peak_p95=np.percentile(d['count'], 95)
+            d_p95=d[d['count']>=peak_p95]
+            d_p95['peak_day']=d_p95['Date']-date(yr, 1, 1)
+            d_p95['peak_day']=d_p95['peak_day'].apply(lambda x: x.days)
+            peak_p95_df.append(d_p95)         
     elif src=="both":
         for i in range(len(byl)):
             yr=byl[i]
@@ -506,49 +527,59 @@ def peak_srkw(src="twm", pod="", loc="", year_zero=1990):
             peak_vals.append(peak_val)
             peak_dates.append(peak_date)
             peak_days.append(peak_day.days)   
+            #95 percentile          
+            peak_p95=np.percentile(d['count'], 95)
+            d_p95=d[d['count']>=peak_p95]
+            d_p95['peak_day']=d_p95['Date']-date(yr, 1, 1)
+            d_p95['peak_day']=d_p95['peak_day'].apply(lambda x: x.days)
+            peak_p95_df.append(d_p95)
     else:
         raise ValueError("Source other than 'twm' and 'acartia'")
-    return peak_vals, peak_dates, peak_days
+    return peak_vals, peak_dates, peak_days, peak_p95_df
 
 # Calculating peak values of Chinook at Albion
 year_zero=1990
 albion_yl4peak=[y for y in range(year_zero, curyr+1)]
 apeak=pd.DataFrame()
-apv, apdt, apdy=peak_chinook(loc="Albion", year_zero=year_zero)
+apeak95=pd.DataFrame()
+apv, apdt, apdy, apdf=peak_chinook(loc="Albion", year_zero=year_zero)
 apeak['year']=albion_yl4peak[:-1]
 apeak['peakvals']=apv 
 apeak['peakdate']=apdt 
 apeak['peakday']=apdy
-x=apeak['year'].values.reshape((-1, 1))
-y=apeak['peakday'].values
-model = LinearRegression().fit(x, y)
-r_sq = model.score(x, y)
-albion_interc=model.intercept_
-albion_slope=model.coef_
+
+peakdays95=[]
+peakyr95=[]
+for i in range(len(albion_yl4peak)-1):
+    yr=albion_yl4peak[i]
+    adf95=apdf[i]
+    adf95_len=adf95.shape[0]
+    peakdays95+=list(adf95['peak_day'])
+    peakyr95+=[yr]*adf95_len
+apeak95['year']=peakyr95
+apeak95['peakday']=peakdays95
 
 # Calculating peak values of Orca sightings 
-def peak_mod_srkw(pod):
-    if pod=="All pods":
-        pod_value="j or k or l"
-    else:
-        pod_value=pod[0]
-    srkw_cs_pv, srkw_cs_pdt, srkw_cs_pdy=peak_srkw(src="both", pod=pod_value, loc="central salish", year_zero=year_zero)
-    srkw_cs_peak=pd.DataFrame()
-    srkw_cs_peak['year']=[y for y in range(year_zero, curyr)]
-    srkw_cs_peak['peakvals']=srkw_cs_pv 
-    srkw_cs_peak['peakdate']=srkw_cs_pdt 
-    srkw_cs_peak['peakday']=srkw_cs_pdy
-    x=srkw_cs_peak['year'].values.reshape((-1, 1))
-    y=srkw_cs_peak['peakday'].values
-    model = LinearRegression().fit(x, y)
-    srkw_interc=model.intercept_
-    srkw_slope=model.coef_
-    return srkw_cs_peak, srkw_interc, srkw_slope
-# Get the intercept and slopes of orca sighitng models
-srkw_cs_all_peak, srkw_all_interc, srkw_all_slope=peak_mod_srkw("All pods")
-srkw_cs_j_peak, srkw_j_interc, srkw_j_slope=peak_mod_srkw("J")
-srkw_cs_k_peak, srkw_k_interc, srkw_k_slope=peak_mod_srkw("K")
-srkw_cs_l_peak, srkw_l_interc, srkw_l_slope=peak_mod_srkw("L")
+srkw_cs_pv, srkw_cs_pdt, srkw_cs_pdy, srkw_cs_df=peak_srkw(src="both", loc="central salish")
+srkw_cs_peak=pd.DataFrame()
+srkw_cs_peak['year']=[y for y in range(year_zero, curyr)]
+srkw_cs_peak['peakvals']=srkw_cs_pv 
+srkw_cs_peak['peakdate']=srkw_cs_pdt
+srkw_cs_peak['peakday']=srkw_cs_pdy
+
+srkw_cs_peak95=pd.DataFrame()
+peakdays95=[]
+peakyr95=[]
+srkw_yrs=[y for y in range(year_zero, curyr)]
+for i in range(len(srkw_yrs)-1):
+    yr=srkw_yrs[i]
+    srkw_cs_df95=srkw_cs_df[i]
+    srkw_cs_df95_len=srkw_cs_df95.shape[0]
+    peakdays95+=list(srkw_cs_df95['peak_day'])
+    peakyr95+=[yr]*srkw_cs_df95_len
+srkw_cs_peak95['year']=peakyr95
+srkw_cs_peak95['peakday']=peakdays95
+
 #%% [markdow]
 # Load The SRKW Population Data
 srkwdata=pd.read_csv(pjoin(APP_PATH, "data/SRKW.csv"))
@@ -832,6 +863,7 @@ app.layout = html.Div(
                                     '''
                                     1. Orca geolocation data are retrieved from [Acartia](https://acartia.io/home) (2018-present) and [The Whale Museum](https://whalemuseum.org/) (1990-2021). 
                                     2. Definition of central Salish Sea follows that of Monika Weiland in her talk about SRKW and Bigg's occupancy metrics.                                  
+                                    3. The top time series chart depicting peak Chinook CPUE and Orca sightings illustrate observed data without any modeling. Lighter-shaded data points represent days when the observed Chinook CPUE or Orca sightings were in the top 95 percentile, while darker-shaded data points represent days when they reached their highest levels of the year.
                                     '''),
                             ],
                         ),
@@ -1304,27 +1336,15 @@ def update_orca_map(pod,year):
 def update_orca_lines(pod):
     if pod=="All pods":
         pod_tag=""
-        srkw_cs_peak=srkw_cs_all_peak
-        srkw_interc=srkw_all_interc
-        srkw_slope=srkw_all_slope
         srkw=srkwdata_all
     elif pod=="J pod":
         pod_tag="[J]"
-        srkw_cs_peak=srkw_cs_j_peak
-        srkw_interc=srkw_j_interc
-        srkw_slope=srkw_j_slope   
         srkw=srkwdata_j
     elif pod=="K pod":
         pod_tag="[K]"
-        srkw_cs_peak=srkw_cs_k_peak
-        srkw_interc=srkw_k_interc
-        srkw_slope=srkw_k_slope
         srkw=srkwdata_k
     elif pod=="L pod":
         pod_tag="[L]"
-        srkw_cs_peak=srkw_cs_l_peak
-        srkw_interc=srkw_l_interc
-        srkw_slope=srkw_l_slope   
         srkw=srkwdata_l 
 
     fig_peak = make_subplots(rows=2,cols=1,
@@ -1348,12 +1368,17 @@ def update_orca_lines(pod):
     )
     fig_peak.add_trace(
         go.Scatter(
-            x=srkw_cs_peak['year'], 
-            y=srkw_interc+srkw_slope*srkw_cs_peak['year'],
-            mode='lines',
-            name=f'Orca peak line {pod_tag}',
-            line=go.scatter.Line(color=plotlycl[0]),
+            x=srkw_cs_peak95['year'],
+            y=srkw_cs_peak95['peakday'],
+            name=f'Orca sightings peak day {pod_tag}',
+            mode='markers',
+            hovertemplate='%{y} day'+', %{x}',
+            marker = go.scatter.Marker(
+                        color = plotlycl[0],
+                        symbol="triangle-ne",
+                ),
             showlegend=False,
+            opacity=0.25,
         ),row=1, col=1,
     )
     fig_peak.add_trace(
@@ -1372,11 +1397,16 @@ def update_orca_lines(pod):
     )
     fig_peak.add_trace(
         go.Scatter(
-            x=apeak['year'], 
-            y=albion_interc+albion_slope*apeak['year'],
-            mode='lines',
-            name='Albion peak line',
-            line=go.scatter.Line(color=plotlycl[1]),
+            x=apeak95['year'],
+            y=apeak95['peakday'],
+            name='Chinook at Albion peak day',
+            mode='markers',
+            hovertemplate='%{y} day'+', %{x}',
+            marker = go.scatter.Marker(
+                        color = plotlycl[1],
+                        symbol="triangle-ne", 
+                ),
+            opacity=0.25,
             showlegend=False,
         ),row=1, col=1,
     )

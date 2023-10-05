@@ -625,7 +625,7 @@ app.layout = html.Div(
                     html.A(id="github-link",children=[
                         html.Img(id="github", src=app.get_asset_url("icone-github-grise.png"),
                         ),
-                    ], href='https://github.com/liu-zoe/orcasalmon', target="_blank"),
+                    ], href='https://github.com/salish-sea/orca-salmon', target="_blank"),
                     html.A(id="logo-link",
                            children=[
                         html.Img(id="logo", src=app.get_asset_url("wordlogo-seagreen.png"),

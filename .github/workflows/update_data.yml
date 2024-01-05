@@ -33,6 +33,6 @@ jobs:
         run: | 
           git config --local user.email "zoelzh@gmail.com"
           git config --local user.name "Zoe Liu"
-          git add ./data/acartia/srkw_2023.csv ./data/foschinook/fos2023.csv ./data/bonchinook/bon2023.csv
+          git add ./data/acartia/srkw_2024.csv ./data/foschinook/fos2024.csv ./data/bonchinook/bon2024.csv
           git commit -m "Updated data with GitHub Actions"
           git push origin main

@@ -1,0 +1,26 @@
+Project,Date,Chinook Run,Chin,JChin,Stlhd,WStlhd,Sock,Coho,JCoho,Shad,Lmpry,BTrout,Chum,Pink,TempC
+Bonneville,2024-01-01,,,,3,,,,,,,,,,
+Bonneville,2024-01-02,,,,6,1,,,,,,,,,
+Notes:
+Columbia River DART
+2024 Adult Passage Daily Counts at Bonneville
+1/1/2024 - 01/03/2024
+Generated 04 Jan 2024 18:05:45 PST. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2024-01-02. Last possible Data Date is 01/03/2024.
+Data Courtesy of U.S. Army Corps of Engineers.
+USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of 
+Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular 
+purpose.
+USACE Dams Video and Live Counting: From November through March; video tape fish counting occurs 
+at US Army Corps of Engineers dams with fish ladders on the Columbia and Snake Rivers. Fish counting by video tape 
+takes at least a few days to process: the fish counters have to make; collect; and read the tapes; and then submit 
+their fish counts. DART retrieves and posts the data as soon as it is made available. On April 1; live fish counting 
+resumes at all 8 Columbia River and Snake River Corps dams with fish ladders: from April through October each year 
+for 16 hours each day; fish counters working at each fish ladder look directly into the fish ladders to count the 
+fish passing by.
+Temperature (TempC) is reported in degrees Celsius. Source of temperature  data varies by project. At most projects; it is scrollcase or water quality temperature data. At Wells; it is the Fishway Attraction Flow temperature which is pumped from tailrace.
+Steelhead Counts: The Steelhead parameter includes both hatchery and wild counts. Prior to 1995 
+wild steelhead data was not published on a daily basis. The Steelhead-Wild parameter is a subset of the total 
+steelhead and may include unmarked hatchery fish.
+Chinook Run Dates: Chinook runs (referring to the season when adults migrate upstream) are based on run schedules by project as reported by the U.S. Army Corps of Engineers; Yakima Klickitat Fisheries Project and Oregon Department of Fish and Wildlife.
+"DART Data Citation. Columbia River DART, Columbia Basin Research, University of Washington. (2024). Adult Passage Daily Counts. Available from https://www.cbr.washington.edu/dart/query/adult_daily."

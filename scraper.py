@@ -37,8 +37,8 @@ pd.options.mode.chained_assignment = None #suppress chained assignment
 # %%
 today=date.today()
 todaystr=str(today)
-curyr=today.year
-#curyr=2022
+#curyr=today.year
+curyr=2024
 lastyr=curyr-1
 twoyr=curyr-2
 ayl=[y for y in range(1980, curyr+1)] #year list for Albion

@@ -43,8 +43,8 @@ except:
 #Get dates
 today=date.today()
 todaystr=str(today)
-#curyr=today.year
-curyr=2023
+curyr=today.year
+#curyr=2023
 lastyr=curyr-1
 twoyr=curyr-2
 ayl=[y for y in range(1980, curyr+1)] #year list for Albion
@@ -754,10 +754,11 @@ app.layout = html.Div(
                                                 children=[
                                                     html.H6("Southern Resident Orca Sightings"),
                                                     dcc.Dropdown(
-                                                            value=2023,
+                                                            value=2024,
                                                             className="year-dropdown",
                                                             id="year-dropdown",
                                                             options=[
+                                                                {"label":"2024","value":2024,},
                                                                 {"label":"2023","value":2023,},
                                                                 {"label":"2022","value":2022,},
                                                                 {"label":"2021","value":2021,},

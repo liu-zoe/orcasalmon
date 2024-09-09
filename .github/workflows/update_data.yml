@@ -1,7 +1,7 @@
 name: Update Data
 on:
   schedule:
-    - cron: '0 1 * * 0-6'
+    - cron: '0 1 * * 1'
   workflow_dispatch:
 
 jobs:

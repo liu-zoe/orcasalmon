@@ -56,7 +56,7 @@ acartia_path='./data/acartia/'
 
 # %% [markdown]
 # 2.1 Scrap Chinook data by year
-#chromedriver_autoinstaller.install()  # Check if the current version of chromedriver exists
+chromedriver_autoinstaller.install()  # Check if the current version of chromedriver exists
                                       # and if it doesn't exist, download it automatically,
                                       # then add chromedriver to path
 
@@ -100,8 +100,4 @@ def scrap_bon(yrs='2022', bon_path=bon_path):
   # filename=dlf[0]
   # os.rename('./'+filename, bon_path+'bon'+yrs+'.csv')
 
-# %% [markdown]
-# Use the following line to download the current year
-
-# %%
 scrap_bon(yrs=str(curyr), bon_path=bon_path)

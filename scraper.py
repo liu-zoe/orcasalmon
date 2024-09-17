@@ -145,7 +145,7 @@ def scrap_bon(yrs='2022', bon_path=bon_path):
 # Use the following line to download the current year
 
 # %%
-#scrap_bon(yrs=str(curyr), bon_path=bon_path)
+scrap_bon(yrs=str(curyr), bon_path=bon_path)
 
 # %% [markdown]
 # Use the following lines to download all fos chinook data

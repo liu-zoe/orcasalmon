@@ -1283,16 +1283,21 @@ def update_orca_map(pod,year):
         srkw_dat=pd.concat([srkw_dat0, srkw_dat1])
     else:
         srkw_dat=srkw_twm_map(year, pod)
+    
+    # create an empty dataset with all months of the year
+    empty_srkw_dat=pd.DataFrame()
+    empty_srkw_dat['m']=list(range(1,13))
+    empty_srkw_dat['year']=year
+    empty_srkw_dat['mon_frac']=empty_srkw_dat['m'].apply(lambda x: viri12pt[int(x)-1])
+
+    # find the current months if year = curyear
     if year==curyr:
-        # create an empty dataset with all months of the year
-        empty_srkw_dat=pd.DataFrame()
-        empty_srkw_dat['m']=list(range(1,13))
-        empty_srkw_dat['year']=curyr
-        empty_srkw_dat['mon_frac']=empty_srkw_dat['m'].apply(lambda x: viri12pt[int(x)-1])
-        # find the current months
         max_m=max(srkw_dat.m)
         append_dat=empty_srkw_dat[empty_srkw_dat['m']>max_m]
         srkw_dat=pd.concat([srkw_dat, append_dat])
+    else:
+        srkw_dat=pd.concat([srkw_dat, empty_srkw_dat])
+
     fig_orcamap = go.Figure()
     fig_orcamap.add_trace(go.Scattermapbox(
             lat=srkw_dat['latitude'],

@@ -145,7 +145,7 @@ def scrap_bon(yrs='2022', bon_path=bon_path):
   dlf = [x for x in os.listdir(download_path) if x[:10] == "adultdaily"]
   filename = dlf[0]
   os.rename(os.path.join(download_path,filename), os.path.join(download_path, "bon" + yrs + ".csv"))
-
+  os.chdir(base_path)
 # %% [markdown]
 # Use the following line to download the current year
 

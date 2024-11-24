@@ -37,8 +37,8 @@ pd.options.mode.chained_assignment = None #suppress chained assignment
 # %%
 today=date.today()
 todaystr=str(today)
-#curyr=today.year
-curyr=2024
+curyr=today.year
+#curyr=2024
 lastyr=curyr-1
 twoyr=curyr-2
 ayl=[y for y in range(1980, curyr+1)] #year list for Albion
@@ -112,13 +112,16 @@ for y in ayl:
 def scrap_bon(yrs='2022', bon_path=bon_path):
   if os.path.exists(bon_path)==False:
     os.makedirs(bon_path)
+  base_path=os.path.abspath("")
+  download_path=os.path.join(base_path, bon_path[2:-1])
+  os.chdir(download_path)
   #Set up chrome driver
   options = webdriver.ChromeOptions()
   options.add_argument('--headless')
   options.add_argument('--no-sandbox')
   options.add_argument('--disable-dev-shm-usage')
   options.add_argument('--ignore-certificate-errors')
-  prefs = {'download.default_directory' : bon_path}
+  prefs = {'download.default_directory' : download_path}
   options.add_experimental_option('prefs', prefs)
   driver=webdriver.Chrome(options=options)
   #landing page of Columbia Basin Research 
@@ -139,9 +142,9 @@ def scrap_bon(yrs='2022', bon_path=bon_path):
     driver.find_element('id','run1').submit()  
   driver.find_element(By.XPATH, ".//input[@type='submit']").submit()
   sleep(3)
-  dlf=[x for x in os.listdir("./") if x[-4:]=='.csv']
-  filename=dlf[0]
-  os.rename('./'+filename, bon_path+'bon'+yrs+'.csv')
+  dlf = [x for x in os.listdir(download_path) if x[:10] == "adultdaily"]
+  filename = dlf[0]
+  os.rename(os.path.join(download_path,filename), os.path.join(download_path, "bon" + yrs + ".csv"))
 
 # %% [markdown]
 # Use the following line to download the current year

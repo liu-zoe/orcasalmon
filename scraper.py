@@ -118,6 +118,8 @@ def scrap_bon(yrs='2022', bon_path=bon_path):
   options.add_argument('--no-sandbox')
   options.add_argument('--disable-dev-shm-usage')
   options.add_argument('--ignore-certificate-errors')
+  prefs = {'download.default_directory' : bon_path}
+  options.add_experimental_option('prefs', prefs)
   driver=webdriver.Chrome(options=options)
   #landing page of Columbia Basin Research 
   url = 'https://www.cbr.washington.edu/dart/query/adult_daily'
@@ -145,7 +147,7 @@ def scrap_bon(yrs='2022', bon_path=bon_path):
 # Use the following line to download the current year
 
 # %%
-#scrap_bon(yrs=str(curyr), bon_path=bon_path)
+scrap_bon(yrs=str(curyr), bon_path=bon_path)
 
 # %% [markdown]
 # Use the following lines to download all fos chinook data

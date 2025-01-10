@@ -1,14 +1,12 @@
-#%% [markdown]
 ## Project Name: Orcasound Salmon
 ### Program Name: app.py
 ### Purpose: To make a dash board for the Chinook salmon data
-##### Date Created: Dec 3rd 2022
+##### Date Created: Dec 14th 2024
+
 import os
 from os.path import join as pjoin
 import pathlib
 from datetime import date
-from datetime import datetime as dt 
-import calendar
 
 import pandas as pd
 pd.options.mode.chained_assignment = None #suppress chained assignment 
@@ -22,29 +20,24 @@ import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 import plotly.express as px
 from plotly.express.colors import sample_colorscale
-#%%
-# Initialize app
-app = dash.Dash(
-    __name__,
-    meta_tags=[
-        {"name": "viewport", "content": "width=device-width, initial-scale=1.0"},
-        {"name": "description", "content": "Chinook Salmon Dashboard"}, 
-        {"name": "news_keywords", "content": "Chinook, Salmon, Orca, Killer Whales, Puget Sound"}
-        ],
-    )
-server=app.server
-#%%
+from apputils import (load_albion, load_bon, 
+                      calendar_template, create_lagged, 
+                      acartia_map_preproc, twm_map_preproc, 
+                      peak_srkw,
+                      apeak_df, srkw_peak_df)
+
 #--------------------------Load And Process Data----------------------------#
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
 try: 
     mapbox_access_token = open(pjoin(APP_PATH,"mapbox_token.txt")).read() #For debugging locally
 except:
     mapbox_access_token = os.environ.get('MAPBOX_TOKEN') #For deployment
+
 #Get dates
 today=date.today()
 todaystr=str(today)
 curyr=today.year
-#curyr=2023
+# curyr=2024
 lastyr=curyr-1
 twoyr=curyr-2
 ayl=[y for y in range(1980, curyr+1)] #year list for Albion
@@ -56,532 +49,30 @@ bon_path=pjoin(APP_PATH,'data/bonchinook/')
 acartia_path=pjoin(APP_PATH, 'data/acartia/')
 twm_path=pjoin(APP_PATH, 'data/twm/')
 srkw_path=pjoin(APP_PATH, 'data/')
-#%%
-#Load Albion data
-albion=pd.DataFrame(columns=['day','m'])
-albion_cpue=[] # Albion cpue sum
-for i in reversed(range(len(ayl))):
-    d=pd.read_csv(fos_path+'fos'+str(ayl[i])+'.csv',\
-        usecols=['day','mon','cpue1'])
-    s=sum(d['cpue1'])
-    albion_cpue.append(s)
-    d['m']=d['mon'].apply(lambda x: dt.strptime(x, '%b').month)
-    d=d.drop(columns='mon')
-    d=d.rename(columns={'cpue1':'cpue'+str(ayl[i])})
-    albion=pd.merge(left=albion, right=d, how='outer', on=['m','day'], sort=True)
-del(d,i,s)
-albion['cpue_hist']=albion.iloc[:,5:].mean(axis=1, skipna=True).round(decimals=2) #History up to 3 years ago
-albion['cpue_hist2']=albion.iloc[:,3:].mean(axis=1, skipna=True).round(decimals=2) #History up to last year
-albion['month']=albion['m'].apply(lambda x: dt.strptime(str(x), '%m').strftime('%b'))
-albion['date']=albion[['month','day']].apply(lambda x: '-'.join(x.values.astype(str)), axis="columns")
-albionpd=pd.DataFrame({'year':ayl[:-1], 'alb_cpue':albion_cpue[:-1]}, columns=['year','alb_cpue'])
-# %%
-# Load Bonneville Dam data
-bonnev=pd.DataFrame(columns=['day','m'])
-for i in reversed(range(len(byl))):
-    d=pd.read_csv(bon_path+'bon'+str(byl[i])+'.csv',\
-        usecols=['Project','Date','Chin'])
-    d=d[d['Project']=='Bonneville']
-    d['Chin2']=d['Chin'].apply(lambda x: 0 if x<0 else x)
-    d['m']=pd.DatetimeIndex(d['Date']).month
-    d['day']=pd.DatetimeIndex(d['Date']).day
-    d=d.rename(columns={'Chin2':'chin'+str(byl[i])})
-    d=d.drop(columns=['Project','Date','Chin'])
-    bonnev=pd.merge(left=bonnev, right=d, how='outer', on=['m','day'], sort=True)
-del(d,i)
-bonnev['chin_hist']=bonnev.iloc[:,5:].mean(axis=1, skipna=True).round(decimals=1)#History up to 3 years ago
-bonnev['chin_hist2']=bonnev.iloc[:,3:].mean(axis=1, skipna=True).round(decimals=1)#History up to last year
-bonnev['month']=bonnev['m'].apply(lambda x: dt.strptime(str(x), '%m').strftime('%b'))
-bonnev['date']=bonnev[['month','day']].apply(lambda x: '-'.join(x.values.astype(str)), axis="columns")
-# %%
+
+#Load Bonneville data
+bonnev=load_bon(bon_path)
+
 # Create calendar dataframes 
-cal=bonnev[['date']]
-cal=cal[cal['date']!='Feb-29']
-cal['date1']=pd.to_datetime(cal['date'].apply(lambda x: str(2021)+'-'+x), format='%Y-%b-%d')
-cal['m']=pd.DatetimeIndex(cal['date1']).month
-cal['day']=pd.DatetimeIndex(cal['date1']).day
-cal=cal.drop(columns=['date1'])
-# Example data frame
-# date  m day
-# Jan-1 1 1 
-# Create calendar dataframes for leapyear 
-cal_leap=bonnev[['date']]
-cal_leap['date1']=pd.to_datetime(cal_leap['date'].apply(lambda x: str(2020)+'-'+x), errors='coerce', format='%Y-%b-%d')
-cal_leap['m']=pd.DatetimeIndex(cal_leap['date1']).month.astype('int')
-cal_leap['day']=pd.DatetimeIndex(cal_leap['date1']).day.astype('int')
-cal_leap=cal_leap.drop(columns=['date1'])
-#%%
-albion=albion.drop(columns=['date'])
-albion=cal_leap.merge(albion, how='left', on=['m','day'])
-# %%
-def create_lagged(year, 
-    lag1, # Albion lag
-    lag2  # Bonneville lag
-    ):
-    # Create Albion lag dataset
-    albion_lagged=albion[['date','cpue'+str(year),'cpue_hist']]
-    if calendar.isleap(year)==False:
-        albion_lagged=albion_lagged[albion_lagged['date']!='Feb-29']
-    albion_lagged['date1']=pd.to_datetime(albion_lagged['date'], errors='coerce', format='%b-%d')
-    albion_lagged['date2']=albion_lagged['date1'] - pd.Timedelta(days=lag1)
-    albion_lagged['m']=pd.DatetimeIndex(albion_lagged['date2']).month
-    albion_lagged['day']=pd.DatetimeIndex(albion_lagged['date2']).day
-    albion_lagged=albion_lagged.drop(columns=['date','date1','date2'])
-    # Create Bonneville Dam lagged dataset
-    bonnev_lagged=bonnev[['date','chin'+str(year),'chin_hist']]
-    if calendar.isleap(year)==False:
-        bonnev_lagged=bonnev_lagged[bonnev_lagged['date']!='Feb-29']
-    bonnev_lagged['date1']=pd.to_datetime(bonnev_lagged['date'].apply(lambda x: str(year)+'-'+x), errors='coerce',format='%Y-%b-%d')
-    bonnev_lagged['date2']=bonnev_lagged['date1'] - pd.Timedelta(days=lag2)
-    bonnev_lagged['year2']=pd.DatetimeIndex(bonnev_lagged['date2']).year
-    bonnev_lagged['m']=pd.DatetimeIndex(bonnev_lagged['date2']).month
-    bonnev_lagged['day']=pd.DatetimeIndex(bonnev_lagged['date2']).day
-    bonnev_lagged=bonnev_lagged[bonnev_lagged['year2']==year]
-    bonnev_lagged=bonnev_lagged.drop(columns=['date','date1','date2','year2'])
-    #Combine Albion and Bonneville lagged data
-    if calendar.isleap(year)==False:
-        lagged=cal.merge(bonnev_lagged, how='left', on=['m','day'])
-    else:
-        lagged=cal_leap.merge(bonnev_lagged, how='left', on=['m','day'])
-    lagged=lagged.merge(albion_lagged, on=['m','day'], how='left')
-    return lagged
-lagged=create_lagged(curyr, 10, 10)
-# %% [markdown]
-# Load Acartia data
-# Function count orca reports or counts by day
-def srkw_count(dat, count_orca=False):
-    if count_orca:
-        #print('Creating a daily average of number of orcas...')
-        dat=dat.loc[:, ['no_sighted', 'date_ymd']]
-        srkw_avg=dat.groupby(dat.date_ymd).mean().reset_index()
-        srkw_avg=srkw_avg.rename(columns={'date_ymd':'date','no_sighted':'count'})
-    else:
-        #print('Creating a daily count of reports...')
-        dat=dat.loc[:, ['date_ymd']]
-        srkw_avg=dat['date_ymd'].value_counts().reset_index()
-        srkw_avg=srkw_avg.rename(columns={'date_ymd':'count','index':'date'})
-        srkw_avg=srkw_avg.sort_values(by=['date'])
-    srkw_avg['day']=srkw_avg['date'].apply(lambda x: int(x.split('-')[2]))
-    srkw_avg['m']=srkw_avg['date'].apply(lambda x: int(x.split('-')[1]))
-    srkw_avg=srkw_avg.sort_values(by=['m','day'])
-    return srkw_avg
-#%%
-# Function to read in acartia orca data for maps
-def srkw_acartia_map(year, pod="All pods"):
-    srkwc=pd.read_csv(acartia_path+"srkw_"+str(year)+".csv")
-    srkwc=srkwc[~srkwc.date.isnull()]
-    srkwc['date2']=pd.to_datetime(srkwc['date_ymd'],format='%Y-%m-%d', errors='coerce')
-    srkwc['mon']=srkwc['date2'].apply(lambda x: x.month)
-    srkwc['mon_frac']=srkwc['mon'].apply(lambda x: viri12pt[int(x)-1])
-    srkwc['day_of_year']=srkwc['date_ymd'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
-    srkwc['tag']="[Acartia]"+srkwc['created']
-    srkwc['source']='arcartia'
-    srkwc_k=srkwc[srkwc.K==1].reset_index()
-    srkwc_l=srkwc[srkwc.L==1].reset_index()
-    srkwc_j=srkwc[srkwc.J==1].reset_index()
-    if pod=="L pod":
-        srkw_dat=srkwc_l
-    elif pod=="K pod":
-        srkw_dat=srkwc_k
-    elif pod=="J pod":
-        srkw_dat=srkwc_j
-    elif pod=="All pods":
-        srkw_dat=srkwc[srkwc.srkw==1]
-    return srkw_dat
-#%% 
-# Function to make orca count data of a certain year and merge with salmon data
-def srkw_acartia_year(year, pod="All pods"):
-    srkwc=pd.read_csv(acartia_path+"srkw_"+str(year)+".csv")
-    srkwc['date2']=pd.to_datetime(srkwc['date_ymd'],format='%Y-%m-%d', errors='coerce')
-    #srkwc['day_of_year']=srkwc['date_ymd'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
-    # Define the north and south puget sound latitude
-    entry_lat=48.19437
-    srkwc['north_puget_sound']=srkwc['latitude'].apply(lambda x: 1 if x>entry_lat else 0)
-    srkwc_k=srkwc[srkwc.K==1].reset_index()
-    srkwc_l=srkwc[srkwc.L==1].reset_index()
-    srkwc_j=srkwc[srkwc.J==1].reset_index()
+cal=calendar_template(bonnev)
+calleap=calendar_template(bonnev, leap=True)
 
-    if pod=="L pod":
-        srkw_dat=srkwc_l
-    elif pod=="K pod":
-        srkw_dat=srkwc_k
-    elif pod=="J pod":
-        srkw_dat=srkwc_j
-    elif pod=="All pods":
-        srkw_dat=srkwc[srkwc.srkw==1]
-    srkwc_north=srkw_dat[srkw_dat['north_puget_sound']==1]
-    srkwc_north_avg=srkw_count(srkwc_north, count_orca=False)
-    srkwc_north_avg.columns=['date','count_north','day','m']
+#Load Albion data
+albion, albsum=load_albion(fos_path)
+albion=calleap.merge(albion, how='left', on=['m','day'])
+# Create a combined data of Albion and Bonneville and create a lag 
+lagged=create_lagged(curyr, albion, bonnev, 10, 10)
 
-    srkwc_south=srkw_dat[srkw_dat['north_puget_sound']==0]
-    srkwc_south_avg=srkw_count(srkwc_south, count_orca=False)
-    srkwc_south_avg.columns=['date','count_south','day','m']
-
-    srkw_yrcount=srkw_count(srkwc, count_orca=False)
-    
-    # Add salmon data
-    salmon=create_lagged(year, 4, 10)
-    srkw_yrcount=srkw_yrcount.merge(salmon, left_on=['m','day'], right_on=['m','day'], how='right')
-    srkw_yrcount=srkw_yrcount.drop(columns=['date_x'])
-    srkw_yrcount=srkw_yrcount.rename(columns={'date_y':'date'})
-
-    # Add srkw count north of puget sound
-    srkw_yrcount=srkw_yrcount.merge(srkwc_north_avg, left_on=['m','day'], right_on=['m','day'], how='left')
-    srkw_yrcount=srkw_yrcount.drop(columns=['date_y'])
-    srkw_yrcount=srkw_yrcount.rename(columns={'date_x':'date'})
-
-    # Add srkw count in puget sound
-    srkw_yrcount=srkw_yrcount.merge(srkwc_south_avg, left_on=['m','day'], right_on=['m','day'], how='left')
-    srkw_yrcount=srkw_yrcount.drop(columns=['date_y'])
-    srkw_yrcount=srkw_yrcount.rename(columns={'date_x':'date'})
-
-    # Keep a subset of variables 
-    srkw_yrcount=srkw_yrcount[['date', 'm','day','count','count_north','count_south','chin'+str(year),'chin_hist','cpue'+str(year),'cpue_hist']]
-    srkw_yrcount.columns=['date','m','day','srkw','srkw_north','srkw_south','bon'+str(year),'bon_hist','alb'+str(year),'alb_hist']
-    return srkw_yrcount
-#%% [markdown]
-# Load the Whale Museum Data
-def srkw_twm_map(year, pod="All pods"):
-    srkwc=pd.read_csv(twm_path+"twm"+str(year)+".csv")
-    srkwc['mon_frac']=srkwc['Month'].apply(lambda x: viri12pt[int(x)-1])
-    srkwc['day_of_year']=srkwc['SightDate'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
-    srkwc['created']=srkwc['SightDate']+" "+srkwc['Time1']
-    srkwc['tag']="[TWM]"+srkwc['created']
-    srkwc['source']='twm'
-    srkwc_k=srkwc[srkwc.k==1].reset_index()
-    srkwc_l=srkwc[srkwc.l==1].reset_index()
-    srkwc_j=srkwc[srkwc.j==1].reset_index()
-    if pod=="L pod":
-        srkw_dat=srkwc_l
-    elif pod=="K pod":
-        srkw_dat=srkwc_k
-    elif pod=="J pod":
-        srkw_dat=srkwc_j
-    elif pod=="All pods":
-        srkw_dat=srkwc
-    return srkw_dat[['created','mon_frac','latitude','longitude','tag','source']]
-#%% [markdown]
-# Load The Whale Museum Data 
-def srkw_twm_year(year, pod="All pods"):
-    srkwc=pd.read_csv(twm_path+"twm"+str(year)+".csv")
-    # Define the north and south puget sound latitude
-    entry_lat=48.19437
-    srkwc['north_puget_sound']=srkwc['latitude'].apply(lambda x: 1 if x>entry_lat else 0)
-    srkwc['mon_frac']=srkwc['Month'].apply(lambda x: viri12pt[int(x)-1])
-    srkwc['day_of_year']=srkwc['SightDate'].apply(lambda x: pd.Period(x, freq='D').day_of_year)
-    srkwc['date_ymd']=srkwc['SightDate']
-    srkwc['created']=srkwc['SightDate']+" "+srkwc['Time1']
-    srkwc_k=srkwc[srkwc.k==1].reset_index()
-    srkwc_l=srkwc[srkwc.l==1].reset_index()
-    srkwc_j=srkwc[srkwc.j==1].reset_index()
-    if pod=="L pod":
-        srkw_dat=srkwc_l
-    elif pod=="K pod":
-        srkw_dat=srkwc_k
-    elif pod=="J pod":
-        srkw_dat=srkwc_j
-    elif pod=="All pods":
-        srkw_dat=srkwc
-
-    srkwc_north=srkw_dat[srkw_dat['north_puget_sound']==1]
-    srkwc_north_avg=srkw_count(srkwc_north, count_orca=False)
-    srkwc_north_avg.columns=['date','count_north','day','m']
-
-    srkwc_south=srkw_dat[srkw_dat['north_puget_sound']==0]
-    srkwc_south_avg=srkw_count(srkwc_south, count_orca=False)
-    srkwc_south_avg.columns=['date','count_south','day','m']
-
-    srkw_yrcount=srkw_count(srkwc, count_orca=False)
-    
-    # Add salmon data
-    salmon=create_lagged(year, 4, 10)
-    srkw_yrcount=srkw_yrcount.merge(salmon, left_on=['m','day'], right_on=['m','day'], how='right')
-    srkw_yrcount=srkw_yrcount.drop(columns=['date_x'])
-    srkw_yrcount=srkw_yrcount.rename(columns={'date_y':'date'})
-
-    # Add srkw count north of puget sound
-    srkw_yrcount=srkw_yrcount.merge(srkwc_north_avg, left_on=['m','day'], right_on=['m','day'], how='left')
-    srkw_yrcount=srkw_yrcount.drop(columns=['date_y'])
-    srkw_yrcount=srkw_yrcount.rename(columns={'date_x':'date'})
-
-    # Add srkw count in puget sound
-    srkw_yrcount=srkw_yrcount.merge(srkwc_south_avg, left_on=['m','day'], right_on=['m','day'], how='left')
-    srkw_yrcount=srkw_yrcount.drop(columns=['date_y'])
-    srkw_yrcount=srkw_yrcount.rename(columns={'date_x':'date'})
-
-    # Keep a subset of variables 
-    srkw_yrcount=srkw_yrcount[['date', 'm','day','count','count_north','count_south','chin'+str(year),'chin_hist','cpue'+str(year),'cpue_hist']]
-    srkw_yrcount.columns=['date','m','day','srkw','srkw_north','srkw_south','bon'+str(year),'bon_hist','alb'+str(year),'alb_hist']
-
-    return srkw_yrcount
-
-# Functions for calculating peak sightings of orca and peak count of Chinook
-def to_datetime(date):
-    """
-    Converts a numpy datetime64 object to a python datetime object 
-    Input:
-      date - a np.datetime64 object
-    Output:
-      DATE - a python datetime object
-    """
-    timestamp = ((date - np.datetime64('1970-01-01T00:00:00'))
-                 / np.timedelta64(1, 's'))
-    return dt.utcfromtimestamp(timestamp).date()
-def str2mon(m):
-    if isinstance(m, str):
-        ml=m.lower()
-        if ml=="jan":
-            x=1
-        elif ml=="feb":
-            x=2
-        elif ml=="mar":
-            x=3
-        elif ml=="apr":
-            x=4
-        elif ml=="may":
-            x=5
-        elif ml=="jun":
-            x=6
-        elif ml=="jul":
-            x=7
-        elif ml=="aug":
-            x=8
-        elif ml=="sep":
-            x=9
-        elif ml=="oct":
-            x=10
-        elif ml=="nov":
-            x=11
-        elif ml=="dec":
-            x=12
-        return x
-    else: 
-        raise ValueError("Input value not string")
-def peak_chinook(loc="Albion", year_zero=1990):
-    ayl=[y for y in range(year_zero, curyr)] #year list for Albion up till last year
-    byl=[y for y in range(year_zero, curyr)] #year list for Bonneville Dam up till last year
-    peak_vals=[]
-    peak_dates=[]
-    peak_days=[]       
-    peak_p95_df=[]
-    if loc=="Albion":
-        for i in range(len(ayl)):
-            d=pd.read_csv(fos_path+'fos'+str(ayl[i])+'.csv',usecols=['day','mon','cpue1'])
-            yr=ayl[i]
-            peak_val=max(d['cpue1'])
-            peak_row=d[d['cpue1']==peak_val]
-            peak_day=peak_row.day.values[0]
-            peak_mon=str2mon(peak_row.mon.values[0])
-            peak_date=date(yr, peak_mon, peak_day)
-            peak_day=peak_date-date(yr,1,1)
-            peak_vals.append(peak_val)
-            peak_dates.append(peak_date)
-            peak_days.append(peak_day.days) 
-            #95 percentile          
-            peak_p95=np.percentile(d['cpue1'], 95)
-            d_p95=d[d['cpue1']>=peak_p95]
-            d_p95['date']=d_p95.apply(lambda x: date(yr, str2mon(x['mon']), int(x['day'])) ,axis=1)
-            d_p95['peak_day']=d_p95['date']-date(yr, 1, 1)
-            d_p95['peak_day']=d_p95['peak_day'].apply(lambda x: x.days)
-            peak_p95_df.append(d_p95)
-    elif loc=="Bonneville":
-        for i in range(len(byl)):
-            d=pd.read_csv(bon_path+'bon'+str(byl[i])+'.csv',\
-                    usecols=['Project','Date','Chin'])
-            yr=byl[i]
-            peak_val=max(d['Chin'].dropna())
-            peak_p95=np.percentile(d['Chin'].dropna(), 95)
-            peak_row=d[d['Chin']==peak_val]
-            peak_date=dt.strptime(peak_row.Date.values[0], '%Y-%m-%d').date()
-            peak_day=peak_date-date(yr,1,1)
-            peak_vals.append(peak_val)
-            peak_dates.append(peak_date)
-            peak_days.append(peak_day.days)  
-            #95 percentile          
-            peak_p95=np.percentile(d['Chin'].dropna(), 95)
-            d_p95=d[d['Chin']>=peak_p95]
-            d_p95['peak_day']=d_p95['Date']-date(yr, 1, 1)
-            d_p95['peak_day']=d_p95['peak_day'].apply(lambda x: x.days)
-            peak_p95_df.append(d_p95)              
-    else:
-        raise ValueError("Location other than 'Albion' and 'Bonneville'")
-    return peak_vals, peak_dates, peak_days, peak_p95_df
-
-def peak_srkw(src="twm", pod="", loc="", year_zero=1990):
-    tyl=[y for y in range(year_zero, 2022)] #year list for data from The Whale Museum
-    ayl=[y for y in range(2018, curyr)] #year list for data from Acartia
-    byl=[y for y in range(year_zero, curyr)] #year list for data from both The Whale Museum plus Acartia
-    peak_vals=[]
-    peak_dates=[]
-    peak_days=[]  
-    peak_p95_df=[]    
-    # Read TWM data 
-    twm_data=[]
-    for i in range(len(tyl)):
-        d1=pd.read_csv(os.path.join(twm_path,'twm'+str(tyl[i])+'.csv'))
-        if pod=="":
-            pass
-        elif pod.lower()=="j":
-            d1=d1[d1['j']==1]
-        elif pod.lower()=="k":
-            d1=d1[d1['k']==1]
-        elif pod.lower()=="l":
-            d1=d1[d1['l']==1]
-        elif pod.lower()=="j or k or l":
-            d1=d1[(d1['j']==1) | (d1['k']==1) | (d1['l']==1)]
-        if loc=="":
-            pass 
-        elif loc.lower()=="puget sound":
-            d1=d1[d1['puget_sound']==1]
-        elif loc.lower()=="central salish":
-            d1=d1[d1['central_salish']==1]
-        d1=d1[['SightDate']]
-        d1['SightDate']=d1['SightDate'].apply(lambda x: dt.strptime(x, '%Y-%m-%d').date())
-        twm_data.append(d1)
-    # Read Acartia Data 
-    acartia_data=[]
-    for i in range(len(ayl)):
-        d2=pd.read_csv(os.path.join(acartia_path,'srkw_'+str(ayl[i])+'.csv'))
-        d2['date2']=pd.to_datetime(d2['date_ymd'],format='%Y-%m-%d', errors='coerce')
-        entry_lat=48.19437
-        d2['central_salish']=d2['latitude'].apply(lambda x: 1 if x>entry_lat else 0)
-        d2['puget_sound']=d2['latitude'].apply(lambda x: 1 if x<=entry_lat else 0)            
-        if pod=="":
-            pass
-        elif pod.lower()=="j":
-            d2=d2[d2['J']==1]
-        elif pod.lower()=="k":
-            d2=d2[d2['K']==1]
-        elif pod.lower()=="l":
-            d2=d2[d2['L']==1]
-        elif pod.lower()=="j or k or l":
-            d2=d2[(d2['J']==1) | (d2['K']==1) | (d2['L']==1)]
-        if loc=="":
-            pass 
-        elif loc.lower()=="puget sound":
-            d2=d2[d2['puget_sound']==1]
-        elif loc.lower()=="central salish":
-            d2=d2[d2['central_salish']==1]
-        d2=d2[['date2']]
-        d2['date2']=d2['date2'].apply(lambda x: to_datetime(x))
-        d2=d2.rename(columns={"date2":"SightDate"})
-        acartia_data.append(d2)
-    if src=="twm":
-        for i in range(len(tyl)):
-            d=twm_data[i]
-            yr=tyl[i]
-            d=d['SightDate'].value_counts().reset_index()
-            d=d.rename(columns={'index':'Date', 'SightDate':'count'})
-            peak_val=max(d['count'])
-            peak_row=d[d['count']==peak_val]
-            peak_date=peak_row['Date'].values[0]
-            peak_day=peak_date-date(yr,1,1)
-            peak_vals.append(peak_val)
-            peak_dates.append(peak_date)
-            peak_days.append(peak_day.days)    
-            #95 percentile          
-            peak_p95=np.percentile(d['count'], 95)
-            d_p95=d[d['count']>=peak_p95]
-            d_p95['peak_day']=d_p95['Date']-date(yr, 1, 1)
-            d_p95['peak_day']=d_p95['peak_day'].apply(lambda x: x.days)
-            peak_p95_df.append(d_p95)                    
-    elif src=="acartia":
-        for i in range(len(ayl)):
-            yr=ayl[i]
-            d=acartia_data[i]
-            d=d['SightDate'].value_counts().reset_index()
-            d=d.rename(columns={'index':'Date', 'SightDate':'count'})   
-            peak_val=max(d['count'])
-            peak_row=d[d['count']==peak_val]
-            peak_date=peak_row['Date'].values[0]
-            peak_day=peak_date-date(yr,1,1)
-            peak_vals.append(peak_val)
-            peak_dates.append(peak_date)
-            peak_days.append(peak_day.days)
-            #95 percentile          
-            peak_p95=np.percentile(d['count'], 95)
-            d_p95=d[d['count']>=peak_p95]
-            d_p95['peak_day']=d_p95['Date']-date(yr, 1, 1)
-            d_p95['peak_day']=d_p95['peak_day'].apply(lambda x: x.days)
-            peak_p95_df.append(d_p95)         
-    elif src=="both":
-        for i in range(len(byl)):
-            yr=byl[i]
-            if byl[i]<2018:
-                j=tyl.index(byl[i])
-                d=twm_data[j]
-            elif (byl[i]>=2018) & (byl[i]<2022):
-                j=tyl.index(byl[i])
-                d1=twm_data[j]
-                k=ayl.index(byl[i])
-                d2=acartia_data[k]   
-                d=pd.concat([d1, d2])              
-            else:
-                k=ayl.index(byl[i])
-                d=acartia_data[k]
-            d=d['SightDate'].value_counts().reset_index()
-            d=d.rename(columns={'index':'Date', 'SightDate':'count'})   
-            peak_val=max(d['count'])
-            peak_row=d[d['count']==peak_val]
-            peak_date=peak_row['Date'].values[0]
-            peak_day=peak_date-date(yr,1,1)
-            peak_vals.append(peak_val)
-            peak_dates.append(peak_date)
-            peak_days.append(peak_day.days)   
-            #95 percentile          
-            peak_p95=np.percentile(d['count'], 95)
-            d_p95=d[d['count']>=peak_p95]
-            d_p95['peak_day']=d_p95['Date']-date(yr, 1, 1)
-            d_p95['peak_day']=d_p95['peak_day'].apply(lambda x: x.days)
-            peak_p95_df.append(d_p95)
-    else:
-        raise ValueError("Source other than 'twm' and 'acartia'")
-    return peak_vals, peak_dates, peak_days, peak_p95_df
+twm_map_data=twm_map_preproc(2017, twm_path, "All pods")
+acartia_map_data=acartia_map_preproc(2023, acartia_path)
 
 # Calculating peak values of Chinook at Albion
-year_zero=1990
-albion_yl4peak=[y for y in range(year_zero, curyr+1)]
-apeak=pd.DataFrame()
-apeak95=pd.DataFrame()
-apv, apdt, apdy, apdf=peak_chinook(loc="Albion", year_zero=year_zero)
-apeak['year']=albion_yl4peak[:-1]
-apeak['peakvals']=apv 
-apeak['peakdate']=apdt 
-apeak['peakday']=apdy
-
-peakdays95=[]
-peakyr95=[]
-for i in range(len(albion_yl4peak)-1):
-    yr=albion_yl4peak[i]
-    adf95=apdf[i]
-    adf95_len=adf95.shape[0]
-    peakdays95+=list(adf95['peak_day'])
-    peakyr95+=[yr]*adf95_len
-apeak95['year']=peakyr95
-apeak95['peakday']=peakdays95
-
+apeak, apeak95=apeak_df(curyr, fos_path, bon_path)
 # Calculating peak values of Orca sightings 
-srkw_cs_pv, srkw_cs_pdt, srkw_cs_pdy, srkw_cs_df=peak_srkw(src="both", loc="central salish")
-srkw_cs_peak=pd.DataFrame()
-srkw_cs_peak['year']=[y for y in range(year_zero, curyr)]
-srkw_cs_peak['peakvals']=srkw_cs_pv 
-srkw_cs_peak['peakdate']=srkw_cs_pdt
-srkw_cs_peak['peakday']=srkw_cs_pdy
+srkw_cs_peak, srkw_cs_peak95=srkw_peak_df(curyr, twm_path, acartia_path)
 
-srkw_cs_peak95=pd.DataFrame()
-peakdays95=[]
-peakyr95=[]
-srkw_yrs=[y for y in range(year_zero, curyr)]
-for i in range(len(srkw_yrs)-1):
-    yr=srkw_yrs[i]
-    srkw_cs_df95=srkw_cs_df[i]
-    srkw_cs_df95_len=srkw_cs_df95.shape[0]
-    peakdays95+=list(srkw_cs_df95['peak_day'])
-    peakyr95+=[yr]*srkw_cs_df95_len
-srkw_cs_peak95['year']=peakyr95
-srkw_cs_peak95['peakday']=peakdays95
+srkw_cs_pv, srkw_cs_pdt, srkw_cs_pdy, srkw_cs_df=peak_srkw(curyr, twm_path, acartia_path, src="both", loc="central salish")
 
-#%% [markdow]
 # Load The SRKW Population Data
 srkwdata=pd.read_csv(pjoin(APP_PATH, "data/SRKW.csv"))
 srkwdata_all=srkwdata[['year','JKL']]
@@ -592,15 +83,16 @@ srkwdata_k=srkwdata[['year','K']]
 srkwdata_k=srkwdata_k.rename(columns={"K":"SRKW"})
 srkwdata_l=srkwdata[['year','L']]
 srkwdata_l=srkwdata_l.rename(columns={"L":"SRKW"})
-#%%
+
 # Define path to salmon map image
 salmon_map_path = 'assets/diagram_of_locations_v2.png'
-# %%
+
 # Create a color schemes and fonts
 plotlycl=px.colors.qualitative.Plotly
-viri12pt=[0.083,0.167,0.25,0.333,0.417,0.5,0.583,0.667,0.75,0.833,0.917,1]
-viri12cl=sample_colorscale('viridis', samplepoints=viri12pt)
-viri12=[[viri12pt[i], viri12cl[i]] for i in range(12)]
+clr12pt=np.linspace(0.083,1,12)
+#clr12pt=[0.083,0.167,0.25,0.333,0.417,0.5,0.583,0.667,0.75,0.833,0.917,1]
+viri12cl=sample_colorscale('viridis', samplepoints=clr12pt)
+viri12=[[clr12pt[i], viri12cl[i]] for i in range(12)]
 bgcl='white'
 framecl='black'
 markercl='salmon'
@@ -612,7 +104,17 @@ plotly_fonts=["Arial, sans-serif", "Balto, sans-serif", "Courier New, monospace"
             "PT Sans Narrow, sans-serif", "Raleway, sans-serif",
             "Times New Roman, Times, serif"]
 plotfont=plotly_fonts[10]
-# %%
+
+# Initialize app
+app = dash.Dash(
+    __name__,
+    meta_tags=[
+        {"name": "viewport", "content": "width=device-width, initial-scale=1.0"},
+        {"name": "description", "content": "Chinook Salmon Dashboard"}, 
+        {"name": "news_keywords", "content": "Chinook, Salmon, Orca, Killer Whales, Puget Sound"}
+        ],
+    )
+server=app.server
 #----------------------------------App Title------------------------------------#
 app.title='Chinook Salmon Dash Board'
 #----------------------------------App Layout-----------------------------------#
@@ -754,10 +256,11 @@ app.layout = html.Div(
                                                 children=[
                                                     html.H6("Southern Resident Orca Sightings"),
                                                     dcc.Dropdown(
-                                                            value=2024,
+                                                            value=2025,
                                                             className="year-dropdown",
                                                             id="year-dropdown",
                                                             options=[
+                                                                {"label":"2025","value":2025,},
                                                                 {"label":"2024","value":2024,},
                                                                 {"label":"2023","value":2023,},
                                                                 {"label":"2022","value":2022,},
@@ -879,6 +382,7 @@ app.layout = html.Div(
 #                                  Callback
 # ----------------------------------------------------------------------------#
 #~~~~~~~~~~~~~~~~~~~~~Salmon Time Series~~~~~~~~~~~~~~~~~~~~#
+
 @app.callback(
     Output("salmon-timeseries", "figure"),
     [
@@ -1102,11 +606,11 @@ def update_salmon_timeseries(location_dropdown):
     elif location_dropdown=="Albion v Bonneville":
         # Define salmon time seires
         if today.month<=4:
-            albbon=create_lagged(curyr, 0, 0)
-            albbon_ly=create_lagged(lastyr, 0, 0)
+            albbon=create_lagged(curyr, albion, bonnev, 0, 0)
+            albbon_ly=create_lagged(lastyr, albion, bonnev, 0, 0)
             albbon=albbon.merge(albbon_ly[['m','day','chin'+str(lastyr),'cpue'+str(lastyr)]], how='left',on=['m','day'])
         else:
-            albbon=create_lagged(curyr, 0, 0)
+            albbon=create_lagged(curyr, albion, bonnev, 0, 0)
         title='Albion Chinook vs Bonneville Dam'
         ylab='CPUE'
         xlab='Date'
@@ -1276,19 +780,19 @@ def update_salmon_timeseries(location_dropdown):
 #%%
 def update_orca_map(pod,year):
     if year>2021:      
-        srkw_dat=srkw_acartia_map(year, pod)
+        srkw_dat=acartia_map_preproc(year, acartia_path, pod)
     elif year>2017:
-        srkw_dat0=srkw_acartia_map(year, pod)
-        srkw_dat1=srkw_twm_map(year, pod)
+        srkw_dat0=acartia_map_preproc(year, acartia_path, pod)
+        srkw_dat1=twm_map_preproc(year, twm_path, pod)
         srkw_dat=pd.concat([srkw_dat0, srkw_dat1])
     else:
-        srkw_dat=srkw_twm_map(year, pod)
+        srkw_dat=twm_map_preproc(year, twm_path, pod)
     
     # create an empty dataset with all months of the year
     empty_srkw_dat=pd.DataFrame()
     empty_srkw_dat['m']=list(range(1,13))
     empty_srkw_dat['year']=year
-    empty_srkw_dat['mon_frac']=empty_srkw_dat['m'].apply(lambda x: viri12pt[int(x)-1])
+    empty_srkw_dat['mon_frac']=empty_srkw_dat['m'].apply(lambda x: clr12pt[int(x)-1])
 
     # find the current months if year = curyear
     if year==curyr:
@@ -1297,7 +801,6 @@ def update_orca_map(pod,year):
         srkw_dat=pd.concat([srkw_dat, append_dat])
     else:
         srkw_dat=pd.concat([srkw_dat, empty_srkw_dat])
-
     fig_orcamap = go.Figure()
     fig_orcamap.add_trace(go.Scattermapbox(
             lat=srkw_dat['latitude'],
@@ -1317,7 +820,7 @@ def update_orca_map(pod,year):
                     ticks='outside',
                     ticklen=3,
                     tickmode='array',
-                    tickvals=viri12pt,
+                    tickvals=clr12pt,
                     ticktext=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"
                     ],
                 ),     
@@ -1450,8 +953,8 @@ def update_orca_lines(pod):
     #---Albion Salmon Sum---#
     fig_peak.add_trace(
         go.Scatter(
-                x=albionpd['year'],
-                y=albionpd['alb_cpue'], 
+                x=albsum['year'],
+                y=albsum['alb_cpue'], 
                 name='Chinook at Albion',
                 mode='lines+markers',
                 hovertemplate='%{x}'+':%{y}',
@@ -1466,11 +969,12 @@ def update_orca_lines(pod):
                     opacity=0.85, 
             ),secondary_y=True,row=2, col=1,
     )
+
     fig_peak.update_yaxes(title_text="Peak day of the year", tickvals=list(range(150,300,50)), range=[140, 300], row=1, col=1)
     fig_peak.update_yaxes(title_text="Number of Orca", row=2, col=1, secondary_y=False)
     fig_peak.update_yaxes(title_text="Albion Chinook CPUE", row=2, col=1, secondary_y=True)
-    fig_peak.update_xaxes(title_text="Year",tickvals=list(range(1990,curyr,5)),range=[1989, 2023], row=1, col=1)
-    fig_peak.update_xaxes(title_text="Year",tickvals=list(range(1990,curyr,5)),range=[1989, 2023], row=2, col=1)
+    fig_peak.update_xaxes(title_text="Year",tickvals=list(range(1990,curyr,5)),range=[1989, 2024], row=1, col=1)
+    fig_peak.update_xaxes(title_text="Year",tickvals=list(range(1990,curyr,5)),range=[1989, 2024], row=2, col=1)
 
     fig_peak.update_layout(
             paper_bgcolor=bgcl, 

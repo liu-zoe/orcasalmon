@@ -1,5 +1,6 @@
 pip==24.2
 dash==2.14.2
+gunicorn
 flask==3.0.3
 flask-compress==1.13
 numpy==1.26.4

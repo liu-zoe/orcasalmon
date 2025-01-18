@@ -20,7 +20,7 @@ import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 import plotly.express as px
 from plotly.express.colors import sample_colorscale
-from apputils import (load_albion, load_bon, 
+from apputils import (load_albion, load_bon, load_wash,
                       calendar_template, create_lagged, 
                       acartia_map_preproc, twm_map_preproc, 
                       peak_srkw,
@@ -46,6 +46,7 @@ twmyl=[y for y in range(1976, 2022)] #year list for TWM data
 #Define data path
 fos_path=pjoin(APP_PATH,'data/foschinook/')
 bon_path=pjoin(APP_PATH,'data/bonchinook/')
+lakewash_path=pjoin(APP_PATH,'data/lakewash/')
 acartia_path=pjoin(APP_PATH, 'data/acartia/')
 twm_path=pjoin(APP_PATH, 'data/twm/')
 srkw_path=pjoin(APP_PATH, 'data/')
@@ -62,6 +63,9 @@ albion, albsum=load_albion(fos_path)
 albion=calleap.merge(albion, how='left', on=['m','day'])
 # Create a combined data of Albion and Bonneville and create a lag 
 lagged=create_lagged(curyr, albion, bonnev, 10, 10)
+
+# Load Lake Washington data
+wash=load_wash(lakewash_path)
 
 twm_map_data=twm_map_preproc(2017, twm_path, "All pods")
 acartia_map_data=acartia_map_preproc(2023, acartia_path)
@@ -201,6 +205,10 @@ app.layout = html.Div(
                                                                 {
                                                                     "label":"Bonneville Dam",
                                                                     "value":"Bonneville Dam",
+                                                                },
+                                                                {
+                                                                    "label":"Lake Washington",
+                                                                    "value":"Lake Washington",
                                                                 },
                                                             ],
                                                         ),
@@ -595,6 +603,112 @@ def update_salmon_timeseries(location_dropdown):
                                     y = 0.98,
                                     xanchor =  'left',
                                     yanchor = 'top',
+                                    font = dict(
+                                                #family='Courier New, monospace',
+                                                size = 14,
+                                                #color='#000000'
+                                                )
+                                    ),
+            )
+        fig_salmon.update_traces(connectgaps=True)
+    elif location_dropdown=="Lake Washington":
+        # Define salmon time seires
+        title='Lake Washington Chinook Count'
+        ylab='Count'
+        xlab='Date'
+        fig_salmon=go.Figure(
+                data=[  
+                        # #--Year before last--# 
+                        # go.Scatter(
+                        # x=bonnev['date'],
+                        # y=bonnev['chin'+str(twoyr)],
+                        # name=str(twoyr),
+                        # mode='lines+markers',
+                        # hovertemplate='%{x}'+':%{y}',
+                        # marker = go.scatter.Marker(
+                        #             color = plotlycl[2],
+                        # ),
+                        # opacity=0.85,     
+                        #         ),
+                        #--Last Year--# 
+                        go.Scatter(
+                        x=wash['date'],
+                        y=wash['chin'+str(lastyr)],
+                        name=str(lastyr),
+                        mode='lines+markers',
+                        hovertemplate='%{x}'+':%{y}',
+                        marker = go.scatter.Marker(
+                                    color = plotlycl[1],
+                        ),
+                        opacity=0.85,     
+                                ),
+                        # #--This Year--# 
+                        # go.Scatter(
+                        # x=bonnev['date'],
+                        # y=bonnev['chin'+str(curyr)],
+                        # name=str(curyr),
+                        # mode='lines+markers',
+                        # hovertemplate='%{x}'+':%{y}',
+                        # marker = go.scatter.Marker(
+                        #             color = plotlycl[0],
+                        # ),
+                        # line = go.scatter.Line(
+                        #             color = plotlycl[0],
+                        # ),
+                        # opacity=0.85,     
+                        #         ),
+                        # #--History--# 
+                        # go.Scatter(
+                        # x=bonnev['date'],
+                        # y=bonnev['chin_hist'],
+                        # name='Historical mean (1939-'+str(twoyr-1)+')',
+                        # mode='lines',
+                        # hovertemplate='%{x}'+':%{y}',
+                        # marker = go.scatter.Marker(
+                        #             color = plotlycl[3],
+                        # ),
+                        # opacity=0.85,     
+                        #         ),
+                    ],
+            )
+        fig_salmon.update_layout(
+                paper_bgcolor=bgcl, 
+                plot_bgcolor=bgcl,
+                margin=dict(l=0, t=0, b=0, r=0, pad=0),
+                yaxis = dict(zeroline = False,
+                            title=ylab,
+                            color=framecl, 
+                            showgrid=False,
+                ),
+                xaxis = dict(zeroline = False,
+                            title=xlab,
+                            color=framecl,
+                            showgrid=False,
+                            tickmode='array',
+                            tickvals=['Mar-1','Apr-1','May-1','Jun-1','Jul-1','Aug-1','Sep-1','Oct-1','Nov-1','Dec-1'],
+                            #nticks=10,
+                            tickangle=45,
+                ),
+                font=dict(
+                    family=plotfont, 
+                    size=11, 
+                    color=framecl,
+                ),
+                legend=dict(
+                    orientation="v",
+                    yanchor="top",
+                    y=0.9,
+                    xanchor="left",
+                    x=0.1
+                ),
+                title=dict(text = title,
+                                    x = 0.1,
+                                    y = 0.98,
+                                    xanchor =  'left',
+                                    yanchor = 'top',
+                                    #pad = dict(
+                                    #            t = 0
+                                    #           ),
                                     font = dict(
                                                 #family='Courier New, monospace',
                                                 size = 14,

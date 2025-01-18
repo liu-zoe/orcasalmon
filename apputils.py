@@ -62,6 +62,26 @@ def load_bon(bon_path):
     bonnev['date']=bonnev[['month','day']].apply(lambda x: '-'.join(x.values.astype(str)), axis="columns")
     return bonnev
 
+def load_wash(path):    
+    curyr=date.today().year
+    yl=[y for y in range(2024, curyr)] #year list for Bonneville Dam
+    wash=pd.DataFrame(columns=['day','m'])
+    for i in reversed(range(len(yl))):
+        d=pd.read_csv(path+str(yl[i])+'.csv',\
+            usecols=['Date','Daily Count',])
+        d['m']=d.apply(lambda x: x["Date"].split("/")[0], axis=1)
+        d['day']=d.apply(lambda x: x["Date"].split("/")[1], axis=1)        
+        d=d.rename(columns={'Daily Count':'chin'+str(yl[i])})
+        d=d.drop(columns=['Date',])
+        d["sort_val"]=d.apply(lambda x: date(yl[i], int(x['m']), int(x['day'])), axis=1)
+        wash=pd.merge(left=wash, right=d, how='outer', on=['m','day'])
+        wash=wash.sort_values(by="sort_val")
+        wash=wash.drop(columns=['sort_val'])        
+    del(d,i)
+    wash['month']=wash['m'].apply(lambda x: dt.strptime(str(x), '%m').strftime('%b'))
+    wash['date']=wash[['month','day']].apply(lambda x: '-'.join(x.values.astype(str)), axis="columns")
+    return wash
+
 def calendar_template(bonnev, leap=False):
     """
     Use Bonneville data to create a calendar tempalte 

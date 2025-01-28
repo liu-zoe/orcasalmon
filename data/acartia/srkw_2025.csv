@@ -86,8 +86,8 @@ Southern Resident Orca,2025-01-04 22:40:00,47.91586,-122.49359,40.0,214974.0,"[O
 Southern Resident Orca,2025-01-04 23:00:00,47.92576,-122.50836,40.0,214975.0,"[Orca Network] SRKWs southbound, one group here (Silver Hubble)",1,4,2025,Jan,Jan-4,2025-1-4,23:00:00,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1
 Southern Resident Orca,2025-01-04 23:16:00,47.88755,-122.49222,40.0,214976.0,"[Orca Network] SRKWs southbound, surface active (Carly Sprague)",1,4,2025,Jan,Jan-4,2025-1-4,23:16:00,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1
 Southern Resident Orca,2025-01-04 23:45:00,47.86446,-122.49094,40.0,214979.0,"[Orca Network] SRKWs quickly southbound, breaching (Sara Montour Lewis, Stephanie Raymond)",1,4,2025,Jan,Jan-4,2025-1-4,23:45:00,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2025-01-05 00:00:00,47.86375,-122.4379,40.0,214981.0,"[Orca Network] SRKWs southeastbound, surface active (Silver Hubble, Stephanie Raymond)",1,5,2025,Jan,Jan-5,2025-1-5,00:00:00,0,0,0,0,1,1,1,0,1,0,1,0,0,0,0,0,0,1
 Southern Resident Orca,2025-01-05 00:00:00,47.86228,-122.43532,40.0,214980.0,"[Orca Network] SRKWs southeastbound, surface active (Stephanie Raymond, Silver Hubble)",1,5,2025,Jan,Jan-5,2025-1-5,00:00:00,0,0,0,0,1,1,1,0,1,0,1,0,0,0,0,0,0,1
+Southern Resident Orca,2025-01-05 00:00:00,47.86375,-122.4379,40.0,214981.0,"[Orca Network] SRKWs southeastbound, surface active (Silver Hubble, Stephanie Raymond)",1,5,2025,Jan,Jan-5,2025-1-5,00:00:00,0,0,0,0,1,1,1,0,1,0,1,0,0,0,0,0,0,1
 Southern Resident Orca,2025-01-05 16:10:00,47.81123,-122.41864,1.0,214989.0,"[Orca Network] Solo orca, likely SRKW, northbound (Casey Bizelli)",1,5,2025,Jan,Jan-5,2025-1-5,16:10:00,0,0,0,0,1,1,1,0,1,0,0,0,1,0,0,0,0,1
 Southern Resident Orca,2025-01-05 16:40:00,47.8133,-122.42001,40.0,214994.0,"[Orca Network] SRKWs spread out, no direction of travel (Ryan Bauer)",1,5,2025,Jan,Jan-5,2025-1-5,16:40:00,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0,0,0,0
 Southern Resident Orca,2025-01-05 16:55:00,47.85617,-122.41315,40.0,214995.0,[Orca Network] SRKWs heading northwest (Amy Johnson),1,5,2025,Jan,Jan-5,2025-1-5,16:55:00,0,0,0,0,1,1,1,0,1,0,0,0,1,0,1,0,0,2
@@ -119,9 +119,9 @@ Southern Resident Orca,2025-01-05 21:40:00,48.05146,-122.65633,14.0,215025.0,"[O
 Southern Resident Orca,2025-01-05 22:05:00,48.05253,-122.63675,26.0,215029.0,[Orca Network] Likely J pod northbound (Beriah SoOrio),1,5,2025,Jan,Jan-5,2025-1-5,22:05:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
 Southern Resident Orca,2025-01-05 22:15:00,48.10256,-122.67907,14.0,215030.0,"[Orca Network] SRKW lead group, likely K pod, northbound (Rachel Haight)",1,5,2025,Jan,Jan-5,2025-1-5,22:15:00,0,1,0,1,1,1,1,0,1,0,0,0,1,0,0,0,0,1
 Southern Resident Orca,2025-01-05 22:22:00,48.06655,-122.66018,26.0,215031.0,[Orca Network] Likely J pod northbound (Kevin Phillips),1,5,2025,Jan,Jan-5,2025-1-5,22:22:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2025-01-05 22:33:00,48.03188,-122.63023,26.0,215034.0,[Orca Network] J pod trailers northbound (Cindi Crowder Rausch) (ID Ariel Yseth),1,5,2025,Jan,Jan-5,2025-1-5,22:33:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
 Unspecified,2025-01-05 22:33:00,48.07961,-122.66971,26.0,215032.0,"[Orca Network] Likely J pod northbound (Beriah SoOrio, Bonnie Gretz)
 ",1,5,2025,Jan,Jan-5,2025-1-5,22:33:00,1,0,0,1,0,0,1,0,1,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2025-01-05 22:33:00,48.03188,-122.63023,26.0,215034.0,[Orca Network] J pod trailers northbound (Cindi Crowder Rausch) (ID Ariel Yseth),1,5,2025,Jan,Jan-5,2025-1-5,22:33:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
 Southern Resident Orca,2025-01-05 22:55:00,48.11476,-122.6565,14.0,215037.0,[Orca Network] Likely K pod northbound (Vanessa Franz),1,5,2025,Jan,Jan-5,2025-1-5,22:55:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
 Southern Resident Orca,2025-01-05 23:00:00,48.14066,-122.72688,14.0,215038.0,"[Orca Network] K pod northwestbound (Rachel Haight, Kat Martin)
 ",1,5,2025,Jan,Jan-5,2025-1-5,23:00:00,0,1,0,1,0,1,1,0,1,0,0,0,0,0,1,0,0,1
@@ -129,3 +129,4 @@ Southern Resident Orca,2025-01-05 23:20:00,48.15851,-122.75157,14.0,215040.0,"[O
 Unspecified,2025-01-05 23:36:00,48.1175,-122.68325,14.0,215041.0,"[Orca Network] J pod northbound (Beriah SoOrio, Rachel Haight)",1,5,2025,Jan,Jan-5,2025-1-5,23:36:00,1,0,0,1,0,0,1,0,1,0,0,0,1,0,0,0,0,1
 Southern Resident Orca,2025-01-05 23:50:00,48.13898,-122.72531,26.0,215043.0,[Orca Network] J pod slowly northbound (Kat Martin),1,5,2025,Jan,Jan-5,2025-1-5,23:50:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
 Southern Resident Orca,2025-01-10 18:49:00,48.45669,-123.16494,25.0,215127.0,"[Orca Network] numbers and location approximate, heading southwest (Gerald Graham) ",1,10,2025,Jan,Jan-10,2025-1-10,18:49:00,0,0,0,0,0,1,1,0,1,1,0,1,0,0,0,0,0,2
+Southern Resident Orca,2025-01-23 18:51:00,48.30298,-123.54802,1.0,215577.0,[SWS] westbound (Paul Pudwell),1,23,2025,Jan,Jan-23,2025-1-23,18:51:00,0,0,0,0,0,1,1,0,1,0,0,1,0,0,0,0,1,2

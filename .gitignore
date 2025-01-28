@@ -27,7 +27,7 @@ salmon_dashboard_notes.md
 orcasalmon_venv
 
 # Workspace
-orcasalmon.code-workspace
+*.code-workspace
 
 # Documentations
 orcasalmon_nobuild.yml
@@ -46,9 +46,11 @@ data/Number of Southern Resident killer whales.xlsx
 data/albion_long.csv
 data/srkw_presence.csv
 data/peak/
+data/acartia/acartia_*.csv
 ._acartia_token.txt
 ._fly.toml
 ._plots_colab.ipynb
 ._requirements.txt
 ._orcasalmon.code-workspace
 ._*
+__pycache__/

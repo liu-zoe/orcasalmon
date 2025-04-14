@@ -81,12 +81,12 @@ Bonneville,2025-03-20,Sp,,,12,8,,,,,,,,,6.7
 Bonneville,2025-03-21,Sp,,,12,10,,,,,,,,,6.8
 Bonneville,2025-03-22,Sp,4,,32,21,,,,,,,,,6.9
 Bonneville,2025-03-23,Sp,1,,19,17,,,,,,,,,7.1
-Bonneville,2025-03-24,Sp,2,1,21,18,,,,,,,,,7.3
-Bonneville,2025-03-25,Sp,21,9,32,23,,,,,,,,,7.7
-Bonneville,2025-03-26,Sp,18,3,28,18,,,,,,,,,8.1
+Bonneville,2025-03-24,Sp,2,1,21,18,,,,,,,,,7.4
+Bonneville,2025-03-25,Sp,21,9,32,23,,,,,,,,,7.8
+Bonneville,2025-03-26,Sp,18,3,28,18,,,,,,,,,8.2
 Bonneville,2025-03-27,Sp,6,1,13,10,,,,,,,,,8.3
 Bonneville,2025-03-28,Sp,29,,51,42,,,,,,,,,8.3
-Bonneville,2025-03-29,Sp,25,5,17,15,,,,,,,,,8.4
+Bonneville,2025-03-29,Sp,25,5,17,15,,,,,,,,,8.5
 Bonneville,2025-03-30,Sp,31,9,12,9,,,,,,,,,8.5
 Bonneville,2025-03-31,Sp,29,6,8,6,,,,,,,,,8.5
 Bonneville,2025-04-01,Sp,69,-1,25,18,,,,,,,,,8.6
@@ -94,12 +94,19 @@ Bonneville,2025-04-02,Sp,49,3,14,11,,,,,,,,,8.6
 Bonneville,2025-04-03,Sp,52,2,24,20,,,,,,,,,8.7
 Bonneville,2025-04-04,Sp,52,3,21,17,,,,,,,,,9
 Bonneville,2025-04-05,Sp,53,3,16,8,,,,,,,,,9.1
+Bonneville,2025-04-06,Sp,35,1,22,20,,,,,,,,,9.3
+Bonneville,2025-04-07,Sp,41,3,5,3,,,,,,,,,9.3
+Bonneville,2025-04-08,Sp,62,1,8,7,,,,,,,,,9.3
+Bonneville,2025-04-09,Sp,128,3,19,13,,,,,,,,,9.2
+Bonneville,2025-04-10,Sp,96,4,16,9,,,,,,,,,9.4
+Bonneville,2025-04-11,Sp,191,5,17,11,,,,,,,,,9.7
+Bonneville,2025-04-12,Sp,208,3,10,9,,,,,,,,,9.9
 Notes:
 Columbia River DART
 2025 Adult Passage Daily Counts at Bonneville
-1/1/2025 - 04/05/2025
-Generated 06 Apr 2025 13:10:30 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2025-04-05. Last possible Data Date is 04/05/2025.
+1/1/2025 - 04/12/2025
+Generated 13 Apr 2025 20:41:15 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2025-04-12. Last possible Data Date is 04/12/2025.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of 
 Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular 

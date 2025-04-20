@@ -29,7 +29,7 @@ acartia_path='./data/acartia/'
 # 2.1 Scrap Chinook data by year
 
 # Use the following line to download the current year
-#scrap_fos(yrs=str(curyr),spe='CHINOOK SALMON')
+scrap_fos(yrs=str(curyr),spe='CHINOOK SALMON')
 
 # Use the following lines to download all fos chinook data
 # Note: commented out after running it once

@@ -71,7 +71,7 @@ def scrap_bon(yrs, bon_path="./data/bonchinook/"):
     # landing page of Columbia Basin Research
     url = "https://www.cbr.washington.edu/dart/query/adult_daily"
     driver.get(url)
-    sleep(3)
+    sleep(6)
     # select year and generate report
     site = "BON"
     driver.find_element("id", "daily").click()

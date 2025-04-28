@@ -96,7 +96,7 @@ Bonneville,2025-04-04,Sp,52,3,21,17,,,,,,,,,9
 Bonneville,2025-04-05,Sp,53,3,16,8,,,,,,,,,9.1
 Bonneville,2025-04-06,Sp,35,1,22,20,,,,,,,,,9.3
 Bonneville,2025-04-07,Sp,41,3,5,3,,,,,,,,,9.3
-Bonneville,2025-04-08,Sp,62,1,8,7,,,,,,,,,9.3
+Bonneville,2025-04-08,Sp,62,1,8,7,,,,,,,,,9.2
 Bonneville,2025-04-09,Sp,128,3,19,13,,,,,,,,,9.2
 Bonneville,2025-04-10,Sp,96,4,16,9,,,,,,,,,9.4
 Bonneville,2025-04-11,Sp,191,5,17,11,,,,,,,,,9.7
@@ -108,12 +108,20 @@ Bonneville,2025-04-16,Sp,219,9,8,3,,,,,,,,,10.7
 Bonneville,2025-04-17,Sp,431,16,11,6,,,,,,,,,10.9
 Bonneville,2025-04-18,Sp,431,24,6,4,,,,,,,,,11
 Bonneville,2025-04-19,Sp,536,21,6,,,,,,,,,,11
+Bonneville,2025-04-20,Sp,858,22,9,3,,,,,,,,,10.8
+Bonneville,2025-04-21,Sp,677,25,10,1,,,,,,,,,10.7
+Bonneville,2025-04-22,Sp,1088,26,9,1,,,,,,,,,10.7
+Bonneville,2025-04-23,Sp,1826,29,8,4,,,,,,,,,10.8
+Bonneville,2025-04-24,Sp,1906,32,13,5,,,,,,,,,10.9
+Bonneville,2025-04-25,Sp,2106,39,1,1,,,,,,,,,11.1
+Bonneville,2025-04-26,Sp,3165,62,11,5,,,,,,,,,11.4
+Bonneville,2025-04-27,Sp,3737,90,6,3,,,,,,,,,11.4
 Notes:
 Columbia River DART
 2025 Adult Passage Daily Counts at Bonneville
-1/1/2025 - 04/19/2025
-Generated 20 Apr 2025 11:55:30 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2025-04-19. Last possible Data Date is 04/19/2025.
+1/1/2025 - 04/27/2025
+Generated 28 Apr 2025 07:35:01 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2025-04-27. Last possible Data Date is 04/27/2025.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of 
 Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular 

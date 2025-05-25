@@ -123,10 +123,10 @@ Bonneville,2025-05-01,Sp,4182,146,12,6,,,,,,,,,12.2
 Bonneville,2025-05-02,Sp,5085,159,11,6,,,,,,,,,12.5
 Bonneville,2025-05-03,Sp,7706,313,9,3,,,,,,,,,12.6
 Bonneville,2025-05-04,Sp,6975,502,9,5,,,,,,,,,12.5
-Bonneville,2025-05-05,Sp,5481,355,14,5,,,,,,,,,12.4
-Bonneville,2025-05-06,Sp,5287,507,10,4,,,,,,,,,12.7
-Bonneville,2025-05-07,Sp,6690,700,21,9,,,,3,1,,,,13
-Bonneville,2025-05-08,Sp,5804,932,16,6,,,,,,,,,13.2
+Bonneville,2025-05-05,Sp,5481,355,14,5,,,,,,,,,12.5
+Bonneville,2025-05-06,Sp,5287,507,10,4,,,,,,,,,12.8
+Bonneville,2025-05-07,Sp,6690,700,21,9,,,,3,1,,,,13.1
+Bonneville,2025-05-08,Sp,5804,932,16,6,,,,,,,,,13.3
 Bonneville,2025-05-09,Sp,4579,608,13,4,,,,26,1,,,,13.4
 Bonneville,2025-05-10,Sp,4275,658,17,9,,,,203,,,,,13.3
 Bonneville,2025-05-11,Sp,2958,501,22,13,,,,150,2,,,,13.3
@@ -136,12 +136,19 @@ Bonneville,2025-05-14,Sp,1562,373,7,5,,,,437,1,,,,13.4
 Bonneville,2025-05-15,Sp,2271,579,8,6,,,,715,2,,,,13.5
 Bonneville,2025-05-16,Sp,2234,550,12,4,,,,593,,,,,13.6
 Bonneville,2025-05-17,Sp,2522,664,23,7,,,,373,,,,,13.8
+Bonneville,2025-05-18,Sp,2169,729,18,12,,,,115,4,,,,13.7
+Bonneville,2025-05-19,Sp,2804,1030,23,8,,,,214,6,,,,13.6
+Bonneville,2025-05-20,Sp,1629,451,15,7,,,,377,10,,,,13.6
+Bonneville,2025-05-21,Sp,1389,401,11,4,,,,3154,18,,,,13.9
+Bonneville,2025-05-22,Sp,1261,320,16,7,,,,1747,13,,,,14.1
+Bonneville,2025-05-23,Sp,1125,286,28,12,,,,709,26,,,,14.2
+Bonneville,2025-05-24,Sp,1292,287,14,6,,,,1107,63,,,,14.5
 Notes:
 Columbia River DART
 2025 Adult Passage Daily Counts at Bonneville
-1/1/2025 - 05/17/2025
-Generated 18 May 2025 07:43:35 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2025-05-17. Last possible Data Date is 05/17/2025.
+1/1/2025 - 05/24/2025
+Generated 25 May 2025 12:44:53 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2025-05-24. Last possible Data Date is 05/24/2025.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of 
 Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular 

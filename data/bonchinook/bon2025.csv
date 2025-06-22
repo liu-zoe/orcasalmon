@@ -154,10 +154,10 @@ Bonneville,2025-06-01,Su,1413,227,26,10,4,,,38145,154,,,,16.1
 Bonneville,2025-06-02,Su,1131,200,24,11,17,,,45645,162,,,,16.3
 Bonneville,2025-06-03,Su,1172,221,35,18,24,,,57340,194,,,,16.4
 Bonneville,2025-06-04,Su,1367,181,35,12,41,,,35264,238,,,,16.6
-Bonneville,2025-06-05,Su,1457,211,39,17,99,,,95107,195,,,,16.9
+Bonneville,2025-06-05,Su,1457,211,39,17,99,,,95107,195,,,,17
 Bonneville,2025-06-06,Su,2054,226,34,20,150,,,147124,334,,,,17.3
 Bonneville,2025-06-07,Su,2010,196,41,26,298,,,129382,738,,,,17.6
-Bonneville,2025-06-08,Su,1838,217,32,14,481,,,153678,466,,,,17.9
+Bonneville,2025-06-08,Su,1838,217,32,14,481,,,153678,466,,,,18
 Bonneville,2025-06-09,Su,2215,226,39,28,830,,,147510,1047,,,,18.1
 Bonneville,2025-06-10,Su,2290,214,58,40,1047,,,145665,1540,,,,18.4
 Bonneville,2025-06-11,Su,1956,211,65,45,1620,,,162930,613,,,,18.2
@@ -165,12 +165,18 @@ Bonneville,2025-06-12,Su,1894,207,50,33,1672,,,132642,292,,,,18
 Bonneville,2025-06-13,Su,1533,209,66,42,2015,,,93113,135,,,,17.7
 Bonneville,2025-06-14,Su,1670,171,58,38,2207,,,134288,84,,,,17.6
 Bonneville,2025-06-15,Su,1432,186,59,44,2329,,,132322,118,,,,17.6
+Bonneville,2025-06-16,Su,1634,141,83,54,3510,,,149384,174,,,,17.9
+Bonneville,2025-06-17,Su,1486,196,93,55,4667,,,158914,347,,,,18.2
+Bonneville,2025-06-18,Su,1885,276,122,61,5792,,,191048,370,,,,18.4
+Bonneville,2025-06-19,Su,1919,230,155,106,5263,,,184118,288,,,,18.5
+Bonneville,2025-06-20,Su,1643,281,145,98,5885,,,95005,348,,,,18.2
+Bonneville,2025-06-21,Su,1754,206,134,94,5500,,,90802,184,,,,17.8
 Notes:
 Columbia River DART
 2025 Adult Passage Daily Counts at Bonneville
-1/1/2025 - 06/15/2025
-Generated 16 Jun 2025 19:45:16 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2025-06-15. Last possible Data Date is 06/15/2025.
+1/1/2025 - 06/21/2025
+Generated 22 Jun 2025 10:18:54 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2025-06-21. Last possible Data Date is 06/21/2025.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of 
 Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular 

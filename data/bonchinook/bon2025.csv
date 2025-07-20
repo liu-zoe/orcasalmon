@@ -183,8 +183,8 @@ Bonneville,2025-06-30,Su,1385,238,317,202,7983,,,31465,131,,,,19.3
 Bonneville,2025-07-01,Su,1710,288,422,257,5413,,,36512,176,,,,19.6
 Bonneville,2025-07-02,Su,1607,298,593,372,5740,,,21364,338,,,,19.7
 Bonneville,2025-07-03,Su,1237,239,585,393,4357,,,15541,376,,,,19.8
-Bonneville,2025-07-04,Su,1053,201,538,323,4627,,,13939,73,,,,19.6
-Bonneville,2025-07-05,Su,906,166,560,355,5396,,,13143,152,,,,19.2
+Bonneville,2025-07-04,Su,1053,201,538,323,4627,,,13939,73,,,,19.5
+Bonneville,2025-07-05,Su,906,166,560,355,5396,,,13143,152,,,,19.1
 Bonneville,2025-07-06,Su,917,189,569,341,5282,,,6055,21,,,,19.1
 Bonneville,2025-07-07,Su,865,144,883,560,3652,,,11767,38,,,,19.6
 Bonneville,2025-07-08,Su,857,185,1328,840,2747,,,3997,285,,,,20
@@ -193,12 +193,18 @@ Bonneville,2025-07-10,Su,681,124,1568,877,2282,,,2631,140,,,,20.7
 Bonneville,2025-07-11,Su,666,105,1500,837,1637,,,2623,270,,,,20.9
 Bonneville,2025-07-12,Su,490,55,1379,724,980,,,1787,362,,,,21.1
 Bonneville,2025-07-13,Su,494,66,1320,716,1291,,,1567,114,,1,,21.2
+Bonneville,2025-07-14,Su,499,94,1152,706,1041,,,1333,62,,,,21.4
+Bonneville,2025-07-15,Su,453,52,1687,947,795,,,840,242,,,,21.5
+Bonneville,2025-07-16,Su,447,61,2189,1204,1183,,,814,365,,,,21.8
+Bonneville,2025-07-17,Su,401,60,1936,1007,870,,,4098,289,,,,21.9
+Bonneville,2025-07-18,Su,343,75,1743,1004,570,,,1931,229,,,,21.7
+Bonneville,2025-07-19,Su,326,46,1798,1014,525,,,476,163,,,,21.7
 Notes:
 Columbia River DART
 2025 Adult Passage Daily Counts at Bonneville
-1/1/2025 - 07/13/2025
-Generated 14 Jul 2025 19:56:55 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2025-07-13. Last possible Data Date is 07/13/2025.
+1/1/2025 - 07/19/2025
+Generated 20 Jul 2025 12:38:03 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2025-07-19. Last possible Data Date is 07/19/2025.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of 
 Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular 

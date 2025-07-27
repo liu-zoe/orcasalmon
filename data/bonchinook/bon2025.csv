@@ -187,8 +187,8 @@ Bonneville,2025-07-04,Su,1053,201,538,323,4627,,,13939,73,,,,19.5
 Bonneville,2025-07-05,Su,906,166,560,355,5396,,,13143,152,,,,19.1
 Bonneville,2025-07-06,Su,917,189,569,341,5282,,,6055,21,,,,19.1
 Bonneville,2025-07-07,Su,865,144,883,560,3652,,,11767,38,,,,19.7
-Bonneville,2025-07-08,Su,857,185,1328,840,2747,,,3997,285,,,,20
-Bonneville,2025-07-09,Su,729,133,1280,784,2312,,,4190,289,,,,20.4
+Bonneville,2025-07-08,Su,857,185,1328,840,2747,,,3997,285,,,,20.1
+Bonneville,2025-07-09,Su,729,133,1280,784,2312,,,4190,289,,,,20.5
 Bonneville,2025-07-10,Su,681,124,1568,877,2282,,,2631,140,,,,20.7
 Bonneville,2025-07-11,Su,666,105,1500,837,1637,,,2623,270,,,,20.9
 Bonneville,2025-07-12,Su,490,55,1379,724,980,,,1787,362,,,,21.1
@@ -200,12 +200,18 @@ Bonneville,2025-07-17,Su,401,60,1936,1007,870,,,4098,289,,,,21.9
 Bonneville,2025-07-18,Su,343,75,1743,1004,570,,,1931,229,,,,21.7
 Bonneville,2025-07-19,Su,326,46,1798,1014,525,,,476,163,,,,21.7
 Bonneville,2025-07-20,Su,236,38,1832,1016,543,,,516,159,,,,21.7
+Bonneville,2025-07-21,Su,269,42,2140,1218,321,,,304,103,,,,21.4
+Bonneville,2025-07-22,Su,309,61,2535,1344,336,,,348,38,,,,21.2
+Bonneville,2025-07-23,Su,354,86,2228,1147,262,,,424,59,,,,21.5
+Bonneville,2025-07-24,Su,478,82,2763,1362,269,,,378,360,,,,21.9
+Bonneville,2025-07-25,Su,536,75,4012,1972,163,,,231,216,,,,22
+Bonneville,2025-07-26,Su,435,58,4230,1941,140,,,385,60,,,,22
 Notes:
 Columbia River DART
 2025 Adult Passage Daily Counts at Bonneville
-1/1/2025 - 07/20/2025
-Generated 21 Jul 2025 19:55:50 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2025-07-20. Last possible Data Date is 07/20/2025.
+1/1/2025 - 07/26/2025
+Generated 27 Jul 2025 12:04:05 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2025-07-26. Last possible Data Date is 07/26/2025.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of 
 Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular 

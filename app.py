@@ -7,7 +7,7 @@ import os
 from os.path import join as pjoin
 import pathlib
 from datetime import date
-
+import glob 
 import pandas as pd
 pd.options.mode.chained_assignment = None #suppress chained assignment 
 
@@ -50,7 +50,17 @@ lakewash_path=pjoin(APP_PATH,'data/lakewash/')
 acartia_path=pjoin(APP_PATH, 'data/acartia/')
 twm_path=pjoin(APP_PATH, 'data/twm_data/')
 srkw_path=pjoin(APP_PATH, 'data/')
-
+#Test folder
+try:
+  subfolders = glob.glob(f"{srkw_path}/**/", recursive=True)
+  with open (pjoin(srkw_path, "test.log") as logf:
+    for folder_path in subfolders:
+      subfolder_name = os.path.basename(os.path.normpath(folder_path))
+      if subfolder_name: # Ensure it's not an empty string if base_directory is matched
+        log_file.write(f"{subfolder_name}\n")      
+except Exception as e:
+  print(e) 
+  
 #Load Bonneville data
 bonnev=load_bon(bon_path)
 

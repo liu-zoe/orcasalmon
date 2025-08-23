@@ -48,12 +48,12 @@ fos_path=pjoin(APP_PATH,'data/foschinook/')
 bon_path=pjoin(APP_PATH,'data/bonchinook/')
 lakewash_path=pjoin(APP_PATH,'data/lakewash/')
 acartia_path=pjoin(APP_PATH, 'data/acartia/')
-twm_path=pjoin(APP_PATH, 'data/twm_data/')
+twm_path=pjoin(APP_PATH, 'data/twm/')
 srkw_path=pjoin(APP_PATH, 'data/')
 #Test folder
 try:
   subfolders = glob.glob(f"{srkw_path}/**/", recursive=True)
-  with open (pjoin(srkw_path, "test.log") as logf:
+  with open(pjoin(srkw_path, "test.log")) as logf:
     for folder_path in subfolders:
       subfolder_name = os.path.basename(os.path.normpath(folder_path))
       if subfolder_name: # Ensure it's not an empty string if base_directory is matched

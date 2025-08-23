@@ -48,7 +48,7 @@ fos_path=pjoin(APP_PATH,'data/foschinook/')
 bon_path=pjoin(APP_PATH,'data/bonchinook/')
 lakewash_path=pjoin(APP_PATH,'data/lakewash/')
 acartia_path=pjoin(APP_PATH, 'data/acartia/')
-twm_path=pjoin(APP_PATH, 'data/twm/')
+twm_path=pjoin(APP_PATH, 'data/twm_data/')
 srkw_path=pjoin(APP_PATH, 'data/')
 
 #Load Bonneville data

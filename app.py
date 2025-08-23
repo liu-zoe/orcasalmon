@@ -7,7 +7,6 @@ import os
 from os.path import join as pjoin
 import pathlib
 from datetime import date
-import glob 
 import pandas as pd
 pd.options.mode.chained_assignment = None #suppress chained assignment 
 

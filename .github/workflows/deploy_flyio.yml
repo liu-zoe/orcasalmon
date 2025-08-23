@@ -22,7 +22,7 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
       - name: Checkout private twm_data repo
         run: |
-          git clone git@github.com:liu-zoe/twm_data.git data/twm  
+          git clone git@github.com:liu-zoe/twm_data.git data/twm_data  
       - name: Setup Python 
         uses: actions/setup-python@v4
         with:

@@ -10,6 +10,7 @@ flyio_ghtoken.txt
 /plot
 /data/data_in_progress
 /data/srkw_satellite_tagging
+/data/twm
 
 # Work in progress
 chinookplot.ipynb

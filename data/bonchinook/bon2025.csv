@@ -222,12 +222,12 @@ Bonneville,2025-08-08,Fa,977,195,1970,702,12,5,6,142,17,,,,21.3
 Bonneville,2025-08-09,Fa,1263,218,1985,746,4,14,11,118,31,,,,21.5
 Bonneville,2025-08-10,Fa,1546,227,2172,699,9,27,27,123,57,,,,21.9
 Bonneville,2025-08-11,Fa,1710,309,1917,676,15,44,33,106,61,,,,22.3
-Bonneville,2025-08-12,Fa,1649,308,2678,908,10,60,31,147,61,,,,22.6
+Bonneville,2025-08-12,Fa,1649,308,2678,908,10,60,31,147,61,,,,22.7
 Bonneville,2025-08-13,Fa,1199,235,2118,665,8,65,20,143,91,,,,22.7
-Bonneville,2025-08-14,Fa,936,156,2137,662,8,53,14,113,84,,,,22.5
+Bonneville,2025-08-14,Fa,936,156,2137,662,8,53,14,113,84,,,,22.4
 Bonneville,2025-08-15,Fa,526,98,1630,458,6,23,7,80,39,,,,22.3
 Bonneville,2025-08-16,Fa,610,87,1389,424,4,21,11,32,51,,,,22.2
-Bonneville,2025-08-17,Fa,843,109,856,247,3,34,10,62,37,,,,22.1
+Bonneville,2025-08-17,Fa,843,109,856,247,3,34,10,62,37,,,,22
 Bonneville,2025-08-18,Fa,1553,277,831,280,4,80,13,44,33,,,,21.9
 Bonneville,2025-08-19,Fa,4359,574,1101,359,2,251,93,92,52,,,,22
 Bonneville,2025-08-20,Fa,4791,965,1639,512,3,215,91,49,205,,,,22
@@ -235,12 +235,18 @@ Bonneville,2025-08-21,Fa,2575,640,1777,530,7,167,68,45,17,,,,22.1
 Bonneville,2025-08-22,Fa,3644,858,1681,484,4,304,100,32,29,,,,22.1
 Bonneville,2025-08-23,Fa,8325,1493,1700,464,2,795,153,48,23,,,,22.2
 Bonneville,2025-08-24,Fa,11663,1958,2012,576,13,1197,166,22,23,,,,22.5
+Bonneville,2025-08-25,Fa,6749,1658,2031,555,12,1105,99,25,38,,,,22.8
+Bonneville,2025-08-26,Fa,2954,786,1822,483,6,633,56,14,35,,,,22.8
+Bonneville,2025-08-27,Fa,3246,759,921,247,10,209,24,15,16,,,,22.9
+Bonneville,2025-08-28,Fa,9328,2140,739,209,10,453,65,18,18,,,1,22.9
+Bonneville,2025-08-29,Fa,17277,3717,684,204,8,1090,196,15,15,1,,1,23
+Bonneville,2025-08-30,Fa,16976,3487,607,185,6,1278,249,10,29,,,2,22.8
 Notes:
 Columbia River DART
 2025 Adult Passage Daily Counts at Bonneville
-1/1/2025 - 08/24/2025
-Generated 25 Aug 2025 19:29:35 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2025-08-24. Last possible Data Date is 08/24/2025.
+1/1/2025 - 08/30/2025
+Generated 31 Aug 2025 10:16:27 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2025-08-30. Last possible Data Date is 08/30/2025.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of 
 Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular 

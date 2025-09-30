@@ -253,7 +253,7 @@ Bonneville,2025-09-08,Fa,17311,2664,917,271,1,4397,330,,3,,,,22.5
 Bonneville,2025-09-09,Fa,15495,3573,1734,515,1,4930,432,,4,,,,22.4
 Bonneville,2025-09-10,Fa,18179,3580,2011,583,2,5568,602,,2,,,1,22.2
 Bonneville,2025-09-11,Fa,12807,2669,1471,411,,3369,248,,5,,,1,22
-Bonneville,2025-09-12,Fa,9627,1520,1161,302,1,2127,168,,2,,,,21.8
+Bonneville,2025-09-12,Fa,9627,1520,1161,302,1,2127,168,,2,,,,21.7
 Bonneville,2025-09-13,Fa,13722,2186,979,287,1,2962,235,,7,,,2,21.6
 Bonneville,2025-09-14,Fa,9754,1594,885,245,1,3194,188,,2,,,1,21.5
 Bonneville,2025-09-15,Fa,12605,1579,943,276,1,2455,202,,2,,,,21.3
@@ -263,12 +263,19 @@ Bonneville,2025-09-18,Fa,8296,1834,1060,279,,2297,210,,2,,,,21.4
 Bonneville,2025-09-19,Fa,7878,1068,1226,312,,2432,204,,2,,,1,21.5
 Bonneville,2025-09-20,Fa,7113,1446,1140,314,1,2186,307,,2,,,1,21.4
 Bonneville,2025-09-21,Fa,5387,1075,919,244,,1939,198,,1,,,1,21.3
+Bonneville,2025-09-22,Fa,4952,1366,874,222,,2669,419,,1,,,,21.1
+Bonneville,2025-09-23,Fa,4605,1083,865,230,,1907,275,,4,,,2,20.9
+Bonneville,2025-09-24,Fa,3294,607,903,253,,1336,224,,2,,,2,20.7
+Bonneville,2025-09-25,Fa,4452,754,997,280,,1377,229,,1,,,,
+Bonneville,2025-09-26,Fa,5853,973,973,282,,1823,343,,1,,,,
+Bonneville,2025-09-27,Fa,4318,561,877,274,,1811,273,,,,,1,
+Bonneville,2025-09-28,Fa,4124,627,762,209,,2116,310,,1,,,,
 Notes:
 Columbia River DART
 2025 Adult Passage Daily Counts at Bonneville
-1/1/2025 - 09/21/2025
-Generated 22 Sep 2025 19:19:04 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2025-09-21. Last possible Data Date is 09/21/2025.
+1/1/2025 - 09/28/2025
+Generated 29 Sep 2025 19:19:26 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2025-09-28. Last possible Data Date is 09/28/2025.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of 
 Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular 

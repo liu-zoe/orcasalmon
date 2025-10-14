@@ -264,8 +264,8 @@ Bonneville,2025-09-19,Fa,7878,1068,1226,312,,2432,204,,2,,,1,21.5
 Bonneville,2025-09-20,Fa,7113,1446,1140,314,1,2186,307,,2,,,1,21.4
 Bonneville,2025-09-21,Fa,5387,1075,919,244,,1939,198,,1,,,1,21.3
 Bonneville,2025-09-22,Fa,4952,1366,874,222,,2669,419,,1,,,,21.1
-Bonneville,2025-09-23,Fa,4605,1083,865,230,,1907,275,,4,,,2,20.9
-Bonneville,2025-09-24,Fa,3294,607,903,253,,1336,224,,2,,,2,20.7
+Bonneville,2025-09-23,Fa,4605,1083,865,230,,1907,275,,4,,,2,20.8
+Bonneville,2025-09-24,Fa,3294,607,903,253,,1336,224,,2,,,2,20.6
 Bonneville,2025-09-25,Fa,4452,754,997,280,,1377,229,,1,,,,
 Bonneville,2025-09-26,Fa,5853,973,973,282,,1823,343,,1,,,,
 Bonneville,2025-09-27,Fa,4318,561,877,274,,1811,273,,,,,1,
@@ -277,12 +277,19 @@ Bonneville,2025-10-02,Fa,2359,699,827,228,,1396,293,,1,,,,
 Bonneville,2025-10-03,Fa,2417,474,717,218,,1713,315,,,,,,
 Bonneville,2025-10-04,Fa,2651,782,557,150,,5749,639,,,,,,
 Bonneville,2025-10-05,Fa,1506,225,330,115,,9612,835,,1,,,,
+Bonneville,2025-10-06,Fa,884,363,178,46,,5797,650,,,,,,
+Bonneville,2025-10-07,Fa,572,161,256,74,,4816,585,,,,,,
+Bonneville,2025-10-08,Fa,984,277,276,92,,4256,490,,,,,,
+Bonneville,2025-10-09,Fa,705,159,224,69,,3457,327,,,,,,
+Bonneville,2025-10-10,Fa,776,224,182,49,,4354,309,,,,,,
+Bonneville,2025-10-11,Fa,542,185,146,47,,1983,151,,,,,,
+Bonneville,2025-10-12,Fa,492,112,175,46,,3044,169,,,,,,
 Notes:
 Columbia River DART
 2025 Adult Passage Daily Counts at Bonneville
-1/1/2025 - 10/05/2025
-Generated 06 Oct 2025 19:19:25 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2025-10-05. Last possible Data Date is 10/05/2025.
+1/1/2025 - 10/12/2025
+Generated 13 Oct 2025 19:21:39 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2025-10-12. Last possible Data Date is 10/12/2025.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of 
 Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular 

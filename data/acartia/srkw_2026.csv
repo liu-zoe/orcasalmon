@@ -1,0 +1,2 @@
+type,created,latitude,longitude,no_sighted,data_source_id,data_source_comments,m,day,year,month,date,date_ymd,time,J,K,L,sum_jkl,srkw_generic,srkw_type,srkw,biggs,sum_srkw_biggs,south,southeast,southwest,north,northeast,northwest,east,west,dir_sum
+Southern Resident Orca,2026-01-03 21:01:00,48.42779,-122.97017,15.0,240431.0,[Orca Network] K pod south/southeastbound (Tracey Carrillo) (ID OBI),1,3,2026,Jan,Jan-3,2026-1-3,21:01:00,0,1,0,1,0,1,1,0,1,0,1,0,0,0,0,0,0,1

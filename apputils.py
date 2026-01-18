@@ -64,6 +64,8 @@ def load_bon(bon_path):
 
 def load_wash(path):    
     curyr=date.today().year
+    if curyr>2025:
+        curyr=2025
     yl=[y for y in range(2024, curyr)] #year list for Bonneville Dam
     wash=pd.DataFrame(columns=['day','m'])
     for i in reversed(range(len(yl))):

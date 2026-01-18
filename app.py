@@ -36,10 +36,14 @@ except:
 today=date.today()
 todaystr=str(today)
 curyr=today.year
+curmon=today.month
 # curyr=2024
 lastyr=curyr-1
 twoyr=curyr-2
-ayl=[y for y in range(1980, curyr+1)] #year list for Albion
+if curmon<5:
+    ayl=[y for y in range(1980, curyr+1)] #year list for Albion <-- Use post April
+else:
+    ayl=[y for y in range(1980, curyr)] #year list for Albion <- Use prio
 byl=[y for y in range(1939, curyr+1)] #year list for Bonneville Dam
 twmyl=[y for y in range(1976, 2022)] #year list for TWM data
 #Define data path
@@ -64,7 +68,7 @@ albion=calleap.merge(albion, how='left', on=['m','day'])
 lagged=create_lagged(curyr, albion, bonnev, 10, 10)
 
 # Load Lake Washington data
-wash=load_wash(lakewash_path)
+# wash=load_wash(lakewash_path)
 
 twm_map_data=twm_map_preproc(2017, twm_path, "All pods")
 acartia_map_data=acartia_map_preproc(2023, acartia_path)
@@ -205,10 +209,10 @@ app.layout = html.Div(
                                                                     "label":"Bonneville Dam",
                                                                     "value":"Bonneville Dam",
                                                                 },
-                                                                {
-                                                                    "label":"Lake Washington",
-                                                                    "value":"Lake Washington",
-                                                                },
+                                                                # {
+                                                                #     "label":"Lake Washington",
+                                                                #     "value":"Lake Washington",
+                                                                # },
                                                             ],
                                                         ),
                                                         
@@ -263,10 +267,11 @@ app.layout = html.Div(
                                                 children=[
                                                     html.H6("Southern Resident Orca Sightings"),
                                                     dcc.Dropdown(
-                                                            value=2025,
+                                                            value=2026,
                                                             className="year-dropdown",
                                                             id="year-dropdown",
                                                             options=[
+                                                                {"label":"2026","value":2026,},
                                                                 {"label":"2025","value":2025,},
                                                                 {"label":"2024","value":2024,},
                                                                 {"label":"2023","value":2023,},
@@ -928,7 +933,7 @@ def update_orca_map(pod,year):
                 colorbar=dict(
                     title='Month',
                     thickness=20,
-                    titleside='right',
+                    # titleside='right',
                     outlinecolor='rgba(68,68,68,0)',
                     ticks='outside',
                     ticklen=3,

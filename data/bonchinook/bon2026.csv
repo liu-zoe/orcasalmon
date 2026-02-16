@@ -1,6 +1,6 @@
 Project,Date,Chinook Run,Chin,JChin,Stlhd,WStlhd,Sock,Coho,JCoho,Shad,LmpryDay,BTrout,Chum,Pink,TempC
 Bonneville,2026-01-01,,1,,33,11,,,,,,,,,
-Bonneville,2026-01-02,,1,,37,21,,,,,,,,,
+Bonneville,2026-01-02,,,,37,21,,,,,,,1,,
 Bonneville,2026-01-03,,,,39,15,,,,,,,,,
 Bonneville,2026-01-04,,,,38,15,,,,,,,,,
 Bonneville,2026-01-05,,,,32,16,,,,,,,,,
@@ -38,12 +38,18 @@ Bonneville,2026-02-05,,,,4,3,,,,,,,,,
 Bonneville,2026-02-06,,,,7,6,,,,,,,,,
 Bonneville,2026-02-07,,,,2,2,,,,,,,,,
 Bonneville,2026-02-08,,,,7,7,,,,,,,,,
+Bonneville,2026-02-09,,,,12,5,,,,,,,,,
+Bonneville,2026-02-10,,,,18,14,,,,,,,,,
+Bonneville,2026-02-11,,,,8,3,,,,,,,,,
+Bonneville,2026-02-12,,,,,-1,,,,,,,,,
+Bonneville,2026-02-13,,,,12,10,,,,,,,,,
+Bonneville,2026-02-14,,,,13,8,,,,,,,,,
 Notes:
 Columbia River DART
 2026 Adult Passage Daily Counts at Bonneville
-2026-01-01 to 2026-02-09
-Generated 10 Feb 2026 19:08:53 PST. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2026-02-09. Last possible Data Date is 2026-02-09.
+2026-01-01 to 2026-02-15
+Generated 16 Feb 2026 07:43:06 PST. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2026-02-15. Last possible Data Date is 2026-02-15.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of 
 Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular 

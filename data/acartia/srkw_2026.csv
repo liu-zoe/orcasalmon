@@ -1,209 +1,702 @@
-type,created,latitude,longitude,no_sighted,data_source_id,data_source_comments,m,day,year,month,date,date_ymd,time,J,K,L,sum_jkl,srkw_generic,srkw_type,srkw,biggs,sum_srkw_biggs,south,southeast,southwest,north,northeast,northwest,east,west,dir_sum
-Southern Resident Orca,2026-01-03 21:01:00,48.42779,-122.97017,15,240431,[Orca Network] K pod south/southeastbound (Tracey Carrillo) (ID OBI),1,3,2026,Jan,Jan-3,2026-1-3,21:01:00,0,1,0,1,0,1,1,0,1,0,1,0,0,0,0,0,0,1
-Orca,2026-01-07 16:00:00,47.6235,-122.4721,5,240488,[Orca Network] Presumed SRKW southbound with some directional changes (Brent Cullimore),1,7,2026,Jan,Jan-7,2026-1-7,16:00:00,0,0,0,0,1,0,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-07 16:24:00,47.5969,-122.43495,10,240490,[Orca Network] blows of SRJWs seen north of Alki (Jamin King),1,7,2026,Jan,Jan-7,2026-1-7,16:24:00,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-01-07 16:28:00,47.55023,-122.42374,10,240491,"[Orca Network] spread out, Southbound (Diana Gragg)",1,7,2026,Jan,Jan-7,2026-1-7,16:28:00,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-07 16:53:00,47.53459,-122.42509,10,240493,[Orca Network] Quickly southbound (Mary Hartmann),1,7,2026,Jan,Jan-7,2026-1-7,16:53:00,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-07 16:58:00,47.52656,-122.42074,10,240494,[Orca Network] Southbound (Jami Cantrell),1,7,2026,Jan,Jan-7,2026-1-7,16:58:00,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-07 17:03:00,47.56822,-122.4327,10,240495,[Orca Network] Trailing residents southbound (Laura Clark),1,7,2026,Jan,Jan-7,2026-1-7,17:03:00,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-07 17:13:00,47.51269,-122.42677,10,240496,"[Orca Network] Southbound, tightly grouped (Hannah Marie Munro)",1,7,2026,Jan,Jan-7,2026-1-7,17:13:00,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-07 17:55:00,47.50343,-122.43371,1,240498,[Orca Network] Presumably SRKWs southbound (Burt Miller),1,7,2026,Jan,Jan-7,2026-1-7,17:55:00,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-07 18:15:00,47.47427,-122.41815,20,240500,"[Orca Network] Presumed SRKWs southbound (Cindy Eckes Waddington, Marla Smith)",1,7,2026,Jan,Jan-7,2026-1-7,18:15:00,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-07 18:35:00,47.45999,-122.41052,41,240501,[Orca Network] Many SRKWs spread out southbound (Marla Smith),1,7,2026,Jan,Jan-7,2026-1-7,18:35:00,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-07 19:23:00,47.41893,-122.40038,41,240503,[Orca Network] Southbound SRKW (Mark McGough),1,7,2026,Jan,Jan-7,2026-1-7,19:23:00,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-07 20:00:00,47.3874,-122.36918,41,240508,[Orca Network] Js and Ks southbound very spread out (Rachel Haight),1,7,2026,Jan,Jan-7,2026-1-7,20:00:00,1,1,0,2,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-07 20:51:00,47.35229,-122.42755,41,240512,"[Orca Network] J pod and K pod southbound, surface active (Marci Barnard)",1,7,2026,Jan,Jan-7,2026-1-7,20:51:00,1,1,0,2,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-07 21:10:00,47.35415,-122.42343,41,240513,"[Orca Network] J pod and K pod here, direction of travel unknown (Jill Clogston)",1,7,2026,Jan,Jan-7,2026-1-7,21:10:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-01-07 21:22:00,47.33333,-122.45759,41,240515,[Orca Network] J pod and K pod heading southwest (Tiffany Russell),1,7,2026,Jan,Jan-7,2026-1-7,21:22:00,1,1,0,2,0,1,1,0,1,1,0,1,0,0,0,0,0,2
-Southern Resident Orca,2026-01-07 21:37:00,47.32449,-122.47647,41,240517,"[Orca Network] J pod and K pod westbound, leaders here (Jill Clogston)",1,7,2026,Jan,Jan-7,2026-1-7,21:37:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,0,0,1,1
-Southern Resident Orca,2026-01-07 21:52:00,47.31716,-122.50754,41,240518,"[Orca Network] J pod and K pod westbound spread out, surface active (Cindy Swenson)",1,7,2026,Jan,Jan-7,2026-1-7,21:52:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,0,0,1,1
-Southern Resident Orca,2026-01-07 22:29:00,47.32239,-122.52162,41,240522,[Orca Network] J pod and K pod westbound spread out (Paul Davis),1,7,2026,Jan,Jan-7,2026-1-7,22:29:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,0,0,1,1
-Southern Resident Orca,2026-01-07 22:40:00,47.33531,-122.53604,41,240524,[Orca Network] J pod and K pod turning north (Hannah Marie Munro),1,7,2026,Jan,Jan-7,2026-1-7,22:40:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-01-07 23:10:00,47.36932,-122.52694,41,240526,[Orca Network] J pod and K pod northbound (Marla Smith),1,7,2026,Jan,Jan-7,2026-1-7,23:10:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-07 23:27:00,47.40593,-122.53055,41,240527,"[Orca Network] J pod and K pod northbound, leaders here (Rachel Haight)",1,7,2026,Jan,Jan-7,2026-1-7,23:27:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-08 00:15:00,47.46561,-122.51776,41,240528,"[Orca Network] J pod and K pod northbound, leaders here (Rachel Haight)",1,8,2026,Jan,Jan-8,2026-1-8,00:15:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-08 16:45:00,47.94336,-122.53989,41,240539,"[Orca Network] Presuming these are southern residents, northbound (Susan John)",1,8,2026,Jan,Jan-8,2026-1-8,16:45:00,0,0,0,0,1,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-08 17:08:00,47.95325,-122.55603,41,240540,"[Orca Network] presume southern residents, J and K pod, location approximate, northbound as seen on the Skunk Bay webcam (Marla Smith, Olivia Newton)",1,8,2026,Jan,Jan-8,2026-1-8,17:08:00,1,1,0,2,1,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-08 17:32:00,48.03045,-122.62469,41,240541,"[Orca Network] presume Js and Ks, spread out, northbound (Christopher Thorton, Rachel Haight)",1,8,2026,Jan,Jan-8,2026-1-8,17:32:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-08 17:53:00,48.06556,-122.63122,41,240542,"[Orca Network] Jpod and Kpod, northbound (Rachel Haight)",1,8,2026,Jan,Jan-8,2026-1-8,17:53:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-08 18:47:00,48.11189,-122.66953,41,240543,"[Orca Network] Jpod and Kpod, location approximate, northbound (Rachel Haight)",1,8,2026,Jan,Jan-8,2026-1-8,18:47:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-08 18:59:00,48.14123,-122.71347,41,240545,"[Orca Network] Jpod and Kpod, northbound with trailers going through ferry lanes (Rachel Haight)",1,8,2026,Jan,Jan-8,2026-1-8,18:59:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-08 19:27:00,48.14672,-122.72755,41,240547,"[Orca Network] Jpod and Kpod, northbound (Ashton Mead)",1,8,2026,Jan,Jan-8,2026-1-8,19:27:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-08 19:42:00,48.15657,-122.74266,41,240548,"[Orca Network] Jpod and Kpod, northwest bound (Ashton Mead)",1,8,2026,Jan,Jan-8,2026-1-8,19:42:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,1,0,0,1
-Southern Resident Orca,2026-01-08 19:52:00,48.16802,-122.74815,41,240550,"[Orca Network] Jpod and Kpod, split, Js going west, Ks closer to whidbey moving northwest (Sarah Geist)",1,8,2026,Jan,Jan-8,2026-1-8,19:52:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,1,0,0,1
-Southern Resident Orca,2026-01-13 16:08:00,47.48508,-122.41824,15,240683,"[Orca Network] presume SRKW, location and numbers approximate, southbound (Olivia Newton)",1,13,2026,Jan,Jan-13,2026-1-13,16:08:00,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-13 16:20:00,47.46319,-122.40971,15,240684,"[Orca Network] likely SRKW, spread out, southbound, numbers approximate (Melanie S.)",1,13,2026,Jan,Jan-13,2026-1-13,16:20:00,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-13 17:02:00,47.44015,-122.3977,2,240685,"[Orca Network]  leaders south of three tree, spread out, southbound (Marla Smith)",1,13,2026,Jan,Jan-13,2026-1-13,17:02:00,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-13 17:13:00,47.41181,-122.3977,12,240686,"[Orca Network] very spread out, easy to west, steady southbound (Marla Smith)",1,13,2026,Jan,Jan-13,2026-1-13,17:13:00,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-13 17:45:00,47.37636,-122.37987,40,240687,[Orca Network] Jpod and kpod southbound (Marla Smith),1,13,2026,Jan,Jan-13,2026-1-13,17:45:00,1,1,0,2,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-13 18:15:00,47.3407,-122.43249,40,240689,[Orca Network] southbound bearing tip of Maury (Ali saccone),1,13,2026,Jan,Jan-13,2026-1-13,18:15:00,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-13 18:39:00,47.32581,-122.44829,40,240690,"[Orca Network] Jpod and kpod, southbound(Morgan Dale)",1,13,2026,Jan,Jan-13,2026-1-13,18:39:00,1,1,0,2,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-13 18:58:00,47.31138,-122.48399,40,240692,"[Orca Network] Jpod and kpod, spread out, foraging and trending west (Marla Smith)",1,13,2026,Jan,Jan-13,2026-1-13,18:58:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-01-13 19:06:00,47.31394,-122.50288,40,240694,[Orca Network] js and ks westbound spread in groups (Marla Smith),1,13,2026,Jan,Jan-13,2026-1-13,19:06:00,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,1,1
-Southern Resident Orca,2026-01-13 19:12:00,47.31464,-122.51163,40,240695,"[Orca Network] js and ks westbound, spread in at least two groups ( Marla Smith) ",1,13,2026,Jan,Jan-13,2026-1-13,19:12:00,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,1,1
-Southern Resident Orca,2026-01-13 19:22:00,47.31685,-122.51532,40,240696,"[Orca Network] js and ks, spread in two groups, trailing group passing ferry lanes, lead group west of, all westbound (Marla Smith)",1,13,2026,Jan,Jan-13,2026-1-13,19:22:00,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,1,1
-Southern Resident Orca,2026-01-13 19:48:00,47.3314,-122.52871,40,240697,"[Orca Neteork] js and ks, northbound (Jolena Tagg)",1,13,2026,Jan,Jan-13,2026-1-13,19:48:00,0,0,0,0,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-13 19:59:00,47.34845,-122.53451,40,240698,[Orca Network] Jpod and kpod northbound (Kim W. Byquist),1,13,2026,Jan,Jan-13,2026-1-13,19:59:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-13 20:34:00,47.36974,-122.53102,40,240699,"[Orca Network] Jpod and kpod, spread in groups, northbound (Marla Smith)",1,13,2026,Jan,Jan-13,2026-1-13,20:34:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-13 20:43:00,47.37567,-122.53016,40,240700,[Orca Network] Jpod and Kpod slowly northbound in two groups (Marla Smith),1,13,2026,Jan,Jan-13,2026-1-13,20:43:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-13 20:58:00,47.38812,-122.53638,40,240702,"[Orca Network] Jpod and Kpod, nothbound spread in two groups (Marla Smith)",1,13,2026,Jan,Jan-13,2026-1-13,20:58:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-01-13 21:23:00,47.40148,-122.53518,40,240704,[Orca Network] Jpod and kpod northbound in two groups (Marla Smith),1,13,2026,Jan,Jan-13,2026-1-13,21:23:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-13 21:52:00,47.42373,-122.52345,42,240705,[Orca Network] Js and Ks split in two tight groups northbound (Rachel Haight),1,13,2026,Jan,Jan-13,2026-1-13,21:52:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-13 22:05:00,47.43383,-122.52341,42,240708,[Orca Network] Js and Ks in two tight groups northbound (Rachel Haight),1,13,2026,Jan,Jan-13,2026-1-13,22:05:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-13 22:33:00,47.45796,-122.51841,41,240710,[Orca Network] J pod and K pod northbound (Tammi Pickett),1,13,2026,Jan,Jan-13,2026-1-13,22:33:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-13 22:45:00,47.4785,-122.50485,41,240711,"[Orca Network] J pod and K pod northbound, leaders here (Nikol Damato)",1,13,2026,Jan,Jan-13,2026-1-13,22:45:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-13 23:01:00,47.49094,-122.49515,41,240713,"[Orca Network] J pod and K pod northbound, Ks here (Nikol Damato)",1,13,2026,Jan,Jan-13,2026-1-13,23:01:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-13 23:14:00,47.50938,-122.48657,41,240714,[Orca Network] J pod and K pod northbound in two groups (Rachel Haight),1,13,2026,Jan,Jan-13,2026-1-13,23:14:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-13 23:31:00,47.52295,-122.47884,41,240716,[Orca Network] J pod and K pod northbound (Nikol Damato),1,13,2026,Jan,Jan-13,2026-1-13,23:31:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
+type,created,latitude,longitude,no_sighted,data_source_id,data_source_comments,m,day,year,month,date,date_ymd,time,J,K,L,sum_jkl,srkw_type,srkw_generic,srkw,biggs_type,biggs_comments,biggs_t_id,biggs,sum_srkw_biggs,is_orca,srkw_candidate,srkw_class,south,southeast,southwest,north,northeast,northwest,east,west,dir_sum
+Orca,2026-01-01 00:05:00,48.51132,-123.16433,4,240350,[Orca Network] Orcas southbound,1,1,2026,Jan,Jan-1,2026-1-1,00:05:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-01 00:15:00,48.27469,-122.78427,4,240349,"[Orca Network] 3-4 orcas southbound, no males (Sarah Geist)",1,1,2026,Jan,Jan-1,2026-1-1,00:15:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-01 00:21:00,47.26887,-122.67741,4,240352,[Orca Network] Orcas northbound (Andrea Facer),1,1,2026,Jan,Jan-1,2026-1-1,00:21:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-01 17:18:00,47.29307,-122.70464,4,240362,"[Orca Network] Orcas northbound, long down times (Deanna Foster Goldberg)",1,1,2026,Jan,Jan-1,2026-1-1,17:18:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-01 17:50:00,47.32298,-122.70288,4,240364,"[Orca Network] Orcas had been northbound, now stalled, surface activity (Randy Witter)",1,1,2026,Jan,Jan-1,2026-1-1,17:50:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-01 18:18:00,47.30949,-122.70202,4,240367,[Orca Network] Orcas possibly trending south now (Randy Witter),1,1,2026,Jan,Jan-1,2026-1-1,18:18:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-01 18:39:00,47.30784,-122.70846,4,240368,"[Orca Network] Orcas milling, breaches (Torry Chamberlayne)",1,1,2026,Jan,Jan-1,2026-1-1,18:39:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-01 18:54:00,47.30677,-122.70684,4,240369,[Orca Network] Orcas still milling on a hunt (Torry Chamberlayne (,1,1,2026,Jan,Jan-1,2026-1-1,18:54:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-01 19:27:00,47.30895,-122.7087,4,240375,"[Orca Network] Orcas still milling, hunting (Laura Chandler,  Kirsten Lunz)",1,1,2026,Jan,Jan-1,2026-1-1,19:27:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-01 20:35:00,47.28268,-122.7142,4,240379,[Orca Network] Orcas southbound (Deanna Foster Goldberg),1,1,2026,Jan,Jan-1,2026-1-1,20:35:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-01 21:02:00,47.27605,-122.72208,4,240380,[Orca Network] Orcas southbound (Deanna Foster Goldberg),1,1,2026,Jan,Jan-1,2026-1-1,21:02:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-01 21:35:08,47.25634,-122.71247,4,240381,,1,1,2026,Jan,Jan-1,2026-1-1,21:35:08,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-01 22:20:19,48.8602989221,-123.34871444,1,240383,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",1,1,2026,Jan,Jan-1,2026-1-1,22:20:19,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-02 16:50:00,48.51125,-122.67105,1,240397,[Orca Network] male orca eastbound (Cindi Crowder Rausch),1,2,2026,Jan,Jan-2,2026-1-2,16:50:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,1,0,1
+Orca,2026-01-02 19:25:38,49.42647,-123.48185,5,240401,,1,2,2026,Jan,Jan-2,2026-1-2,19:25:38,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-02 23:19:00,48.53779,-123.17892,4,240413,"[Orca Network] Orcas audible on Orcasound Lab hydrophone, location and numbers approximate, direction of travel and ecotype unknown (Bernadette Ireland)",1,2,2026,Jan,Jan-2,2026-1-2,23:19:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-03 20:08:00,47.30199,-122.71368,4,240377,"[Orca Network] Orcas slowly southbound (Torry Chamberlayne,  Hannah Marie Munro)",1,3,2026,Jan,Jan-3,2026-1-3,20:08:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-03 21:01:00,48.42779,-122.97017,15,240431,[Orca Network] K pod south/southeastbound (Tracey Carrillo) (ID OBI),1,3,2026,Jan,Jan-3,2026-1-3,21:01:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,1,0,0,0,0,0,0,1
+Orca,2026-01-03 21:25:00,48.59686,-123.06154,3,240433,"[Orca Network] Orcas southeastbound, possibly hunting (Ben Cowan)",1,3,2026,Jan,Jan-3,2026-1-3,21:25:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,1,0,0,0,0,0,0,1
+Orca,2026-01-03 23:28:00,48.12102,-122.72595,2,240435,[Orca Network] At least two orcas northbound (Jennifer Fulton Carpenter),1,3,2026,Jan,Jan-3,2026-1-3,23:28:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-03 23:44:00,48.14681,-122.74551,2,240436,[Orca Network] At least two orcas northbound (Jennifer Fulton Carpenter),1,3,2026,Jan,Jan-3,2026-1-3,23:44:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-04 00:23:00,48.13509,-122.73381,2,240437,[Orca Network] At least two orcas southbound (Jennifer Fulton Carpenter),1,4,2026,Jan,Jan-4,2026-1-4,00:23:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-07 16:00:00,47.6235,-122.4721,5,240488,[Orca Network] Presumed SRKW southbound with some directional changes (Brent Cullimore),1,7,2026,Jan,Jan-7,2026-1-7,16:00:00,0,0,0,0,0,1,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-07 16:24:00,47.5969,-122.43495,10,240490,[Orca Network] blows of SRJWs seen north of Alki (Jamin King),1,7,2026,Jan,Jan-7,2026-1-7,16:24:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-07 16:28:00,47.55023,-122.42374,10,240491,"[Orca Network] spread out, Southbound (Diana Gragg)",1,7,2026,Jan,Jan-7,2026-1-7,16:28:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-07 16:53:00,47.53459,-122.42509,10,240493,[Orca Network] Quickly southbound (Mary Hartmann),1,7,2026,Jan,Jan-7,2026-1-7,16:53:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-07 16:58:00,47.52656,-122.42074,10,240494,[Orca Network] Southbound (Jami Cantrell),1,7,2026,Jan,Jan-7,2026-1-7,16:58:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-07 17:03:00,47.56822,-122.4327,10,240495,[Orca Network] Trailing residents southbound (Laura Clark),1,7,2026,Jan,Jan-7,2026-1-7,17:03:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-07 17:13:00,47.51269,-122.42677,10,240496,"[Orca Network] Southbound, tightly grouped (Hannah Marie Munro)",1,7,2026,Jan,Jan-7,2026-1-7,17:13:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-07 17:55:00,47.50343,-122.43371,1,240498,[Orca Network] Presumably SRKWs southbound (Burt Miller),1,7,2026,Jan,Jan-7,2026-1-7,17:55:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-07 18:15:00,47.47427,-122.41815,20,240500,"[Orca Network] Presumed SRKWs southbound (Cindy Eckes Waddington, Marla Smith)",1,7,2026,Jan,Jan-7,2026-1-7,18:15:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Orca,2026-01-07 18:17:08,49.42644,-123.48188,4,240499,,1,7,2026,Jan,Jan-7,2026-1-7,18:17:08,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-07 18:35:00,47.45999,-122.41052,41,240501,[Orca Network] Many SRKWs spread out southbound (Marla Smith),1,7,2026,Jan,Jan-7,2026-1-7,18:35:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-07 19:23:00,47.41893,-122.40038,41,240503,[Orca Network] Southbound SRKW (Mark McGough),1,7,2026,Jan,Jan-7,2026-1-7,19:23:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-07 20:00:00,47.3874,-122.36918,41,240508,[Orca Network] Js and Ks southbound very spread out (Rachel Haight),1,7,2026,Jan,Jan-7,2026-1-7,20:00:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-07 20:51:00,47.35229,-122.42755,41,240512,"[Orca Network] J pod and K pod southbound, surface active (Marci Barnard)",1,7,2026,Jan,Jan-7,2026-1-7,20:51:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-07 21:10:00,47.35415,-122.42343,41,240513,"[Orca Network] J pod and K pod here, direction of travel unknown (Jill Clogston)",1,7,2026,Jan,Jan-7,2026-1-7,21:10:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-07 21:22:00,47.33333,-122.45759,41,240515,[Orca Network] J pod and K pod heading southwest (Tiffany Russell),1,7,2026,Jan,Jan-7,2026-1-7,21:22:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,1,0,0,0,0,0,2
+Southern Resident Orca,2026-01-07 21:37:00,47.32449,-122.47647,41,240517,"[Orca Network] J pod and K pod westbound, leaders here (Jill Clogston)",1,7,2026,Jan,Jan-7,2026-1-7,21:37:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,1,1
+Southern Resident Orca,2026-01-07 21:52:00,47.31716,-122.50754,41,240518,"[Orca Network] J pod and K pod westbound spread out, surface active (Cindy Swenson)",1,7,2026,Jan,Jan-7,2026-1-7,21:52:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,1,1
+Southern Resident Orca,2026-01-07 22:29:00,47.32239,-122.52162,41,240522,[Orca Network] J pod and K pod westbound spread out (Paul Davis),1,7,2026,Jan,Jan-7,2026-1-7,22:29:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,1,1
+Southern Resident Orca,2026-01-07 22:40:00,47.33531,-122.53604,41,240524,[Orca Network] J pod and K pod turning north (Hannah Marie Munro),1,7,2026,Jan,Jan-7,2026-1-7,22:40:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-07 23:10:00,47.36932,-122.52694,41,240526,[Orca Network] J pod and K pod northbound (Marla Smith),1,7,2026,Jan,Jan-7,2026-1-7,23:10:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-07 23:27:00,47.40593,-122.53055,41,240527,"[Orca Network] J pod and K pod northbound, leaders here (Rachel Haight)",1,7,2026,Jan,Jan-7,2026-1-7,23:27:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-08 00:15:00,47.46561,-122.51776,41,240528,"[Orca Network] J pod and K pod northbound, leaders here (Rachel Haight)",1,8,2026,Jan,Jan-8,2026-1-8,00:15:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-08 16:45:00,47.94336,-122.53989,41,240539,"[Orca Network] Presuming these are southern residents, northbound (Susan John)",1,8,2026,Jan,Jan-8,2026-1-8,16:45:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-08 17:08:00,47.95325,-122.55603,41,240540,"[Orca Network] presume southern residents, J and K pod, location approximate, northbound as seen on the Skunk Bay webcam (Marla Smith, Olivia Newton)",1,8,2026,Jan,Jan-8,2026-1-8,17:08:00,1,1,0,2,1,1,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-08 17:32:00,48.03045,-122.62469,41,240541,"[Orca Network] presume Js and Ks, spread out, northbound (Christopher Thorton, Rachel Haight)",1,8,2026,Jan,Jan-8,2026-1-8,17:32:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-08 17:53:00,48.06556,-122.63122,41,240542,"[Orca Network] Jpod and Kpod, northbound (Rachel Haight)",1,8,2026,Jan,Jan-8,2026-1-8,17:53:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-08 18:47:00,48.11189,-122.66953,41,240543,"[Orca Network] Jpod and Kpod, location approximate, northbound (Rachel Haight)",1,8,2026,Jan,Jan-8,2026-1-8,18:47:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-08 18:59:00,48.14123,-122.71347,41,240545,"[Orca Network] Jpod and Kpod, northbound with trailers going through ferry lanes (Rachel Haight)",1,8,2026,Jan,Jan-8,2026-1-8,18:59:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-08 19:27:00,48.14672,-122.72755,41,240547,"[Orca Network] Jpod and Kpod, northbound (Ashton Mead)",1,8,2026,Jan,Jan-8,2026-1-8,19:27:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-08 19:42:00,48.15657,-122.74266,41,240548,"[Orca Network] Jpod and Kpod, northwest bound (Ashton Mead)",1,8,2026,Jan,Jan-8,2026-1-8,19:42:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,1,0,0,1
+Southern Resident Orca,2026-01-08 19:52:00,48.16802,-122.74815,41,240550,"[Orca Network] Jpod and Kpod, split, Js going west, Ks closer to whidbey moving northwest (Sarah Geist)",1,8,2026,Jan,Jan-8,2026-1-8,19:52:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,1,0,0,1
+Orca,2026-01-08 20:39:00,47.11182,-122.9019,3,240551,"[Orca Network] southbound, group includes a calf (Terry Jansen)",1,8,2026,Jan,Jan-8,2026-1-8,20:39:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-09 01:06:44,48.571,-122.8829,1,240558,Very large ,1,9,2026,Jan,Jan-9,2026-1-9,01:06:44,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-09 12:22:00,47.69344,-122.40638,5,240610,,1,9,2026,Jan,Jan-9,2026-1-9,12:22:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-09 17:29:00,47.378,-122.53063,10,240564,[Orca Network] large group of orca (Johnathan Salter),1,9,2026,Jan,Jan-9,2026-1-9,17:29:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-09 18:00:00,47.41648,-122.52582,10,240565,[Orca Network] Orcas northbound (Diane Swanson Van Auken),1,9,2026,Jan,Jan-9,2026-1-9,18:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-09 18:45:00,47.45996,-122.51855,10,240566,[Orca Network] Orcas northbound (Mark Reddish),1,9,2026,Jan,Jan-9,2026-1-9,18:45:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-09 19:32:00,47.50681,-122.48793,10,240567,[Orca Network] Orcas northbound (Barb Thomas),1,9,2026,Jan,Jan-9,2026-1-9,19:32:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-09 19:33:00,47.49635,-122.49177,10,240568,"[Orca Network] Orcas northbound (Mollie Segall, Barb Thomas)",1,9,2026,Jan,Jan-9,2026-1-9,19:33:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-09 19:57:00,47.52241,-122.488,10,240570,"[Orca Network] Orcas northbound (Mollie Segall, Patti Waterfall)",1,9,2026,Jan,Jan-9,2026-1-9,19:57:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-09 20:15:00,47.53754,-122.47268,10,240572,[Orca Network] Orcas slowly northbound (Mary Hartmann),1,9,2026,Jan,Jan-9,2026-1-9,20:15:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-09 20:29:00,47.53893,-122.475,10,240576,[Orca Network] Orcas slowly northbound (Jeremy Robin),1,9,2026,Jan,Jan-9,2026-1-9,20:29:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-09 21:14:00,47.5798,-122.46311,10,240581,"[Orca Network] Orcas northbound (Annika Hipple, Sean DeLellis, Mary Hartmann)",1,9,2026,Jan,Jan-9,2026-1-9,21:14:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-09 21:35:00,47.6004,-122.465,10,240584,"[Orca Network] Orcas northbound (Annika Hipple, Diana Gragg)",1,9,2026,Jan,Jan-9,2026-1-9,21:35:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-09 21:43:00,47.61505,-122.46749,12,240585,[Orca Network] Orcas northbound (Hannah Marie Munro),1,9,2026,Jan,Jan-9,2026-1-9,21:43:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-09 22:16:00,47.64675,-122.45462,12,240591,[Orca Network] Orcas quickly northbound (Hannah Marie Munro),1,9,2026,Jan,Jan-9,2026-1-9,22:16:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-09 22:31:00,47.66132,-122.45153,12,240592,"[Orca Network] Orcas spreading out, continuing northbound (Jill M Rotset, Sue Surowiec Larkin)",1,9,2026,Jan,Jan-9,2026-1-9,22:31:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-09 22:45:00,47.68542,-122.43997,12,240602,"[Orca Network] Orcas northbound, some surface activity (Hannah Marie Munro)",1,9,2026,Jan,Jan-9,2026-1-9,22:45:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-09 23:13:00,47.71286,-122.43771,12,240606,[Orca Network] Orcas northbound (Terra Rose),1,9,2026,Jan,Jan-9,2026-1-9,23:13:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-09 23:37:00,47.76146,-122.44732,12,240607,[Orca Network] Orcas northbound (Elissa Martin Story),1,9,2026,Jan,Jan-9,2026-1-9,23:37:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-09 23:54:00,47.758,-122.42449,12,240608,"[Orca Network] Orcas continuing north, northwest trend, traveling in two parallel groups (Elissa Martin Story, Alisa Lemire Brooks, Kelly Dawson)",1,9,2026,Jan,Jan-9,2026-1-9,23:54:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,1,0,0,1
+Orca,2026-01-10 00:14:00,47.7696,-122.41677,12,240609,"[Orca Network] Orcas loosely grouped, northbound (Alisa Lemire Brooks, Lori Ormerod)",1,10,2026,Jan,Jan-10,2026-1-10,00:14:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-12 21:36:00,48.10403,-122.74885,2,240678,[Orca Network] Orcas northbound (Heather Sheppard),1,12,2026,Jan,Jan-12,2026-1-12,21:36:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-13 16:08:00,47.48508,-122.41824,15,240683,"[Orca Network] presume SRKW, location and numbers approximate, southbound (Olivia Newton)",1,13,2026,Jan,Jan-13,2026-1-13,16:08:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-13 16:20:00,47.46319,-122.40971,15,240684,"[Orca Network] likely SRKW, spread out, southbound, numbers approximate (Melanie S.)",1,13,2026,Jan,Jan-13,2026-1-13,16:20:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-13 17:02:00,47.44015,-122.3977,2,240685,"[Orca Network]  leaders south of three tree, spread out, southbound (Marla Smith)",1,13,2026,Jan,Jan-13,2026-1-13,17:02:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-13 17:13:00,47.41181,-122.3977,12,240686,"[Orca Network] very spread out, easy to west, steady southbound (Marla Smith)",1,13,2026,Jan,Jan-13,2026-1-13,17:13:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-13 17:45:00,47.37636,-122.37987,40,240687,[Orca Network] Jpod and kpod southbound (Marla Smith),1,13,2026,Jan,Jan-13,2026-1-13,17:45:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-13 18:15:00,47.3407,-122.43249,40,240689,[Orca Network] southbound bearing tip of Maury (Ali saccone),1,13,2026,Jan,Jan-13,2026-1-13,18:15:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-13 18:39:00,47.32581,-122.44829,40,240690,"[Orca Network] Jpod and kpod, southbound(Morgan Dale)",1,13,2026,Jan,Jan-13,2026-1-13,18:39:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-13 18:58:00,47.31138,-122.48399,40,240692,"[Orca Network] Jpod and kpod, spread out, foraging and trending west (Marla Smith)",1,13,2026,Jan,Jan-13,2026-1-13,18:58:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-13 19:06:00,47.31394,-122.50288,40,240694,[Orca Network] js and ks westbound spread in groups (Marla Smith),1,13,2026,Jan,Jan-13,2026-1-13,19:06:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,1,1
+Southern Resident Orca,2026-01-13 19:12:00,47.31464,-122.51163,40,240695,"[Orca Network] js and ks westbound, spread in at least two groups ( Marla Smith) ",1,13,2026,Jan,Jan-13,2026-1-13,19:12:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,1,1
+Southern Resident Orca,2026-01-13 19:22:00,47.31685,-122.51532,40,240696,"[Orca Network] js and ks, spread in two groups, trailing group passing ferry lanes, lead group west of, all westbound (Marla Smith)",1,13,2026,Jan,Jan-13,2026-1-13,19:22:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,1,1
+Southern Resident Orca,2026-01-13 19:48:00,47.3314,-122.52871,40,240697,"[Orca Neteork] js and ks, northbound (Jolena Tagg)",1,13,2026,Jan,Jan-13,2026-1-13,19:48:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-13 19:59:00,47.34845,-122.53451,40,240698,[Orca Network] Jpod and kpod northbound (Kim W. Byquist),1,13,2026,Jan,Jan-13,2026-1-13,19:59:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-13 20:34:00,47.36974,-122.53102,40,240699,"[Orca Network] Jpod and kpod, spread in groups, northbound (Marla Smith)",1,13,2026,Jan,Jan-13,2026-1-13,20:34:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-13 20:43:00,47.37567,-122.53016,40,240700,[Orca Network] Jpod and Kpod slowly northbound in two groups (Marla Smith),1,13,2026,Jan,Jan-13,2026-1-13,20:43:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-13 20:58:00,47.38812,-122.53638,40,240702,"[Orca Network] Jpod and Kpod, nothbound spread in two groups (Marla Smith)",1,13,2026,Jan,Jan-13,2026-1-13,20:58:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-13 21:23:00,47.40148,-122.53518,40,240704,[Orca Network] Jpod and kpod northbound in two groups (Marla Smith),1,13,2026,Jan,Jan-13,2026-1-13,21:23:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-13 21:52:00,47.42373,-122.52345,42,240705,[Orca Network] Js and Ks split in two tight groups northbound (Rachel Haight),1,13,2026,Jan,Jan-13,2026-1-13,21:52:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-13 22:05:00,47.43383,-122.52341,42,240708,[Orca Network] Js and Ks in two tight groups northbound (Rachel Haight),1,13,2026,Jan,Jan-13,2026-1-13,22:05:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-13 22:33:00,47.45796,-122.51841,41,240710,[Orca Network] J pod and K pod northbound (Tammi Pickett),1,13,2026,Jan,Jan-13,2026-1-13,22:33:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-13 22:45:00,47.4785,-122.50485,41,240711,"[Orca Network] J pod and K pod northbound, leaders here (Nikol Damato)",1,13,2026,Jan,Jan-13,2026-1-13,22:45:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-13 23:01:00,47.49094,-122.49515,41,240713,"[Orca Network] J pod and K pod northbound, Ks here (Nikol Damato)",1,13,2026,Jan,Jan-13,2026-1-13,23:01:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-13 23:14:00,47.50938,-122.48657,41,240714,[Orca Network] J pod and K pod northbound in two groups (Rachel Haight),1,13,2026,Jan,Jan-13,2026-1-13,23:14:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-13 23:31:00,47.52295,-122.47884,41,240716,[Orca Network] J pod and K pod northbound (Nikol Damato),1,13,2026,Jan,Jan-13,2026-1-13,23:31:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Orca,2026-01-13 23:36:58,47.51144,-122.46482,4,240717,,1,13,2026,Jan,Jan-13,2026-1-13,23:36:58,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Southern Resident Orca,2026-01-14 00:05:00,47.55887,-122.45618,41,240718,"[Orca Network] J pod and K pod northbound (Stephanie Raymond, Lainey B Seims, 
-Colleen Paul)",1,14,2026,Jan,Jan-14,2026-1-14,00:05:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 00:22:00,47.55111,-122.44451,41,240720,"[Orca Network] Js and Ks northbound, likely trailers here (Marcy Goldstone)",1,14,2026,Jan,Jan-14,2026-1-14,00:22:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 00:50:00,47.58007,-122.46271,41,240721,"[Orca Network] J pod and K pod northbound (Taylor White, Clare Glo)",1,14,2026,Jan,Jan-14,2026-1-14,00:50:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 15:38:00,48.04677,-122.37224,20,240724,"[Orca Network] Presumed SRKWs, spread out, northbound (Rachel Haight]",1,14,2026,Jan,Jan-14,2026-1-14,15:38:00,0,0,0,0,1,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 15:50:00,48.04943,-122.38366,30,240725,"[Orca Network] Likely SRKWs very spread, some surface activity, northbound (Rachel Haight)",1,14,2026,Jan,Jan-14,2026-1-14,15:50:00,0,0,0,0,1,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 16:09:00,48.06914,-122.40911,30,240728,[Orca Network] many orcas spread northbound (Serena Tierra),1,14,2026,Jan,Jan-14,2026-1-14,16:09:00,0,0,0,0,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 16:30:00,48.08139,-122.43901,30,240730,[Orca Network] Spread out SRKWs northbound (Serena Tierra),1,14,2026,Jan,Jan-14,2026-1-14,16:30:00,0,0,0,0,1,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 16:46:00,48.1008,-122.47131,30,240731,[Orca Network] seeing some facing south now (Sarah Geist),1,14,2026,Jan,Jan-14,2026-1-14,16:46:00,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-01-14 17:08:00,48.10858,-122.49225,42,240732,"[Orca Network] J pod and K pod northbound in singles and pairs, very spread (Rachel Haight)",1,14,2026,Jan,Jan-14,2026-1-14,17:08:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 17:18:00,48.12027,-122.51277,42,240733,"[Orca Network] very spread, Js and Ks, northbound (Serena Tierra, Rachel Haight)",1,14,2026,Jan,Jan-14,2026-1-14,17:18:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 17:32:00,48.11573,-122.50775,42,240734,"[Orca Network] very spread Js and Ks northbound, some facing south (Rachel Haight, Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,17:32:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 17:57:00,48.12285,-122.52666,42,240735,"[Orca Network] Js and Ks very spread, some northbound, some westbound (Sarah Geist, Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,17:57:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,1,2
-Southern Resident Orca,2026-01-14 18:15:00,48.12704,-122.53872,42,240736,"[Orca Network] Js and Ks very spread out, some facing north, some facing south (Liam Doucet, Emily)",1,14,2026,Jan,Jan-14,2026-1-14,18:15:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-01-14 18:25:00,48.10208,-122.54044,42,240739,"[Orca Network] Js and Ks appear southbound into Holmes Harbor, spread, (April, Candace, Emily, Liam Doucet)",1,14,2026,Jan,Jan-14,2026-1-14,18:25:00,1,1,0,2,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-14 19:08:00,48.07489,-122.52919,42,240741,[Orca Network] Js amd Ks loosely grouped southbound (Rachel Haight),1,14,2026,Jan,Jan-14,2026-1-14,19:08:00,1,1,0,2,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-14 19:21:00,48.05787,-122.5298,42,240742,[Orca Network] Js and Ks southbound in groups (Rachel Haight),1,14,2026,Jan,Jan-14,2026-1-14,19:21:00,1,1,0,2,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-14 19:33:00,48.07127,-122.5304,42,240743,[Orca Network] Js and Ks in groups northbound (Rachel Haight),1,14,2026,Jan,Jan-14,2026-1-14,19:33:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 19:50:00,48.0934,-122.53917,42,240744,"[Orca Network] Js and Ks northbound (Dan Gulden, Michele Tosh Brodsky)",1,14,2026,Jan,Jan-14,2026-1-14,19:50:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 20:19:00,48.117,-122.54231,42,240749,"[Orca Network] js and Ks split in two groups, one milling, one northbound (Linda Aitkins)",1,14,2026,Jan,Jan-14,2026-1-14,20:19:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 20:38:00,48.13282,-122.54958,42,240753,[Orca Network] J pod and K pod northbound (Linda Aitkins),1,14,2026,Jan,Jan-14,2026-1-14,20:38:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 21:05:00,48.16913,-122.55387,42,240758,[Orca Network] J pod and K pod northbound (Berna Avunca),1,14,2026,Jan,Jan-14,2026-1-14,21:05:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 21:38:00,48.20875,-122.56534,42,240759,[Orca Network] J pod and K pod northbound (Serena Tierra),1,14,2026,Jan,Jan-14,2026-1-14,21:38:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 21:53:00,48.21755,-122.56138,42,240760,[Orca Network] J pod and K pod northbound spread out (Serena Tierra),1,14,2026,Jan,Jan-14,2026-1-14,21:53:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 22:08:00,48.21839,-122.55639,42,240761,"[Orca Network] J pod and K pod spread out, possibly flipped southbound (Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,22:08:00,1,1,0,2,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-14 22:23:00,48.22103,-122.56619,42,240762,[Orca Network] J pod and K pod spread out foraging (Serena Tierra),1,14,2026,Jan,Jan-14,2026-1-14,22:23:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-01-14 22:29:00,48.20879,-122.56308,15,240763,"[Orca Network] J pod and K pod northbound, trailing group here (Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,22:29:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 22:44:00,48.21775,-122.56594,15,240764,"[Orca Network] J pod and K pod northbound, trailing group here (Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,22:44:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-14 23:01:00,48.22823,-122.57863,42,240766,"[Orca Network] J pod and K pod spread out trending north, directional changes and surface activity (Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,23:01:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-01-14 23:17:00,48.22855,-122.57694,42,240767,"[Orca Network] J pod and K pod spread out foraging, some breaching (Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,23:17:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-01-14 23:32:00,48.23469,-122.58872,42,240768,[Orca Network] J pod and K pod spread out foraging (Serena Tierra),1,14,2026,Jan,Jan-14,2026-1-14,23:32:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-01-14 23:48:00,48.22258,-122.59035,42,240769,"[Orca Network] J pod and K pod spread out, possibly southbound (Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,23:48:00,1,1,0,2,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-14 23:58:00,48.22057,-122.57256,42,240770,"[Orca Network] J pod and K pod northbound, possibly split (Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,23:58:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-15 00:13:00,48.23345,-122.57772,42,240771,"[Orca Network] J pod and K pod spread out, some porpoising northbound (Serena Tierra)",1,15,2026,Jan,Jan-15,2026-1-15,00:13:00,1,1,0,2,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-15 00:30:00,48.24129,-122.58596,42,240772,"[Orca Network] J pod and K pod spread out, multidirectional (Serena Tierra)",1,15,2026,Jan,Jan-15,2026-1-15,00:30:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Orca,2026-01-15 21:25:00,48.01762,-122.35132,6,240785,"[Orca Network] Orcas, possible Southern Residents but unconfirmed, northbound (Michele Tosh Brodsky)",1,15,2026,Jan,Jan-15,2026-1-15,21:25:00,0,0,0,0,1,0,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-15 21:37:00,48.03553,-122.35853,42,240786,"[Orca Network] SRKWs widely spread northbound, likely J and K pods (Cindi Crowder Rausch)",1,15,2026,Jan,Jan-15,2026-1-15,21:37:00,1,1,0,2,1,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-15 21:53:00,48.04081,-122.36677,42,240787,"[Orca Network] At least K pod, possibly J pod, widely spread (Rachel Haight)",1,15,2026,Jan,Jan-15,2026-1-15,21:53:00,1,1,0,2,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-01-15 22:05:00,48.04184,-122.37312,15,240789,[Orca Network] K pod trailers northbound (Rachel Haight),1,15,2026,Jan,Jan-15,2026-1-15,22:05:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-15 22:13:00,48.07122,-122.41552,15,240788,[Orca Network] K pod leaders northbound (Serena Tierra),1,15,2026,Jan,Jan-15,2026-1-15,22:13:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-15 22:30:00,48.06916,-122.43195,15,240790,"[Orca Network] K pod northbound (Rachel Haight, Serena Tierra)",1,15,2026,Jan,Jan-15,2026-1-15,22:30:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-15 22:39:00,48.06723,-122.4241,15,240791,"[Orca Network] K pod northbound, grouping up (Michele Tosh Brodsky)",1,15,2026,Jan,Jan-15,2026-1-15,22:39:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-15 22:46:00,48.08351,-122.44864,15,240792,[Orca Network] K pod northbound (Serena Tierra),1,15,2026,Jan,Jan-15,2026-1-15,22:46:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-15 22:53:00,48.08448,-122.44752,15,240794,"[Orca Network] K pod spread north to south, most are here, trending northbound (Serena Tierra)",1,15,2026,Jan,Jan-15,2026-1-15,22:53:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-15 23:07:00,48.08517,-122.44442,15,240795,[Orca Network] K pod milling (Duane Beekly),1,15,2026,Jan,Jan-15,2026-1-15,23:07:00,0,1,0,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-01-15 23:19:00,48.09389,-122.46536,15,240796,[Orca Network] K pod northbound (Serena Tierra),1,15,2026,Jan,Jan-15,2026-1-15,23:19:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-15 23:27:00,48.10627,-122.48854,15,240797,"[Orca Network] K pod leaders northbound (Serena Tierra, Tamara Kelley)",1,15,2026,Jan,Jan-15,2026-1-15,23:27:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-15 23:42:00,48.11452,-122.51989,15,240799,"[Orca Network] K pod northbound, spread east to west across channel (Serena Tierra)",1,15,2026,Jan,Jan-15,2026-1-15,23:42:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 00:03:00,48.1261,-122.52856,15,240800,[Orca Network] K pod northbound (Serena Tierra),1,16,2026,Jan,Jan-16,2026-1-16,00:03:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 00:30:00,48.13474,-122.5358,15,240802,"[Orca Network] K pod northbound (Michele Tosh Brodsky, Aaron Gill)",1,16,2026,Jan,Jan-16,2026-1-16,00:30:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 00:46:00,48.1715,-122.54644,15,240803,[Orca Network] K pod leaders northbound (Aaron Gill),1,16,2026,Jan,Jan-16,2026-1-16,00:46:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Orca,2026-01-16 16:51:00,47.31726,-122.50549,15,240818,"[Orca Network] possibke K pod direction changes, east and westbound (David Bennett, Ashley Whitman)",1,16,2026,Jan,Jan-16,2026-1-16,16:51:00,0,1,0,1,0,0,1,0,1,0,0,0,0,0,0,0,1,1
-Southern Resident Orca,2026-01-16 17:14:00,47.32513,-122.52426,15,240821,"[Orca Network] K pod westbound, northwest towards Colvos Passage (Marla Smith)",1,16,2026,Jan,Jan-16,2026-1-16,17:14:00,0,1,0,1,0,1,1,0,1,0,0,0,0,0,1,0,1,2
-Southern Resident Orca,2026-01-16 17:25:00,47.34189,-122.53463,15,240823,[Orca Network] K pod northbound (Lainey B Sims),1,16,2026,Jan,Jan-16,2026-1-16,17:25:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 17:35:00,47.36595,-122.53019,15,240825,[Orca Network] K pod northbound (Marla Smith),1,16,2026,Jan,Jan-16,2026-1-16,17:35:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 17:46:00,47.37784,-122.52609,15,240829,[Orca Network] K pod northbound (Marla Smith),1,16,2026,Jan,Jan-16,2026-1-16,17:46:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 18:14:00,47.38237,-122.52969,15,240832,[Orca Network] K Pod northbound (Marla Smith),1,16,2026,Jan,Jan-16,2026-1-16,18:14:00,0,0,0,0,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 18:28:00,47.40062,-122.53639,15,240834,"[Orca Network] K Pod northbound long down times (Heather Cat, Marla Smith)",1,16,2026,Jan,Jan-16,2026-1-16,18:28:00,0,0,0,0,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 18:43:00,47.41032,-122.53163,15,240839,"[Orca Network] K Pod northbound (Laura Walsh Stewart, Andrea Facer)",1,16,2026,Jan,Jan-16,2026-1-16,18:43:00,0,0,0,0,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 19:04:00,47.41502,-122.52768,15,240841,"[Orca Network] K Pod northbound (Ashley Whitman, Mollie Segall)",1,16,2026,Jan,Jan-16,2026-1-16,19:04:00,0,0,0,0,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 19:23:00,47.42392,-122.52371,15,240843,[Orca Network] K Pod northbound (Heather Cat),1,16,2026,Jan,Jan-16,2026-1-16,19:23:00,0,0,0,0,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 19:46:00,47.44749,-122.52361,15,240846,[Orca Network] K Pod northbound (Kathi Salmon),1,16,2026,Jan,Jan-16,2026-1-16,19:46:00,0,0,0,0,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 20:00:00,47.45536,-122.51915,15,240848,"[Orca Network] K pod northbound (Katie Apone, Roxane Jackson Johnson)",1,16,2026,Jan,Jan-16,2026-1-16,20:00:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 20:13:00,47.46,-122.51846,15,240849,[Orca Network] K pod northbound (Katie Apone),1,16,2026,Jan,Jan-16,2026-1-16,20:13:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 20:27:00,47.47532,-122.50868,15,240850,[Orca Network] K pod northbound (Josh Reiss),1,16,2026,Jan,Jan-16,2026-1-16,20:27:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 20:43:00,47.48178,-122.50484,15,240852,[Orca Network] K pod northbound (Roxane Jackson Johnson),1,16,2026,Jan,Jan-16,2026-1-16,20:43:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 20:54:00,47.48932,-122.50312,15,240854,[Orca Network] K pod northbound (Tiffany Russell),1,16,2026,Jan,Jan-16,2026-1-16,20:54:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 21:16:00,47.5072,-122.49029,15,240856,"[Orca Network] K pod northbound (Melissa Bird, Mary Hartmann)",1,16,2026,Jan,Jan-16,2026-1-16,21:16:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 21:34:00,47.51373,-122.48744,15,240859,"[Orca Network] K pod northbound (Melissa Bird, Mary Hartmann)",1,16,2026,Jan,Jan-16,2026-1-16,21:34:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 21:46:00,47.52133,-122.48573,15,240861,"[Orca Network] K pod northbound (Mary Hartmann, Amy Fowler)",1,16,2026,Jan,Jan-16,2026-1-16,21:46:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 21:57:00,47.53057,-122.47847,15,240862,[Orca Network] K pod leaders northbound (Stephanie Raymond),1,16,2026,Jan,Jan-16,2026-1-16,21:57:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 22:39:00,47.56399,-122.46936,15,240885,[Orca Network] K pod northbound (Samiksha Gulrajani),1,16,2026,Jan,Jan-16,2026-1-16,22:39:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 23:04:00,47.59443,-122.4603,15,240887,"[Orca Network] K pod northbound (Diana Gragg, Steve Rice)",1,16,2026,Jan,Jan-16,2026-1-16,23:04:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 23:14:00,47.60942,-122.46364,15,240896,[Orca Network] K pod northbound (Steve Rice),1,16,2026,Jan,Jan-16,2026-1-16,23:14:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-16 23:44:00,47.61632,-122.46574,15,240897,[Orca Network] K pod leaders porpoising northbound (Kas Alexis),1,16,2026,Jan,Jan-16,2026-1-16,23:44:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-17 00:16:00,47.65958,-122.46883,15,240901,[Orca Network] K pod widely spread northbound (Kas Alexis),1,17,2026,Jan,Jan-17,2026-1-17,00:16:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-17 00:31:00,47.69031,-122.47578,15,240902,"[Orca Network] K pod steady northbound, wide spread, long down times (Nikol Damato)",1,17,2026,Jan,Jan-17,2026-1-17,00:31:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-17 00:40:00,47.70382,-122.47636,15,240907,"[Orca Network] K pod steady northbound, wide spread north to south long down times (Nikol Damato, Sue Surowiec Larkin)",1,17,2026,Jan,Jan-17,2026-1-17,00:40:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-20 15:45:00,47.3302,-122.6892,23,241084,"[Orca Network] J pod (-16s) breaching, trending south (Randy Witter)",1,20,2026,Jan,Jan-20,2026-1-20,15:45:00,1,0,0,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-01-20 18:33:00,47.18054,-122.64526,23,241099,"[Orca Network] J pod (-16s) southbound (Victory Kovach, June Juliano Huelskamp, Belen Bilgic Schneider)",1,20,2026,Jan,Jan-20,2026-1-20,18:33:00,1,0,0,1,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-01-20 19:41:00,47.26991,-122.55273,23,241111,"[Orca Network] J pod (-16s) northbound, surface active (Matthew Pfab, Ian Johnson, Jolena Tagg, Rachel Haight)",1,20,2026,Jan,Jan-20,2026-1-20,19:41:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-20 22:32:00,47.41647,-122.52348,23,241114,"[Orca Network] J pod (-16s) northbound (Katie Reinemann, Amy FowIer, Lester More)",1,20,2026,Jan,Jan-20,2026-1-20,22:32:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-01-23 21:34:00,48.53788,-123.20252,27,241200,"[Orca Network] J pod northbound, visible on LK webcam (Tenaya Brian Stecker)",1,23,2026,Jan,Jan-23,2026-1-23,21:34:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-03 16:15:00,48.55384,-123.1885,25,241492,"[Orca Network] numbers and location approximate, likely southbound, can be heard on the orcasound lab hydrophone (Marla Smith, Sophia Newton)",2,3,2026,Feb,Feb-3,2026-2-3,16:15:00,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-02-03 16:41:00,48.53793,-123.19176,27,241493,"[Orca Network] location and numbers approximate, likely southbound (Marla Smith, Sarah Geist, Jourdan Rae, Jct Guarnes)",2,3,2026,Feb,Feb-3,2026-2-3,16:41:00,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-02-06 16:22:00,48.54204,-123.20373,27,241583,[Orca Network] SRKWs on Lime Kiln and Orcasound hydrophones (Sophia Newton),2,6,2026,Feb,Feb-6,2026-2-6,16:22:00,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-02-06 16:58:00,48.55636,-123.20511,27,241585,"[Orca Network] J pod, loud calls on Orcasound Lab hydrophone (Serena Tierra)",2,6,2026,Feb,Feb-6,2026-2-6,16:58:00,1,0,0,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-02-22 15:06:00,47.52132,-122.4324,27,242287,"[Orca Network] J pod, only one seen, no direction of travel given (WSF)",2,22,2026,Feb,Feb-22,2026-2-22,15:06:00,1,0,0,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-02-22 17:55:00,47.47314,-122.39796,15,242166,"[Orca Network] Likely K pod northbound, spread out north to south (Steve Czerniak)",2,22,2026,Feb,Feb-22,2026-2-22,17:55:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-22 18:27:00,47.509,-122.4258,15,242167,[Orca Network] Likely K pod northbound (Mandy Fuller),2,22,2026,Feb,Feb-22,2026-2-22,18:27:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-22 19:00:00,47.54354,-122.43095,15,242169,[Orca Network] Likely K pod northbound (Alisa Lemire Brooks),2,22,2026,Feb,Feb-22,2026-2-22,19:00:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-22 19:16:00,47.57829,-122.44434,15,242172,"[Orca Network] Likely K pod northbound, surface active (Alisa Lemire Brooks, Hannah Marie Munro, Orca Updates)",2,22,2026,Feb,Feb-22,2026-2-22,19:16:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-22 19:30:00,47.60261,-122.44846,15,242174,[Orca Network] Likely K pod northbound (Mary Hartmann),2,22,2026,Feb,Feb-22,2026-2-22,19:30:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-22 20:03:00,47.63778,-122.45326,15,242177,[Orca Network] Likely K pod northbound very spread out (April Basham),2,22,2026,Feb,Feb-22,2026-2-22,20:03:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-22 20:32:00,47.69611,-122.44217,15,242181,"[Orca Network] Likely K pod northbound (Alisa Lemire Brooks, Jason Cook)",2,22,2026,Feb,Feb-22,2026-2-22,20:32:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-22 20:54:00,47.71505,-122.44526,15,242182,[Orca Network] Likely K pod northbound (Hannah Marie Munro),2,22,2026,Feb,Feb-22,2026-2-22,20:54:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-22 21:20:00,47.77715,-122.41848,15,242186,"[Orca Network] Likely K pod northbound (Hannah Marie Munro, Alisa Lemire Brooks, Emma Vasilj)",2,22,2026,Feb,Feb-22,2026-2-22,21:20:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-22 21:50:00,47.79053,-122.4226,15,242187,[Orca Network] Likely K pod northbound (Alisa Lemire Brooks),2,22,2026,Feb,Feb-22,2026-2-22,21:50:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-22 22:18:00,47.80517,-122.41591,27,242188,"[Orca Network] At least J pod northbound (Jourdan Rae, Linse Vlahovich Hill, Summer Staley, Jenny Klis) (ID Tamara Kelley)",2,22,2026,Feb,Feb-22,2026-2-22,22:18:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-22 22:41:00,47.82016,-122.41779,27,242190,"[Orca Network] At least J pod north/northeastbound, most east of midchannel, several further west (Ariel Yseth, Hannah Marie Munro, Alisa Lemire Brooks)",2,22,2026,Feb,Feb-22,2026-2-22,22:41:00,1,0,0,1,0,1,1,0,1,0,0,0,0,1,0,1,0,2
-Southern Resident Orca,2026-02-22 23:02:00,47.8424,-122.41264,27,242206,"[Orca Network] At least J pod northbound, spread east to west, location approximate (Jason Cook, Alisa Lemire Brooks)",2,22,2026,Feb,Feb-22,2026-2-22,23:02:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-22 23:32:00,47.8613,-122.41093,27,242209,"[Orca Network] At least J pod northbound, calls audible on Sunset Bay hydrophone (Jct Guarnes, Jourdan Rae, Eric Nordstrom)",2,22,2026,Feb,Feb-22,2026-2-22,23:32:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
+Colleen Paul)",1,14,2026,Jan,Jan-14,2026-1-14,00:05:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Orca,2026-01-14 00:19:55,47.55487,-122.44992,2,240719,,1,14,2026,Jan,Jan-14,2026-1-14,00:19:55,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-14 00:22:00,47.55111,-122.44451,41,240720,"[Orca Network] Js and Ks northbound, likely trailers here (Marcy Goldstone)",1,14,2026,Jan,Jan-14,2026-1-14,00:22:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 00:50:00,47.58007,-122.46271,41,240721,"[Orca Network] J pod and K pod northbound (Taylor White, Clare Glo)",1,14,2026,Jan,Jan-14,2026-1-14,00:50:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 15:38:00,48.04677,-122.37224,20,240724,"[Orca Network] Presumed SRKWs, spread out, northbound (Rachel Haight]",1,14,2026,Jan,Jan-14,2026-1-14,15:38:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 15:50:00,48.04943,-122.38366,30,240725,"[Orca Network] Likely SRKWs very spread, some surface activity, northbound (Rachel Haight)",1,14,2026,Jan,Jan-14,2026-1-14,15:50:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 16:09:00,48.06914,-122.40911,30,240728,[Orca Network] many orcas spread northbound (Serena Tierra),1,14,2026,Jan,Jan-14,2026-1-14,16:09:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 16:30:00,48.08139,-122.43901,30,240730,[Orca Network] Spread out SRKWs northbound (Serena Tierra),1,14,2026,Jan,Jan-14,2026-1-14,16:30:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 16:46:00,48.1008,-122.47131,30,240731,[Orca Network] seeing some facing south now (Sarah Geist),1,14,2026,Jan,Jan-14,2026-1-14,16:46:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-14 17:08:00,48.10858,-122.49225,42,240732,"[Orca Network] J pod and K pod northbound in singles and pairs, very spread (Rachel Haight)",1,14,2026,Jan,Jan-14,2026-1-14,17:08:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 17:18:00,48.12027,-122.51277,42,240733,"[Orca Network] very spread, Js and Ks, northbound (Serena Tierra, Rachel Haight)",1,14,2026,Jan,Jan-14,2026-1-14,17:18:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 17:32:00,48.11573,-122.50775,42,240734,"[Orca Network] very spread Js and Ks northbound, some facing south (Rachel Haight, Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,17:32:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 17:57:00,48.12285,-122.52666,42,240735,"[Orca Network] Js and Ks very spread, some northbound, some westbound (Sarah Geist, Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,17:57:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,1,2
+Southern Resident Orca,2026-01-14 18:15:00,48.12704,-122.53872,42,240736,"[Orca Network] Js and Ks very spread out, some facing north, some facing south (Liam Doucet, Emily)",1,14,2026,Jan,Jan-14,2026-1-14,18:15:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-14 18:25:00,48.10208,-122.54044,42,240739,"[Orca Network] Js and Ks appear southbound into Holmes Harbor, spread, (April, Candace, Emily, Liam Doucet)",1,14,2026,Jan,Jan-14,2026-1-14,18:25:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-14 19:08:00,48.07489,-122.52919,42,240741,[Orca Network] Js amd Ks loosely grouped southbound (Rachel Haight),1,14,2026,Jan,Jan-14,2026-1-14,19:08:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-14 19:21:00,48.05787,-122.5298,42,240742,[Orca Network] Js and Ks southbound in groups (Rachel Haight),1,14,2026,Jan,Jan-14,2026-1-14,19:21:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-14 19:33:00,48.07127,-122.5304,42,240743,[Orca Network] Js and Ks in groups northbound (Rachel Haight),1,14,2026,Jan,Jan-14,2026-1-14,19:33:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 19:50:00,48.0934,-122.53917,42,240744,"[Orca Network] Js and Ks northbound (Dan Gulden, Michele Tosh Brodsky)",1,14,2026,Jan,Jan-14,2026-1-14,19:50:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 20:19:00,48.117,-122.54231,42,240749,"[Orca Network] js and Ks split in two groups, one milling, one northbound (Linda Aitkins)",1,14,2026,Jan,Jan-14,2026-1-14,20:19:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 20:38:00,48.13282,-122.54958,42,240753,[Orca Network] J pod and K pod northbound (Linda Aitkins),1,14,2026,Jan,Jan-14,2026-1-14,20:38:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 21:05:00,48.16913,-122.55387,42,240758,[Orca Network] J pod and K pod northbound (Berna Avunca),1,14,2026,Jan,Jan-14,2026-1-14,21:05:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 21:38:00,48.20875,-122.56534,42,240759,[Orca Network] J pod and K pod northbound (Serena Tierra),1,14,2026,Jan,Jan-14,2026-1-14,21:38:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 21:53:00,48.21755,-122.56138,42,240760,[Orca Network] J pod and K pod northbound spread out (Serena Tierra),1,14,2026,Jan,Jan-14,2026-1-14,21:53:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 22:08:00,48.21839,-122.55639,42,240761,"[Orca Network] J pod and K pod spread out, possibly flipped southbound (Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,22:08:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-14 22:23:00,48.22103,-122.56619,42,240762,[Orca Network] J pod and K pod spread out foraging (Serena Tierra),1,14,2026,Jan,Jan-14,2026-1-14,22:23:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Orca,2026-01-14 22:27:17,48.849253185,-123.341888718,1,240775,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",1,14,2026,Jan,Jan-14,2026-1-14,22:27:17,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-14 22:29:00,48.20879,-122.56308,15,240763,"[Orca Network] J pod and K pod northbound, trailing group here (Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,22:29:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 22:44:00,48.21775,-122.56594,15,240764,"[Orca Network] J pod and K pod northbound, trailing group here (Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,22:44:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-14 23:01:00,48.22823,-122.57863,42,240766,"[Orca Network] J pod and K pod spread out trending north, directional changes and surface activity (Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,23:01:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-14 23:17:00,48.22855,-122.57694,42,240767,"[Orca Network] J pod and K pod spread out foraging, some breaching (Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,23:17:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-14 23:32:00,48.23469,-122.58872,42,240768,[Orca Network] J pod and K pod spread out foraging (Serena Tierra),1,14,2026,Jan,Jan-14,2026-1-14,23:32:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-14 23:48:00,48.22258,-122.59035,42,240769,"[Orca Network] J pod and K pod spread out, possibly southbound (Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,23:48:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-14 23:58:00,48.22057,-122.57256,42,240770,"[Orca Network] J pod and K pod northbound, possibly split (Serena Tierra)",1,14,2026,Jan,Jan-14,2026-1-14,23:58:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-15 00:13:00,48.23345,-122.57772,42,240771,"[Orca Network] J pod and K pod spread out, some porpoising northbound (Serena Tierra)",1,15,2026,Jan,Jan-15,2026-1-15,00:13:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-15 00:30:00,48.24129,-122.58596,42,240772,"[Orca Network] J pod and K pod spread out, multidirectional (Serena Tierra)",1,15,2026,Jan,Jan-15,2026-1-15,00:30:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Orca,2026-01-15 11:38:24,48.8752616868,-123.292009039,1,240776,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",1,15,2026,Jan,Jan-15,2026-1-15,11:38:24,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-15 20:31:58,47.88906,-122.28834,3,240782,"Headed north toward ferries
+",1,15,2026,Jan,Jan-15,2026-1-15,20:31:58,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-15 20:48:34,47.9434,-122.29862,2,240784,,1,15,2026,Jan,Jan-15,2026-1-15,20:48:34,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-15 21:25:00,48.01762,-122.35132,6,240785,"[Orca Network] Orcas, possible Southern Residents but unconfirmed, northbound (Michele Tosh Brodsky)",1,15,2026,Jan,Jan-15,2026-1-15,21:25:00,0,0,0,0,0,1,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-15 21:37:00,48.03553,-122.35853,42,240786,"[Orca Network] SRKWs widely spread northbound, likely J and K pods (Cindi Crowder Rausch)",1,15,2026,Jan,Jan-15,2026-1-15,21:37:00,1,1,0,2,1,1,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-15 21:53:00,48.04081,-122.36677,42,240787,"[Orca Network] At least K pod, possibly J pod, widely spread (Rachel Haight)",1,15,2026,Jan,Jan-15,2026-1-15,21:53:00,1,1,0,2,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-15 22:05:00,48.04184,-122.37312,15,240789,[Orca Network] K pod trailers northbound (Rachel Haight),1,15,2026,Jan,Jan-15,2026-1-15,22:05:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-15 22:13:00,48.07122,-122.41552,15,240788,[Orca Network] K pod leaders northbound (Serena Tierra),1,15,2026,Jan,Jan-15,2026-1-15,22:13:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-15 22:30:00,48.06916,-122.43195,15,240790,"[Orca Network] K pod northbound (Rachel Haight, Serena Tierra)",1,15,2026,Jan,Jan-15,2026-1-15,22:30:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-15 22:39:00,48.06723,-122.4241,15,240791,"[Orca Network] K pod northbound, grouping up (Michele Tosh Brodsky)",1,15,2026,Jan,Jan-15,2026-1-15,22:39:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-15 22:46:00,48.08351,-122.44864,15,240792,[Orca Network] K pod northbound (Serena Tierra),1,15,2026,Jan,Jan-15,2026-1-15,22:46:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-15 22:53:00,48.08448,-122.44752,15,240794,"[Orca Network] K pod spread north to south, most are here, trending northbound (Serena Tierra)",1,15,2026,Jan,Jan-15,2026-1-15,22:53:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-15 23:07:00,48.08517,-122.44442,15,240795,[Orca Network] K pod milling (Duane Beekly),1,15,2026,Jan,Jan-15,2026-1-15,23:07:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-15 23:19:00,48.09389,-122.46536,15,240796,[Orca Network] K pod northbound (Serena Tierra),1,15,2026,Jan,Jan-15,2026-1-15,23:19:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-15 23:27:00,48.10627,-122.48854,15,240797,"[Orca Network] K pod leaders northbound (Serena Tierra, Tamara Kelley)",1,15,2026,Jan,Jan-15,2026-1-15,23:27:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-15 23:42:00,48.11452,-122.51989,15,240799,"[Orca Network] K pod northbound, spread east to west across channel (Serena Tierra)",1,15,2026,Jan,Jan-15,2026-1-15,23:42:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 00:03:00,48.1261,-122.52856,15,240800,[Orca Network] K pod northbound (Serena Tierra),1,16,2026,Jan,Jan-16,2026-1-16,00:03:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 00:30:00,48.13474,-122.5358,15,240802,"[Orca Network] K pod northbound (Michele Tosh Brodsky, Aaron Gill)",1,16,2026,Jan,Jan-16,2026-1-16,00:30:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 00:46:00,48.1715,-122.54644,15,240803,[Orca Network] K pod leaders northbound (Aaron Gill),1,16,2026,Jan,Jan-16,2026-1-16,00:46:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Orca,2026-01-16 15:47:49,47.59514,-122.38673,1,240812,,1,16,2026,Jan,Jan-16,2026-1-16,15:47:49,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-16 16:17:00,47.60493,-122.4496,2,240813,"[Orca Network] reported as couple orcas, no direction (Jamin King)",1,16,2026,Jan,Jan-16,2026-1-16,16:17:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-16 16:25:00,47.31826,-122.50636,6,240814,"[Orca Network] Orcas trending east, split on both sides of ferry lanes [Ashley Whitman]",1,16,2026,Jan,Jan-16,2026-1-16,16:25:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-16 16:30:00,47.5964,-122.45739,3,240816,[Orca Network] Orcas southbound (Diana Gragg),1,16,2026,Jan,Jan-16,2026-1-16,16:30:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-16 16:32:00,47.55837,-122.42,3,240815,"[Orca Network] Orcas southbound (Stephanie Raymond, Hannah Marie Munro)",1,16,2026,Jan,Jan-16,2026-1-16,16:32:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-16 16:41:00,47.3085,-122.4915,6,240817,[Orca Network] Orcas eastbound (David Bennett),1,16,2026,Jan,Jan-16,2026-1-16,16:41:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,1,0,1
+Orca,2026-01-16 16:51:00,47.31726,-122.50549,15,240818,"[Orca Network] possibke K pod direction changes, east and westbound (David Bennett, Ashley Whitman)",1,16,2026,Jan,Jan-16,2026-1-16,16:51:00,0,1,0,1,0,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,1,1
+Orca,2026-01-16 16:59:00,47.54093,-122.41225,3,240819,"[Orca Network] Orcas southbound, maybe hunting (Daniel Walsh,  Hannah Marie Munro)",1,16,2026,Jan,Jan-16,2026-1-16,16:59:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-16 17:07:00,47.58005,-122.44901,4,240820,[Orca Network] surface active orcad southbound (Diana Gragg),1,16,2026,Jan,Jan-16,2026-1-16,17:07:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-16 17:14:00,47.32513,-122.52426,15,240821,"[Orca Network] K pod westbound, northwest towards Colvos Passage (Marla Smith)",1,16,2026,Jan,Jan-16,2026-1-16,17:14:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,1,0,1,2
+Orca,2026-01-16 17:17:00,47.52304,-122.41144,3,240822,[Orca Network] Orcas southbound (Hannah Marie Munro),1,16,2026,Jan,Jan-16,2026-1-16,17:17:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-16 17:25:00,47.34189,-122.53463,15,240823,[Orca Network] K pod northbound (Lainey B Sims),1,16,2026,Jan,Jan-16,2026-1-16,17:25:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Orca,2026-01-16 17:30:00,47.51473,-122.40699,3,240824,[Orca Network] Orcas southbound (Steve Rice),1,16,2026,Jan,Jan-16,2026-1-16,17:30:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-16 17:35:00,47.36595,-122.53019,15,240825,[Orca Network] K pod northbound (Marla Smith),1,16,2026,Jan,Jan-16,2026-1-16,17:35:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Orca,2026-01-16 17:45:00,47.48937,-122.38912,3,240828,[Orca Network] Orcas southbound (Ron Cage Billiett),1,16,2026,Jan,Jan-16,2026-1-16,17:45:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-16 17:46:00,47.37784,-122.52609,15,240829,[Orca Network] K pod northbound (Marla Smith),1,16,2026,Jan,Jan-16,2026-1-16,17:46:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 18:14:00,47.38237,-122.52969,15,240832,[Orca Network] K Pod northbound (Marla Smith),1,16,2026,Jan,Jan-16,2026-1-16,18:14:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Orca,2026-01-16 18:25:00,47.4505,-122.39559,3,240837,[Orca Network] Orcas southbound (Daria Etchings),1,16,2026,Jan,Jan-16,2026-1-16,18:25:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-16 18:28:00,47.40062,-122.53639,15,240834,"[Orca Network] K Pod northbound long down times (Heather Cat, Marla Smith)",1,16,2026,Jan,Jan-16,2026-1-16,18:28:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 18:43:00,47.41032,-122.53163,15,240839,"[Orca Network] K Pod northbound (Laura Walsh Stewart, Andrea Facer)",1,16,2026,Jan,Jan-16,2026-1-16,18:43:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Orca,2026-01-16 18:49:00,47.41781,-122.37284,3,240840,[Orca Network] Orcas southbound (Sandhya Ballal),1,16,2026,Jan,Jan-16,2026-1-16,18:49:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-16 19:04:00,47.41502,-122.52768,15,240841,"[Orca Network] K Pod northbound (Ashley Whitman, Mollie Segall)",1,16,2026,Jan,Jan-16,2026-1-16,19:04:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 19:23:00,47.42392,-122.52371,15,240843,[Orca Network] K Pod northbound (Heather Cat),1,16,2026,Jan,Jan-16,2026-1-16,19:23:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 19:46:00,47.44749,-122.52361,15,240846,[Orca Network] K Pod northbound (Kathi Salmon),1,16,2026,Jan,Jan-16,2026-1-16,19:46:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 20:00:00,47.45536,-122.51915,15,240848,"[Orca Network] K pod northbound (Katie Apone, Roxane Jackson Johnson)",1,16,2026,Jan,Jan-16,2026-1-16,20:00:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 20:13:00,47.46,-122.51846,15,240849,[Orca Network] K pod northbound (Katie Apone),1,16,2026,Jan,Jan-16,2026-1-16,20:13:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 20:27:00,47.47532,-122.50868,15,240850,[Orca Network] K pod northbound (Josh Reiss),1,16,2026,Jan,Jan-16,2026-1-16,20:27:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Orca,2026-01-16 20:35:00,47.43059,-122.40802,6,240851,[Orca Network] Orcas southbound (Ellen Weir),1,16,2026,Jan,Jan-16,2026-1-16,20:35:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-16 20:43:00,47.48178,-122.50484,15,240852,[Orca Network] K pod northbound (Roxane Jackson Johnson),1,16,2026,Jan,Jan-16,2026-1-16,20:43:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 20:54:00,47.48932,-122.50312,15,240854,[Orca Network] K pod northbound (Tiffany Russell),1,16,2026,Jan,Jan-16,2026-1-16,20:54:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 21:16:00,47.5072,-122.49029,15,240856,"[Orca Network] K pod northbound (Melissa Bird, Mary Hartmann)",1,16,2026,Jan,Jan-16,2026-1-16,21:16:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 21:34:00,47.51373,-122.48744,15,240859,"[Orca Network] K pod northbound (Melissa Bird, Mary Hartmann)",1,16,2026,Jan,Jan-16,2026-1-16,21:34:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 21:46:00,47.52133,-122.48573,15,240861,"[Orca Network] K pod northbound (Mary Hartmann, Amy Fowler)",1,16,2026,Jan,Jan-16,2026-1-16,21:46:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 21:57:00,47.53057,-122.47847,15,240862,[Orca Network] K pod leaders northbound (Stephanie Raymond),1,16,2026,Jan,Jan-16,2026-1-16,21:57:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 22:39:00,47.56399,-122.46936,15,240885,[Orca Network] K pod northbound (Samiksha Gulrajani),1,16,2026,Jan,Jan-16,2026-1-16,22:39:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 23:04:00,47.59443,-122.4603,15,240887,"[Orca Network] K pod northbound (Diana Gragg, Steve Rice)",1,16,2026,Jan,Jan-16,2026-1-16,23:04:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 23:14:00,47.60942,-122.46364,15,240896,[Orca Network] K pod northbound (Steve Rice),1,16,2026,Jan,Jan-16,2026-1-16,23:14:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-16 23:44:00,47.61632,-122.46574,15,240897,[Orca Network] K pod leaders porpoising northbound (Kas Alexis),1,16,2026,Jan,Jan-16,2026-1-16,23:44:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-17 00:16:00,47.65958,-122.46883,15,240901,[Orca Network] K pod widely spread northbound (Kas Alexis),1,17,2026,Jan,Jan-17,2026-1-17,00:16:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-17 00:31:00,47.69031,-122.47578,15,240902,"[Orca Network] K pod steady northbound, wide spread, long down times (Nikol Damato)",1,17,2026,Jan,Jan-17,2026-1-17,00:31:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-17 00:40:00,47.70382,-122.47636,15,240907,"[Orca Network] K pod steady northbound, wide spread north to south long down times (Nikol Damato, Sue Surowiec Larkin)",1,17,2026,Jan,Jan-17,2026-1-17,00:40:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Orca,2026-01-17 17:00:00,47.90547,-122.50385,5,240938,"[Orca Network] Orcas here, numbers and direction of travel unknown (Danielle Lanxon)",1,17,2026,Jan,Jan-17,2026-1-17,17:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-17 17:15:00,47.92618,-122.52754,4,240940,[Orca Network] At least four orcas northbound (Danielle Lanxon),1,17,2026,Jan,Jan-17,2026-1-17,17:15:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-17 18:30:00,47.94458,-122.55604,4,240942,[Orca Network] Orcas northbound (Susan John),1,17,2026,Jan,Jan-17,2026-1-17,18:30:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-17 20:30:00,48.06939,-122.65938,4,240948,"[Orca Network] Orcas northbound, numbers approximate (Susan John, Sarah Geist)",1,17,2026,Jan,Jan-17,2026-1-17,20:30:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-17 23:03:36,48.78567,-123.55444,4,240975,"Heading north (estimated 345 degrees) on the saanich channel, on the middle of the channel. First sighting was a the two juvenile whales near shore at a 20 feet deep bank playing (tail whips) then headed out to the middle of the channel with its parent, observed a male orca and a female orca.",1,17,2026,Jan,Jan-17,2026-1-17,23:03:36,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-19 17:03:00,47.34739,-122.42552,5,241048,"[Orca Network] northbound, ecotype unknown (Eileen Wolcott)",1,19,2026,Jan,Jan-19,2026-1-19,17:03:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-20 15:45:00,47.3302,-122.6892,23,241084,"[Orca Network] J pod (-16s) breaching, trending south (Randy Witter)",1,20,2026,Jan,Jan-20,2026-1-20,15:45:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-20 18:33:00,47.18054,-122.64526,23,241099,"[Orca Network] J pod (-16s) southbound (Victory Kovach, June Juliano Huelskamp, Belen Bilgic Schneider)",1,20,2026,Jan,Jan-20,2026-1-20,18:33:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-01-20 19:41:00,47.26991,-122.55273,23,241111,"[Orca Network] J pod (-16s) northbound, surface active (Matthew Pfab, Ian Johnson, Jolena Tagg, Rachel Haight)",1,20,2026,Jan,Jan-20,2026-1-20,19:41:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-01-20 22:32:00,47.41647,-122.52348,23,241114,"[Orca Network] J pod (-16s) northbound (Katie Reinemann, Amy FowIer, Lester More)",1,20,2026,Jan,Jan-20,2026-1-20,22:32:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Orca,2026-01-21 00:02:00,48.17533,-122.57209,3,241118,[Orca Network] Orcas reported slowly southbound (Steve Hipskind),1,21,2026,Jan,Jan-21,2026-1-21,00:02:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-21 05:09:38,48.8754105424,-123.302613038,1,241120,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",1,21,2026,Jan,Jan-21,2026-1-21,05:09:38,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-22 17:35:00,47.96798,-122.33593,6,241151,[Orca Network] northbound (Natalie Scantlen),1,22,2026,Jan,Jan-22,2026-1-22,17:35:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-22 17:49:00,47.98437,-122.3356,8,241152,[Orca Network] northbound (Natalie Scantlen),1,22,2026,Jan,Jan-22,2026-1-22,17:49:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-22 18:32:00,48.02991,-122.3599,8,241153,[Orca Network] northbound rounding Sandy Point (Cindi Crowder Rausch),1,22,2026,Jan,Jan-22,2026-1-22,18:32:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-01-22 20:32:00,48.10458,-122.52609,1,241162,[Orca Network] Gray whale facing north (Sarah Geist),1,22,2026,Jan,Jan-22,2026-1-22,20:32:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-22 20:34:00,48.10886,-122.50534,2,241163,,1,22,2026,Jan,Jan-22,2026-1-22,20:34:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-23 21:22:39,48.8601514535,-123.347123925,1,241199,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",1,23,2026,Jan,Jan-23,2026-1-23,21:22:39,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-01-23 21:34:00,48.53788,-123.20252,27,241200,"[Orca Network] J pod northbound, visible on LK webcam (Tenaya Brian Stecker)",1,23,2026,Jan,Jan-23,2026-1-23,21:34:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Orca,2026-01-24 01:38:12,48.8603337765,-123.345362713,1,241209,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",1,24,2026,Jan,Jan-24,2026-1-24,01:38:12,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-28 13:42:13,48.8753671933,-123.29181602,1,241333,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",1,28,2026,Jan,Jan-28,2026-1-28,13:42:13,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-28 20:18:10,49.33164,-124.28808,3,241337,,1,28,2026,Jan,Jan-28,2026-1-28,20:18:10,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-31 11:17:00,47.40126,-122.32816,4,241422,in between Des Moines and Maury Island traveling southbound,1,31,2026,Jan,Jan-31,2026-1-31,11:17:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-31 18:42:00,47.65282,-122.4451,7,241391,"[Orca Network] Orcas surface active, southbound (Steve Rice)",1,31,2026,Jan,Jan-31,2026-1-31,18:42:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-31 19:08:00,47.64958,-122.4451,7,241392,[Orca Network] Orcas breaching (Steve Rice),1,31,2026,Jan,Jan-31,2026-1-31,19:08:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-31 19:24:00,47.65536,-122.44922,7,241394,[Orca Network] Orcas milling (Summer Staley),1,31,2026,Jan,Jan-31,2026-1-31,19:24:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-31 19:37:22,47.66024,-122.4312,4,241396,West side of channel seen from West Point lighthouse,1,31,2026,Jan,Jan-31,2026-1-31,19:37:22,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-31 19:40:00,47.63275,-122.45883,7,241398,[Orca Network] Orcas trending south (Summer Staley),1,31,2026,Jan,Jan-31,2026-1-31,19:40:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-31 19:51:49,47.65974,-122.42869,3,241399,,1,31,2026,Jan,Jan-31,2026-1-31,19:51:49,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-31 20:11:00,47.62632,-122.46301,7,241401,[Orca Network] Orcas southwestbound (Mary Hartmann),1,31,2026,Jan,Jan-31,2026-1-31,20:11:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,1,0,0,0,0,1,2
+Orca,2026-01-31 20:25:00,47.61359,-122.46713,7,241402,[Orca Network] Orcas southbound (Kathy Kaplan),1,31,2026,Jan,Jan-31,2026-1-31,20:25:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-31 20:31:00,47.60017,-122.48052,7,241403,[Orca Network] Orcas southbound (Clare Glo),1,31,2026,Jan,Jan-31,2026-1-31,20:31:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-31 20:36:00,47.57366,-122.47228,7,241404,"[Orca Network] Orcas southbound (Camryn Phipps, Michele Edwards Ley, Kathy Kaplan)",1,31,2026,Jan,Jan-31,2026-1-31,20:36:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-31 20:48:00,47.56427,-122.47348,7,241405,"[Orca Network] Orcas southbound (Michele Edwards Ley, Hannah Marie Munro, Kathy Kaplan)",1,31,2026,Jan,Jan-31,2026-1-31,20:48:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-31 20:52:00,47.54887,-122.47485,7,241407,[Orca Network] Orcas southbound (Hannah Marie Munro),1,31,2026,Jan,Jan-31,2026-1-31,20:52:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-31 21:10:00,47.52314,-122.46455,7,241409,"[Orca Network] Orcas southbound, grouped up (Hannah Marie Munro, Israel Rios Jr)",1,31,2026,Jan,Jan-31,2026-1-31,21:10:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-31 21:20:00,47.50946,-122.44704,7,241410,[Orca Network] Orcas southbound (Andrea Reinicke),1,31,2026,Jan,Jan-31,2026-1-31,21:20:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-31 21:40:00,47.50894,-122.44335,7,241412,"[Orca Network] Orcas southbound (Hannah Marie Munro, Jason Luc, Jct Guarnes)",1,31,2026,Jan,Jan-31,2026-1-31,21:40:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-01-31 22:31:27,47.45006,-122.37897,4,241417,,1,31,2026,Jan,Jan-31,2026-1-31,22:31:27,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-31 23:23:37,47.38882,-122.37428,6,241423,"South bound, slowly, visible from Pt Robinson looking towards Burien",1,31,2026,Jan,Jan-31,2026-1-31,23:23:37,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-01-31 23:30:01,47.38841,-122.37366,6,241424,Directly off pt Robinson in close,1,31,2026,Jan,Jan-31,2026-1-31,23:30:01,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-02-03 16:15:00,48.55384,-123.1885,25,241492,"[Orca Network] numbers and location approximate, likely southbound, can be heard on the orcasound lab hydrophone (Marla Smith, Sophia Newton)",2,3,2026,Feb,Feb-3,2026-2-3,16:15:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-02-03 16:41:00,48.53793,-123.19176,27,241493,"[Orca Network] location and numbers approximate, likely southbound (Marla Smith, Sarah Geist, Jourdan Rae, Jct Guarnes)",2,3,2026,Feb,Feb-3,2026-2-3,16:41:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Orca,2026-02-03 17:35:00,48.12814,-122.63183,5,241494,"[Orca Network] location and time approximate, northbound (Neval Rasmussen)",2,3,2026,Feb,Feb-3,2026-2-3,17:35:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-02-04 15:11:26,48.90999,-122.74003,1,241507,,2,4,2026,Feb,Feb-4,2026-2-4,15:11:26,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-04 15:52:00,47.28156,-122.47227,3,241510,[Orca Network] Orcas milling (Tina Lee),2,4,2026,Feb,Feb-4,2026-2-4,15:52:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-04 16:09:00,47.28968,-122.47978,3,241511,"[Orca Network] Orcas milling (Dave Porter, Brenna Brandsma)",2,4,2026,Feb,Feb-4,2026-2-4,16:09:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-04 16:17:00,47.28893,-122.48508,5,241512,[Orca Network] Orcas moving west (Michalyn Marzocco),2,4,2026,Feb,Feb-4,2026-2-4,16:17:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-04 20:00:00,47.4779,-122.36399,3,241525,"Slowly moving northbound, mid channel, visible from Seahurst Park",2,4,2026,Feb,Feb-4,2026-2-4,20:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-02-04 20:05:19,49.4264,-123.48186,5,241526,,2,4,2026,Feb,Feb-4,2026-2-4,20:05:19,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-04 21:16:03,47.53751,-122.39541,2,241537,,2,4,2026,Feb,Feb-4,2026-2-4,21:16:03,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-04 21:20:18,47.5375,-122.39531,1,241538,,2,4,2026,Feb,Feb-4,2026-2-4,21:20:18,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-04 22:43:51,47.59525,-122.38561,4,241544,,2,4,2026,Feb,Feb-4,2026-2-4,22:43:51,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-04 23:08:40,47.59464,-122.384,1,241546,,2,4,2026,Feb,Feb-4,2026-2-4,23:08:40,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-05 22:42:00,48.17057,-122.54411,4,241567,[Orca Network] Orcas northbound (Marie Heil),2,5,2026,Feb,Feb-5,2026-2-5,22:42:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-02-06 00:17:40,49.42639,-123.48186,4,241568,,2,6,2026,Feb,Feb-6,2026-2-6,00:17:40,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-02-06 16:22:00,48.54204,-123.20373,27,241583,[Orca Network] SRKWs on Lime Kiln and Orcasound hydrophones (Sophia Newton),2,6,2026,Feb,Feb-6,2026-2-6,16:22:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-02-06 16:58:00,48.55636,-123.20511,27,241585,"[Orca Network] J pod, loud calls on Orcasound Lab hydrophone (Serena Tierra)",2,6,2026,Feb,Feb-6,2026-2-6,16:58:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Orca,2026-02-06 22:35:00,47.96467,-122.32028,4,241595,[Orca Network] At least four orcas reported southbound (Melissa Foss),2,6,2026,Feb,Feb-6,2026-2-6,22:35:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-02-06 23:00:00,47.93179,-122.35307,4,241596,[Orca Network] Orcas steadily southbound (Sandy Pollard),2,6,2026,Feb,Feb-6,2026-2-6,23:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-02-06 23:17:00,47.90627,-122.364,4,241597,[Orca Network] Orcas slow and steady southbound (Alice Thuy Talbot),2,6,2026,Feb,Feb-6,2026-2-6,23:17:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-02-06 23:38:17,49.20251,-123.81975,3,241599,,2,6,2026,Feb,Feb-6,2026-2-6,23:38:17,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-07 00:00:00,47.87082,-122.39615,4,241600,[Orca Network] Orcas slow and steady southbound (Beriah SoOrio),2,7,2026,Feb,Feb-7,2026-2-7,00:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-02-07 00:33:00,47.8745,-122.39238,4,241601,[Orca Network] Orcas southbound (Beriah SoOrio),2,7,2026,Feb,Feb-7,2026-2-7,00:33:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-02-07 21:00:09,48.3173,-123.61137,5,241651,,2,7,2026,Feb,Feb-7,2026-2-7,21:00:09,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-07 22:00:20,48.31374,-123.65075,2,241652,Near Sooke,2,7,2026,Feb,Feb-7,2026-2-7,22:00:20,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-08 01:37:29,48.33326,-123.71013,3,241656,,2,8,2026,Feb,Feb-8,2026-2-8,01:37:29,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-08 03:02:15,48.8743717159,-123.272047622,1,241657,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",2,8,2026,Feb,Feb-8,2026-2-8,03:02:15,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-08 20:14:00,47.7418,-122.43224,4,241670,"[Orca Network] Orcas milling, numbers and location approximate (Kim Griggs)",2,8,2026,Feb,Feb-8,2026-2-8,20:14:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-08 20:22:00,47.73857,-122.42881,4,241671,"[Orca Network] Orcas hunting, number and location approximate (Nicole Schleich Abbott)",2,8,2026,Feb,Feb-8,2026-2-8,20:22:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-08 20:40:00,47.74093,-122.39307,4,241676,"[Orca Network] Orcas surface active, making directional changes (Alisa Lemire Brooks)",2,8,2026,Feb,Feb-8,2026-2-8,20:40:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-08 20:55:00,47.73215,-122.38758,4,241677,[Orca Network] Orcas trending southeast (Alisa Lemire Brooks),2,8,2026,Feb,Feb-8,2026-2-8,20:55:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,1,0,0,0,0,0,0,1
+Orca,2026-02-08 21:21:00,47.73657,-122.38041,4,241678,"[Orca Network] Orcas feeding, milling (Alisa Lemire Brooks, Hannah Marie Munro)",2,8,2026,Feb,Feb-8,2026-2-8,21:21:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-08 21:39:00,47.73631,-122.38758,4,241680,[Orca Network] Orcas drifting west (Alisa Lemire Brooks),2,8,2026,Feb,Feb-8,2026-2-8,21:39:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-08 21:54:00,47.73873,-122.38741,4,241681,[Orca Network] Orcas milling (Alicia Cheshier),2,8,2026,Feb,Feb-8,2026-2-8,21:54:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-08 22:20:00,47.737,-122.38621,4,241683,[Orca Network] Orcas milling (Kat Martin),2,8,2026,Feb,Feb-8,2026-2-8,22:20:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-08 22:48:00,47.73261,-122.39179,4,241685,"[Orca Network] Orcas slowly southbound (Barbara Gamrath,  Yamna Nasir)",2,8,2026,Feb,Feb-8,2026-2-8,22:48:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-02-08 23:16:00,47.68999,-122.44329,4,241687,[Orca Network] Orcas southbound (Michalyn Marzocco),2,8,2026,Feb,Feb-8,2026-2-8,23:16:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-02-08 23:48:00,47.66133,-122.44981,4,241688,[Orca Network] Orcas hunting (Duangjai Vasantana-Berntsen),2,8,2026,Feb,Feb-8,2026-2-8,23:48:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-09 01:21:58,49.3536,-124.36506,6,241692,,2,9,2026,Feb,Feb-9,2026-2-9,01:21:58,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-09 20:58:25,47.3128,-122.52797,3,241709,,2,9,2026,Feb,Feb-9,2026-2-9,20:58:25,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-09 21:32:46,47.27258,-122.47037,1,241715,,2,9,2026,Feb,Feb-9,2026-2-9,21:32:46,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-10 00:20:33,47.37259,-122.32488,1,241733,,2,10,2026,Feb,Feb-10,2026-2-10,00:20:33,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-11 00:53:08,47.30508,-122.50787,2,241792,,2,11,2026,Feb,Feb-11,2026-2-11,00:53:08,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-11 00:56:00,47.31203,-122.4913,3,241793,[Orca Network] Orcas northbound (George Slaats),2,11,2026,Feb,Feb-11,2026-2-11,00:56:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-02-11 01:13:00,47.28578,-122.44713,3,241794,[Orca Network] Orcas eastbound (Vawn Parker),2,11,2026,Feb,Feb-11,2026-2-11,01:13:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,1,0,1
+Orca,2026-02-11 15:41:00,47.50965,-122.48559,3,241816,[Orca Network] Orcas southbound (Mary Lou Blakely),2,11,2026,Feb,Feb-11,2026-2-11,15:41:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-02-11 17:09:00,47.43719,-122.5232,3,241826,"[Orca Network] Orcas tightly grouped, slow southbound (Jolena Tagg)",2,11,2026,Feb,Feb-11,2026-2-11,17:09:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-02-11 21:55:25,48.8603944168,-123.348653631,1,241844,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",2,11,2026,Feb,Feb-11,2026-2-11,21:55:25,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-11 22:46:09,47.25333,-122.5926,1,241847,,2,11,2026,Feb,Feb-11,2026-2-11,22:46:09,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-13 01:08:00,48.224,-122.69128,4,241875,"[Orca Network] Orcas westbound, numbers approximate (Sarah Geist)",2,13,2026,Feb,Feb-13,2026-2-13,01:08:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,1,1
+Orca,2026-02-13 23:37:00,47.28514,-122.46205,3,241914,"[Orca Network] Orcas here, no direction given (Stephanie Patterson)",2,13,2026,Feb,Feb-13,2026-2-13,23:37:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-14 00:21:00,47.28246,-122.45879,3,241916,"[Orca Network] Orcas here, no direction given (Paul Davis)",2,14,2026,Feb,Feb-14,2026-2-14,00:21:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-14 00:30:00,47.28578,-122.47055,3,241917,[Orca Network] Orcas westbound (Jason Cook),2,14,2026,Feb,Feb-14,2026-2-14,00:30:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,1,1
+Orca,2026-02-14 00:53:00,47.30668,-122.49612,3,241920,"[Orca Network] Orcas westbound (Jason Cook, Ryan Dicks)",2,14,2026,Feb,Feb-14,2026-2-14,00:53:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,1,1
+Orca,2026-02-14 01:09:00,47.30994,-122.50625,3,241921,[Orca Network] Orcas westbound (Ryan Dicks),2,14,2026,Feb,Feb-14,2026-2-14,01:09:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,1,1
+Orca,2026-02-14 17:12:00,48.03958,-122.38671,3,241928,"[Orca Network] Orcas west, northwest bound (Heather Hardin)",2,14,2026,Feb,Feb-14,2026-2-14,17:12:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,1,0,0,1
+Orca,2026-02-14 18:00:00,48.07745,-122.45136,3,241932,[Orca Network] Orcas northbound (Cindi Crowder Rausch),2,14,2026,Feb,Feb-14,2026-2-14,18:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-02-14 22:40:29,48.12763,-122.5624,3,241957,,2,14,2026,Feb,Feb-14,2026-2-14,22:40:29,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-15 00:16:00,48.51193,-123.26047,5,241974,"[Orca Network] Likely orcas visible on Lime Kiln webcam, numbers approximate, ecotype unconfirmed (Sophia Newton)",2,15,2026,Feb,Feb-15,2026-2-15,00:16:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-15 00:40:00,48.46517,-122.67285,5,241977,"[Orca Network] Orcas milling, numbers approximate (Missy Main)",2,15,2026,Feb,Feb-15,2026-2-15,00:40:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-15 22:43:00,47.75704,-122.43048,7,242009,"[Orca Network] 6-7 orcas milling, possibly trending west (Alicia Cheshier)",2,15,2026,Feb,Feb-15,2026-2-15,22:43:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-15 23:03:00,47.72841,-122.44696,7,242010,[Orca Network] Orcas southbound (Alicia Cheshier),2,15,2026,Feb,Feb-15,2026-2-15,23:03:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-02-15 23:29:00,47.7186,-122.47194,7,242012,"[Orca Network] Orcas milling, trending west (Alicia Cheshier)",2,15,2026,Feb,Feb-15,2026-2-15,23:29:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-16 00:14:00,47.72143,-122.47961,7,242015,[Orca Network] Orcas milling (Bruno Karam),2,16,2026,Feb,Feb-16,2026-2-16,00:14:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-16 00:50:00,47.70794,-122.56841,7,242017,[Orca Network] Orcas southbound (Brian Whitlock),2,16,2026,Feb,Feb-16,2026-2-16,00:50:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-02-16 20:29:00,48.12066,-122.65896,4,242043,[Orca Network] Orcas northbound (Susan John),2,16,2026,Feb,Feb-16,2026-2-16,20:29:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-02-17 13:17:30,48.854049967,-123.345990211,1,242056,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",2,17,2026,Feb,Feb-17,2026-2-17,13:17:30,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-17 13:59:14,48.8746895309,-123.289898298,1,242057,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",2,17,2026,Feb,Feb-17,2026-2-17,13:59:14,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-20 19:30:43,48.734,-122.51,3,242122,,2,20,2026,Feb,Feb-20,2026-2-20,19:30:43,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-02-22 15:06:00,47.52132,-122.4324,27,242287,"[Orca Network] J pod, only one seen, no direction of travel given (WSF)",2,22,2026,Feb,Feb-22,2026-2-22,15:06:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Orca,2026-02-22 15:08:01,47.54663,-122.44533,4,242156,,2,22,2026,Feb,Feb-22,2026-2-22,15:08:01,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-22 15:17:35,47.50808,-122.42977,5,242157,,2,22,2026,Feb,Feb-22,2026-2-22,15:17:35,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-22 16:11:00,47.43681,-122.39607,1,242161,[Orca Network] Orca slowly southbound (Lee Van Valkenburg),2,22,2026,Feb,Feb-22,2026-2-22,16:11:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-02-22 16:26:00,47.46258,-122.3995,4,242162,[Orca Network] Orcas southbound (Shari Tarantino),2,22,2026,Feb,Feb-22,2026-2-22,16:26:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-02-22 16:48:00,47.44238,-122.40088,4,242163,[Orca Network] Orcas southbound (Marla Smith),2,22,2026,Feb,Feb-22,2026-2-22,16:48:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-02-22 17:03:00,47.41079,-122.38354,12,242164,"[Orca Network] Orcas very spread out milling and trending south, spyhopping (Marla Smith)",2,22,2026,Feb,Feb-22,2026-2-22,17:03:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-22 17:41:00,47.44633,-122.39916,12,242165,"[Orca Network] Orcas northbound spread out (Alisa Lemire Brooks, Barbara Weber, Amy FowIer, Shari Tarantino)",2,22,2026,Feb,Feb-22,2026-2-22,17:41:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-22 17:55:00,47.47314,-122.39796,15,242166,"[Orca Network] Likely K pod northbound, spread out north to south (Steve Czerniak)",2,22,2026,Feb,Feb-22,2026-2-22,17:55:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-22 18:27:00,47.509,-122.4258,15,242167,[Orca Network] Likely K pod northbound (Mandy Fuller),2,22,2026,Feb,Feb-22,2026-2-22,18:27:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-22 19:00:00,47.54354,-122.43095,15,242169,[Orca Network] Likely K pod northbound (Alisa Lemire Brooks),2,22,2026,Feb,Feb-22,2026-2-22,19:00:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-22 19:16:00,47.57829,-122.44434,15,242172,"[Orca Network] Likely K pod northbound, surface active (Alisa Lemire Brooks, Hannah Marie Munro, Orca Updates)",2,22,2026,Feb,Feb-22,2026-2-22,19:16:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-22 19:30:00,47.60261,-122.44846,15,242174,[Orca Network] Likely K pod northbound (Mary Hartmann),2,22,2026,Feb,Feb-22,2026-2-22,19:30:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-22 20:03:00,47.63778,-122.45326,15,242177,[Orca Network] Likely K pod northbound very spread out (April Basham),2,22,2026,Feb,Feb-22,2026-2-22,20:03:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-22 20:32:00,47.69611,-122.44217,15,242181,"[Orca Network] Likely K pod northbound (Alisa Lemire Brooks, Jason Cook)",2,22,2026,Feb,Feb-22,2026-2-22,20:32:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-22 20:54:00,47.71505,-122.44526,15,242182,[Orca Network] Likely K pod northbound (Hannah Marie Munro),2,22,2026,Feb,Feb-22,2026-2-22,20:54:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Orca,2026-02-22 21:06:53,47.69056,-122.38785,3,242183,,2,22,2026,Feb,Feb-22,2026-2-22,21:06:53,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-02-22 21:20:00,47.77715,-122.41848,15,242186,"[Orca Network] Likely K pod northbound (Hannah Marie Munro, Alisa Lemire Brooks, Emma Vasilj)",2,22,2026,Feb,Feb-22,2026-2-22,21:20:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-22 21:50:00,47.79053,-122.4226,15,242187,[Orca Network] Likely K pod northbound (Alisa Lemire Brooks),2,22,2026,Feb,Feb-22,2026-2-22,21:50:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-22 22:18:00,47.80517,-122.41591,27,242188,"[Orca Network] At least J pod northbound (Jourdan Rae, Linse Vlahovich Hill, Summer Staley, Jenny Klis) (ID Tamara Kelley)",2,22,2026,Feb,Feb-22,2026-2-22,22:18:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-22 22:41:00,47.82016,-122.41779,27,242190,"[Orca Network] At least J pod north/northeastbound, most east of midchannel, several further west (Ariel Yseth, Hannah Marie Munro, Alisa Lemire Brooks)",2,22,2026,Feb,Feb-22,2026-2-22,22:41:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,1,0,1,0,2
+Southern Resident Orca,2026-02-22 23:02:00,47.8424,-122.41264,27,242206,"[Orca Network] At least J pod northbound, spread east to west, location approximate (Jason Cook, Alisa Lemire Brooks)",2,22,2026,Feb,Feb-22,2026-2-22,23:02:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-22 23:32:00,47.8613,-122.41093,27,242209,"[Orca Network] At least J pod northbound, calls audible on Sunset Bay hydrophone (Jct Guarnes, Jourdan Rae, Eric Nordstrom)",2,22,2026,Feb,Feb-22,2026-2-22,23:32:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
 Southern Resident Orca,2026-02-22 23:58:00,47.88663,-122.40955,27,242212,"[Orca Network] At least J pod spread out milling, foraging, some surface activity, had been northbound (Andrea Ballesteros, Jourdan Rae)
-",2,22,2026,Feb,Feb-22,2026-2-22,23:58:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-23 00:05:00,47.89262,-122.41299,27,242215,[Orca Network] At least J pod spread out foraging (Alisa Lemire Brooks),2,23,2026,Feb,Feb-23,2026-2-23,00:05:00,1,0,0,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-02-23 00:40:00,47.90967,-122.35741,27,242220,"[Orca Network] J pod northbound (Michele Tosh Brodsky, Alisa Lemire Brooks, Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,00:40:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-23 00:50:00,47.92233,-122.35381,27,242221,"[Orca Network] J pod leaders northbound (Jason Cook, Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,00:50:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-23 01:20:00,47.94556,-122.33956,27,242222,[Orca Network] J pod northbound (Cindi Crowder Rausch),2,23,2026,Feb,Feb-23,2026-2-23,01:20:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-23 01:40:00,47.96004,-122.33441,27,242223,"[Orca Network] J pod widely spread, leaders approaching ferry lanes, trailers near Glendale (Joe Dreimiller, Tamara Kelley)",2,23,2026,Feb,Feb-23,2026-2-23,01:40:00,1,0,0,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-02-23 01:52:00,47.94372,-122.34231,27,242224,[Orca Network] J pod trailers northbound (Cindi Crowder Rausch),2,23,2026,Feb,Feb-23,2026-2-23,01:52:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-23 15:06:00,48.07648,-122.5396,27,242232,"[Orca Network] likely SRKW, numbers approximate (Kate)",2,23,2026,Feb,Feb-23,2026-2-23,15:06:00,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-02-23 15:19:00,47.89902,-122.36693,12,242233,"[Orca Network] likely SRKW, numbers approximate, surface active and southbound (Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,15:19:00,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-02-23 15:42:00,47.88338,-122.38043,12,242234,"[Orca Network] likely SRKW, numbers approximate, surface active, very spread out (Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,15:42:00,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-02-23 16:05:00,47.87947,-122.38523,27,242235,"[Orca Network] likely Jpod, southbound, surface active (Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,16:05:00,1,0,0,1,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-02-23 16:20:00,47.87008,-122.39712,27,242237,"[Orca Network] likely Jpod, stalled with directional changes(Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,16:20:00,1,0,0,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-02-23 17:38:00,47.86042,-122.42806,27,242239,"[Orca Network] Jpod, location approximate, heard on the Sunset Bay Hydrophone(Marla Smith)",2,23,2026,Feb,Feb-23,2026-2-23,17:38:00,1,0,0,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0
+",2,22,2026,Feb,Feb-22,2026-2-22,23:58:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-23 00:05:00,47.89262,-122.41299,27,242215,[Orca Network] At least J pod spread out foraging (Alisa Lemire Brooks),2,23,2026,Feb,Feb-23,2026-2-23,00:05:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-02-23 00:40:00,47.90967,-122.35741,27,242220,"[Orca Network] J pod northbound (Michele Tosh Brodsky, Alisa Lemire Brooks, Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,00:40:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-23 00:50:00,47.92233,-122.35381,27,242221,"[Orca Network] J pod leaders northbound (Jason Cook, Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,00:50:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-23 01:20:00,47.94556,-122.33956,27,242222,[Orca Network] J pod northbound (Cindi Crowder Rausch),2,23,2026,Feb,Feb-23,2026-2-23,01:20:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-23 01:40:00,47.96004,-122.33441,27,242223,"[Orca Network] J pod widely spread, leaders approaching ferry lanes, trailers near Glendale (Joe Dreimiller, Tamara Kelley)",2,23,2026,Feb,Feb-23,2026-2-23,01:40:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-02-23 01:52:00,47.94372,-122.34231,27,242224,[Orca Network] J pod trailers northbound (Cindi Crowder Rausch),2,23,2026,Feb,Feb-23,2026-2-23,01:52:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-23 15:06:00,48.07648,-122.5396,27,242232,"[Orca Network] likely SRKW, numbers approximate (Kate)",2,23,2026,Feb,Feb-23,2026-2-23,15:06:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-02-23 15:19:00,47.89902,-122.36693,12,242233,"[Orca Network] likely SRKW, numbers approximate, surface active and southbound (Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,15:19:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-02-23 15:42:00,47.88338,-122.38043,12,242234,"[Orca Network] likely SRKW, numbers approximate, surface active, very spread out (Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,15:42:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-02-23 16:05:00,47.87947,-122.38523,27,242235,"[Orca Network] likely Jpod, southbound, surface active (Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,16:05:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-02-23 16:20:00,47.87008,-122.39712,27,242237,"[Orca Network] likely Jpod, stalled with directional changes(Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,16:20:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-02-23 17:38:00,47.86042,-122.42806,27,242239,"[Orca Network] Jpod, location approximate, heard on the Sunset Bay Hydrophone(Marla Smith)",2,23,2026,Feb,Feb-23,2026-2-23,17:38:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
 Southern Resident Orca,2026-02-23 18:10:00,47.8995,-122.35301,27,242242,"[Orca Network] Jpod, spread out northbound(Sarah Geist, Duangjai Vasantana-Berntsen)
-",2,23,2026,Feb,Feb-23,2026-2-23,18:10:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-23 18:26:00,47.91814,-122.3482,27,242244,"[Orca Network] Jpod, spread out, northbound (Rachel Haight, Cindi Crowder Rausch)",2,23,2026,Feb,Feb-23,2026-2-23,18:26:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-23 18:59:00,47.93891,-122.34399,5,242246,"[Orca Network] Jpod members, numbers approximate, socializing while drifting northbound (Rachel Haight)",2,23,2026,Feb,Feb-23,2026-2-23,18:59:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
+",2,23,2026,Feb,Feb-23,2026-2-23,18:10:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-23 18:26:00,47.91814,-122.3482,27,242244,"[Orca Network] Jpod, spread out, northbound (Rachel Haight, Cindi Crowder Rausch)",2,23,2026,Feb,Feb-23,2026-2-23,18:26:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-23 18:59:00,47.93891,-122.34399,5,242246,"[Orca Network] Jpod members, numbers approximate, socializing while drifting northbound (Rachel Haight)",2,23,2026,Feb,Feb-23,2026-2-23,18:59:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
 Southern Resident Orca,2026-02-23 19:07:00,47.95547,-122.32975,27,242247,"[Orca Network] Jpod, spread out, northbound(Michele Tosh Brodsky)
-",2,23,2026,Feb,Feb-23,2026-2-23,19:07:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-23 19:42:00,47.95973,-122.33098,27,242248,"[Orca Network] Jpod, spread out slowly northbound (Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,19:42:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-23 20:10:00,47.97122,-122.33418,27,242271,"[Orca Network] Jpod, spread out east to west, northbound (Natalie Scantlen)",2,23,2026,Feb,Feb-23,2026-2-23,20:10:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
+",2,23,2026,Feb,Feb-23,2026-2-23,19:07:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-23 19:42:00,47.95973,-122.33098,27,242248,"[Orca Network] Jpod, spread out slowly northbound (Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,19:42:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-23 20:10:00,47.97122,-122.33418,27,242271,"[Orca Network] Jpod, spread out east to west, northbound (Natalie Scantlen)",2,23,2026,Feb,Feb-23,2026-2-23,20:10:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
 Southern Resident Orca,2026-02-23 20:36:00,47.99098,-122.33762,27,242275,"[Orca Network] Jpod, very spread out, slowly northbound (Michele Tosh Brodsky)
-",2,23,2026,Feb,Feb-23,2026-2-23,20:36:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-23 21:17:00,48.00959,-122.34812,27,242276,"[Orca Network] Jpod, very spread out, northbound (Rachel Haight)",2,23,2026,Feb,Feb-23,2026-2-23,21:17:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-23 21:33:00,48.0258,-122.34455,1,242277,"[Orca Network] J pod very spread out, leaders trending east (Thomas McKane)",2,23,2026,Feb,Feb-23,2026-2-23,21:33:00,1,0,0,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-02-23 21:45:00,48.03533,-122.35983,27,242278,[Orca Network] J pod northbound spread out (Rachel Haight),2,23,2026,Feb,Feb-23,2026-2-23,21:45:00,1,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,1
-Southern Resident Orca,2026-02-23 22:10:00,48.03269,-122.35554,27,242279,[Orca Network] J pod possibly flipped southbound (Elise VanWest),2,23,2026,Feb,Feb-23,2026-2-23,22:10:00,1,0,0,1,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-02-23 22:36:00,48.01845,-122.35433,27,242280,[Orca Network] J pod southbound (Duangjai Vasantana-Berntsen),2,23,2026,Feb,Feb-23,2026-2-23,22:36:00,1,0,0,1,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-02-23 22:50:00,47.99709,-122.33786,27,242281,[Orca Network] J pod southbound spread out east to west (Rachel Haight),2,23,2026,Feb,Feb-23,2026-2-23,22:50:00,1,0,0,1,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-02-23 23:10:00,47.98307,-122.3382,27,242283,"[Orca Network] J pod southbound, some breaching (Jourdan Rae, Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,23:10:00,1,0,0,1,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-02-23 23:32:00,47.96653,-122.34386,27,242284,"[Orca Network] J pod southbound, leaders here (Jourdan Rae)",2,23,2026,Feb,Feb-23,2026-2-23,23:32:00,1,0,0,1,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-02-24 00:05:00,47.94353,-122.34026,27,242285,"[Orca Network] J pod southbound, leaders here (Rachel Haight)",2,24,2026,Feb,Feb-24,2026-2-24,00:05:00,1,0,0,1,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-02-24 00:27:00,47.93698,-122.34661,27,242286,"[Orca Network] J pod slowly southbound, leaders here (Rachel Haight)",2,24,2026,Feb,Feb-24,2026-2-24,00:27:00,1,0,0,1,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-02-24 00:44:00,47.93111,-122.34987,27,242288,"[Orca Network] J pod slowly southbound, spread out in small groups (Rachel Haight)",2,24,2026,Feb,Feb-24,2026-2-24,00:44:00,1,0,0,1,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-02-24 01:01:00,47.91167,-122.36738,27,242289,"[Orca Network] J pod southbound, some breaching (Alice Thuy Talbot, Jourdan Rae)",2,24,2026,Feb,Feb-24,2026-2-24,01:01:00,1,0,0,1,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-02-24 01:18:00,47.90753,-122.37013,27,242290,[Orca Network] J pod southbound (Rachel Haight),2,24,2026,Feb,Feb-24,2026-2-24,01:18:00,1,0,0,1,0,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-02-24 01:45:00,47.87818,-122.38129,27,242291,[Orca Network] J pod heading southwest very spread out (Alice Thuy Talbot),2,24,2026,Feb,Feb-24,2026-2-24,01:45:00,1,0,0,1,0,1,1,0,1,1,0,1,0,0,0,0,0,2
-Killer whale(Southern Resident),2026-03-18 22:02:27,48.399624,-123.104617,10,228451,Traveling: North-West<br><br>Viewed over .5 miles away<br><br>From: Motor vessel > 60 ft<br>Ocean Wise Conservation Association<br>,3,18,2026,Mar,Mar-18,2026-3-18,22:02:27,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0
-Killer whale(Southern Resident),2026-03-19 00:18:59,48.531771,-123.200146,15,228463,From: Land (close to water)<br>Ocean Wise Conservation Association<br>,3,19,2026,Mar,Mar-19,2026-3-19,00:18:59,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0
+",2,23,2026,Feb,Feb-23,2026-2-23,20:36:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-23 21:17:00,48.00959,-122.34812,27,242276,"[Orca Network] Jpod, very spread out, northbound (Rachel Haight)",2,23,2026,Feb,Feb-23,2026-2-23,21:17:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-23 21:33:00,48.0258,-122.34455,1,242277,"[Orca Network] J pod very spread out, leaders trending east (Thomas McKane)",2,23,2026,Feb,Feb-23,2026-2-23,21:33:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-02-23 21:45:00,48.03533,-122.35983,27,242278,[Orca Network] J pod northbound spread out (Rachel Haight),2,23,2026,Feb,Feb-23,2026-2-23,21:45:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,0,0,0,1
+Southern Resident Orca,2026-02-23 22:10:00,48.03269,-122.35554,27,242279,[Orca Network] J pod possibly flipped southbound (Elise VanWest),2,23,2026,Feb,Feb-23,2026-2-23,22:10:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-02-23 22:36:00,48.01845,-122.35433,27,242280,[Orca Network] J pod southbound (Duangjai Vasantana-Berntsen),2,23,2026,Feb,Feb-23,2026-2-23,22:36:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-02-23 22:50:00,47.99709,-122.33786,27,242281,[Orca Network] J pod southbound spread out east to west (Rachel Haight),2,23,2026,Feb,Feb-23,2026-2-23,22:50:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-02-23 23:10:00,47.98307,-122.3382,27,242283,"[Orca Network] J pod southbound, some breaching (Jourdan Rae, Alice Thuy Talbot)",2,23,2026,Feb,Feb-23,2026-2-23,23:10:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-02-23 23:32:00,47.96653,-122.34386,27,242284,"[Orca Network] J pod southbound, leaders here (Jourdan Rae)",2,23,2026,Feb,Feb-23,2026-2-23,23:32:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-02-24 00:05:00,47.94353,-122.34026,27,242285,"[Orca Network] J pod southbound, leaders here (Rachel Haight)",2,24,2026,Feb,Feb-24,2026-2-24,00:05:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-02-24 00:27:00,47.93698,-122.34661,27,242286,"[Orca Network] J pod slowly southbound, leaders here (Rachel Haight)",2,24,2026,Feb,Feb-24,2026-2-24,00:27:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-02-24 00:44:00,47.93111,-122.34987,27,242288,"[Orca Network] J pod slowly southbound, spread out in small groups (Rachel Haight)",2,24,2026,Feb,Feb-24,2026-2-24,00:44:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-02-24 01:01:00,47.91167,-122.36738,27,242289,"[Orca Network] J pod southbound, some breaching (Alice Thuy Talbot, Jourdan Rae)",2,24,2026,Feb,Feb-24,2026-2-24,01:01:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-02-24 01:18:00,47.90753,-122.37013,27,242290,[Orca Network] J pod southbound (Rachel Haight),2,24,2026,Feb,Feb-24,2026-2-24,01:18:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-02-24 01:45:00,47.87818,-122.38129,27,242291,[Orca Network] J pod heading southwest very spread out (Alice Thuy Talbot),2,24,2026,Feb,Feb-24,2026-2-24,01:45:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,1,0,0,0,0,0,2
+Orca,2026-02-24 02:59:51,48.8600861519,-123.346382948,1,242292,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",2,24,2026,Feb,Feb-24,2026-2-24,02:59:51,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-25 19:41:00,47.662,-122.44333,4,242321,"[Orca Network] possible orcas, southbound (Jeanne)",2,25,2026,Feb,Feb-25,2026-2-25,19:41:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-02-27 17:19:27,48.8758380401,-123.304303212,1,242374,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",2,27,2026,Feb,Feb-27,2026-2-27,17:19:27,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-27 20:18:22,48.856941242,-123.349052931,1,242402,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",2,27,2026,Feb,Feb-27,2026-2-27,20:18:22,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-27 22:42:11,48.8601476731,-123.347007998,1,242414,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",2,27,2026,Feb,Feb-27,2026-2-27,22:42:11,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-28 00:17:14,48.8756964375,-123.283275772,1,242419,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",2,28,2026,Feb,Feb-28,2026-2-28,00:17:14,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-28 00:35:58,48.8582120869,-123.323820002,1,242420,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",2,28,2026,Feb,Feb-28,2026-2-28,00:35:58,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-02-28 03:33:19,48.8603503429,-123.3467567,1,242427,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",2,28,2026,Feb,Feb-28,2026-2-28,03:33:19,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-08 01:26:08,48.0965,-122.91767,3,242660,,3,8,2026,Mar,Mar-8,2026-3-8,01:26:08,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-09 00:13:37,48.57231,-122.87547,5,242683,"Small
+",3,9,2026,Mar,Mar-9,2026-3-9,00:13:37,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-09 10:01:00,47.25652,-122.43595,3,242709,near docked container ship,3,9,2026,Mar,Mar-9,2026-3-9,10:01:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-09 15:34:44,47.59789,-122.36939,4,242688,,3,9,2026,Mar,Mar-9,2026-3-9,15:34:44,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-09 17:44:00,47.50333,-122.40133,2,242696,,3,9,2026,Mar,Mar-9,2026-3-9,17:44:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-09 17:47:00,47.5145,-122.44083,3,242697,,3,9,2026,Mar,Mar-9,2026-3-9,17:47:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-10 00:00:01,47.26866,-122.5535,4,242713,Traveling south under the Narrows Bridge,3,10,2026,Mar,Mar-10,2026-3-10,00:00:01,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-10 15:34:51,47.27189,-122.93204,3,242723,,3,10,2026,Mar,Mar-10,2026-3-10,15:34:51,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-10 15:48:15,47.27188,-122.93208,3,242724,,3,10,2026,Mar,Mar-10,2026-3-10,15:48:15,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-10 16:11:22,47.22385,-122.92155,5,242726,,3,10,2026,Mar,Mar-10,2026-3-10,16:11:22,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-12 09:54:48,48.8576852181,-123.349732062,1,242790,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",3,12,2026,Mar,Mar-12,2026-3-12,09:54:48,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-12 16:35:23,47.16366,-122.87167,4,242794,,3,12,2026,Mar,Mar-12,2026-3-12,16:35:23,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-12 21:10:14,47.12297,-122.91842,2,242799,,3,12,2026,Mar,Mar-12,2026-3-12,21:10:14,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-12 23:13:36,47.79616,-122.45567,6,242807,,3,12,2026,Mar,Mar-12,2026-3-12,23:13:36,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-12 23:14:00,47.71046,-122.56864,5,242806,,3,12,2026,Mar,Mar-12,2026-3-12,23:14:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-12 23:14:30,47.79831,-122.44161,1,242804,,3,12,2026,Mar,Mar-12,2026-3-12,23:14:30,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-13 15:52:00,47.80533,-122.44531,2,242812,"[Orca Network] Orcas southbound, numbers unknown (Natalie Caudle)",3,13,2026,Mar,Mar-13,2026-3-13,15:52:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-03-13 18:00:22,48.8602862266,-123.337239645,1,242823,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",3,13,2026,Mar,Mar-13,2026-3-13,18:00:22,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-13 22:02:00,47.70854,-122.56791,4,242836,4 orcas just went under bainbridge bridge heading south,3,13,2026,Mar,Mar-13,2026-3-13,22:02:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-03-15 09:55:00,47.54257,-123.04019,4,242902,,3,15,2026,Mar,Mar-15,2026-3-15,09:55:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-15 17:26:06,47.83206,-122.68863,3,242876,,3,15,2026,Mar,Mar-15,2026-3-15,17:26:06,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-15 18:01:16,48.8737724732,-123.282396622,1,242915,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",3,15,2026,Mar,Mar-15,2026-3-15,18:01:16,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-15 18:29:00,47.86279,-122.46274,5,242879,"heading in a SE direction to Edmonds, one large male, one calf, a couple midsized ones",3,15,2026,Mar,Mar-15,2026-3-15,18:29:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,1,0,0,0,0,0,0,1
+Orca,2026-03-15 19:36:00,47.9151,-122.34571,5,242881,[Orca Network] Orcas northbound (Sarah Geist),3,15,2026,Mar,Mar-15,2026-3-15,19:36:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-03-15 19:42:33,48.8606960628,-123.341843131,1,242916,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",3,15,2026,Mar,Mar-15,2026-3-15,19:42:33,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-18 16:09:29,48.52266,-122.76936,4,243027,,3,18,2026,Mar,Mar-18,2026-3-18,16:09:29,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Killer whale (Ecotype Unknown),2026-03-18 16:16:31,48.529582,-122.766308,12,228425,Traveling: South<br><br>From: Airplane / Helicopter<br>Ocean Wise Conservation Association<br>,3,18,2026,Mar,Mar-18,2026-3-18,16:16:31,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-18 17:30:00,47.80484,-122.44906,4,243030,"[Orca Network] southbound, ecotype unknown(Sue Surowiec Larkin)",3,18,2026,Mar,Mar-18,2026-3-18,17:30:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-03-18 18:25:00,47.75968,-122.43659,4,243033,"[Orca Network] southbound, number approximate from earlier report (Alisa Lemire Brooks)",3,18,2026,Mar,Mar-18,2026-3-18,18:25:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-03-18 18:43:00,47.72066,-122.43144,4,243034,"[Orca Network] Southbound fast, adult male in the group (Alisa Lemire Brooks)",3,18,2026,Mar,Mar-18,2026-3-18,18:43:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Killer whale (Ecotype Unknown),2026-03-18 20:48:24,47.597492,-122.3836,5,228438,Traveling: South-East<br><br>From: Ferry<br>Ocean Wise Conservation Association<br>,3,18,2026,Mar,Mar-18,2026-3-18,20:48:24,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-18 21:37:08,47.49156,-123.07191,8,243043,,3,18,2026,Mar,Mar-18,2026-3-18,21:37:08,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-18 21:39:34,48.40322,-123.24018,2,243052,,3,18,2026,Mar,Mar-18,2026-3-18,21:39:34,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Killer whale(Southern Resident),2026-03-18 22:02:27,48.399624,-123.104617,10,228451,Traveling: North-West<br><br>Viewed over .5 miles away<br><br>From: Motor vessel > 60 ft<br>Ocean Wise Conservation Association<br>,3,18,2026,Mar,Mar-18,2026-3-18,22:02:27,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Orca,2026-03-18 22:25:03,48.45801,-123.21673,3,243053,,3,18,2026,Mar,Mar-18,2026-3-18,22:25:03,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Killer whale (Ecotype Unknown),2026-03-18 23:19:11,48.474922,-123.211686,3,228455,Traveling: North-West<br><br>From: Land (close to water)<br>Ocean Wise Conservation Association<br>,3,18,2026,Mar,Mar-18,2026-3-18,23:19:11,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Killer whale(Southern Resident),2026-03-19 00:18:59,48.531771,-123.200146,15,228463,From: Land (close to water)<br>Ocean Wise Conservation Association<br>,3,19,2026,Mar,Mar-19,2026-3-19,00:18:59,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Orca,2026-03-19 16:47:03,48.3775,-123.91601,1,243066,,3,19,2026,Mar,Mar-19,2026-3-19,16:47:03,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-20 01:37:45,47.54259,-123.03997,3,243091,,3,20,2026,Mar,Mar-20,2026-3-20,01:37:45,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-20 16:34:00,48.00254,-122.64738,5,243103,"[Orca Network] Orcas northbound, numbers approximate (Susan John)",3,20,2026,Mar,Mar-20,2026-3-20,16:34:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-03-20 17:35:00,48.06332,-122.66858,5,243106,"[Orca Network] Orcas slowly northbound, some milling, numbers approximate (Sarah Geist)",3,20,2026,Mar,Mar-20,2026-3-20,17:35:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-03-21 09:45:00,47.28333,-122.67633,2,243214,,3,21,2026,Mar,Mar-21,2026-3-21,09:45:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-21 12:25:00,47.36886,-122.63095,4,243182,,3,21,2026,Mar,Mar-21,2026-3-21,12:25:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-22 00:14:00,49.31782,-123.15852,2,243219,Active near the Ambleside buoy and heading toward Stanley Park and 3rd Beach.,3,22,2026,Mar,Mar-22,2026-3-22,00:14:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-22 15:53:00,48.1223,-122.65785,4,243229,[Orca Network] Orcas northbound (Kenna Klosterman),3,22,2026,Mar,Mar-22,2026-3-22,15:53:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-03-22 16:22:00,47.13659,-122.72029,4,243231,Took a video. 3- 4 orcas,3,22,2026,Mar,Mar-22,2026-3-22,16:22:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-22 20:43:04,47.36161,-122.79156,1,243250,,3,22,2026,Mar,Mar-22,2026-3-22,20:43:04,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-22 23:11:00,47.81252,-122.41946,5,243288,[Orca Network] Orcas southeastbound (Beriah SoOrio),3,22,2026,Mar,Mar-22,2026-3-22,23:11:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,1,0,0,0,0,0,0,1
+Orca,2026-03-23 00:45:29,47.69612,-122.43707,5,243290,"The photo wouldn't load correctly, sorry!",3,23,2026,Mar,Mar-23,2026-3-23,00:45:29,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-23 02:11:44,47.58224,-122.403,6,243293,,3,23,2026,Mar,Mar-23,2026-3-23,02:11:44,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-23 02:23:31,47.579,-122.41134,4,243294,,3,23,2026,Mar,Mar-23,2026-3-23,02:23:31,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-23 10:05:00,47.65433,-122.484,15,243337,,3,23,2026,Mar,Mar-23,2026-3-23,10:05:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-24 03:49:09,48.8753679338,-123.294397308,1,243354,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",3,24,2026,Mar,Mar-24,2026-3-24,03:49:09,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-24 04:29:55,48.8609993915,-123.337979033,1,243355,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",3,24,2026,Mar,Mar-24,2026-3-24,04:29:55,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-24 04:32:14,48.876065335,-123.297198723,1,243356,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",3,24,2026,Mar,Mar-24,2026-3-24,04:32:14,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-24 05:05:26,48.8750071937,-123.278882104,1,243357,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",3,24,2026,Mar,Mar-24,2026-3-24,05:05:26,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-25 18:45:43,47.9718,-122.34685,3,243430,,3,25,2026,Mar,Mar-25,2026-3-25,18:45:43,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-25 22:52:34,48.09583,-122.49234,4,243443,,3,25,2026,Mar,Mar-25,2026-3-25,22:52:34,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-25 22:58:22,48.08133,-122.47734,3,243444,,3,25,2026,Mar,Mar-25,2026-3-25,22:58:22,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-26 09:47:00,47.62049,-122.49804,5,243490,,3,26,2026,Mar,Mar-26,2026-3-26,09:47:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-26 10:07:00,47.31836,-122.42443,1,243492,Dash Point State Park,3,26,2026,Mar,Mar-26,2026-3-26,10:07:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-26 10:31:00,47.31867,-122.42414,1,243495,Two Individuals at Dash Point dock moving south.,3,26,2026,Mar,Mar-26,2026-3-26,10:31:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-26 10:39:00,47.31869,-122.42414,1,243497,,3,26,2026,Mar,Mar-26,2026-3-26,10:39:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-26 16:02:50,47.58474,-122.39903,3,243463,,3,26,2026,Mar,Mar-26,2026-3-26,16:02:50,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-26 16:04:49,47.58478,-122.39932,3,243464,,3,26,2026,Mar,Mar-26,2026-3-26,16:04:49,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-26 16:11:23,47.5834,-122.39928,1,243465,,3,26,2026,Mar,Mar-26,2026-3-26,16:11:23,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-26 17:25:16,47.54519,-122.38528,2,243474,,3,26,2026,Mar,Mar-26,2026-3-26,17:25:16,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-03-26 19:15:46,49.19204,-123.87306,20,243480,"SRKW DUKE POINT FERRY STOP!!!!
-",3,26,2026,Mar,Mar-26,2026-3-26,19:15:46,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0
-Southern Resident Orca,2026-03-28 20:15:00,48.51433,-122.73641,10,243602,[Orca Network] SRKWs southbound (Alisa Lemire Brooks],3,28,2026,Mar,Mar-28,2026-3-28,20:15:00,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1
-Southern Resident Orca,2026-03-28 20:47:00,48.50478,-122.74746,27,243604,"[Orca Network] SRKWs southbound, numbers/pod ID unconfirmed (Alisa Lemire Brooks)",3,28,2026,Mar,Mar-28,2026-3-28,20:47:00,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1
+",3,26,2026,Mar,Mar-26,2026-3-26,19:15:46,0,0,0,0,0,1,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
+Orca,2026-03-26 23:24:07,47.29935,-122.43953,1,243501,"Saw from my balcony in Brown point! I Got one orca on video, looked like there was at least one more. Doing a lap in the bay by the Tacoma port!",3,26,2026,Mar,Mar-26,2026-3-26,23:24:07,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-27 02:33:18,47.57576,-122.58665,3,243515,Couldn’t get a clear photo from the fast ferry but I have video clips I can email.,3,27,2026,Mar,Mar-27,2026-3-27,02:33:18,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-27 03:00:57,47.56083,-122.61467,5,243528,,3,27,2026,Mar,Mar-27,2026-3-27,03:00:57,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-27 14:26:09,47.56316,-122.531,2,243525,"One adult, possibly one juvenile.",3,27,2026,Mar,Mar-27,2026-3-27,14:26:09,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-27 15:29:24,47.59109,-122.56829,3,243527,,3,27,2026,Mar,Mar-27,2026-3-27,15:29:24,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-27 19:00:00,47.56343,-122.61748,5,243551,,3,27,2026,Mar,Mar-27,2026-3-27,19:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-27 21:29:00,47.62763,-122.58359,6,243553,,3,27,2026,Mar,Mar-27,2026-3-27,21:29:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-28 15:44:00,47.65682,-122.48721,2,243580,[Orca Network] Orcas southbound (Katie Loberstein),3,28,2026,Mar,Mar-28,2026-3-28,15:44:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-03-28 17:35:00,47.59468,-122.46645,3,243586,[Orca Network] orcas southbound (Steve Rice),3,28,2026,Mar,Mar-28,2026-3-28,17:35:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-03-28 18:31:58,48.876018418,-123.293329622,1,243593,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",3,28,2026,Mar,Mar-28,2026-3-28,18:31:58,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Southern Resident Orca,2026-03-28 20:15:00,48.51433,-122.73641,10,243602,[Orca Network] SRKWs southbound (Alisa Lemire Brooks],3,28,2026,Mar,Mar-28,2026-3-28,20:15:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Southern Resident Orca,2026-03-28 20:47:00,48.50478,-122.74746,27,243604,"[Orca Network] SRKWs southbound, numbers/pod ID unconfirmed (Alisa Lemire Brooks)",3,28,2026,Mar,Mar-28,2026-3-28,20:47:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Orca,2026-03-29 17:26:00,47.74152,-122.46685,3,243635,"[Orca Network] Orcas east, northeastbound (Lisa Robinson)",3,29,2026,Mar,Mar-29,2026-3-29,17:26:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,1,0,1,0,2
+Orca,2026-03-29 19:44:00,47.63833,-122.446,5,243645,[Orca Network] Orcas southbound (Amy Fowler),3,29,2026,Mar,Mar-29,2026-3-29,19:44:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-03-29 21:55:44,48.858172865,-123.349847905,1,243653,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",3,29,2026,Mar,Mar-29,2026-3-29,21:55:44,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-30 16:05:00,47.942,-122.50611,10,243671,"[Orca Network] ecotype unconfirmed, numbers could be more, as seen on Skunkbay webcam, southbound (Amy Folwer, Marla Smith)",3,30,2026,Mar,Mar-30,2026-3-30,16:05:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-03-31 19:30:00,48.24911,-122.61232,2,243734,,3,31,2026,Mar,Mar-31,2026-3-31,19:30:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-31 21:14:55,47.29283,-122.45817,1,243740,,3,31,2026,Mar,Mar-31,2026-3-31,21:14:55,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-31 22:04:28,47.61968,-122.36049,1,243742,,3,31,2026,Mar,Mar-31,2026-3-31,22:04:28,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-03-31 23:00:00,47.59547,-122.3875,3,243749,,3,31,2026,Mar,Mar-31,2026-3-31,23:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-01 00:01:26,47.5645,-122.40534,1,243747,,4,1,2026,Apr,Apr-1,2026-4-1,00:01:26,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-01 00:03:40,47.44937,-122.37319,5,243748,,4,1,2026,Apr,Apr-1,2026-4-1,00:03:40,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-01 00:52:00,47.529,-122.41184,3,243753,,4,1,2026,Apr,Apr-1,2026-4-1,00:52:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-01 01:12:00,47.52757,-122.40433,3,243754,,4,1,2026,Apr,Apr-1,2026-4-1,01:12:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-01 01:44:00,47.96837,-122.33552,1,243758,[Orca Network] Solo male orca northbound (Paul Kelly),4,1,2026,Apr,Apr-1,2026-4-1,01:44:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-04-01 02:07:57,47.56645,-122.40668,3,243763,,4,1,2026,Apr,Apr-1,2026-4-1,02:07:57,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-01 12:37:00,47.43841,-122.35105,1,243796,"3 seen, only 2 at once pic.",4,1,2026,Apr,Apr-1,2026-4-1,12:37:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-01 12:56:00,47.43843,-122.35106,3,243791,"3 seen, pic of 2.  Total 5+ good pics, only 1 allowed‽",4,1,2026,Apr,Apr-1,2026-4-1,12:56:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-01 13:04:00,47.43842,-122.35103,3,243792,"gave 1 pic with 2, didn't get all 3!",4,1,2026,Apr,Apr-1,2026-4-1,13:04:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-01 19:38:00,47.62384,-122.38868,3,243775,[Orca Network] Orcas eastbound (Summer Staley),4,1,2026,Apr,Apr-1,2026-4-1,19:38:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,1,0,1
+Orca,2026-04-01 20:11:55,47.6085,-122.38467,2,243778,"Two orcas moving southbound in the sound!
+",4,1,2026,Apr,Apr-1,2026-4-1,20:11:55,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-04-01 20:20:04,47.6055,-122.3416,1,243777,,4,1,2026,Apr,Apr-1,2026-4-1,20:20:04,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-02 09:31:09,48.8608063506,-123.343551795,1,243798,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",4,2,2026,Apr,Apr-2,2026-4-2,09:31:09,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-02 20:44:22,47.15083,-122.66684,1,243809,,4,2,2026,Apr,Apr-2,2026-4-2,20:44:22,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-02 21:10:50,48.61577,-123.02798,3,243810,,4,2,2026,Apr,Apr-2,2026-4-2,21:10:50,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-03 09:42:00,47.31866,-122.7937,3,243862,Case Inlet headed south towards Harstine Island. 3 or 4 orcas jumping and feeding,4,3,2026,Apr,Apr-3,2026-4-3,09:42:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-03 15:00:00,47.17345,-122.7548,2,243886,"1 LARGE 
+1 SMALLER 
+HEADING SOUTH FROM LONGBRANCH WA. AND TURNING WEST AT DEVILS HEAD",4,3,2026,Apr,Apr-3,2026-4-3,15:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-04-03 15:28:00,47.27172,-122.92652,1,243819,,4,3,2026,Apr,Apr-3,2026-4-3,15:28:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-03 15:28:55,47.27189,-122.93206,1,243820,,4,3,2026,Apr,Apr-3,2026-4-3,15:28:55,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-03 16:26:00,47.29599,-122.49942,1,243826,,4,3,2026,Apr,Apr-3,2026-4-3,16:26:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-03 17:10:00,47.2764,-122.45754,2,243832,"[Orca Network] At least two orcas eastbound close to shore (Michalyn Marzocco, Philip Coates)",4,3,2026,Apr,Apr-3,2026-4-3,17:10:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,1,0,1
+Orca,2026-04-03 18:32:32,47.29935,-122.43953,2,243843,Looked to be one female and one male. I got the female on video coming by my house close to shore! Headed out towards browns point! ,4,3,2026,Apr,Apr-3,2026-4-3,18:32:32,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-03 20:52:00,47.30038,-122.47483,2,243861,"[Orca Network] Approximate location of orcas, northwestbound, includes T65A5 (Janelle Avice McDonald)",4,3,2026,Apr,Apr-3,2026-4-3,20:52:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,1,0,0,1
+Orca,2026-04-03 21:24:01,49.30633,-122.93867,5,243864,,4,3,2026,Apr,Apr-3,2026-4-3,21:24:01,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-03 22:18:00,48.54515,-122.99052,8,243863,[Orca Network] Orcas including T49A1 northbound (SS),4,3,2026,Apr,Apr-3,2026-4-3,22:18:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-04-03 23:28:00,48.61592,-123.02832,4,243874,,4,3,2026,Apr,Apr-3,2026-4-3,23:28:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-04 08:19:00,47.76104,-122.45746,1,243933,,4,4,2026,Apr,Apr-4,2026-4-4,08:19:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-04 13:43:00,48.4981,-122.7015,8,243963,,4,4,2026,Apr,Apr-4,2026-4-4,13:43:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-04 14:48:33,47.35686,-122.44723,3,243890,,4,4,2026,Apr,Apr-4,2026-4-4,14:48:33,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-04 16:05:32,48.8609833099,-123.339550947,1,243900,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",4,4,2026,Apr,Apr-4,2026-4-4,16:05:32,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-04 17:23:14,47.51066,-122.43067,3,243905,,4,4,2026,Apr,Apr-4,2026-4-4,17:23:14,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-04 17:52:43,47.56157,-122.45476,5,243913,,4,4,2026,Apr,Apr-4,2026-4-4,17:52:43,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-04 19:18:27,47.69831,-122.47308,2,243928,,4,4,2026,Apr,Apr-4,2026-4-4,19:18:27,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-04 20:17:49,47.76005,-122.4566,1,243932,,4,4,2026,Apr,Apr-4,2026-4-4,20:17:49,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-04 21:57:08,48.19549,-123.56774,10,243940,,4,4,2026,Apr,Apr-4,2026-4-4,21:57:08,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-04 23:32:11,47.99385,-122.53461,1,243953,,4,4,2026,Apr,Apr-4,2026-4-4,23:32:11,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-05 01:00:00,48.53806,-122.67039,10,243958,"[Orca Network] Large group of orcas likely southbound, surface active (Caitlyn Blair)",4,5,2026,Apr,Apr-5,2026-4-5,01:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-04-05 01:40:00,48.52534,-122.67468,10,243961,"[Orca Network] Orcas widely spread, directional changes (Sarah Plane)",4,5,2026,Apr,Apr-5,2026-4-5,01:40:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-05 16:10:23,48.860214151,-123.347096422,1,243969,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",4,5,2026,Apr,Apr-5,2026-4-5,16:10:23,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-05 16:51:00,48.8604474755,-123.3480138,1,243972,"<br><br>WhaleSpotter thermal imaging powered automated detection, learn more at http:\/\/www.whalespotter.com
+",4,5,2026,Apr,Apr-5,2026-4-5,16:51:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-05 18:20:53,48.30929,-123.68692,2,243981,,4,5,2026,Apr,Apr-5,2026-4-5,18:20:53,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Southern Resident Orca,2026-04-05 19:00:00,39.39203,-123.8583,14,244059,"[Orca Network] K pod, southbound. SV screenshots from video by fisherman Aaron Vargas, heads up from Katherina Audley, IDs by Sara Hysong-Shimazu (Howard Garrett, Alisa Schulman-Janiger)
 
-https://www.facebook.com/alisa.schulmanjaniger/posts/pfbid0txrThpSGVmhKKyhGRZF3rP14iKG4o5BvshLfYtf9wbQb6B6iHF8L3mwp2nG6XtvCl",4,5,2026,Apr,Apr-5,2026-4-5,19:00:00,0,1,0,1,0,1,1,0,1,1,0,0,0,0,0,0,0,1
+https://www.facebook.com/alisa.schulmanjaniger/posts/pfbid0txrThpSGVmhKKyhGRZF3rP14iKG4o5BvshLfYtf9wbQb6B6iHF8L3mwp2nG6XtvCl",4,5,2026,Apr,Apr-5,2026-4-5,19:00:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Orca,2026-04-05 21:25:02,47.22287,-122.80976,3,243994,,4,5,2026,Apr,Apr-5,2026-4-5,21:25:02,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-05 22:38:59,47.17704,-122.81525,3,243995,,4,5,2026,Apr,Apr-5,2026-4-5,22:38:59,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-06 00:30:45,39.1985,-123.77734,8,244008,,4,6,2026,Apr,Apr-6,2026-4-6,00:30:45,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-06 01:10:16,48.19135,-122.85631,4,244007,"From the clipper
+",4,6,2026,Apr,Apr-6,2026-4-6,01:10:16,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-06 19:39:46,49.42638,-123.48181,3,244029,,4,6,2026,Apr,Apr-6,2026-4-6,19:39:46,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-06 19:53:50,47.27516,-122.81459,3,244030,,4,6,2026,Apr,Apr-6,2026-4-6,19:53:50,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-06 20:06:50,47.27512,-122.81526,3,244031,,4,6,2026,Apr,Apr-6,2026-4-6,20:06:50,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-07 02:23:45,47.21838,-122.80394,3,244085,,4,7,2026,Apr,Apr-7,2026-4-7,02:23:45,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Southern Resident Orca,2026-04-07 10:52:00,39.44083,-123.86826,14,244058,"[Orca Network] K pod sighted near here yesterday. On her FB page about that sighting, Alisa mentioned this sighting (heading northwest, aka northwestbound). (Howard Garrett, Alisa Schulman-Janiger)
 
-https://www.facebook.com/alisa.schulmanjaniger/posts/pfbid0txrThpSGVmhKKyhGRZF3rP14iKG4o5BvshLfYtf9wbQb6B6iHF8L3mwp2nG6XtvCl?comment_id=810933648244731&reply_comment_id=1226294405971989",4,7,2026,Apr,Apr-7,2026-4-7,10:52:00,0,1,0,1,0,1,1,0,1,0,0,0,1,0,1,0,0,2
+https://www.facebook.com/alisa.schulmanjaniger/posts/pfbid0txrThpSGVmhKKyhGRZF3rP14iKG4o5BvshLfYtf9wbQb6B6iHF8L3mwp2nG6XtvCl?comment_id=810933648244731&reply_comment_id=1226294405971989",4,7,2026,Apr,Apr-7,2026-4-7,10:52:00,0,1,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,1,0,1,0,0,2
+Orca,2026-04-07 20:28:19,48.52727,-122.80003,3,244078,,4,7,2026,Apr,Apr-7,2026-4-7,20:28:19,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-07 21:54:04,47.20118,-122.5829,2,244082,,4,7,2026,Apr,Apr-7,2026-4-7,21:54:04,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-08 04:37:07,48.09476,-122.38848,1,244094,It was dark but we could hear them! It was so cool! ,4,8,2026,Apr,Apr-8,2026-4-8,04:37:07,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-08 11:05:00,48.58283,-122.89833,2,244108,We were on the ferry going from Orcas to Lopez and saw 2 or 3 orcas,4,8,2026,Apr,Apr-8,2026-4-8,11:05:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-08 19:35:00,48.62033,-122.99969,4,244110,spotted from cattle point light house across the water,4,8,2026,Apr,Apr-8,2026-4-8,19:35:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-08 22:41:58,49.00154,-123.82029,4,244104,,4,8,2026,Apr,Apr-8,2026-4-8,22:41:58,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-08 22:52:03,48.97104,-123.78826,4,244129,,4,8,2026,Apr,Apr-8,2026-4-8,22:52:03,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-08 23:02:10,48.54166,-122.97,2,244106,,4,8,2026,Apr,Apr-8,2026-4-8,23:02:10,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-09 00:00:07,47.18689,-122.59902,3,244107,Mother with 2 young. Slowly feeding ,4,9,2026,Apr,Apr-9,2026-4-9,00:00:07,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-09 19:28:00,48.10415,-122.50529,2,244123,,4,9,2026,Apr,Apr-9,2026-4-9,19:28:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-09 20:03:59,48.70036,-122.81936,1,244126,,4,9,2026,Apr,Apr-9,2026-4-9,20:03:59,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-10 00:40:17,48.90883,-123.23134,1,244140,,4,10,2026,Apr,Apr-10,2026-4-10,00:40:17,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-10 10:00:00,47.3555,-122.59407,4,244168,,4,10,2026,Apr,Apr-10,2026-4-10,10:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-10 19:30:38,48.20966,-122.404,8,244198,"I have a number of videos 
+
+Two whale watching vessels were there ",4,10,2026,Apr,Apr-10,2026-4-10,19:30:38,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-10 21:59:01,47.95183,-122.33834,2,244158,,4,10,2026,Apr,Apr-10,2026-4-10,21:59:01,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-11 03:31:52,47.7625,-122.38418,1,244171,,4,11,2026,Apr,Apr-11,2026-4-11,03:31:52,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-11 23:51:44,47.86008,-122.62497,1,244208,,4,11,2026,Apr,Apr-11,2026-4-11,23:51:44,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-11 23:53:46,47.53066,-122.47767,5,244209,,4,11,2026,Apr,Apr-11,2026-4-11,23:53:46,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-12 00:26:34,47.52976,-122.40147,8,244211,,4,12,2026,Apr,Apr-12,2026-4-12,00:26:34,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-12 17:53:37,48.61304,-123.28895,3,244224,,4,12,2026,Apr,Apr-12,2026-4-12,17:53:37,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-12 22:38:00,48.65946,-122.72956,4,244242,[Orca Network] At least 4 orcas northwestbound (SS),4,12,2026,Apr,Apr-12,2026-4-12,22:38:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,1,0,0,1
+Orca,2026-04-13 00:55:00,47.55704,-122.50251,3,244250,[Orca Network],4,13,2026,Apr,Apr-13,2026-4-13,00:55:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-13 15:39:00,48.60953,-122.75049,5,244256,"[Orca Network] number approximate, southbound (Pete Ancich)",4,13,2026,Apr,Apr-13,2026-4-13,15:39:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-04-13 15:56:34,48.42162,-123.36822,20,244258,,4,13,2026,Apr,Apr-13,2026-4-13,15:56:34,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-13 20:44:00,47.81606,-122.47839,3,244277,[Orca Network] Orcas southbound (Sara Frey),4,13,2026,Apr,Apr-13,2026-4-13,20:44:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-04-13 23:02:56,48.6862,-123.41012,5,244281,,4,13,2026,Apr,Apr-13,2026-4-13,23:02:56,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-14 16:35:00,47.33237,-122.41277,2,244303,[Orca Network] westbound (Isadora M.),4,14,2026,Apr,Apr-14,2026-4-14,16:35:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,1,1
+Orca,2026-04-14 16:42:00,47.33191,-122.4269,2,244300,"Heading south, mid channel",4,14,2026,Apr,Apr-14,2026-4-14,16:42:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-04-15 20:08:43,49.4264,-123.48187,2,244355,,4,15,2026,Apr,Apr-15,2026-4-15,20:08:43,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-15 20:09:46,47.98066,-122.33317,8,244356,,4,15,2026,Apr,Apr-15,2026-4-15,20:09:46,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-15 21:26:10,48.0845,-122.917,1,244361,,4,15,2026,Apr,Apr-15,2026-4-15,21:26:10,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-16 01:42:06,47.63424,-122.94289,1,244374,,4,16,2026,Apr,Apr-16,2026-4-16,01:42:06,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-16 02:26:33,47.94783,-122.44067,3,244375,,4,16,2026,Apr,Apr-16,2026-4-16,02:26:33,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-16 18:24:22,48.18355,-122.94423,7,244390,,4,16,2026,Apr,Apr-16,2026-4-16,18:24:22,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-17 18:15:17,48.42534,-122.67874,2,244440,,4,17,2026,Apr,Apr-17,2026-4-17,18:15:17,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-19 17:07:46,36.71894,-122.01046,4,244553,"Sea lion sighted, too!<br><br>Submitted by a Cascadia Trusted Observer Via App
+",4,19,2026,Apr,Apr-19,2026-4-19,17:07:46,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-19 17:49:11,36.68783,-122.01866,4,244554,"One calf, one adult male<br><br>Submitted by a Cascadia Trusted Observer Via App
+",4,19,2026,Apr,Apr-19,2026-4-19,17:49:11,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-19 18:01:44,36.66384,-122.01771,4,244555,"CA051A subgroup, traveling southbound<br><br>Submitted by a Cascadia Trusted Observer Via App
+",4,19,2026,Apr,Apr-19,2026-4-19,18:01:44,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-04-19 21:51:18,48.14152,-123.4268,2,244580,,4,19,2026,Apr,Apr-19,2026-4-19,21:51:18,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-19 22:03:07,48.96756,-123.55677,1,244581,,4,19,2026,Apr,Apr-19,2026-4-19,22:03:07,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-20 12:22:00,48.54072,-122.70209,4,244647,,4,20,2026,Apr,Apr-20,2026-4-20,12:22:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-20 14:40:00,48.41574,-122.61044,8,244623,Edit by ALB to move pin to waterway. Location not exact. Orcas did continue east. ,4,20,2026,Apr,Apr-20,2026-4-20,14:40:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-20 20:49:00,48.05262,-122.4122,1,244640,,4,20,2026,Apr,Apr-20,2026-4-20,20:49:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-20 22:29:00,47.99415,-122.3299,6,244642,,4,20,2026,Apr,Apr-20,2026-4-20,22:29:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-21 15:15:38,48.68612,-123.40997,4,244662,,4,21,2026,Apr,Apr-21,2026-4-21,15:15:38,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-22 11:18:00,48.39306,-122.58666,4,244731,,4,22,2026,Apr,Apr-22,2026-4-22,11:18:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-22 19:48:00,47.78861,-122.46098,2,244722,"[Orca Network] Possible orcas, numbers approximate, northbound (Leigh Anne Hardy)",4,22,2026,Apr,Apr-22,2026-4-22,19:48:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-04-23 15:00:00,47.97072,-122.34204,3,244747,[Orca Network] southbound (Missy Main),4,23,2026,Apr,Apr-23,2026-4-23,15:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-04-23 20:39:21,47.95193,-122.29763,2,244775,,4,23,2026,Apr,Apr-23,2026-4-23,20:39:21,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-24 01:00:00,48.4566,-123.02148,2,244787,,4,24,2026,Apr,Apr-24,2026-4-24,01:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-24 16:00:00,47.79651,-122.48811,3,244800,,4,24,2026,Apr,Apr-24,2026-4-24,16:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-24 16:57:00,47.70921,-122.63203,1,244803,Edit by ALB w ID T65A3 Amir traveling alone. ,4,24,2026,Apr,Apr-24,2026-4-24,16:57:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-24 17:17:00,47.69083,-122.60984,1,244804,Edit by Alisa to add ID T65A3.,4,24,2026,Apr,Apr-24,2026-4-24,17:17:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-24 18:16:16,36.80566,-121.81812,3,244813,,4,24,2026,Apr,Apr-24,2026-4-24,18:16:16,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-24 23:54:52,47.15665,-122.87058,1,244843,,4,24,2026,Apr,Apr-24,2026-4-24,23:54:52,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-25 00:09:55,48.52218,-123.36808,2,244838,"Seen from shore. Whale watching boat nearby 
+",4,25,2026,Apr,Apr-25,2026-4-25,00:09:55,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-25 00:12:34,48.52216,-123.3681,2,244839,,4,25,2026,Apr,Apr-25,2026-4-25,00:12:34,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-26 01:05:12,38.52899,-123.26281,2,244891,,4,26,2026,Apr,Apr-26,2026-4-26,01:05:12,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-26 01:15:39,38.52904,-123.26278,2,244956,,4,26,2026,Apr,Apr-26,2026-4-26,01:15:39,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-26 17:46:25,48.79499,-123.59996,3,244907,,4,26,2026,Apr,Apr-26,2026-4-26,17:46:25,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-26 21:14:21,48.12657,-122.43516,2,244932,,4,26,2026,Apr,Apr-26,2026-4-26,21:14:21,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-27 03:25:19,48.49529,-122.7266,5,244952,,4,27,2026,Apr,Apr-27,2026-4-27,03:25:19,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-27 18:31:00,48.41667,-122.61651,8,244985,,4,27,2026,Apr,Apr-27,2026-4-27,18:31:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-29 01:56:47,48.40424,-122.64765,1,245073,,4,29,2026,Apr,Apr-29,2026-4-29,01:56:47,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-04-29 14:16:55,48.79502,-123.59995,2,245083,,4,29,2026,Apr,Apr-29,2026-4-29,14:16:55,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-01 17:30:00,49.32341,-122.9237,4,245156,,5,1,2026,May,May-1,2026-5-1,17:30:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-01 18:22:00,48.51079,-123.25709,1,245161,,5,1,2026,May,May-1,2026-5-1,18:22:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-01 18:50:10,36.65853,-121.646,7,245163,,5,1,2026,May,May-1,2026-5-1,18:50:10,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-01 22:15:33,48.61267,-123.09769,5,245181,,5,1,2026,May,May-1,2026-5-1,22:15:33,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-01 23:41:00,48.59261,-122.94489,6,245187,[Orca Network] Orcas eastbound (Steve Czerniak),5,1,2026,May,May-1,2026-5-1,23:41:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,1,0,1
+Orca,2026-05-02 02:58:30,48.12016,-122.90134,3,245192,,5,2,2026,May,May-2,2026-5-2,02:58:30,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-02 09:55:00,49.31419,-123.13923,6,245567,"Follow up, this is 2nd hand of from  video by a_wild_dawn_appears/TT of pod passing under the LGB. ",5,2,2026,May,May-2,2026-5-2,09:55:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-02 18:50:21,48.29908,-122.82142,1,245234,,5,2,2026,May,May-2,2026-5-2,18:50:21,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-03 02:21:18,48.59966,-122.85467,1,245260,Looked like they were heading west towards Shaw from east sound. ,5,3,2026,May,May-3,2026-5-3,02:21:18,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,1,1
+Orca,2026-05-03 19:30:00,48.45392,-123.02603,5,245415,Headed south off America Camp,5,3,2026,May,May-3,2026-5-3,19:30:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-04 02:55:47,48.36739,-125.07821,8,245454,"7-9 Orcas investigating the Cunard Queen Elizabeth as we neared Neah Bay
+",5,4,2026,May,May-4,2026-5-4,02:55:47,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-04 03:09:00,48.41958,-125.04787,5,245456,"Edit by Alisa LB. When zoomed in, image shows 2 orcas who both appear to be males. ",5,4,2026,May,May-4,2026-5-4,03:09:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-04 03:09:56,48.41958,-125.04787,5,245456,,5,4,2026,May,May-4,2026-5-4,03:09:56,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-04 16:57:20,47.8433,-122.61751,1,245621,,5,4,2026,May,May-4,2026-5-4,16:57:20,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-04 16:59:48,47.8485,-122.63767,1,245549,,5,4,2026,May,May-4,2026-5-4,16:59:48,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-04 21:00:08,48.4345,-123.44267,2,245593,,5,4,2026,May,May-4,2026-5-4,21:00:08,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-06 10:57:00,48.7483,-122.84249,2,245792,Just outside the State Park cove at Matia.,5,6,2026,May,May-6,2026-5-6,10:57:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-08 18:53:56,48.51614,-123.1525,3,246003,,5,8,2026,May,May-8,2026-5-8,18:53:56,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-08 18:55:40,48.5186,-123.1517,2,246002,,5,8,2026,May,May-8,2026-5-8,18:55:40,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-09 00:44:00,48.54137,-122.97128,2,246023,,5,9,2026,May,May-9,2026-5-9,00:44:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-09 15:25:00,47.82116,-122.27908,3,246041,,5,9,2026,May,May-9,2026-5-9,15:25:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-09 23:40:00,48.18642,-122.58055,5,246101,,5,9,2026,May,May-9,2026-5-9,23:40:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-09 23:48:57,48.18468,-122.58793,5,246089,Can’t upload video but I have a couple,5,9,2026,May,May-9,2026-5-9,23:48:57,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-10 10:06:00,48.61062,-123.0595,6,246165,,5,10,2026,May,May-10,2026-5-10,10:06:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-10 12:00:00,49.27814,-123.16383,2,246184,whales hunting off kits beach ,5,10,2026,May,May-10,2026-5-10,12:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-10 18:25:18,48.14184,-123.42647,1,246130,,5,10,2026,May,May-10,2026-5-10,18:25:18,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-10 20:19:57,48.53603,-122.95129,1,246152,,5,10,2026,May,May-10,2026-5-10,20:19:57,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-10 21:13:00,47.32663,-122.54448,2,246155,,5,10,2026,May,May-10,2026-5-10,21:13:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-10 21:30:00,48.62522,-122.73433,9,246160,9 whales,5,10,2026,May,May-10,2026-5-10,21:30:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-10 22:46:12,47.24829,-122.5491,1,246170,,5,10,2026,May,May-10,2026-5-10,22:46:12,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-11 16:40:13,47.23216,-122.92377,3,246238,looked like 3 heading south into peale passage ,5,11,2026,May,May-11,2026-5-11,16:40:13,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-05-11 16:41:56,47.226,-122.92384,3,246239,looks like 3 heading south into peale passing in between harstine and squaxin islands ,5,11,2026,May,May-11,2026-5-11,16:41:56,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-05-11 18:42:53,48.39839,-122.95835,1,246245,,5,11,2026,May,May-11,2026-5-11,18:42:53,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-11 21:30:21,48.42116,-122.95184,10,246273,10 orcas including 2 males (Stanley and Amir) seen in Strait de Juan de Fuca. Super friendly under and near our boat with babies practicing with - lots of tail slaps and breaches! Incredible show. ,5,11,2026,May,May-11,2026-5-11,21:30:21,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-11 21:51:10,48.42627,-122.95059,9,246256,,5,11,2026,May,May-11,2026-5-11,21:51:10,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-11 21:55:00,47.25189,-122.55994,2,246262,[Orca Network] Two orcas seen from Narrows Beach direction unknown (Paige Scannell-Van Der Vilet),5,11,2026,May,May-11,2026-5-11,21:55:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-11 22:36:26,47.32238,-122.77639,4,246265,,5,11,2026,May,May-11,2026-5-11,22:36:26,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-12 10:04:00,48.34855,-122.83003,9,246350,,5,12,2026,May,May-12,2026-5-12,10:04:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-12 12:08:00,47.72681,-124.10384,3,246377,,5,12,2026,May,May-12,2026-5-12,12:08:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-12 12:20:00,45.36068,-125.29153,7,246381,,5,12,2026,May,May-12,2026-5-12,12:20:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-12 16:51:00,47.52657,-122.43657,5,246319,"[Orca Network] Orcas hunting, trending northbound (Mary Hartmann)",5,12,2026,May,May-12,2026-5-12,16:51:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-05-12 16:58:00,47.53897,-122.43997,5,246322,[Orca Network] Orcas northbound (Mary Hartmann),5,12,2026,May,May-12,2026-5-12,16:58:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-05-12 17:18:00,47.56759,-122.44241,5,246324,[Orca Network] Orcas northbound (Hannah Marie Munro),5,12,2026,May,May-12,2026-5-12,17:18:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-05-12 17:38:00,47.58102,-122.45992,5,246327,[Orca Network] Orcas northbound (Hannah Marie Munro),5,12,2026,May,May-12,2026-5-12,17:38:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-05-12 17:45:00,47.59145,-122.46238,5,246329,[Orca Network] Orcas northbound (Orca Updates),5,12,2026,May,May-12,2026-5-12,17:45:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-05-12 17:53:00,47.61046,-122.4663,5,246330,[Orca Network] Orcas northbound (Hannah Marie Munro),5,12,2026,May,May-12,2026-5-12,17:53:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-05-12 19:22:13,48.49795,-123.14747,3,246336,,5,12,2026,May,May-12,2026-5-12,19:22:13,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-12 19:31:49,47.68133,-122.47,4,246337,,5,12,2026,May,May-12,2026-5-12,19:31:49,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-13 18:53:55,48.91143,-123.45117,3,246408,,5,13,2026,May,May-13,2026-5-13,18:53:55,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-15 16:30:00,48.18086,-122.77279,1,246621,[Orca Network] Lone male orca SE bound (Trevor Tillman),5,15,2026,May,May-15,2026-5-15,16:30:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,1,0,0,0,0,0,0,1
+Orca,2026-05-15 16:34:00,47.64633,-122.59086,5,246607,"Edit by Alisa LB. Moving from north of Agate bridge, where they were at 0805 to an approximate location based on other confirmed reports. ",5,15,2026,May,May-15,2026-5-15,16:34:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-15 17:17:00,47.62312,-122.5835,1,246626,[Orca Network] 4 orcas southbound (Amy Fowler),5,15,2026,May,May-15,2026-5-15,17:17:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-05-15 17:24:00,47.6127,-122.58625,4,246629,[Orca Network] Southbound past Ilahee dock (Melissa Bird),5,15,2026,May,May-15,2026-5-15,17:24:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-05-15 17:28:00,48.15224,-122.71205,1,246637,[Orca Network] Lone male orca southbound E of midchannel (Kim Parry),5,15,2026,May,May-15,2026-5-15,17:28:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-05-15 17:33:00,47.60074,-122.58365,4,246639,[Orca Network] Orcas southbound on both sides of the channel (Bart Rulon),5,15,2026,May,May-15,2026-5-15,17:33:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-05-15 17:54:30,47.57033,-122.59834,7,246657,,5,15,2026,May,May-15,2026-5-15,17:54:30,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-15 18:55:00,47.25827,-122.6039,2,246683,[Orca Network] 2 orcas SE bound towards Tacoma Narrows (Jennifer Balcom),5,15,2026,May,May-15,2026-5-15,18:55:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,1,0,0,0,0,0,0,1
+Orca,2026-05-15 19:09:00,49.33225,-124.27698,1,246675,"single male Orca
+ headed 
+north toward French Cr",5,15,2026,May,May-15,2026-5-15,19:09:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-15 19:10:00,49.33334,-124.27701,1,246676,,5,15,2026,May,May-15,2026-5-15,19:10:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-15 19:44:00,47.56277,-122.61786,5,246681,,5,15,2026,May,May-15,2026-5-15,19:44:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-16 00:54:24,48.53755,-123.01519,5,246723,,5,16,2026,May,May-16,2026-5-16,00:54:24,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-16 16:24:20,50.807,-127.50784,3,246753,,5,16,2026,May,May-16,2026-5-16,16:24:20,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-17 08:06:00,47.90505,-122.60148,4,246838,"Hood Canal, just passing Driftwood Key heading south. 1 male and looked like 2 or 3 females? One looked small, could have been a juvenile.",5,17,2026,May,May-17,2026-5-17,08:06:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-05-17 20:50:00,47.61234,-122.43686,1,246849,[Orca Network] Possible solo orca northbound (Zachary Heistand),5,17,2026,May,May-17,2026-5-17,20:50:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-05-17 21:04:34,47.61002,-122.40031,1,246846,,5,17,2026,May,May-17,2026-5-17,21:04:34,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-05-17 23:05:00,47.72287,-122.40898,1,246853,"Solo orca, too far to confirm but looks possible for Indy, T65A5, slow northbound travel with spurts of stalling, logging, and making directional changes. ",5,17,2026,May,May-17,2026-5-17,23:05:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-05-17 23:36:00,48.23584,-122.8144,5,246861,[Orca Network] Orcas including a small calf southbound (Jason Cook),5,17,2026,May,May-17,2026-5-17,23:36:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-05-17 23:46:00,48.20679,-122.79062,5,246863,[Orca Network] Orcas including a small calf southbound (Jason Cook),5,17,2026,May,May-17,2026-5-17,23:46:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1

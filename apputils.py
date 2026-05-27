@@ -163,6 +163,7 @@ def acartia_map_preproc(year, acartia_path, pod="All pods"):
     srkwc_k=srkwc[srkwc.K==1].reset_index()
     srkwc_l=srkwc[srkwc.L==1].reset_index()
     srkwc_j=srkwc[srkwc.J==1].reset_index()
+    print(srkwc.head())
     if pod=="L pod":
         srkw_dat=srkwc_l
     elif pod=="K pod":
@@ -170,7 +171,7 @@ def acartia_map_preproc(year, acartia_path, pod="All pods"):
     elif pod=="J pod":
         srkw_dat=srkwc_j
     elif pod=="All pods":
-        srkw_dat=srkwc[srkwc.srkw==1]
+        srkw_dat=srkwc
     return srkw_dat
 
 def twm_map_preproc(year, twm_path, pod="All pods"):

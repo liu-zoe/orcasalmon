@@ -263,7 +263,7 @@ def proc_acartia(acartia_path):
         acartia = pd.concat([acartia_feb, acartia], ignore_index=True)
 
     # print(acartia.tail(3))
-
+    acartia = acartia[acartia['created']!= "Wed Jun 10 2026 05:58:49 GMT+0000 (Coordinated Universal Time)"]
     acartia = acartia[~acartia['created'].isnull()].copy()
     acartia['created'] = acartia['created'].apply(cleandates)
     acartia['m'] = pd.DatetimeIndex(acartia['created']).month

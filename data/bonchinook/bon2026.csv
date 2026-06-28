@@ -162,20 +162,27 @@ Bonneville,2026-06-09,Su,1332,119,63,24,174,,,57294,42,146,188,82,,,,16.3
 Bonneville,2026-06-10,Su,1297,134,81,28,238,,,55069,59,67,126,78,,,,16.2
 Bonneville,2026-06-11,Su,1665,201,100,30,404,,,171866,40,96,136,94,,,,16.5
 Bonneville,2026-06-12,Su,1198,175,95,26,585,,,185242,123,304,427,196,,,,16.7
-Bonneville,2026-06-13,Su,1330,175,96,28,771,,,185064,138,297,435,164,,,,16.8
+Bonneville,2026-06-13,Su,1330,175,96,28,771,,,185064,138,297,435,164,,,,16.9
 Bonneville,2026-06-14,Su,1262,194,95,19,1018,,,113571,100,182,282,248,,,,17.1
 Bonneville,2026-06-15,Su,1704,212,115,40,1258,,,117453,207,280,487,289,,,,17.5
 Bonneville,2026-06-16,Su,1767,209,147,48,1667,,,142322,604,364,968,416,,,,17.6
 Bonneville,2026-06-17,Su,1215,151,142,48,2193,,,113750,461,155,616,518,,,,17.7
-Bonneville,2026-06-18,Su,1186,126,108,21,2101,,,106833,234,-146,88,,,,,17.7
-Bonneville,2026-06-19,Su,1420,199,165,53,3036,,,107529,164,-87,77,,,,,17.9
-Bonneville,2026-06-20,Su,1607,182,188,69,3984,,,94080,309,,309,,,,,18.1
+Bonneville,2026-06-18,Su,1186,126,108,21,2101,,,106833,234,-146,88,236,,,,17.7
+Bonneville,2026-06-19,Su,1420,199,165,53,3036,,,107529,164,-87,77,224,,,,17.9
+Bonneville,2026-06-20,Su,1607,182,188,69,3984,,,94080,309,148,457,394,,,,18.1
+Bonneville,2026-06-21,Su,1571,217,173,51,4553,,,76891,227,465,692,242,,,,18.2
+Bonneville,2026-06-22,Su,1472,145,149,53,4841,,,99385,377,245,622,303,,,,18.6
+Bonneville,2026-06-23,Su,1447,185,218,78,5171,,,73855,497,61,558,163,,,,18.9
+Bonneville,2026-06-24,Su,1469,129,168,52,4062,,,63961,243,260,503,169,,,,19.3
+Bonneville,2026-06-25,Su,1661,213,230,76,4812,,,84502,502,438,940,100,,,,19.4
+Bonneville,2026-06-26,Su,1597,183,266,90,4748,,,55098,181,142,323,,,,,19.2
+Bonneville,2026-06-27,Su,1412,154,321,120,3062,,,33544,174,,174,,,,,19.1
 Notes:
 Columbia River DART
 2026 Adult Passage Daily Counts at Bonneville
-2026-01-01 to 2026-06-20
-Generated 21 Jun 2026 13:02:38 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2026-06-20. Last possible Data Date is 2026-06-20.
+2026-01-01 to 2026-06-27
+Generated 28 Jun 2026 15:08:06 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2026-06-27. Last possible Data Date is 2026-06-27.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular purpose.
 USACE Dams Video and Live Counting: From November through March; video tape fish counting occurs at US Army Corps of Engineers dams with fish ladders on the Columbia and Snake Rivers. Fish counting by video tape takes at least a few days to process: the fish counters have to make; collect; and read the tapes; and then submit their fish counts. DART retrieves and posts the data as soon as it is made available. On April 1; live fish counting resumes at all 8 Columbia River and Snake River Corps dams with fish ladders: from April through October each year for 16 hours each day; fish counters working at each fish ladder look directly into the fish ladders to count the fish passing by.

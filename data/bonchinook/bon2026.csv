@@ -178,25 +178,33 @@ Bonneville,2026-06-25,Su,1661,213,230,76,4812,,,84502,502,438,940,100,,,,19.4
 Bonneville,2026-06-26,Su,1597,183,266,90,4748,,,55098,181,142,323,89,,,,19.2
 Bonneville,2026-06-27,Su,1412,154,321,120,3062,,,33544,174,327,501,56,,,,19.1
 Bonneville,2026-06-28,Su,1201,74,296,116,1952,,,63109,106,175,281,50,,,,18.8
-Bonneville,2026-06-29,Su,1050,129,231,91,2829,,,25942,101,33,134,42,,,,18.5
-Bonneville,2026-06-30,Su,1344,136,184,61,2527,,,6516,66,42,108,44,,,,18.3
+Bonneville,2026-06-29,Su,1050,129,231,91,2829,,,25942,101,33,134,42,,,,18.4
+Bonneville,2026-06-30,Su,1344,136,184,61,2527,,,6516,66,42,108,44,,,,18.2
 Bonneville,2026-07-01,Su,960,137,226,76,2074,,,16933,39,104,143,71,,,,18.3
-Bonneville,2026-07-02,Su,961,143,257,76,1987,,,14324,79,206,285,82,,,,18.4
-Bonneville,2026-07-03,Su,942,150,259,74,2175,,,17141,152,409,561,121,,,,18.7
+Bonneville,2026-07-02,Su,961,143,257,76,1987,,,14324,79,206,285,82,,,,18.5
+Bonneville,2026-07-03,Su,942,150,259,74,2175,,,17141,152,409,561,121,,,,18.8
 Bonneville,2026-07-04,Su,1115,142,338,112,1939,,,11836,424,454,878,273,,,,19
-Bonneville,2026-07-05,Su,1075,132,400,139,2004,,,7357,319,408,727,243,,,,19.1
-Bonneville,2026-07-06,Su,935,127,334,134,1591,,,8479,237,84,321,330,,,,19.4
+Bonneville,2026-07-05,Su,1075,132,400,139,2004,,,7357,319,408,727,243,,,,19.2
+Bonneville,2026-07-06,Su,935,127,334,134,1591,,,8479,237,84,321,330,,,,19.5
 Bonneville,2026-07-07,Su,1106,116,376,139,1251,,,7068,362,520,882,230,,,,19.5
 Bonneville,2026-07-08,Su,1075,93,463,215,927,,,4408,299,370,669,157,,,,19.5
 Bonneville,2026-07-09,Su,889,89,491,201,612,,,3058,389,522,911,125,,,,19.5
-Bonneville,2026-07-10,Su,624,70,445,171,436,,,4716,426,495,921,,,,,19.6
-Bonneville,2026-07-11,Su,578,34,404,182,468,,,3920,420,,420,,,,,19.6
+Bonneville,2026-07-10,Su,624,70,445,171,436,,,4716,426,495,921,164,,,,19.6
+Bonneville,2026-07-11,Su,578,34,404,182,468,,,3920,420,450,870,209,,,,19.6
+Bonneville,2026-07-12,Su,525,64,351,154,463,,,2814,214,306,520,112,,,,19.7
+Bonneville,2026-07-13,Su,420,66,462,196,367,,,2931,267,290,557,100,,,,19.9
+Bonneville,2026-07-14,Su,432,51,475,226,221,,,2161,247,444,691,103,,,,20.1
+Bonneville,2026-07-15,Su,364,34,503,247,150,,,2470,252,274,526,130,,,,20.4
+Bonneville,2026-07-16,Su,427,48,547,264,129,,,2071,236,278,514,139,,,,20.4
+Bonneville,2026-07-17,Su,350,40,501,232,119,,,1223,267,456,723,77,,,,20.4
+Bonneville,2026-07-18,Su,345,39,509,257,79,,,1370,337,482,819,95,,,,20.5
+Bonneville,2026-07-19,Su,344,34,547,266,59,,,1110,308,,308,107,,,,20.7
 Notes:
 Columbia River DART
 2026 Adult Passage Daily Counts at Bonneville
-2026-01-01 to 2026-07-11
-Generated 12 Jul 2026 19:21:57 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2026-07-11. Last possible Data Date is 2026-07-11.
+2026-01-01 to 2026-07-19
+Generated 20 Jul 2026 17:20:13 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2026-07-19. Last possible Data Date is 2026-07-19.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular purpose.
 USACE Dams Video and Live Counting: From November through March; video tape fish counting occurs at US Army Corps of Engineers dams with fish ladders on the Columbia and Snake Rivers. Fish counting by video tape takes at least a few days to process: the fish counters have to make; collect; and read the tapes; and then submit their fish counts. DART retrieves and posts the data as soon as it is made available. On April 1; live fish counting resumes at all 8 Columbia River and Snake River Corps dams with fish ladders: from April through October each year for 16 hours each day; fish counters working at each fish ladder look directly into the fish ladders to count the fish passing by.

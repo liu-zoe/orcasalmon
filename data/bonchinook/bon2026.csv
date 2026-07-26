@@ -188,7 +188,7 @@ Bonneville,2026-07-05,Su,1075,132,400,139,2004,,,7357,319,408,727,243,,,,19.2
 Bonneville,2026-07-06,Su,935,127,334,134,1591,,,8479,237,84,321,330,,,,19.5
 Bonneville,2026-07-07,Su,1106,116,376,139,1251,,,7068,362,520,882,230,,,,19.5
 Bonneville,2026-07-08,Su,1075,93,463,215,927,,,4408,299,370,669,157,,,,19.5
-Bonneville,2026-07-09,Su,889,89,491,201,612,,,3058,389,522,911,125,,,,19.5
+Bonneville,2026-07-09,Su,889,89,491,201,612,,,3058,389,522,911,125,,,,19.4
 Bonneville,2026-07-10,Su,624,70,445,171,436,,,4716,426,495,921,164,,,,19.6
 Bonneville,2026-07-11,Su,578,34,404,182,468,,,3920,420,450,870,209,,,,19.6
 Bonneville,2026-07-12,Su,525,64,351,154,463,,,2814,214,306,520,112,,,,19.7
@@ -198,13 +198,19 @@ Bonneville,2026-07-15,Su,364,34,503,247,150,,,2470,252,274,526,130,,,,20.4
 Bonneville,2026-07-16,Su,427,48,547,264,129,,,2071,236,278,514,139,,,,20.4
 Bonneville,2026-07-17,Su,350,40,501,232,119,,,1223,267,456,723,77,,,,20.4
 Bonneville,2026-07-18,Su,345,39,509,257,79,,,1370,337,482,819,95,,,,20.5
-Bonneville,2026-07-19,Su,344,34,547,266,59,,,1110,308,,308,107,,,,20.7
+Bonneville,2026-07-19,Su,344,34,547,266,59,,,1110,308,308,616,107,,,,20.7
+Bonneville,2026-07-20,Su,355,36,524,278,75,,,1452,111,298,409,94,,,,20.9
+Bonneville,2026-07-21,Su,426,54,633,285,58,,,828,100,180,280,108,,,,20.9
+Bonneville,2026-07-22,Su,413,47,763,344,28,1,,1003,65,253,318,124,,,,21.4
+Bonneville,2026-07-23,Su,417,36,662,305,45,,,628,186,342,528,172,,,,21.7
+Bonneville,2026-07-24,Su,456,97,936,491,46,,,621,106,359,465,,,,,21.7
+Bonneville,2026-07-25,Su,392,44,986,431,20,,,408,117,,117,,,,,21.9
 Notes:
 Columbia River DART
 2026 Adult Passage Daily Counts at Bonneville
-2026-01-01 to 2026-07-19
-Generated 20 Jul 2026 17:20:13 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2026-07-19. Last possible Data Date is 2026-07-19.
+2026-01-01 to 2026-07-25
+Generated 26 Jul 2026 16:38:51 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2026-07-25. Last possible Data Date is 2026-07-25.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular purpose.
 USACE Dams Video and Live Counting: From November through March; video tape fish counting occurs at US Army Corps of Engineers dams with fish ladders on the Columbia and Snake Rivers. Fish counting by video tape takes at least a few days to process: the fish counters have to make; collect; and read the tapes; and then submit their fish counts. DART retrieves and posts the data as soon as it is made available. On April 1; live fish counting resumes at all 8 Columbia River and Snake River Corps dams with fish ladders: from April through October each year for 16 hours each day; fish counters working at each fish ladder look directly into the fish ladders to count the fish passing by.

@@ -266,14 +266,21 @@ Bonneville,2026-09-21,Fa,3871,978,199,36,,1084,276,,3,3,6,4,,,,
 Bonneville,2026-09-22,Fa,3225,784,128,35,,760,219,,4,4,8,3,,,,
 Bonneville,2026-09-23,Fa,3497,928,153,43,,740,216,,-1,4,3,3,,,,
 Bonneville,2026-09-24,Fa,4499,1610,203,58,,1478,377,,-1,1,,4,,,,
-Bonneville,2026-09-25,Fa,3700,1124,218,51,,1599,445,,,,,,,,,
-Bonneville,2026-09-26,Fa,2569,809,129,33,,2809,709,,-1,,-1,,,,,
+Bonneville,2026-09-25,Fa,3700,1124,218,51,,1599,445,,,,,1,,,,
+Bonneville,2026-09-26,Fa,2569,809,129,33,,2809,709,,-1,,-1,6,,,,
+Bonneville,2026-09-27,Fa,1483,492,126,30,,1418,444,,2,,2,,,,,
+Bonneville,2026-09-28,Fa,3611,900,179,45,,1229,358,,-1,1,,2,,,,
+Bonneville,2026-09-29,Fa,2395,604,103,27,,1062,374,,,,,,,,,
+Bonneville,2026-09-30,Fa,1954,454,81,15,,1706,424,,,,,3,,,,
+Bonneville,2026-10-01,Fa,2093,551,74,25,,1926,393,,,,,1,,,,
+Bonneville,2026-10-02,Fa,1297,308,71,25,,917,219,,,,,,,,,
+Bonneville,2026-10-03,Fa,2297,551,71,12,,1314,251,,,,,,,,,
 Notes:
 Columbia River DART
 2026 Adult Passage Daily Counts at Bonneville
-2026-01-01 to 2026-09-26
-Generated 27 Sep 2026 16:41:52 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2026-09-26. Last possible Data Date is 2026-09-26.
+2026-01-01 to 2026-10-03
+Generated 04 Oct 2026 13:14:33 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2026-10-03. Last possible Data Date is 2026-10-03.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular purpose.
 USACE Dams Video and Live Counting: From November through March; video tape fish counting occurs at US Army Corps of Engineers dams with fish ladders on the Columbia and Snake Rivers. Fish counting by video tape takes at least a few days to process: the fish counters have to make; collect; and read the tapes; and then submit their fish counts. DART retrieves and posts the data as soon as it is made available. On April 1; live fish counting resumes at all 8 Columbia River and Snake River Corps dams with fish ladders: from April through October each year for 16 hours each day; fish counters working at each fish ladder look directly into the fish ladders to count the fish passing by.

@@ -274,13 +274,20 @@ Bonneville,2026-09-29,Fa,2395,604,103,27,,1062,374,,,,,,,,,
 Bonneville,2026-09-30,Fa,1954,454,81,15,,1706,424,,,,,3,,,,
 Bonneville,2026-10-01,Fa,2093,551,74,25,,1926,393,,,,,1,,,,
 Bonneville,2026-10-02,Fa,1297,308,71,25,,917,219,,,,,,,,,
-Bonneville,2026-10-03,Fa,2297,551,71,12,,1314,251,,,,,,,,,
+Bonneville,2026-10-03,Fa,2297,551,71,12,,1314,251,,,1,1,1,,,,
+Bonneville,2026-10-04,Fa,1574,451,74,23,,1588,169,,,4,4,2,,,,
+Bonneville,2026-10-05,Fa,1600,482,47,8,,1259,190,,1,,1,3,,,,
+Bonneville,2026-10-06,Fa,956,301,47,4,,756,170,,2,,2,3,,,,
+Bonneville,2026-10-07,Fa,1195,240,35,9,,874,190,,1,,1,3,,,,
+Bonneville,2026-10-08,Fa,721,170,13,2,,519,127,,1,2,3,2,,,,
+Bonneville,2026-10-09,Fa,590,163,25,7,,1203,160,,,,,,,,,
+Bonneville,2026-10-10,Fa,669,154,26,6,,1556,246,,,,,,,,,
 Notes:
 Columbia River DART
 2026 Adult Passage Daily Counts at Bonneville
-2026-01-01 to 2026-10-03
-Generated 04 Oct 2026 13:14:33 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2026-10-03. Last possible Data Date is 2026-10-03.
+2026-01-01 to 2026-10-10
+Generated 11 Oct 2026 09:01:20 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2026-10-10. Last possible Data Date is 2026-10-10.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular purpose.
 USACE Dams Video and Live Counting: From November through March; video tape fish counting occurs at US Army Corps of Engineers dams with fish ladders on the Columbia and Snake Rivers. Fish counting by video tape takes at least a few days to process: the fish counters have to make; collect; and read the tapes; and then submit their fish counts. DART retrieves and posts the data as soon as it is made available. On April 1; live fish counting resumes at all 8 Columbia River and Snake River Corps dams with fish ladders: from April through October each year for 16 hours each day; fish counters working at each fish ladder look directly into the fish ladders to count the fish passing by.

@@ -866,8 +866,8 @@ Orca,2026-06-09 19:52:00,47.37461,-122.82476,5.0,249264.0,[Orca Network] At leas
 Orca,2026-06-09 21:09:39,47.16116,-122.8715,3.0,249268.0,,6,9,2026,Jun,Jun-9,2026-6-9,21:09:39,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-06-09 21:15:00,47.18449,-122.92132,2.0,249269.0,"[Orca Network] Two orcas just passed Squaxin passage, headed west to Hope Island.",6,9,2026,Jun,Jun-9,2026-6-9,21:15:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-06-09 21:50:00,47.20583,-122.92939,2.0,249272.0,[Orca Network] Orcas northbound past Hammersley in Pickering Passage (Kathy Wands Meredith),6,9,2026,Jun,Jun-9,2026-6-9,21:50:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
-Orca,2026-06-10 16:29:00,48.72643,-122.50724,3.0,249327.0,They are close to the shore of Portage Island.,6,10,2026,Jun,Jun-10,2026-6-10,16:29:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-06-10 16:29:00,48.71261,-122.58681,3.0,249327.0,They are close to the shore of Portage Island.,6,10,2026,Jun,Jun-10,2026-6-10,16:29:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-06-10 16:29:00,48.72643,-122.50724,3.0,249327.0,They are close to the shore of Portage Island.,6,10,2026,Jun,Jun-10,2026-6-10,16:29:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-06-10 17:00:00,47.17023,-122.84894,5.0,249331.0,[Orca Network] 5 orcas in Dana Passage possibly moving toward Olympia (Joan Ahre),6,10,2026,Jun,Jun-10,2026-6-10,17:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-06-10 18:01:50,48.33743,-123.02738,2.0,249336.0,,6,10,2026,Jun,Jun-10,2026-6-10,18:01:50,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-06-10 20:53:57,48.8693,-123.305,1.0,249346.0,,6,10,2026,Jun,Jun-10,2026-6-10,20:53:57,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
@@ -1329,11 +1329,13 @@ Orca,2026-09-05 17:36:00,37.75996,-122.6998,7.0,259780.0,"<br><br>Submitted by a
 ",9,5,2026,Sep,Sep-5,2026-9-5,17:36:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-09-05 22:19:48,50.54187,-126.72111,5.0,259827.0,,9,5,2026,Sep,Sep-5,2026-9-5,22:19:48,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-09-06 17:12:00,48.544,-122.99872,4.0,259896.0,[Orca Network] At least 4 orcas eastbound (Holly Harrison),9,6,2026,Sep,Sep-6,2026-9-6,17:12:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,1,0,1
+Orca,2026-09-06 18:34:15,53.84982,-130.99708,3.0,259990.0,,9,6,2026,Sep,Sep-6,2026-9-6,18:34:15,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-09-06 19:15:00,48.46133,-122.9497,1.0,259949.0,,9,6,2026,Sep,Sep-6,2026-9-6,19:15:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-09-06 19:18:00,48.46169,-122.95034,1.0,259950.0,,9,6,2026,Sep,Sep-6,2026-9-6,19:18:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-09-06 19:37:03,48.7592,-122.89032,4.0,259953.0,,9,6,2026,Sep,Sep-6,2026-9-6,19:37:03,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-09-06 20:35:45,48.71166,-122.87084,4.0,259961.0,,9,6,2026,Sep,Sep-6,2026-9-6,20:35:45,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-09-06 21:39:00,48.36487,-122.98241,3.0,259965.0,,9,6,2026,Sep,Sep-6,2026-9-6,21:39:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-09-08 00:29:47,48.32405,-123.2672,4.0,260063.0,,9,8,2026,Sep,Sep-8,2026-9-8,00:29:47,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Southern Resident Orca,2026-09-08 16:43:00,48.52519,-123.18442,25.0,260114.0,"[Orca Network] numbers approximate, moving south towards Lime Kiln as seen on the webcam (Sarah Geist)",9,8,2026,Sep,Sep-8,2026-9-8,16:43:00,0,0,0,0,1,0,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
 Southern Resident Orca,2026-09-08 17:59:00,48.44312,-122.98191,25.0,260150.0,"[Orca Network] numbers approximate, likely Jpod, southbound (Hongming Zheng)",9,8,2026,Sep,Sep-8,2026-9-8,17:59:00,1,0,0,1,1,0,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
 Orca,2026-09-10 15:08:15,48.62116,-122.80467,4.0,260340.0,,9,10,2026,Sep,Sep-10,2026-9-10,15:08:15,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
@@ -1367,8 +1369,8 @@ Southern Resident Orca,2026-09-15 16:39:00,47.88461,-122.40156,10.0,260896.0,"[O
 Southern Resident Orca,2026-09-15 16:50:00,47.84016,-122.40525,10.0,260897.0,"[Orca Network] SRKWs spread, multi directional (Beriah SoOrio,  Michele Tosh Brodsky, Sage Michelle Schmalz)",9,15,2026,Sep,Sep-15,2026-9-15,16:50:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
 Southern Resident Orca,2026-09-15 17:06:00,47.85066,-122.42535,10.0,260902.0,"[Orca Network] SRKWs spread, milling, multidirectional (Duangjai Vasantana-Berntsen)",9,15,2026,Sep,Sep-15,2026-9-15,17:06:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,0,0,0,0,0,0,0,0,0
 Southern Resident Orca,2026-09-15 17:14:00,47.83257,-122.43634,10.0,260903.0,"[Orca Network] SRKWs southbound, surface active, some E of mid, some W of mid (Sage Michelle Schmalz)(Duangjai Vasantana-Berntsen)",9,15,2026,Sep,Sep-15,2026-9-15,17:14:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
-Unspecified,2026-09-15 17:28:00,47.81574,-122.43548,27.0,260904.0,"[Orca Network] SRKWs approaching ferry lanes southbound, surface active (Duangjai Vasantana-Berntsen)(Shannon Heuvel)",9,15,2026,Sep,Sep-15,2026-9-15,17:28:00,0,0,0,0,0,1,1,0,0,0,0,1,0,0,confirmed,1,0,0,0,0,0,0,0,1
 Southern Resident Orca,2026-09-15 17:28:00,47.81574,-122.43548,27.0,260905.0,"[Orca Network] SRKWs approaching ferry lanes southbound, surface active (Duangjai Vasantana-Berntsen)(Shannon Heuvel)",9,15,2026,Sep,Sep-15,2026-9-15,17:28:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
+Unspecified,2026-09-15 17:28:00,47.81574,-122.43548,27.0,260904.0,"[Orca Network] SRKWs approaching ferry lanes southbound, surface active (Duangjai Vasantana-Berntsen)(Shannon Heuvel)",9,15,2026,Sep,Sep-15,2026-9-15,17:28:00,0,0,0,0,0,1,1,0,0,0,0,1,0,0,confirmed,1,0,0,0,0,0,0,0,1
 Southern Resident Orca,2026-09-15 17:37:00,47.80986,-122.43737,27.0,260906.0,"[Orca Network] SRKWs milling, southbound (Shannon Heuvel)",9,15,2026,Sep,Sep-15,2026-9-15,17:37:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
 Southern Resident Orca,2026-09-15 17:50:00,47.80606,-122.42003,27.0,260907.0,[Orca Network] SRKWs southbound E of mid channel (Hongming Zheng),9,15,2026,Sep,Sep-15,2026-9-15,17:50:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
 Southern Resident Orca,2026-09-15 18:16:00,47.79187,-122.43101,27.0,260911.0,"[Orca Network] SRKWs southbound, E of mid channel (Kristin Schuman)",9,15,2026,Sep,Sep-15,2026-9-15,18:16:00,0,0,0,0,1,1,1,0,0,0,0,1,1,0,confirmed,1,0,0,0,0,0,0,0,1
@@ -1456,6 +1458,7 @@ Orca,2026-09-17 23:30:00,49.1754,-123.93001,1.0,261201.0,,9,17,2026,Sep,Sep-17,2
 Orca,2026-09-19 16:38:00,47.97461,-122.34572,2.0,261263.0,[Orca Network] Orcas northbound close to shore (Natalie Scantlen),9,19,2026,Sep,Sep-19,2026-9-19,16:38:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
 Orca,2026-09-19 17:25:00,49.542641,-123.286763,2.0,,Northwestbound in Howe Sound off the east side of Anvil Island. Observed from shore at Furry Creek.,9,19,2026,Sep,Sep-19,2026-9-19,17:25:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,1,0,0,1
 Orca,2026-09-19 17:32:00,48.09838,-122.62734,6.0,261267.0,"[Orca Network] Orcas spread, milling and trending S, E of mid channel (Rachel Haight)",9,19,2026,Sep,Sep-19,2026-9-19,17:32:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-09-19 20:30:11,48.30816,-123.70317,3.0,261371.0,Nootka and her sons Galiano and Sputter,9,19,2026,Sep,Sep-19,2026-9-19,20:30:11,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-09-20 01:48:29,47.91873,-122.51005,3.0,261350.0,,9,20,2026,Sep,Sep-20,2026-9-20,01:48:29,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-09-20 08:05:00,47.21115,-122.61816,5.0,261393.0,,9,20,2026,Sep,Sep-20,2026-9-20,08:05:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-09-20 14:48:00,47.336,-122.45502,2.0,261369.0,[Orca Network] Orcas eastbound (Jason Cook),9,20,2026,Sep,Sep-20,2026-9-20,14:48:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,1,0,1
@@ -1490,9 +1493,9 @@ Orca,2026-09-21 22:05:00,47.25436,-122.9262,3.0,261528.0,[Orca Network] Orcas sl
 Orca,2026-09-21 22:51:00,47.27679,-122.92122,3.0,261535.0,[Orca Network] Orcas slowly northbound (Robyn Norman),9,21,2026,Sep,Sep-21,2026-9-21,22:51:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
 Orca,2026-09-22 00:08:41,47.29614,-122.8619,5.0,261537.0,,9,22,2026,Sep,Sep-22,2026-9-22,00:08:41,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-09-22 01:44:00,47.363,-122.82016,5.0,261550.0,"2 adults, possibly 3 youth",9,22,2026,Sep,Sep-22,2026-9-22,01:44:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-09-22 16:00:00,47.30892,-122.50383,7.0,261568.0,[Orca Network] Orcas eastbound (Bill Clogston),9,22,2026,Sep,Sep-22,2026-9-22,16:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,1,0,1
 Orca,2026-09-22 16:00:00,47.3086,-122.50332,7.0,261567.0,[Orca Network] Orcas eastbound (Bill Clogston),9,22,2026,Sep,Sep-22,2026-9-22,16:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,1,0,1
 Orca,2026-09-22 16:00:00,47.30909,-122.50079,7.0,261569.0,[Orca Network] Orcas eastbound (Bill Clogston),9,22,2026,Sep,Sep-22,2026-9-22,16:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,1,0,1
-Orca,2026-09-22 16:00:00,47.30892,-122.50383,7.0,261568.0,[Orca Network] Orcas eastbound (Bill Clogston),9,22,2026,Sep,Sep-22,2026-9-22,16:00:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,1,0,1
 Orca,2026-09-22 16:19:00,47.31972,-122.47978,7.0,261571.0,"[Orca Network] Long down times, some surface activity,  appear eastbound still (David Bennett)",9,22,2026,Sep,Sep-22,2026-9-22,16:19:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,1,0,1
 Orca,2026-09-22 16:44:00,47.31939,-122.49947,7.0,261574.0,[Orca Network] Orcas milling (Brooke Casanova),9,22,2026,Sep,Sep-22,2026-9-22,16:44:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-09-22 16:56:00,47.31642,-122.49187,7.0,261583.0,[Orca Network] Orcas milling (Tricia Louthian Morgan),9,22,2026,Sep,Sep-22,2026-9-22,16:56:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
@@ -1519,6 +1522,7 @@ Orca,2026-09-29 23:53:00,48.52294,-122.72921,2.0,261999.0,[Orca Network] Orcas n
 Orca,2026-09-30 01:14:00,47.97387,-122.34273,2.0,262001.0,[Orca Network] Orcas reported feeding and milling (Shelby Nicole),9,30,2026,Sep,Sep-30,2026-9-30,01:14:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-09-30 19:01:00,47.26636,-122.55038,3.0,262012.0,[Orca Network] Orcas southbound (Blue Huber),9,30,2026,Sep,Sep-30,2026-9-30,19:01:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
 Orca,2026-09-30 20:52:00,47.22843,-122.58777,3.0,262014.0,[Orca Network] 3 orcas southbound (Shelly Bergman),9,30,2026,Sep,Sep-30,2026-9-30,20:52:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-10-01 00:35:09,47.334,-122.68967,5.0,262029.0,,10,1,2026,Oct,Oct-1,2026-10-1,00:35:09,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-10-01 18:29:00,47.19988,-122.93013,6.0,262043.0,"[Orca Network] Orcas northbound, (Duangjai Vasantana-Berntsen)",10,1,2026,Oct,Oct-1,2026-10-1,18:29:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
 Orca,2026-10-01 20:37:00,47.35666,-122.81401,6.0,262051.0,"[Orca Network] were northbound,  sudden porpoising southbound, now milling on hunt (Rachel Haight)",10,1,2026,Oct,Oct-1,2026-10-1,20:37:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,1,0,0,0,0,2
 Orca,2026-10-01 20:55:00,47.35939,-122.81587,6.0,262052.0,"[Orca Network] Orcas milling, some trend north (Rachel Haight,  Torry Chamberlayne)",10,1,2026,Oct,Oct-1,2026-10-1,20:55:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
@@ -1527,3 +1531,7 @@ Orca,2026-10-02 19:02:00,48.54329,-123.16917,2.0,262089.0,[Orca Network] 2 male 
 Orca,2026-10-02 21:34:00,47.59133,-122.55527,2.0,262099.0,"[Orca Network] 2 orcas near Glover Point, direction of travel unknown (WSF)",10,2,2026,Oct,Oct-2,2026-10-2,21:34:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-10-02 23:04:00,47.53212,-122.53081,2.0,262116.0,"[Orca Network] At least one orca here, no direction given (Mollie Segall)",10,2,2026,Oct,Oct-2,2026-10-2,23:04:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
 Orca,2026-10-02 23:10:00,47.95438,-122.31881,1.0,262117.0,"[Orca Network] At least one orca, likely northbound (Margaret Ostervold)",10,2,2026,Oct,Oct-2,2026-10-2,23:10:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,1,0,0,0,0,1
+Orca,2026-10-07 00:34:00,47.29407,-122.693,1.0,262228.0,[Orca Network] Orca milling (Deanna Foster Goldberg),10,7,2026,Oct,Oct-7,2026-10-7,00:34:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-10-10 17:50:00,47.31424,-122.55833,1.0,262293.0,"[Orca Network] Single orca here, no direction of travel given (Karla Ann)",10,10,2026,Oct,Oct-10,2026-10-10,17:50:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,0,0,0,0,0,0,0
+Orca,2026-10-10 18:41:00,48.58562,-123.01917,2.0,262297.0,[Orca Network] At least two orcas southbound (SS),10,10,2026,Oct,Oct-10,2026-10-10,18:41:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,1,0,0,0,0,0,0,0,1
+Orca,2026-10-10 22:12:00,48.57852,-123.18969,2.0,262312.0,"[Orca Network] 1-2 orcas here, had been southwestbound (DM)",10,10,2026,Oct,Oct-10,2026-10-10,22:12:00,0,0,0,0,0,0,0,0,0,0,0,0,1,1,candidate,0,0,1,0,0,0,0,1,2

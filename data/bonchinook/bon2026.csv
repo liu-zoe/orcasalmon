@@ -294,14 +294,21 @@ Bonneville,2026-10-19,Fa,323,77,36,20,,470,37,,,,,,,,,
 Bonneville,2026-10-20,Fa,341,78,12,2,,603,45,,,,,,,,,
 Bonneville,2026-10-21,Fa,108,30,11,2,,591,38,,,,,,,,,
 Bonneville,2026-10-22,Fa,190,44,7,2,,868,66,,,,,,,,,
-Bonneville,2026-10-23,Fa,86,20,15,4,,384,22,,,,,,,,,
+Bonneville,2026-10-23,Fa,86,20,15,4,,384,22,,,,,1,,,,
 Bonneville,2026-10-24,Fa,35,8,6,2,,292,32,,,,,,,,,
+Bonneville,2026-10-25,Fa,22,6,10,5,,279,14,,,,,,,,,
+Bonneville,2026-10-26,Fa,50,9,4,2,,277,13,,,,,,-1,1,5,
+Bonneville,2026-10-27,Fa,119,21,4,3,,340,32,,,,,,,1,,
+Bonneville,2026-10-28,Fa,470,69,22,17,,840,62,,,,,,,2,,
+Bonneville,2026-10-29,Fa,136,17,24,15,,386,55,,,,,,,4,,
+Bonneville,2026-10-30,Fa,203,16,13,3,,348,42,,,,,,,6,,
+Bonneville,2026-10-31,Fa,175,17,9,4,,456,36,,,,,,,5,,
 Notes:
 Columbia River DART
 2026 Adult Passage Daily Counts at Bonneville
-2026-01-01 to 2026-10-24
-Generated 25 Oct 2026 08:31:00 PDT. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
-Last Date 2026-10-24. Last possible Data Date is 2026-10-24.
+2026-01-01 to 2026-10-31
+Generated 01 Nov 2026 08:05:27 PST. DART Adult Passage Daily Counts www.cbr.washington.edu/dart/query/adult_daily.
+Last Date 2026-10-31. Last possible Data Date is 2026-10-31.
 Data Courtesy of U.S. Army Corps of Engineers.
 USACE Data Disclaimer: These data are furnished with the understanding that the U.S. Army Corps of Engineers makes no warranties concerning the accuracy; reliability; or suitability of this data for any particular purpose.
 USACE Dams Video and Live Counting: From November through March; video tape fish counting occurs at US Army Corps of Engineers dams with fish ladders on the Columbia and Snake Rivers. Fish counting by video tape takes at least a few days to process: the fish counters have to make; collect; and read the tapes; and then submit their fish counts. DART retrieves and posts the data as soon as it is made available. On April 1; live fish counting resumes at all 8 Columbia River and Snake River Corps dams with fish ladders: from April through October each year for 16 hours each day; fish counters working at each fish ladder look directly into the fish ladders to count the fish passing by.

@@ -1,0 +1,48 @@
+# Files left out of the image that fly.io builds. The running dashboard only
+# needs: app.py, orcasalmon/, assets/, data/ (processed files), Procfile and
+# requirements.txt.
+
+# Secrets: never ship tokens
+*token*.txt
+GH_token*.txt
+acartia_token.txt
+flyio_ghtoken.txt
+mapbox_token.txt
+.env
+.env.*
+
+# Version control, CI and editor settings
+.git
+.github
+.gitignore
+.claude
+.vscode
+*.code-workspace
+
+# Research, docs and old material not used by the app
+research_notes
+reports
+docs
+assets_archive
+deploy_readme.md
+
+# Separate experiments and analysis scripts
+srkw_salmon_dashboard.py
+make_peak_data.py
+peakmod.R
+scraper.py
+*.ipynb
+
+# Data the dashboard doesn't read
+data/acartia/acartia_*.csv
+data/srkw_satellite_tagging
+data/data_in_progress
+data/peak
+data/twm/*.pdf
+data/twm/*.XLSX
+
+# Python and macOS clutter
+__pycache__
+*.pyc
+.DS_Store
+._*

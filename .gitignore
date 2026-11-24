@@ -1,0 +1,30 @@
+# ---- Never publish -----------------------------------------------------------
+# Tokens and secrets
+*token*.txt
+.env
+.env.*
+
+# Private or restricted data (kept only in the local deploy folder)
+/data/twm/
+/data/srkw_satellite_tagging/
+/data/SRKW.csv
+# Acartia sightings (include reporters' names); download with scraper.py
+/data/acartia/
+
+# ---- Local-only material -------------------------------------------------------
+/reports/
+/research_notes/
+/docs/
+/assets_archive/
+/deploy_readme.md
+/.claude/
+/.vscode/
+*.code-workspace
+/data/data_in_progress/
+/data/peak/
+
+# ---- Python and macOS clutter ---------------------------------------------------
+__pycache__/
+*.pyc
+.DS_Store
+._*

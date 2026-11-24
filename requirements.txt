@@ -1,0 +1,9 @@
+pip==24.2
+dash==4.1.0
+gunicorn==27.0.1
+flask==3.0.3
+numpy==2.2.5
+pandas==2.2.3
+plotly==6.0.1
+requests==2.32.3
+werkzeug==3.0.6
